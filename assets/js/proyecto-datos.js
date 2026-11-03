@@ -1,4 +1,4 @@
-// Datos del Proyecto LSM 2026–2031. Montos en dólares estadounidenses (USD) de 2026.
+// Datos del Proyecto 2026 (plan 2027–2031). Montos en dólares estadounidenses (USD) de 2026.
 // Son estimaciones de orden de magnitud para decidir y pedir cotizaciones, no un pliego.
 // Supuestos: ~9.500 habitantes, ~3.500 hogares, ~2.000 puntos de luz, ~10,5 km de calles a pavimentar.
 
@@ -15,7 +15,7 @@ export const AREAS = {
 
 // capex/opex: [mínimo, máximo] en USD. opex = por año. null = no presupuestado (condicionado o a cotizar).
 export const PARTIDAS = [
-  { id: 'c1', area: 'con', nombre: 'Ductos en las 105 cuadras a pavimentar (“zanja única”)', detalle: '~10,5 km de tritubo y cámaras cada 100 m, mientras la calle está abierta.', capex: [105000, 210000], opex: [0, 0] },
+  { id: 'c1', area: 'con', nombre: 'Caños para fibra en las 105 cuadras que se asfaltan', detalle: 'Solo el costo extra de dejar ~10,5 km de caños vacíos y cámaras cada 100 m dentro de la obra de asfalto del municipio. El asfalto no se paga acá.', capex: [105000, 210000], opex: [0, 0] },
   { id: 'c2', area: 'con', nombre: 'Anillo troncal de fibra municipal hasta Puiggari', detalle: '~18 km, aéreo en postes existentes y en los ductos nuevos. Red neutra: la usan LAR y otros proveedores.', capex: [150000, 280000], opex: [8000, 15000] },
   { id: 'c3', area: 'con', nombre: 'Nodo central y sala técnica', detalle: 'Equipos de núcleo, energía de respaldo (UPS y solar), climatización, doble salida a internet.', capex: [40000, 80000], opex: [5000, 10000] },
   { id: 'c4', area: 'con', nombre: 'Wi-Fi 6 en 8 espacios públicos', detalle: 'Plazas, terminal, CIC, polideportivo. Con portal sin pedir DNI.', capex: [16000, 32000], opex: [3000, 6000] },
@@ -41,7 +41,7 @@ export const PARTIDAS = [
 export const INICIO = 2027;
 export const CRONOGRAMA = [
   { fase: 0, nombre: 'Diagnóstico, ordenanza de datos y mesa de gobernanza', t: [0, 1] },
-  { fase: 1, nombre: 'Ductos con cada cuadra que se pavimenta', t: [1, 15] },
+  { fase: 1, nombre: 'Caños para fibra en cada cuadra que se asfalta', t: [1, 15] },
   { fase: 1, nombre: 'Anillo de fibra y nodo central', t: [2, 6] },
   { fase: 1, nombre: 'Red de cámaras separada y centro de monitoreo', t: [2, 5] },
   { fase: 1, nombre: 'LoRaWAN y Wi-Fi en espacios públicos', t: [3, 5] },

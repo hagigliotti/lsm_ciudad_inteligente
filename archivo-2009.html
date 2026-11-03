@@ -6,11 +6,12 @@
   <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://www.googletagmanager.com; connect-src 'self' https://*.google-analytics.com https://*.analytics.google.com https://www.googletagmanager.com; img-src 'self' data: https://*.google-analytics.com https://www.googletagmanager.com; style-src 'self'; font-src 'self'; base-uri 'self'; form-action 'self'; object-src 'none'; upgrade-insecure-requests">
   <meta name="referrer" content="strict-origin-when-cross-origin">
   <title>Archivo 2009 · LSM Ciudad Inteligente</title>
-  <meta name="description" content="El blog original del proyecto Libertador San Martín, una Ciudad Inteligente (julio de 2009), archivado completo.">
+  <meta name="description" content="El blog original del proyecto Libertador San Martín, una Ciudad Inteligente (julio de 2009), archivado completo y con enlaces a cada página original.">
   <meta name="theme-color" content="#0d1f18">
   <link rel="icon" href="assets/logos/isotipo.svg" type="image/svg+xml">
   <link rel="stylesheet" href="assets/css/estilo.css">
   <script type="module" src="assets/js/app.js"></script>
+  <script type="module" src="assets/js/archivo.js"></script>
 </head>
 <body>
 <a class="salto" href="#contenido">Saltar al contenido</a>
@@ -26,29 +27,74 @@
   </div>
 </header>
 
-<main id="contenido" class="doc archivo">
+<div class="arch-portada">
   <div class="envoltura">
-    <span class="etiqueta">Archivo · publicado el 27 de julio de 2009</span>
+    <span class="etiqueta">Archivo · 27 de julio de 2009</span>
     <h1>Libertador San Martín, Una Ciudad Inteligente</h1>
-    <img class="archivo__cabecera" src="docs/archivo-2009/cabecera-blog.jpg" alt="Cabecera original del blog de 2009" width="900" height="200">
-    <p class="intro">El blog original del proyecto, rescatado completo desde la exportación de WordPress para que no se pierda. Es el texto de 2009 tal cual se publicó, con sus mapas y figuras. El original sigue en <a href="https://lsmciudadinteligente.wordpress.com" rel="noopener">lsmciudadinteligente.wordpress.com</a>.</p>
-    <div class="archivo__logos">
-      <figure><img src="docs/archivo-2009/logo11.jpg" alt="Logo opción 1 del proyecto 2009" loading="lazy"><figcaption>Logo, opción 1</figcaption></figure>
-      <figure><img src="docs/archivo-2009/logo2.jpg" alt="Logo opción 2 del proyecto 2009, con la torre entre WI y FI" loading="lazy"><figcaption>Logo, opción 2: la torre que hoy está en el logo nuevo</figcaption></figure>
+    <p>El proyecto original, completo y sin cambios de contenido. Cada capítulo tiene un enlace a su página en el blog de WordPress, para que puedas comprobar que es el mismo texto.</p>
+    <dl class="arch-ficha">
+      <div><dt>Autor</dt><dd>Hernando A. Gigliotti</dd></div>
+      <div><dt>Materia</dt><dd>Seminario de Aplicación Profesional · Lic. en Sistemas de Información, UAP</dd></div>
+      <div><dt>Aprobado</dt><dd>3 de agosto de 2009</dd></div>
+    </dl>
+    <div class="botones">
+      <a class="boton" href="https://lsmciudadinteligente.wordpress.com/" rel="noopener" target="_blank">Ver el blog original en WordPress <span aria-hidden="true">↗</span></a>
+      <a class="boton boton--claro" href="proyecto-2026.html">Cómo sería hoy: Proyecto 2026</a>
     </div>
-    <nav class="archivo__indice" aria-label="Índice del proyecto 2009"><ol><li><a href="#proyecto">Proyecto</a></li>
-<li><a href="#1-introduccion">1. Introducción</a></li>
-<li><a href="#2-aspectos-generales">2. Aspectos Generales</a></li>
-<li><a href="#3-resumen-ejecutivo">3. Resumen Ejecutivo</a></li>
-<li><a href="#4-estudio-del-mercado">4. Estudio del Mercado</a></li>
-<li><a href="#5-ingenieria-del-proyecto">5. Ingeniería del Proyecto</a></li>
-<li><a href="#6-programa-de-produccion">6. Programa de Producción</a></li>
-<li><a href="#7-antenas">7. Antenas</a></li>
-<li><a href="#8-resultados">8. Resultados</a></li>
-<li><a href="#9-conclusiones-y-recomendaciones">9. Conclusiones y Recomendaciones</a></li>
-<li><a href="#agradecimientos">Agradecimientos</a></li>
-<li><a href="#bibliografia">Bibliografía</a></li></ol></nav>
-    <section class="archivo__sec" id="proyecto"><h2>Proyecto</h2>
+  </div>
+</div>
+
+<main id="contenido" class="archivo">
+  <div class="envoltura">
+    <img class="archivo__cabecera" src="docs/archivo-2009/cabecera-blog.jpg" alt="Cabecera original del blog de 2009" width="900" height="200">
+
+    <section id="indice" class="ind">
+      <h2>Índice</h2>
+      <ol class="ind__grilla">
+<li><a href="#proyecto"><span class="ind__num">P</span><span class="ind__txt"><b>Proyecto</b><small>Presentación, logos y aprobación del proyecto.</small></span></a></li>
+<li><a href="#introduccion"><span class="ind__num">01</span><span class="ind__txt"><b>Introducción</b><small>Justificación, problema, objetivos, marco teórico, importancia y limitaciones.</small></span></a></li>
+<li><a href="#aspectos-generales"><span class="ind__num">02</span><span class="ind__txt"><b>Aspectos Generales</b><small>Nombre, ubicación, clasificación y objetivos.</small></span></a></li>
+<li><a href="#resumen-ejecutivo"><span class="ind__num">03</span><span class="ind__txt"><b>Resumen Ejecutivo</b><small>Mercado, localización, organización e inversión.</small></span></a></li>
+<li><a href="#estudio-del-mercado"><span class="ind__num">04</span><span class="ind__txt"><b>Estudio del Mercado</b><small>Usos del servicio, encuesta, competencia y tamaño.</small></span></a></li>
+<li><a href="#ingenieria-del-proyecto"><span class="ind__num">05</span><span class="ind__txt"><b>Ingeniería del Proyecto</b><small>Requerimientos técnicos, hardware, software y personal.</small></span></a></li>
+<li><a href="#programa-de-produccion"><span class="ind__num">06</span><span class="ind__txt"><b>Programa de Producción</b><small>Registro de usuarios, cronograma y etapas por barrios.</small></span></a></li>
+<li><a href="#antenas"><span class="ind__num">07</span><span class="ind__txt"><b>Antenas</b><small>Radioenlaces, alcance visual y radio horizonte.</small></span></a></li>
+<li><a href="#resultados"><span class="ind__num">08</span><span class="ind__txt"><b>Resultados</b><small>Análisis de las 161 encuestas.</small></span></a></li>
+<li><a href="#conclusiones-y-recomendaciones"><span class="ind__num">09</span><span class="ind__txt"><b>Conclusiones y Recomendaciones</b><small>Viabilidad y recomendaciones finales.</small></span></a></li>
+<li><a href="#agradecimientos"><span class="ind__num">A</span><span class="ind__txt"><b>Agradecimientos</b><small>Quienes ayudaron a hacer el proyecto.</small></span></a></li>
+<li><a href="#bibliografia"><span class="ind__num">B</span><span class="ind__txt"><b>Bibliografía</b><small>Fuentes consultadas en 2008 y 2009.</small></span></a></li>
+        <li><a href="#otras-voces"><span class="ind__num">+</span><span class="ind__txt"><b>¿Quién más escribió?</b><small>Otras fuentes sobre la ciudad conectada, 1997–2026.</small></span></a></li>
+      </ol>
+    </section>
+
+    <div class="arch-cuerpo">
+      <aside class="arch-menu" aria-label="Capítulos">
+        <p class="arch-menu__tit">Capítulos</p>
+        <ol>
+<li><a href="#proyecto"><span>P</span>Proyecto</a></li>
+<li><a href="#introduccion"><span>01</span>Introducción</a></li>
+<li><a href="#aspectos-generales"><span>02</span>Aspectos Generales</a></li>
+<li><a href="#resumen-ejecutivo"><span>03</span>Resumen Ejecutivo</a></li>
+<li><a href="#estudio-del-mercado"><span>04</span>Estudio del Mercado</a></li>
+<li><a href="#ingenieria-del-proyecto"><span>05</span>Ingeniería del Proyecto</a></li>
+<li><a href="#programa-de-produccion"><span>06</span>Programa de Producción</a></li>
+<li><a href="#antenas"><span>07</span>Antenas</a></li>
+<li><a href="#resultados"><span>08</span>Resultados</a></li>
+<li><a href="#conclusiones-y-recomendaciones"><span>09</span>Conclusiones y Recomendaciones</a></li>
+<li><a href="#agradecimientos"><span>A</span>Agradecimientos</a></li>
+<li><a href="#bibliografia"><span>B</span>Bibliografía</a></li>
+          <li><a href="#otras-voces"><span>+</span>Otras voces</a></li>
+        </ol>
+        <a class="arch-menu__orig" href="https://lsmciudadinteligente.wordpress.com/" rel="noopener" target="_blank">Blog original ↗</a>
+      </aside>
+
+      <div class="arch-texto">
+        <div class="archivo__logos">
+          <figure><img src="docs/archivo-2009/logo11.jpg" alt="Logo opción 1 del proyecto 2009" loading="lazy"><figcaption>Logo 2009, opción 1</figcaption></figure>
+          <figure><img src="docs/archivo-2009/logo2.jpg" alt="Logo opción 2 del proyecto 2009, con el pórtico de entrada a la ciudad entre WI y FI" loading="lazy"><figcaption>Logo 2009, opción 2: el pórtico de entrada que hoy está en el logo nuevo</figcaption></figure>
+        </div>
+
+<section class="cap" id="proyecto" data-cap><header class="cap__cab"><span class="cap__num" aria-hidden="true">P</span><div><h2>Proyecto</h2><p class="cap__meta">Publicado el 27 de julio de 2009 · <a class="cap__orig" href="https://lsmciudadinteligente.wordpress.com/" rel="noopener" target="_blank">Ver en el original <span aria-hidden="true">↗</span></a></p></div></header><div class="cap__cuerpo">
 <figure><img src="docs/archivo-2009/logo11.jpg" alt="Logo del proyecto" loading="lazy"><figcaption>Opción 1: Logo del proyecto</figcaption></figure>
 
 <figure><img src="docs/archivo-2009/logo2.jpg" alt="Opción 2: Logo del proyecto" loading="lazy"><figcaption>Opción 2: Logo del proyecto</figcaption></figure>
@@ -61,21 +107,21 @@ Declaro bajo mi responsabilidad haber realizado este proyecto, en cumplimento de
 
 <p><span><strong>Aprobación del Proyecto:</strong></span></p>
 <p><em>El lunes 3 de agosto de 2009, el proyecto fué aprobado por el  el Ing. Claudio Bracalenti  (profesor de la materia de Seminario y Aplicación Profesional) y el Ing. Juan Bournissen (director de la Carrera de la Lic. en Sistemas de Información, de la Universidad Adventista del Plata).</em></p>
-</section>
-<section class="archivo__sec" id="1-introduccion"><h2>1. Introducción</h2><h3>Justificación del Problema</h3><p>La creciente demanda de información, la imperiosa necesidad de comunicación, las posibilidades de encontrar y ofrecer trabajo, la amplia red de ubicación territorial, como la abarcante necesidad de información literaria, cultural, económica, sociológica, religiosa espiritual, política, otro, ha llevado al ser humano a refugiarse en internet a través de Computadoras, PDA, smatphones, teléfono, Laptops, entre otros.</p>
+</div><a class="cap__arriba" href="#indice">↑ Volver al índice</a></section>
+<section class="cap" id="introduccion" data-cap><header class="cap__cab"><span class="cap__num" aria-hidden="true">01</span><div><h2>Introducción</h2><p class="cap__meta">Publicado el 27 de julio de 2009 · <a class="cap__orig" href="https://lsmciudadinteligente.wordpress.com/introduccion/" rel="noopener" target="_blank">Ver en el original <span aria-hidden="true">↗</span></a></p></div></header><div class="cap__cuerpo"><div class="cap__sub"><h3>Justificación del Problema</h3><p class="cap__meta"><a class="cap__orig" href="https://lsmciudadinteligente.wordpress.com/2009/07/27/justificacion-del-problema/" rel="noopener" target="_blank">Ver en el original <span aria-hidden="true">↗</span></a></p><p>La creciente demanda de información, la imperiosa necesidad de comunicación, las posibilidades de encontrar y ofrecer trabajo, la amplia red de ubicación territorial, como la abarcante necesidad de información literaria, cultural, económica, sociológica, religiosa espiritual, política, otro, ha llevado al ser humano a refugiarse en internet a través de Computadoras, PDA, smatphones, teléfono, Laptops, entre otros.</p>
 <p>Desde principios del presente siglo se considera analfabetos, a los que, aun sabiendo leer y escribir, no poseen los conocimientos de inglés y computación.</p>
 <p>La computadora en todas las esferas no solo es imprescindible sino que si esta no se conecta a internet es defectuoso a los fines más necesarios, por lo tanto la computadora misma a dejado de ser un elemento necesario si no se conecta a internet.</p>
-<p>La necesidad de internet es en este momento de suma necesidad para todos los  quieren estar a la altura de las circunstancia del mundo tecnológico, teniendo así todo al alcance de la mano.</p><h3>Planteamiento del problema</h3><p>La problemática en Libertador San Martín se centra en que no todos los habitantes permanentes, los habitantes de transito o los ocasionales tiene o pueden tener acceso a internet, libre y gratuita, por varios motivos.</p>
-<p>La creciente demanda de información, comunicación y por otro lado, la pluralidad de economías dispares de los habitantes de Libertador San Martín, deja de manifiesto la necesidad de contar con una ciudad inteligente con igualdad para todos.</p><h3>Objetivos</h3><p>1.- Analizar la necesidad de los habitantes permanentes, de los habitantes ocasionales, turistas y pacientes el deseo de tener la posibilidad de conectarse a internet en forma libre y gratuita.</p>
+<p>La necesidad de internet es en este momento de suma necesidad para todos los  quieren estar a la altura de las circunstancia del mundo tecnológico, teniendo así todo al alcance de la mano.</p></div><div class="cap__sub"><h3>Planteamiento del problema</h3><p class="cap__meta"><a class="cap__orig" href="https://lsmciudadinteligente.wordpress.com/2009/07/27/planteamiento-del-problema/" rel="noopener" target="_blank">Ver en el original <span aria-hidden="true">↗</span></a></p><p>La problemática en Libertador San Martín se centra en que no todos los habitantes permanentes, los habitantes de transito o los ocasionales tiene o pueden tener acceso a internet, libre y gratuita, por varios motivos.</p>
+<p>La creciente demanda de información, comunicación y por otro lado, la pluralidad de economías dispares de los habitantes de Libertador San Martín, deja de manifiesto la necesidad de contar con una ciudad inteligente con igualdad para todos.</p></div><div class="cap__sub"><h3>Objetivos</h3><p class="cap__meta"><a class="cap__orig" href="https://lsmciudadinteligente.wordpress.com/2009/07/27/objetivos/" rel="noopener" target="_blank">Ver en el original <span aria-hidden="true">↗</span></a></p><p>1.- Analizar la necesidad de los habitantes permanentes, de los habitantes ocasionales, turistas y pacientes el deseo de tener la posibilidad de conectarse a internet en forma libre y gratuita.</p>
 <p>2.- Verificar la posibilidad de establecer cordones WI-FI y transformar a Libertador San Martín en una ciudad inteligente.</p>
 <p>3.- Verificar cualitativamente la posibilidad de establecer una red WI-FI.</p>
-<p>4.- Proporcionar información después de realizada la investigación pertinente a la municipalidad y la comunidad toda, que permita a quien lo desee poner en marcha tal proyecto.</p><h3>Marco Teórico</h3><p>Hay en la actualidad países y ciudades en todo el mundo que cuentan con una red inalámbrica libre y gratuita, Ejemplo de esto son ciudades como Filadelfia, San Francisco, Toronto, Mountain View, entre otras, en nuestro país la provincia de San Luis, La ciudad Autónoma de Buenos Aires, y el partido de la costa, provincia de Buenos Aires.</p>
-<p>En nuestro país hay proyectos como la provincia de San Luis, la municipalidad de Tigre, el partido de la costa en Buenos Aires (la costa atlántica) y la ciudad de Buenos Aires, que aunque estos proyectos no están terminados, ya se deja ver en algunos lugares como los mencionados, la posibilidad cierta de ingresar a internet a través de este medio.</p><h3>Importancia del estudio</h3><p>En la ciudad de Libertador San Martín, por las características propias del lugar, se hace cada vez más necesario la comunicación, la obtención de información etc.</p>
-<p>El proyecto arrojará datos que pueden ser orientadores en la elaboración de un plan de estudio y de implementación de este mismo proyecto en la instalación de internet libre y gratuito para todos. <strong></strong></p><h3>Limitaciones y Debilidades del Proyecto</h3><p><strong>Limitaciones del proyecto</strong></p>
+<p>4.- Proporcionar información después de realizada la investigación pertinente a la municipalidad y la comunidad toda, que permita a quien lo desee poner en marcha tal proyecto.</p></div><div class="cap__sub"><h3>Marco Teórico</h3><p class="cap__meta"><a class="cap__orig" href="https://lsmciudadinteligente.wordpress.com/2009/07/27/marco-teorico/" rel="noopener" target="_blank">Ver en el original <span aria-hidden="true">↗</span></a></p><p>Hay en la actualidad países y ciudades en todo el mundo que cuentan con una red inalámbrica libre y gratuita, Ejemplo de esto son ciudades como Filadelfia, San Francisco, Toronto, Mountain View, entre otras, en nuestro país la provincia de San Luis, La ciudad Autónoma de Buenos Aires, y el partido de la costa, provincia de Buenos Aires.</p>
+<p>En nuestro país hay proyectos como la provincia de San Luis, la municipalidad de Tigre, el partido de la costa en Buenos Aires (la costa atlántica) y la ciudad de Buenos Aires, que aunque estos proyectos no están terminados, ya se deja ver en algunos lugares como los mencionados, la posibilidad cierta de ingresar a internet a través de este medio.</p></div><div class="cap__sub"><h3>Importancia del estudio</h3><p class="cap__meta"><a class="cap__orig" href="https://lsmciudadinteligente.wordpress.com/2009/07/27/importancia-del-estudio/" rel="noopener" target="_blank">Ver en el original <span aria-hidden="true">↗</span></a></p><p>En la ciudad de Libertador San Martín, por las características propias del lugar, se hace cada vez más necesario la comunicación, la obtención de información etc.</p>
+<p>El proyecto arrojará datos que pueden ser orientadores en la elaboración de un plan de estudio y de implementación de este mismo proyecto en la instalación de internet libre y gratuito para todos. <strong></strong></p></div><div class="cap__sub"><h3>Limitaciones y Debilidades del Proyecto</h3><p class="cap__meta"><a class="cap__orig" href="https://lsmciudadinteligente.wordpress.com/2009/07/27/limitaciones-y-debilidades-del-proyecto/" rel="noopener" target="_blank">Ver en el original <span aria-hidden="true">↗</span></a></p><p><strong>Limitaciones del proyecto</strong></p>
 <p>El presente proyecto se limitará sólo a los habitantes permanentes, habitantes ocasionales, y visitantes de paso y/o turistas, de Libertador San Martín.</p>
 <p><strong>Debilidades del proyecto</strong></p>
-<p>La ciudad de LSM, en el inicio del proyecto, no va a estar conectada en su totalidad, ya que el mismo irá en crecimiento.</p></section>
-<section class="archivo__sec" id="2-aspectos-generales"><h2>2. Aspectos Generales</h2><h2>Nombre del Proyecto.</h2>
+<p>La ciudad de LSM, en el inicio del proyecto, no va a estar conectada en su totalidad, ya que el mismo irá en crecimiento.</p></div></div><a class="cap__arriba" href="#indice">↑ Volver al índice</a></section>
+<section class="cap" id="aspectos-generales" data-cap><header class="cap__cab"><span class="cap__num" aria-hidden="true">02</span><div><h2>Aspectos Generales</h2><p class="cap__meta">Publicado el 27 de julio de 2009 · <a class="cap__orig" href="https://lsmciudadinteligente.wordpress.com/aspectos-generales/" rel="noopener" target="_blank">Ver en el original <span aria-hidden="true">↗</span></a></p></div></header><div class="cap__cuerpo"><h2>Nombre del Proyecto.</h2>
 Al proyecto se lo ha identificado bajo el nombre de  <strong>“Libertador San Martín, una ciudad inteligente”</strong>.
 <p><strong><span> </span></strong><br><h2></h2><br><h2>Ubicación geográfica de LSM</h2><br>Libertador San Martín se encuentra ubicada en el suroeste de la provincia de Entre Ríos, departamento Diamante, distrito El Palmar, entre las ciudades de Crespo y Diamante, sobre la Ruta Nacional Nº 131 (32º04'34.53" S - 60º27'53.06" W). Los habitantes del lugar la denominaron "Colina de la Esperanza", en referencia a la fe religiosa de buena parte de la comunidad basada en las promesas expresadas en la Santa Biblia.<br><p><em></em></p></p>
 <h2>Clasificación del proyecto</h2>
@@ -89,8 +135,8 @@ Este proyecto podrá ubicarse dentro del sector terciario por la razón en la qu
 <p>Ante la posibilidad de que alguna entidad tome parte en el mismo. El marco legal será designado en su debido momento por medio de la misma entidad reguladora del proyecto estando en concordancia con de las leyes nacionales, provinciales, municipales y los derechos humanos entre otros. Ver en el Anexo A, el proyecto de ley.</p>
 <p>Carta al intendente, en el Anexo B del proyecto.<br><h2>Análisis de los resultados obtenidos</h2><br>El análisis de los resultados es el siguiente.</p>
 <p>Se realizó un sondeo en diciembre de 2008 en donde se buscó una muestra de 83 personas, con el fin de determinar la forma en que se acceden a Internet. De esta muestra se obtuvo que el 90% de ellas se conecta a Internet mediante una red Inalámbrica por lo menos una vez al día sin importar si es en su hogar, lugar de trabajo o institución educativa.<br><h2>Costo básico inicial del proyecto</h2><br>El presupuesto fue obtenido en el mes de enero de 2009. El mismo queda sujeto a modificaciones que puedan surgir hasta la realización del proyecto.</p>
-<p>La inversión inicial del proyecto estimada es aproximadamente de $7.000 sólo con equipamiento mínimo y sin alquiler de local.   (ver tabla orientativa en el proyecto escrito)</p></section>
-<section class="archivo__sec" id="3-resumen-ejecutivo"><h2>3. Resumen Ejecutivo</h2><h2>Mercado del Proyecto</h2>
+<p>La inversión inicial del proyecto estimada es aproximadamente de $7.000 sólo con equipamiento mínimo y sin alquiler de local.   (ver tabla orientativa en el proyecto escrito)</p></div><a class="cap__arriba" href="#indice">↑ Volver al índice</a></section>
+<section class="cap" id="resumen-ejecutivo" data-cap><header class="cap__cab"><span class="cap__num" aria-hidden="true">03</span><div><h2>Resumen Ejecutivo</h2><p class="cap__meta">Publicado el 27 de julio de 2009 · <a class="cap__orig" href="https://lsmciudadinteligente.wordpress.com/resumen-ejecutivo/" rel="noopener" target="_blank">Ver en el original <span aria-hidden="true">↗</span></a></p></div></header><div class="cap__cuerpo"><h2>Mercado del Proyecto</h2>
 Se trabajó una muestra de 173 personas con el fin de determinar el universo existentes en la localidad de LSM en cuanto a la forma de uso y acceso a internet, gustos y modalidades de los habitantes y turistas; de las cuales han sido descartadas 12 encuestas por falta de información, quedando un total de 161 encuestas para el análisis.
 <p>De esta muestra se obtuvo que el 27,33% contrata un servicio inalámbrico, además debemos agregar a los alumnos de la UAP que son el 24,84% del total de encuestados, que se conectan al <em>wireless</em> gratuito de esta casa de estudios. A todo esto debemos añadir que el 34,78% posee contrato con alguna empresa de internet, de los cuales el 15,53% tiene un <em>router</em> en el lugar de conexión.</p>
 <p>Además se intentó comprobar cuántos de los encuestados ven con buenos ojos la distribución libre y gratuita de internet en lugares públicos, llegándose a la suma de que  40,37% se manifestó con grado excelente, el 32,30% en grado muy bueno y el 16,15% en grado bueno.</p>
@@ -108,8 +154,8 @@ Se trabajó una muestra de 173 personas con el fin de determinar el universo exi
 <p>La mayor inversión del proyecto está centralizada en la adquisición de los equipos.<br><h3><em>Ingresos y egresos</em><em> </em></h3><br>Los ingresos no serán generados por la venta del servicio de Internet sino por la venta de publicidades o donaciones.</p>
 <p>Si se quiere, se podrá disponer de un lugar de venta de CDs, DVDs, etc.</p>
 <p>Con respecto a los egresos, estos son mínimos una vez que se adquieran los equipos. Los gastos serán los de mantenimiento, sueldo del administrador y la tarifa de Internet.</p>
-<p>Los costos serán estudiados y aprobados por una comisión evaluadora creada por la entidad reguladora.</p></section>
-<section class="archivo__sec" id="4-estudio-del-mercado"><h2>4. Estudio del Mercado</h2><h2>Características comerciales</h2>
+<p>Los costos serán estudiados y aprobados por una comisión evaluadora creada por la entidad reguladora.</p></div><a class="cap__arriba" href="#indice">↑ Volver al índice</a></section>
+<section class="cap" id="estudio-del-mercado" data-cap><header class="cap__cab"><span class="cap__num" aria-hidden="true">04</span><div><h2>Estudio del Mercado</h2><p class="cap__meta">Publicado el 27 de julio de 2009 · <a class="cap__orig" href="https://lsmciudadinteligente.wordpress.com/estudio-del-mercado/" rel="noopener" target="_blank">Ver en el original <span aria-hidden="true">↗</span></a></p></div></header><div class="cap__cuerpo"><h2>Características comerciales</h2>
 La MLSM o alguna entidad que lleve a cabo el proyecto se dedicará a brindar el servicio de conexión a Internet.
 <ul>
 	<li>Servicio: Conexión a Internet.</li>
@@ -220,8 +266,8 @@ En el caso de nuestro proyecto, los equipos necesarios son ofrecidos en el merca
 <p>(Solo en el efecto que el proyecto no sea llevado a cabo por la municipalidad)</p>
 <p>Para poner en marcha el proyecto será recomendable alquilar un local si es que no se establece una oficina en alguna empresa ya existente.</p>
 <p><span>Elección de la localización</span></p>
-<p>La determinación del local u oficina está a cargo de la Municipalidad de Libertador San Martín, teniendo en cuenta los siguientes factores:<br><ul><br>	<li>Cercanía      a los lugares más frecuentados.</li><br>	<li>Disponibilidad      de Línea de Internet.</li><br>	<li>Local      e infraestructura (alquiler y/o ubicación de la oficina)</li><br>	<li>Alcance      del proyecto.</li><br>	<li>Seguridad.</li><br></ul></p></section>
-<section class="archivo__sec" id="5-ingenieria-del-proyecto"><h2>5. Ingeniería del Proyecto</h2><h2>¿Producto o servicio?</h2>
+<p>La determinación del local u oficina está a cargo de la Municipalidad de Libertador San Martín, teniendo en cuenta los siguientes factores:<br><ul><br>	<li>Cercanía      a los lugares más frecuentados.</li><br>	<li>Disponibilidad      de Línea de Internet.</li><br>	<li>Local      e infraestructura (alquiler y/o ubicación de la oficina)</li><br>	<li>Alcance      del proyecto.</li><br>	<li>Seguridad.</li><br></ul></p></div><a class="cap__arriba" href="#indice">↑ Volver al índice</a></section>
+<section class="cap" id="ingenieria-del-proyecto" data-cap><header class="cap__cab"><span class="cap__num" aria-hidden="true">05</span><div><h2>Ingeniería del Proyecto</h2><p class="cap__meta">Publicado el 27 de julio de 2009 · <a class="cap__orig" href="https://lsmciudadinteligente.wordpress.com/ingenieria-del-proyecto/" rel="noopener" target="_blank">Ver en el original <span aria-hidden="true">↗</span></a></p></div></header><div class="cap__cuerpo"><h2>¿Producto o servicio?</h2>
 Internet es el conjunto de redes más grande del mundo. Su estructura es abierta, posee protocolos independientes de la red y de los sistemas operativos existentes. Además se hallan herramientas y servicios tales como el correo electrónico, las diversas páginas Web, transferencia de archivos (ftp), terminal remoto (telnet), conversaciones, acceso a videoconferencias, etc. donde las personas de todas las edades, estudios y profesiones encuentran la mayor variación de información.
 <p>Con respecto al tema de la recreación se brinda un lugar donde se puede observar las maravillas de la naturaleza, salas de lectura e información. Sin dejar de lado la posibilidad de divertirse, Internet, también brinda esta posibilidad donde una persona puede encontrar y ponerse en contacto con otras con el fin de hacer amistad o relacionarse con empresas para solicitar alguna información trascendente o llevar a cabo un negocio, siendo de mucha utilidad en el Marketing, Publicidad y Comercio. Otra forma de divertirse es la de concurrir a salas de juegos y apuestas <em>on-line</em>.</p>
 <p>Con estas referencias es que se ha decidido que nuestro proyecto brindará el acceso a Internet a los ciudadanos y visitantes de la localidad de Libertador San Martín con el fin de incrementar la cultura.  El servicio es gratis para todo aquel que posea una placa <em>wireless</em> en su PC o <em>laptop</em>.<br><h2>Requerimientos</h2><br><h3><em>Requerimiento técnico</em><em> </em></h3><br>Cuando se habla de comunicación por Internet surge un problema vinculado con el gran ancho de banda que se requiere para que la información fluya con una velocidad que haga más ameno la navegación. Es por este motivo que se necesita una conexión rápida y segura para la satisfacción de nuestros usuarios.<br><h3><em>Redes de comunicación</em><em></em></h3><br>Una red es un conjunto de computadoras interconectadas entre sí, ya sea por medio de calves o de ondas de radio (<em>Wireless</em>).</p>
@@ -264,8 +310,8 @@ Recordemos que este punto queda a decisión de la municipalidad o del agente reg
 	<li>Revistero.</li>
 	<li>Mesa con sillas.</li>
 </ul>
-<a>[1]</a> Trabajo de investigación sobre redes <em>Wireless</em>, por Hernando A. Gigliotti, en cumplimiento de los requisitos de la materia.</section>
-<section class="archivo__sec" id="6-programa-de-produccion"><h2>6. Programa de Producción</h2><p>Existe la posibilidad de que el usuario deba registrarse con el número de MAC de la placa <em>wireless</em>, para ello podrá dirigirse a la oficina, o hacerlo por teléfono o Internet (conectado desde otra red) y completar un formulario, con datos mínimos.<br><p><em>Ejemplo del formulario:</em></p><br><p><em>Formulario Nº ____________</em></p><br><p><em>Nombre y Apellido: _________________________________________________________</em></p><br><p><em>Lugar de residencia: ________________________________________________________</em></p><br><p><em>DNI: ____._______.________  Edad: ____________          Sexo: Masculino Femenino</em></p><br><p><em>Equipo, Modelo y Descripciones: _________________________________________________________________________</em></p><br><p><em>_________________________________________________________________________</em></p><br><p><em> Número de MAC: ____-____-____-____-____-____</em></p><br><br><p>Ilustración 10<strong>. </strong>Formulario para registrar el número de MAC.</p></p>
+<a>[1]</a> Trabajo de investigación sobre redes <em>Wireless</em>, por Hernando A. Gigliotti, en cumplimiento de los requisitos de la materia.</div><a class="cap__arriba" href="#indice">↑ Volver al índice</a></section>
+<section class="cap" id="programa-de-produccion" data-cap><header class="cap__cab"><span class="cap__num" aria-hidden="true">06</span><div><h2>Programa de Producción</h2><p class="cap__meta">Publicado el 27 de julio de 2009 · <a class="cap__orig" href="https://lsmciudadinteligente.wordpress.com/programa-de-produccion/" rel="noopener" target="_blank">Ver en el original <span aria-hidden="true">↗</span></a></p></div></header><div class="cap__cuerpo"><p>Existe la posibilidad de que el usuario deba registrarse con el número de MAC de la placa <em>wireless</em>, para ello podrá dirigirse a la oficina, o hacerlo por teléfono o Internet (conectado desde otra red) y completar un formulario, con datos mínimos.<br><p><em>Ejemplo del formulario:</em></p><br><p><em>Formulario Nº ____________</em></p><br><p><em>Nombre y Apellido: _________________________________________________________</em></p><br><p><em>Lugar de residencia: ________________________________________________________</em></p><br><p><em>DNI: ____._______.________  Edad: ____________          Sexo: Masculino Femenino</em></p><br><p><em>Equipo, Modelo y Descripciones: _________________________________________________________________________</em></p><br><p><em>_________________________________________________________________________</em></p><br><p><em> Número de MAC: ____-____-____-____-____-____</em></p><br><br><p>Ilustración 10<strong>. </strong>Formulario para registrar el número de MAC.</p></p>
 <h2>El cronograma de implementación del proyecto</h2>
 La entidad reguladora del proyecto deberá confexionar un cronograma de implementación del proyecto.
 <p>Consideraciones a tener en cuenta:<br><ul><br>	<li>Alquiler del local (opcional).</li><br>	<li>Adquisición de una línea de telefónica.</li><br>	<li>Adquisición de una línea de ADSL para proveer Internet.</li><br>	<li>Compra de los equipos.</li><br>	<li>Instalación de los mismos.</li><br>	<li>Marketing del proyecto.</li><br>	<li>Puesta en marcha del proyecto.</li><br></ul><br><strong><span> </span></strong><br><h2></h2><br><h2>Plano de distribución de los equipos</h2><br>Es la municipalidad o la entidad reguladora del proyecto la que deberá establecer los puntos exactos para colocar estrategicamente los nodos y realizar las transacciones pertinentes para colocar las debidas antenas.</p>
@@ -274,8 +320,8 @@ La entidad reguladora del proyecto deberá confexionar un cronograma de implemen
 <figure><img src="docs/archivo-2009/libertador-san-martin-etapas-de-implementacion.jpg" alt="Etapas: Primera etapa (rojo), segunda etapa (verde), tercera etapa (amarillo)." loading="lazy"><figcaption>Etapas: Primera etapa (rojo), segunda etapa (verde), tercera etapa (amarillo).</figcaption></figure>
 <p>Mapa de sugerencia de una posible distribución de los equipos y las primeras zonas Wi-Fi de Libertador San Martín:</p>
 <figure><img src="docs/archivo-2009/libertador-san-martin-zonas-wireless-en-un-comienzo.jpg" alt="Posible ubicación de los nodos y alcance." loading="lazy"><figcaption>Posible ubicación de los nodos y alcance.</figcaption></figure>
-<p>Una vez alcanzado esta meta, se podrá seguir ampliando la red <em>wireless</em>, abarcando no solo los lugares públicos como se ve en la imagen anterior.</p></section>
-<section class="archivo__sec" id="7-antenas"><h2>7. Antenas</h2><p>El propósito de esta sección es analizar el diseño del radioenlace que abarca el cálculo geométrico de la instalación y el cálculo del enlace.</p>
+<p>Una vez alcanzado esta meta, se podrá seguir ampliando la red <em>wireless</em>, abarcando no solo los lugares públicos como se ve en la imagen anterior.</p></div><a class="cap__arriba" href="#indice">↑ Volver al índice</a></section>
+<section class="cap" id="antenas" data-cap><header class="cap__cab"><span class="cap__num" aria-hidden="true">07</span><div><h2>Antenas</h2><p class="cap__meta">Publicado el 27 de julio de 2009 · <a class="cap__orig" href="https://lsmciudadinteligente.wordpress.com/antenas/" rel="noopener" target="_blank">Ver en el original <span aria-hidden="true">↗</span></a></p></div></header><div class="cap__cuerpo"><p>El propósito de esta sección es analizar el diseño del radioenlace que abarca el cálculo geométrico de la instalación y el cálculo del enlace.</p>
 <p>Una transmisión con RF en el espectro de las microondas, requiere que la señal transmitida alcance a la antena receptora en una trayectoria recta y limpia, es decir sin obstáculos ni elemento que produzcan dispersión. Ésta será la trayectoria primaria para estas frecuencias y la llamaremos trayectoria de espacio libre. <a href="docs/archivo-2009/transmision-de-datos-por-rf-terrestre.pdf" rel="noopener">[Transmision de datos por RF terrestre</a>]</p>
 <p>Para que la comunicación sea exitosa con una trayectoria se debe verificar que exista un alcance visual y que la línea de vista entre el emisor y el receptor no tenga obstáculos.<br><h2>Alcance visual</h2></p>
 <figure><img src="docs/archivo-2009/alcance-visual-y-radio-horizonte.jpg" alt="Alcance visual y radio horizonte de una instalación" loading="lazy"><figcaption>Alcance visual y radio horizonte de una instalación</figcaption></figure>
@@ -302,8 +348,8 @@ Existe un punto crítico, y se lo encuentra en el lugar de mayor acercamiento de
 <p>Para calcular la altura de despeje se puede plantear por la relación entre los catetos y la hipotenusa, al igual que en el cálculo para el radio horizonte.</p>
 <p>La única incógnita que tenemos es Ad.</p>
 <p>Valores a tener en cuenta:<br><ol><br>	<li>d: distancia al horizonte.</li><br>	<li>H: altura de la torre. [150mts. = 0,15Km.]</li><br>	<li>r: radio de la tierra. [6.413,50Km.]</li><br>	<li>Ejemplo para 1Km.</li><br></ol><br><strong> </strong><br><table><br><tbody><br><tr><br><td><br><p><strong>Km</strong></p><br></td><br><td><br><p><strong>Ad (mts)</strong></p><br></td><br></tr><br><tr><br><td><br><p>1</p><br></td><br><td><br><p>149,90</p><br></td><br></tr><br><tr><br><td><br><p>2</p><br></td><br><td><br><p>149,70</p><br></td><br></tr><br><tr><br><td><br><p>3</p><br></td><br><td><br><p>149,30</p><br></td><br></tr><br><tr><br><td><br><p>4</p><br></td><br><td><br><p>148,80</p><br></td><br></tr><br><tr><br><td><br><p>5</p><br></td><br><td><br><p>148,10</p><br></td><br></tr><br></tbody></table><br><p>Tabla 7. Altura de despeje a medio camino de 1 a 5 km.</p></p>
-<p><a>[1]</a> Sistemas de comunicaciones electrónicas, Wayne Tomasi.</p></section>
-<section class="archivo__sec" id="8-resultados"><h2>8. Resultados</h2><p>Antes de analizar el trabajo en su conjunto, vale la pena mencionar que el proyecto tendrá su importancia o será válido de acuerdo al interés que demuestre no sólo las autoridades municipales competentes sino también la comunidad en su conjunto. De allí que se hizo un trabajo de campo con la finalidad de no solo reflejar puntos de interés para el presente trabajo, sino también conocer la opinión de la comunidad y el deseo de transformar a Libertador San Martín en una Ciudad inteligente.</p>
+<p><a>[1]</a> Sistemas de comunicaciones electrónicas, Wayne Tomasi.</p></div><a class="cap__arriba" href="#indice">↑ Volver al índice</a></section>
+<section class="cap" id="resultados" data-cap><header class="cap__cab"><span class="cap__num" aria-hidden="true">08</span><div><h2>Resultados</h2><p class="cap__meta">Publicado el 27 de julio de 2009 · <a class="cap__orig" href="https://lsmciudadinteligente.wordpress.com/resultados/" rel="noopener" target="_blank">Ver en el original <span aria-hidden="true">↗</span></a></p></div></header><div class="cap__cuerpo"><p>Antes de analizar el trabajo en su conjunto, vale la pena mencionar que el proyecto tendrá su importancia o será válido de acuerdo al interés que demuestre no sólo las autoridades municipales competentes sino también la comunidad en su conjunto. De allí que se hizo un trabajo de campo con la finalidad de no solo reflejar puntos de interés para el presente trabajo, sino también conocer la opinión de la comunidad y el deseo de transformar a Libertador San Martín en una Ciudad inteligente.</p>
 <p>Por lo tanto para este trabajo se realizó un trabajo de campo a través de encuestas tratando de cubrir toda la ciudad de Libertador San Martín en sus distintos estratos sociales, económicos, culturales e inclusive se trató de buscar la opinión de los visitantes en tránsito que podrían ser o pacientes del Sanatorio Adventista de Plata, Padre de Alumnos de la Universidad Adventista del Plata como también turistas.</p>
 <p>Al estudiar las 161 encuestas realizadas, tuvimos como resultado que el 37,89% fueron varones y el 62,11% la contestaron las damas.<br><p>Ilustración 18. Porcentaje por sexo</p></p>
 <p>De todas las edades destacándose los 16 años a los 35 años, edad justa del aprendizaje en todas sus líneas desde el secundario a la universidad.<br><table><br><tbody><br><tr><br><td><br><p><strong>Edades</strong></p><br></td><br><td><br><p><strong>Cantidad</strong></p><br></td><br><td><br><p><strong>Porcentaje</strong></p><br></td><br></tr><br><tr><br><td><br><p>10 a 15</p><br></td><br><td><br><p>6</p><br></td><br><td><br><p>3,73%</p><br></td><br></tr><br><tr><br><td><br><p>16 a 21</p><br></td><br><td><br><p>35</p><br></td><br><td><br><p>21,74%</p><br></td><br></tr><br><tr><br><td><br><p>22 a 29</p><br></td><br><td><br><p>61</p><br></td><br><td><br><p>37,89%</p><br></td><br></tr><br><tr><br><td><br><p>30 a 35</p><br></td><br><td><br><p>25</p><br></td><br><td><br><p>15,53%</p><br></td><br></tr><br><tr><br><td><br><p>36 a 39</p><br></td><br><td><br><p>7</p><br></td><br><td><br><p>4,35%</p><br></td><br></tr><br><tr><br><td><br><p>40 a 49</p><br></td><br><td><br><p>18</p><br></td><br><td><br><p>11,18%</p><br></td><br></tr><br><tr><br><td><br><p>50 a 59</p><br></td><br><td><br><p>6</p><br></td><br><td><br><p>3,73%</p><br></td><br></tr><br><tr><br><td><br><p>60 o más</p><br></td><br><td><br><p>3</p><br></td><br><td><br><p>1,86%</p><br></td><br></tr><br><tr><br><td><br><p>No contestó</p><br></td><br><td><br><p>0</p><br></td><br><td><br><p>0,00%</p><br></td><br></tr><br></tbody></table><br><p>Tabla 8. Distribución de cantidades por edades y porcentajes</p></p>
@@ -668,8 +714,8 @@ Existe un punto crítico, y se lo encuentra en el lugar de mayor acercamiento de
 </tr>
 </tbody></table>
 <p>Tabla 29. Grado de interés en que LSM se convierta en una Ciudad Inteligente</p>
-<p>El 18 % dijo que colaboraría de diversas formas para hacer de este proyecto una realidad.<br><table><br><tbody><br><tr><br><td><br><p><strong>¿Colaboraría con el proyecto?</strong></p><br></td><br><td><br><p><strong>Cantidad</strong></p><br></td><br><td><br><p><strong>Porcentaje</strong></p><br></td><br></tr><br><tr><br><td><br><p>Si</p><br></td><br><td><br><p>18</p><br></td><br><td><br><p>11,18%</p><br></td><br></tr><br><tr><br><td><br><p>No</p><br></td><br><td><br><p>126</p><br></td><br><td><br><p>78,26%</p><br></td><br></tr><br><tr><br><td><br><p>No contestó</p><br></td><br><td><br><p>17</p><br></td><br><td><br><p>10,56%</p><br></td><br></tr><br></tbody></table><br><p>Tabla 30. Grado de colaboración</p></p></section>
-<section class="archivo__sec" id="9-conclusiones-y-recomendaciones"><h2>9. Conclusiones y Recomendaciones</h2><p><strong>Conclusiones</strong></p>
+<p>El 18 % dijo que colaboraría de diversas formas para hacer de este proyecto una realidad.<br><table><br><tbody><br><tr><br><td><br><p><strong>¿Colaboraría con el proyecto?</strong></p><br></td><br><td><br><p><strong>Cantidad</strong></p><br></td><br><td><br><p><strong>Porcentaje</strong></p><br></td><br></tr><br><tr><br><td><br><p>Si</p><br></td><br><td><br><p>18</p><br></td><br><td><br><p>11,18%</p><br></td><br></tr><br><tr><br><td><br><p>No</p><br></td><br><td><br><p>126</p><br></td><br><td><br><p>78,26%</p><br></td><br></tr><br><tr><br><td><br><p>No contestó</p><br></td><br><td><br><p>17</p><br></td><br><td><br><p>10,56%</p><br></td><br></tr><br></tbody></table><br><p>Tabla 30. Grado de colaboración</p></p></div><a class="cap__arriba" href="#indice">↑ Volver al índice</a></section>
+<section class="cap" id="conclusiones-y-recomendaciones" data-cap><header class="cap__cab"><span class="cap__num" aria-hidden="true">09</span><div><h2>Conclusiones y Recomendaciones</h2><p class="cap__meta">Publicado el 27 de julio de 2009 · <a class="cap__orig" href="https://lsmciudadinteligente.wordpress.com/conclusiones-y-recomendaciones/" rel="noopener" target="_blank">Ver en el original <span aria-hidden="true">↗</span></a></p></div></header><div class="cap__cuerpo"><p><strong>Conclusiones</strong></p>
 <p>El apoyo del proyecto por parte de la población encuestada es altamente significativo. Además, los resultados evaluados y expuestos anteriormente, brindan los datos de que existe un gran porcentaje de personas que tienen acceso a internet mediante algún dispositivo inalámbrico, ya sea por motivos de comunicación, estudios, trabajos, compra y ventas, entre otros.</p>
 <p>De esta muestra se obtuvo que el 27,33% contrata un servicio inalámbrico, además debemos agregar a los alumnos de la UAP que son el 24,84% del total de encuestados, que se conectan al <em>wireless</em> gratuito de esta casa de estudios. A todo esto debemos añadir que el 34,78% posee contrato con alguna empresa de internet, de los cuales el 15,53% posee un <em>router</em> en el lugar de conexión.</p>
 <p>Además se comprobó que los encuestados ven con buenos ojos la distribución libre y gratuita de internet en lugares públicos, llegándose a la suma de que  40,37% se manifestó con grado excelente, el 32,30% en grado muy bueno y el 16,15% en grado bueno.</p>
@@ -681,14 +727,14 @@ Existe un punto crítico, y se lo encuentra en el lugar de mayor acercamiento de
 <p>Consultar con un especialista en sistemas en la configuración de los equipos para obtener el mejor provecho de los mismos, tanto en infraestructura como en ancho de banda.</p>
 <p>Asesorarse en la compra de los equipos, con otras implementaciones, con el motivo de adquirir las mejores unidades y al mejor costo posible del mercado actual.</p>
 <p>Realizar un estudio de campo en la ciudad vecina de Puiggari, con el objetivo de determinar si allí es posible implementar éste proyecto.</p>
-<p>Por último, recomiendo a la Municipalidad de Libertador San Martín implementar este proyecto en conjunto con la carrera de Licenciatura en Sistemas de Información de la Universidad Adventista del Plata.</p></section>
-<section class="archivo__sec" id="agradecimientos"><h2>Agradecimientos</h2><p>Quisiera expresar mi gratitud hacia el Lic. en Sistemas Sergio Espinosa quien además es Subgerente del departamento de sistemas del Sanatorio Adventista del Plata, por sus sugerencias.</p>
+<p>Por último, recomiendo a la Municipalidad de Libertador San Martín implementar este proyecto en conjunto con la carrera de Licenciatura en Sistemas de Información de la Universidad Adventista del Plata.</p></div><a class="cap__arriba" href="#indice">↑ Volver al índice</a></section>
+<section class="cap" id="agradecimientos" data-cap><header class="cap__cab"><span class="cap__num" aria-hidden="true">A</span><div><h2>Agradecimientos</h2><p class="cap__meta">Publicado el 27 de julio de 2009 · <a class="cap__orig" href="https://lsmciudadinteligente.wordpress.com/agradecimientos/" rel="noopener" target="_blank">Ver en el original <span aria-hidden="true">↗</span></a></p></div></header><div class="cap__cuerpo"><p>Quisiera expresar mi gratitud hacia el Lic. en Sistemas Sergio Espinosa quien además es Subgerente del departamento de sistemas del Sanatorio Adventista del Plata, por sus sugerencias.</p>
 <p>Al Mag. en Ingeniería del Software Carlos Marí por sus palabras de ánimo, sugerencias y disposición constante.</p>
 <p>A la Mag. en Educación Nilde Mayer por haber dedicado tiempo en la corrección lingüística de mi proyecto.</p>
 <p>Además quisiera agradecer a mis padres, Mag. Rolando Gigliotti y PU. Silvia Ferreyra, por ayudarme en la realización del proyecto con su tiempo y conocimiento, por haber hecho un esfuerzo tan grande e importante para brindarme una educación adventista y por apoyarme siempre en todo lo que hago para poder llegar a las metas que tengo para mi vida.</p>
 <p><strong> </strong></p>
-<p><strong> </strong>Por último quisiera agradecer a mis amigos: A la Lic. Lissie Mayer, por ayudarme en la presentación escrita del proyecto. A la Lic. Cynthia Álvarez por su ayuda y conocimiento en la preparación de la presentación del proyecto. Al Lic. Emmanuel Torres, por las modificaciones en el logo del proyecto y a su esposa Marisel Morán que hizo posible que este proyecto fuera presentado de la mejor manera.</p></section>
-<section class="archivo__sec" id="bibliografia"><h2>Bibliografía</h2><ol>
+<p><strong> </strong>Por último quisiera agradecer a mis amigos: A la Lic. Lissie Mayer, por ayudarme en la presentación escrita del proyecto. A la Lic. Cynthia Álvarez por su ayuda y conocimiento en la preparación de la presentación del proyecto. Al Lic. Emmanuel Torres, por las modificaciones en el logo del proyecto y a su esposa Marisel Morán que hizo posible que este proyecto fuera presentado de la mejor manera.</p></div><a class="cap__arriba" href="#indice">↑ Volver al índice</a></section>
+<section class="cap" id="bibliografia" data-cap><header class="cap__cab"><span class="cap__num" aria-hidden="true">B</span><div><h2>Bibliografía</h2><p class="cap__meta">Publicado el 27 de julio de 2009 · <a class="cap__orig" href="https://lsmciudadinteligente.wordpress.com/bibliografia/" rel="noopener" target="_blank">Ver en el original <span aria-hidden="true">↗</span></a></p></div></header><div class="cap__cuerpo"><ol>
 	<li><em>2hotspot</em>. (s.f.). Recuperado el 20 de enero de 2009, de http://www.2hotspot.com/</li>
 	<li>Acevedo Eder, C. F. (2005). <em>Comunidad de redes inalambricas basandose en el uso e implementacion de software libre.</em></li>
 	<li><em>Bandwidth Controller</em>. (s.f.). Recuperado el 16 de febrero de 2009, de http://bandwidthcontroller.com/</li>
@@ -715,21 +761,25 @@ Existe un punto crítico, y se lo encuentra en el lugar de mayor acercamiento de
 	<li><em>Valencia Wireless</em>. (s.f.). Recuperado el 2009, de http://www.valenciawireless.org/</li>
 	<li>Wikipedia. (s.f.). <em>La enciclopedia de contenido libre</em>. Recuperado el 01 de Febrero de 2009, de http://es.wikipedia.org/wiki/Wikipedia:Portada</li>
 	<li><em>Zona WiFi Getafe</em>. (2007). Recuperado el 2008, de http://www.getafewifi.es/</li>
-</ol></section>
+</ol></div><a class="cap__arriba" href="#indice">↑ Volver al índice</a></section>
 
-    <section class="archivo__sec archivo__otros" id="otras-voces">
-      <h2>¿Quién más escribió sobre esto?</h2>
-      <p>Buscamos en noticias, sitios locales y repositorios académicos. No encontramos otro proyecto de “ciudad inteligente” para Libertador San Martín: el de 2009 sigue siendo el único publicado. Sí hay hitos y fuentes que cuentan la historia de la ciudad conectada:</p>
-      <ul class="linea-tiempo">
-        <li><b>1997</b> <span><a href="https://www.puiggariweb.com.ar/nuestro-sitio" rel="noopener">Puiggariweb</a>, de Alfredo Bizzocchi, fue el primer sitio web de la ciudad y uno de los primeros de Entre Ríos. Registra la primera conexión a internet de la ciudad, por módem telefónico, ese mismo año.</span></li>
-        <li><b>2009</b> <span>“Libertador San Martín, una Ciudad Inteligente”, de Hernando A. Gigliotti (este archivo).</span></li>
-        <li><b>2019</b> <span>La cooperativa La Agrícola Regional (LAR) empezó a ofrecer internet por fibra óptica en Libertador San Martín y Puiggari, con 38 km de fibra tendidos (<a href="https://paralelo32.com.ar/lar-ya-ofrece-internet-en-libertador-san-martin/" rel="noopener">Paralelo 32</a>).</span></li>
-        <li><b>2022</b> <span>Se inauguró el centro de monitoreo con 29 cámaras, financiado por el Fondo Provincial de Seguridad (<a href="https://www.unoentrerios.com.ar/libertador-san-martin-inauguraron-un-centro-monitoreo-n2722296.html" rel="noopener">Uno Entre Ríos</a>).</span></li>
-        <li><b>2026</b> <span>El municipio informa 165 cámaras monitoreadas y un plan de 105 cuadras de asfalto (<a href="https://www.lacapital.com.ar/la-region/la-ciudad-solo-dos-horas-rosario-donde-el-alcohol-y-el-tabaco-son-rarezas-n10271150.html" rel="noopener">La Capital</a>).</span></li>
-      </ul>
-    </section>
+        <section class="cap" id="otras-voces" data-cap>
+          <header class="cap__cab"><span class="cap__num" aria-hidden="true">+</span><div><h2>¿Quién más escribió sobre esto?</h2><p class="cap__meta">Investigación de noviembre de 2026</p></div></header>
+          <div class="cap__cuerpo">
+            <p>Buscamos en noticias, sitios locales y repositorios académicos. No encontramos otro proyecto de “ciudad inteligente” para Libertador San Martín: el de 2009 sigue siendo el único publicado. Sí hay hitos y fuentes que cuentan la historia de la ciudad conectada:</p>
+            <ul class="linea-tiempo">
+              <li><b>1997</b> <span><a href="https://www.puiggariweb.com.ar/nuestro-sitio" rel="noopener">Puiggariweb</a>, de Alfredo Bizzocchi, fue el primer sitio web de la ciudad y uno de los primeros de Entre Ríos. Registra la primera conexión a internet de la ciudad, por módem telefónico, ese mismo año.</span></li>
+              <li><b>2009</b> <span>“Libertador San Martín, una Ciudad Inteligente”, de Hernando A. Gigliotti (este archivo).</span></li>
+              <li><b>2019</b> <span>La cooperativa La Agrícola Regional (LAR) empezó a ofrecer internet por fibra óptica en Libertador San Martín y Puiggari, con 38 km de fibra tendidos (<a href="https://paralelo32.com.ar/lar-ya-ofrece-internet-en-libertador-san-martin/" rel="noopener">Paralelo 32</a>).</span></li>
+              <li><b>2022</b> <span>Se inauguró el centro de monitoreo con 29 cámaras, financiado por el Fondo Provincial de Seguridad (<a href="https://www.unoentrerios.com.ar/libertador-san-martin-inauguraron-un-centro-monitoreo-n2722296.html" rel="noopener">Uno Entre Ríos</a>).</span></li>
+              <li><b>2026</b> <span>El municipio informa 165 cámaras monitoreadas y un plan de 105 cuadras de asfalto (<a href="https://www.lacapital.com.ar/la-region/la-ciudad-solo-dos-horas-rosario-donde-el-alcohol-y-el-tabaco-son-rarezas-n10271150.html" rel="noopener">La Capital</a>).</span></li>
+            </ul>
+          </div>
+        </section>
 
-    <p class="fuentes">Se omitieron la página “Contacto”, porque tenía teléfonos y un email personales de 2009, y “Download”, porque sus enlaces apuntaban a un servidor externo que ya no es del proyecto. Texto original de Hernando A. Gigliotti; esta página lo reproduce sin cambios de contenido. La conversión y el diseño se hicieron con asistencia de inteligencia artificial. Ver la <a href="privacidad.html">política de privacidad</a>.</p>
+        <p class="fuentes">Se omitieron la página “Contacto”, porque tenía teléfonos y un email personales de 2009, y “Download”, porque sus enlaces apuntaban a un servidor externo que ya no es del proyecto. Texto original de Hernando A. Gigliotti. La conversión y el diseño de esta página se hicieron con asistencia de inteligencia artificial. Ver la <a href="privacidad.html">política de privacidad</a>.</p>
+      </div>
+    </div>
   </div>
 </main>
 
@@ -741,7 +791,7 @@ Existe un punto crítico, y se lo encuentra en el lugar de mayor acercamiento de
   </div>
 </footer>
 <div class="consent" data-consent hidden role="dialog" aria-label="Cookies">
-  <p>Usamos Google Analytics para saber cuántas personas visitan el sitio. Solo se activa si aceptás.</p>
+  <p>Usamos Google Analytics para saber cuántas personas visitan el sitio. Solo se activa si aceptás. <a href="privacidad.html#cookies">Más información</a>.</p>
   <div><button class="boton" data-elegir="si">Aceptar</button><button class="boton boton--sec" data-elegir="no">Rechazar</button></div>
 </div>
 </body>

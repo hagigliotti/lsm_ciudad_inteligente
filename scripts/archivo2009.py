@@ -120,9 +120,32 @@ def slug(t):
     return re.sub(r'[^a-z0-9]+', '-', t).strip('-')
 
 
+DESCRIPCIONES = {
+    'Proyecto': 'Presentación, logos y aprobación del proyecto.',
+    '1. Introducción': 'Justificación, problema, objetivos, marco teórico, importancia y limitaciones.',
+    '2. Aspectos Generales': 'Nombre, ubicación, clasificación y objetivos.',
+    '3. Resumen Ejecutivo': 'Mercado, localización, organización e inversión.',
+    '4. Estudio del Mercado': 'Usos del servicio, encuesta, competencia y tamaño.',
+    '5. Ingeniería del Proyecto': 'Requerimientos técnicos, hardware, software y personal.',
+    '6. Programa de Producción': 'Registro de usuarios, cronograma y etapas por barrios.',
+    '7. Antenas': 'Radioenlaces, alcance visual y radio horizonte.',
+    '8. Resultados': 'Análisis de las 161 encuestas.',
+    '9. Conclusiones y Recomendaciones': 'Viabilidad y recomendaciones finales.',
+    'Agradecimientos': 'Quienes ayudaron a hacer el proyecto.',
+    'Bibliografía': 'Fuentes consultadas en 2008 y 2009.',
+}
+
+
+def fecha_larga(f):
+    a, m, d = f.split('-')
+    meses = 'enero febrero marzo abril mayo junio julio agosto septiembre octubre noviembre diciembre'.split()
+    return f'{int(d)} de {meses[int(m) - 1]} de {a}'
+
+
 def main():
     xml = sorted(glob.glob(os.path.join(CARPETA, '*.xml')))[0]
     canal = ET.parse(xml).getroot().find('channel')
+    original = (canal.findtext('link') or 'https://lsmciudadinteligente.wordpress.com').rstrip('/') + '/'
     paginas, entradas = [], []
     for it in canal.findall('item'):
         tipo = it.findtext('wp:post_type', namespaces=NS)
@@ -131,27 +154,44 @@ def main():
         titulo = (it.findtext('title') or '').strip()
         if titulo in OMITIR:
             continue
-        reg = {'titulo': titulo, 'fecha': it.findtext('wp:post_date', namespaces=NS)[:10],
+        enlace = (it.findtext('link') or '').strip()
+        if not enlace.startswith(original):
+            enlace = original
+        reg = {'titulo': titulo, 'fecha': it.findtext('wp:post_date', namespaces=NS)[:10], 'enlace': enlace,
                'orden': int(it.findtext('wp:menu_order', namespaces=NS) or 0),
                'html': limpiar(it.findtext('content:encoded', namespaces=NS) or '')}
         (paginas if tipo == 'page' else entradas).append(reg)
     paginas.sort(key=lambda p: p['orden'])
     entradas.sort(key=lambda p: p['fecha'])
 
-    secciones = []
+    def orig(url, texto='Ver en el original'):
+        return f'<a class="cap__orig" href="{html.escape(url, quote=True)}" rel="noopener" target="_blank">{texto} <span aria-hidden="true">↗</span></a>'
+
+    tarjetas, menu, secciones = [], [], []
     for p in paginas:
+        m = re.match(r'^(\d+)\.\s*(.+)$', p['titulo'])
+        num, nombre = (m.group(1).zfill(2), m.group(2)) if m else (p['titulo'][0].upper(), p['titulo'])
+        sid = slug(nombre)
+        desc = DESCRIPCIONES.get(p['titulo'], '')
         cuerpo = p['html']
         if p['titulo'].startswith('1.'):
-            cuerpo = ''.join(f'<h3>{html.escape(e["titulo"])}</h3>{e["html"]}' for e in entradas)
-        secciones.append((slug(p['titulo']), p['titulo'], cuerpo))
+            cuerpo = ''.join(
+                f'<div class="cap__sub"><h3>{html.escape(e["titulo"])}</h3><p class="cap__meta">{orig(e["enlace"])}</p>{e["html"]}</div>'
+                for e in entradas)
+        tarjetas.append(f'<li><a href="#{sid}"><span class="ind__num">{num}</span><span class="ind__txt"><b>{html.escape(nombre)}</b><small>{html.escape(desc)}</small></span></a></li>')
+        menu.append(f'<li><a href="#{sid}"><span>{num}</span>{html.escape(nombre)}</a></li>')
+        secciones.append(
+            f'<section class="cap" id="{sid}" data-cap><header class="cap__cab"><span class="cap__num" aria-hidden="true">{num}</span>'
+            f'<div><h2>{html.escape(nombre)}</h2><p class="cap__meta">Publicado el {fecha_larga(p["fecha"])} · {orig(p["enlace"])}</p></div></header>'
+            f'<div class="cap__cuerpo">{cuerpo}</div><a class="cap__arriba" href="#indice">↑ Volver al índice</a></section>')
 
-    indice = '\n'.join(f'<li><a href="#{s}">{html.escape(t)}</a></li>' for s, t, _ in secciones)
-    cuerpo = '\n'.join(f'<section class="archivo__sec" id="{s}"><h2>{html.escape(t)}</h2>{c}</section>' for s, t, c in secciones)
     plantilla = open(os.path.join(RAIZ, 'scripts', 'archivo2009.plantilla.html'), encoding='utf-8').read()
-    salida = plantilla.replace('{{TITULO_BLOG}}', html.escape(canal.findtext('title').strip('"'))) \
-                      .replace('{{INDICE}}', indice).replace('{{CONTENIDO}}', cuerpo)
+    salida = (plantilla.replace('{{TITULO_BLOG}}', html.escape(canal.findtext('title').strip('"')))
+              .replace('{{ORIGINAL}}', html.escape(original, quote=True))
+              .replace('{{TARJETAS}}', '\n'.join(tarjetas)).replace('{{MENU}}', '\n'.join(menu))
+              .replace('{{CONTENIDO}}', '\n'.join(secciones)))
     open(os.path.join(RAIZ, 'archivo-2009.html'), 'w', encoding='utf-8').write(salida)
-    print(f'archivo-2009.html: {len(secciones)} secciones, {len(entradas)} entradas')
+    print(f'archivo-2009.html: {len(secciones)} capítulos, {len(entradas)} entradas')
 
 
 if __name__ == '__main__':

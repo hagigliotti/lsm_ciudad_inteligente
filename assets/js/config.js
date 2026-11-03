@@ -3,7 +3,7 @@ export const CONFIG = {
   // Pegá acá tu ID de medición de Google Analytics 4 (formato G-XXXXXXXXXX).
   // Mientras esté vacío, no se carga nada de Google. Aunque lo completes,
   // solo se carga si la persona acepta en el aviso de cookies.
-  gaId: '',
+  gaId: 'G-FNJFF7J97Q',
 
   // Clave pública de Web3Forms para recibir las ideas del formulario por email.
   // Si la dejás vacía, el formulario se muestra pero avisa que está desactivado.
