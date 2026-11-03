@@ -18,6 +18,7 @@ export const PARTIDAS = [
   { id: 'c1', area: 'con', nombre: 'Caños para fibra en las 105 cuadras que se asfaltan', detalle: 'Solo el costo extra de dejar ~10,5 km de caños vacíos y cámaras cada 100 m dentro de la obra de asfalto del municipio. El asfalto no se paga acá.', capex: [105000, 210000], opex: [0, 0] },
   { id: 'c2', area: 'con', nombre: 'Anillo troncal de fibra municipal hasta Puiggari', detalle: '~18 km, aéreo en postes existentes y en los ductos nuevos. Red neutra: la usan LAR y otros proveedores.', capex: [150000, 280000], opex: [8000, 15000] },
   { id: 'c3', area: 'con', nombre: 'Nodo central y sala técnica', detalle: 'Equipos de núcleo, energía de respaldo (UPS y solar), climatización, doble salida a internet.', capex: [40000, 80000], opex: [5000, 10000] },
+  { id: 'c6', area: 'con', nombre: 'Enlaces Starlink: respaldo y puntos sin fibra', detalle: '~6 antenas: segunda salida a internet del nodo central y del centro de monitoreo, y conexión inmediata de accesos por ruta y caminos rurales sin tender fibra.', capex: [3000, 8000], opex: [2500, 6000] },
   { id: 'c4', area: 'con', nombre: 'Wi-Fi 6 en 8 espacios públicos', detalle: 'Plazas, terminal, CIC, polideportivo. Con portal sin pedir DNI.', capex: [16000, 32000], opex: [3000, 6000] },
   { id: 'c5', area: 'con', nombre: 'Red LoRaWAN para sensores', detalle: '4 gateways y servidor de red de código abierto. Cubre todo el ejido.', capex: [8000, 16000], opex: [1000, 3000] },
   { id: 'd1', area: 'dat', nombre: 'Plataforma urbana de datos y gemelo digital', detalle: 'Código abierto (FIWARE), tablero municipal, datos abiertos, modelo 3D de la ciudad. Con la UAP.', capex: [120000, 250000], opex: [25000, 50000] },
@@ -42,6 +43,7 @@ export const INICIO = 2027;
 export const CRONOGRAMA = [
   { fase: 0, nombre: 'Diagnóstico, ordenanza de datos y mesa de gobernanza', t: [0, 1] },
   { fase: 1, nombre: 'Caños para fibra en cada cuadra que se asfalta', t: [1, 15] },
+  { fase: 1, nombre: 'Enlaces Starlink de respaldo y en los accesos', t: [1, 2] },
   { fase: 1, nombre: 'Anillo de fibra y nodo central', t: [2, 6] },
   { fase: 1, nombre: 'Red de cámaras separada y centro de monitoreo', t: [2, 5] },
   { fase: 1, nombre: 'LoRaWAN y Wi-Fi en espacios públicos', t: [3, 5] },
