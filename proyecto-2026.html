@@ -1,0 +1,269 @@
+<!doctype html>
+<html lang="es-AR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://www.googletagmanager.com; connect-src 'self' https://*.google-analytics.com https://*.analytics.google.com https://www.googletagmanager.com; img-src 'self' data: https://*.tile.openstreetmap.org https://server.arcgisonline.com https://*.google-analytics.com https://www.googletagmanager.com; style-src 'self'; font-src 'self'; base-uri 'self'; form-action 'self'; object-src 'none'; upgrade-insecure-requests">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <title>Proyecto LSM 2031 · LSM Ciudad Inteligente</title>
+  <meta name="description" content="El proyecto completo para hacer de Libertador San Martín una ciudad inteligente de nivel internacional: mapa, costos, cronograma, seguridad y robótica.">
+  <meta property="og:title" content="Proyecto LSM 2031 · Libertador San Martín, ciudad inteligente">
+  <meta property="og:image" content="https://hagigliotti.github.io/lsm_ciudad_inteligente/assets/logos/portada.jpg">
+  <meta name="theme-color" content="#0d1f18">
+  <link rel="icon" href="assets/logos/isotipo.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/vendor/leaflet/leaflet.css">
+  <link rel="stylesheet" href="assets/css/estilo.css">
+  <script src="assets/vendor/leaflet/leaflet.js" defer></script>
+  <script type="module" src="assets/js/proyecto.js"></script>
+  <script type="module" src="assets/js/app.js"></script>
+</head>
+<body>
+<a class="salto" href="#contenido">Saltar al contenido</a>
+<header class="barra">
+  <div class="envoltura">
+    <a class="barra__marca" href="index.html"><img src="assets/logos/isotipo.svg" alt="" width="36" height="36">LSM</a>
+    <nav aria-label="Secciones">
+      <a class="opc" href="index.html">Análisis</a>
+      <a href="proyecto-2026.html" aria-current="page">Proyecto 2026</a>
+      <a href="archivo-2009.html">Archivo 2009</a>
+      <a class="opc2" href="#presupuesto">Costos</a>
+    </nav>
+  </div>
+</header>
+
+<main id="contenido">
+
+<section class="proy-portada">
+  <div class="envoltura">
+    <span class="etiqueta">Plan maestro · 2027 – 2031</span>
+    <h1>Proyecto LSM 2031</h1>
+    <p class="intro">Cómo convertir Libertador San Martín en la ciudad pequeña mejor conectada de Sudamérica, con estándares europeos de privacidad y seguridad. Qué se construye, dónde, cuánto cuesta y en qué orden.</p>
+    <div class="proy-chips">
+      <div><b data-total="capex">USD 1,5 – 3,0 millones</b><span>inversión en 5 años</span></div>
+      <div><b data-total="opex">USD 133 – 284 mil</b><span>de funcionamiento por año</span></div>
+      <div><b data-total="hab">USD 32 a 63</b><span>por habitante y por año</span></div>
+      <div><b>20</b><span>trimestres, en 5 fases</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="resumen">
+  <div class="envoltura">
+    <span class="etiqueta">Resumen ejecutivo</span>
+    <h2>De un nodo Wi-Fi a una ciudad que se gestiona con datos</h2>
+    <p class="intro">El proyecto de 2009 proponía un nodo Wi-Fi omnidireccional de 2,4 GHz, una línea ADSL y un presupuesto de $7.000 para dar internet gratis en el centro. Diecisiete años después, internet ya llega a casi todos por el celular y por la fibra de la cooperativa LAR. El problema ahora es otro: una ciudad que creció un 30 % en doce años, con barrios nuevos donde antes había campo, necesita gestionar alumbrado, agua, seguridad, tránsito y servicios con información en tiempo real.</p>
+    <p class="intro">Este plan lo resuelve en cinco capas que se construyen una sobre otra: <strong>conductos y fibra</strong> aprovechando el pavimento, <strong>sensores</strong> en una red de bajo consumo, una <strong>plataforma de datos abierta</strong>, <strong>servicios</strong> para vecinos, pacientes, estudiantes y turistas, y <strong>reglas de privacidad</strong> al nivel de las de Europa.</p>
+  </div>
+</section>
+
+<section id="leccion" class="alterna">
+  <div class="envoltura">
+    <span class="etiqueta">Lo que enseña el 2009</span>
+    <h2>Cada decisión de 2009, corregida</h2>
+    <div class="desliza">
+      <table class="tabla">
+        <thead><tr><th>Tema</th><th>Propuesta 2009</th><th>Decisión 2026</th></tr></thead>
+        <tbody>
+          <tr><td>Red</td><td>Un nodo Wi-Fi omnidireccional de 2,4 GHz y una línea ADSL para toda la zona.</td><td>Anillo de fibra municipal, red LoRaWAN para sensores y Wi-Fi 6 solo en espacios públicos.</td></tr>
+          <tr><td>Alcance</td><td>Centro, B° América y Libertador Norte y Sur; luego Los Tilos y Camarero; al final Puiggari.</td><td>Todo el ejido desde el primer año de sensores, porque lo que era campo hoy son barrios.</td></tr>
+          <tr><td>Población de diseño</td><td>5.926 habitantes (censo 2001).</td><td>15.000 habitantes más la población flotante de la UAP, el sanatorio y el turismo.</td></tr>
+          <tr><td>Presupuesto</td><td>$7.000 de inversión inicial.</td><td>USD 1,5 a 3,0 millones en 5 años, con una parte pagada por el ahorro de energía.</td></tr>
+          <tr><td>Sostenimiento</td><td>Publicidad y donaciones.</td><td>Presupuesto anual aprobado antes de comprar, contratos por rendimiento y red neutra que cobra por uso.</td></tr>
+          <tr><td>Registro de usuarios</td><td>Formulario con DNI, edad, sexo y la MAC del equipo.</td><td>Ningún dato personal para usar el Wi-Fi público. La MAC se puede falsificar y el DNI no hace falta.</td></tr>
+          <tr><td>Interferencias</td><td>“No existen construcciones que puedan interferir.”</td><td>Relevamiento de radio y de arbolado antes de instalar: la ciudad creció hacia arriba y hacia los costados.</td></tr>
+          <tr><td>Lo que sigue valiendo</td><td colspan="2">La encuesta a 161 personas (el 88,82 % quería internet libre en lugares públicos), la idea de avanzar por etapas y barrios, el cálculo de radioenlaces y la visión de llegar hasta Puiggari y Camarero.</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<section id="mapa">
+  <div class="envoltura">
+    <span class="etiqueta">Dónde</span>
+    <h2>La ciudad de 2009 y la de hoy</h2>
+    <p class="intro">A la izquierda, el mapa de etapas del proyecto original sobre la imagen satelital de 2009. A la derecha, la imagen satelital actual con la red propuesta. Lo que en 2009 era campo entre el centro y Puiggari hoy tiene calles, casas, el CIC y la plaza de Altos de Libertador.</p>
+    <div class="antes-ahora">
+      <figure class="antes-ahora__antes">
+        <img src="assets/img/mapa-2009-etapas.jpg" width="1400" height="905" alt="Mapa de 2009 con las tres etapas: centro en rojo, ampliación en verde y Puiggari en amarillo, rodeados de campos" loading="lazy">
+        <figcaption><b>2009</b> · Etapas originales: centro (rojo), Los Tilos y Camarero (verde), Puiggari (amarillo).</figcaption>
+      </figure>
+      <figure class="antes-ahora__ahora">
+        <div class="mapa" data-mapa role="region" aria-label="Mapa interactivo con la red propuesta"></div>
+        <figcaption><b>2026</b> · Fibra troncal (naranja), Wi-Fi público (verde), cobertura LoRaWAN (círculos) y zona de crecimiento (amarillo). Cambiá capas y base con el botón del mapa.</figcaption>
+      </figure>
+    </div>
+    <p class="fuentes">El trazado de la fibra es esquemático; el definitivo sale del relevamiento de postes y calles. Las coordenadas de los edificios son reales. Las lectoras de patentes van en los accesos por la Ruta 131 (este y oeste), en el acceso a Puiggari y en los caminos rurales principales.</p>
+  </div>
+</section>
+
+<section id="metas" class="alterna">
+  <div class="envoltura">
+    <span class="etiqueta">Metas 2031</span>
+    <h2>Medido como en Europa</h2>
+    <p class="intro">Para compararse con cualquier ciudad del mundo, el proyecto se mide con la norma internacional ISO 37122 de indicadores de ciudades inteligentes y se somete a una auditoría externa al final.</p>
+    <div class="cifras" data-metas></div>
+  </div>
+</section>
+
+<section id="componentes">
+  <div class="envoltura">
+    <span class="etiqueta">Qué se construye</span>
+    <h2>Los componentes, uno por uno</h2>
+    <div class="tarjetas">
+      <article class="tarjeta"><div class="tarjeta__icono" aria-hidden="true">🛣️</div><h3>Zanja única</h3><p>Cada cuadra que se pavimente lleva ductos para fibra. Hacerlo con la calle abierta ahorra entre el 60 y el 90 % frente a romperla después: la obra civil es la mayor parte del costo de la fibra subterránea.</p></article>
+      <article class="tarjeta"><div class="tarjeta__icono" aria-hidden="true">🔆</div><h3>Fibra y red neutra</h3><p>Un anillo municipal une edificios públicos, cámaras, el CIC y Puiggari. Se ofrece a la cooperativa LAR, que ya tiene fibra en la ciudad desde 2019, y a cualquier proveedor: más competencia, sin que el municipio sea operador.</p></article>
+      <article class="tarjeta"><div class="tarjeta__icono" aria-hidden="true">📡</div><h3>Sensores LoRaWAN</h3><p>Cuatro gateways cubren todo el ejido: en zona urbana el alcance real es de 2 a 5 km. Los sensores funcionan años a batería y avisan de anegamientos, pérdidas de agua, tanques vacíos, ruido y calidad del aire.</p></article>
+      <article class="tarjeta"><div class="tarjeta__icono" aria-hidden="true">💡</div><h3>Luminarias inteligentes</h3><p>LED con telegestión: se atenúan de madrugada, suben con movimiento y avisan cuando se queman. En Almada (Portugal) la telegestión sola redujo un 40 % la energía del alumbrado.</p></article>
+      <article class="tarjeta"><div class="tarjeta__icono" aria-hidden="true">🧠</div><h3>Gemelo digital</h3><p>Un modelo 3D de la ciudad con los datos en vivo: dónde se inunda, qué luminaria falla, cómo creció cada barrio. Lo desarrolla la UAP como laboratorio, con datos abiertos.</p></article>
+      <article class="tarjeta"><div class="tarjeta__icono" aria-hidden="true">📱</div><h3>Servicios para la gente</h3><p>Reclamos con foto y seguimiento, turnos, pago de tasas, alertas por WhatsApp, horarios de colectivos y una guía en seis idiomas para estudiantes, pacientes y turistas.</p></article>
+    </div>
+  </div>
+</section>
+
+<section id="seguridad-urbana" class="alterna">
+  <div class="envoltura">
+    <span class="etiqueta">Seguridad pública</span>
+    <h2>Patentes sí. Rostros, con reglas.</h2>
+    <div class="tarjetas">
+      <article class="tarjeta tarjeta--pot"><h3>Lectoras de patentes en los accesos</h3><p>12 cámaras en los 6 accesos leen patentes y avisan al centro de monitoreo si un vehículo tiene pedido de secuestro. Las lecturas que no coinciden con ninguna alerta se borran a las 72 horas. Es la herramienta con mejor relación costo y resultado para una ciudad con pocos accesos.</p></article>
+      <article class="tarjeta tarjeta--pot"><h3>Cámaras que detectan, no que identifican</h3><p>La analítica de video avisa de una caída, un merodeo nocturno, un objeto abandonado o una calle anegada, y cuenta personas en eventos, sin reconocer a nadie. Las 165 cámaras actuales pasan a una red separada de internet.</p></article>
+      <article class="tarjeta tarjeta--falla"><h3>Reconocimiento facial: solo forense y con orden judicial</h3><p>En la Ciudad de Buenos Aires la justicia declaró inconstitucional el sistema de reconocimiento facial de prófugos en 2023, por falta de control y de pruebas sobre sus errores. En la Unión Europea, la identificación biométrica en tiempo real en espacios públicos está prohibida salvo excepciones graves, con autorización previa en cada caso. Por eso el proyecto no lo usa en vivo. Si una ley lo habilitara, solo se buscaría un rostro en grabaciones, con orden judicial, verificación de dos personas y registro auditable.</p></article>
+    </div>
+  </div>
+</section>
+
+<section id="robotica">
+  <div class="envoltura">
+    <span class="etiqueta">Robótica</span>
+    <h2>Robots donde rinden, no para la foto</h2>
+    <div class="desliza">
+      <table class="tabla">
+        <thead><tr><th>Tarea</th><th>Tecnología</th><th>Veredicto</th></tr></thead>
+        <tbody>
+          <tr><td>Corte de césped</td><td>Robots cortacésped autónomos en plazas y parques, de noche.</td><td><span class="estado-chip ok">SÍ</span> Probado, barato, silencioso.</td></tr>
+          <tr><td>Riego</td><td>No hace falta un robot: válvulas con sensores de humedad y pronóstico del tiempo.</td><td><span class="estado-chip ok">SÍ</span> Ahorra agua desde el primer verano.</td></tr>
+          <tr><td>Inspección</td><td>Drones para luminarias, desagües, techos públicos y obras.</td><td><span class="estado-chip ok">SÍ</span> Menos escaleras y camiones.</td></tr>
+          <tr><td>Mantenimiento de calles</td><td>Cámaras en los vehículos municipales que detectan baches y carteles dañados.</td><td><span class="estado-chip ok">SÍ</span> Usa los recorridos que ya existen.</td></tr>
+          <tr><td>Barrido</td><td>Barredora eléctrica autónoma. Porvoo (Finlandia) la contrató en 2026 como servicio por 8 años.</td><td><span class="estado-chip pend">PILOTO</span> Desde 2030, en el centro, si baja el costo.</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<section id="presupuesto" class="alterna">
+  <div class="envoltura">
+    <span class="etiqueta">Cuánto cuesta</span>
+    <h2>Presupuesto estimado</h2>
+    <p class="intro">Rangos en dólares de 2026, con precios internacionales de referencia; en Argentina pueden variar según impuestos e importación. Sirven para decidir y para pedir cotizaciones, no son un pliego.</p>
+    <div class="barras-area" data-barras></div>
+    <div class="desliza">
+      <table class="tabla tabla--presupuesto" data-presupuesto>
+        <thead><tr><th>#</th><th>Componente</th><th class="num">Inversión</th><th class="num">Por año</th></tr></thead>
+        <tbody></tbody>
+        <tfoot></tfoot>
+      </table>
+    </div>
+    <h3 class="sub">Cómo se paga</h3>
+    <ul class="lista-check">
+      <li><strong>Alumbrado:</strong> contrato por rendimiento energético; la empresa instala y cobra con parte del ahorro en la factura de luz.</li>
+      <li><strong>Cámaras y monitoreo:</strong> el Fondo Provincial de Seguridad ya financió el centro de monitoreo en 2022.</li>
+      <li><strong>Fibra:</strong> red neutra con la cooperativa LAR y otros proveedores, que pagan por usar los ductos y la troncal.</li>
+      <li><strong>Plataforma y app:</strong> convenio con la UAP (prácticas, tesis, laboratorio) y líneas de crédito para municipios de bancos de desarrollo.</li>
+      <li><strong>Robótica:</strong> contratos de servicio en lugar de compra, para no quedar con equipos obsoletos.</li>
+    </ul>
+  </div>
+</section>
+
+<section id="cronograma">
+  <div class="envoltura">
+    <span class="etiqueta">Cuándo</span>
+    <h2>Cronograma 2027 – 2031</h2>
+    <div class="gantt" data-gantt role="img" aria-label="Diagrama de Gantt del proyecto por trimestres"></div>
+    <div class="gantt__ref"><span class="gantt__barra--f0">Fase 0 · Diagnóstico</span><span class="gantt__barra--f1">Fase 1 · Red</span><span class="gantt__barra--f2">Fase 2 · Servicios</span><span class="gantt__barra--f3">Fase 3 · Datos</span><span class="gantt__barra--f4">Fase 4 · Evaluación</span></div>
+  </div>
+</section>
+
+<section id="riesgos" class="alterna">
+  <div class="envoltura">
+    <span class="etiqueta">Riesgos</span>
+    <h2>Qué puede salir mal y cómo se evita</h2>
+    <div class="desliza">
+      <table class="tabla">
+        <thead><tr><th>Riesgo</th><th>Mitigación</th></tr></thead>
+        <tbody>
+          <tr><td>Se cambia de gestión y el proyecto se abandona</td><td>Ordenanza marco aprobada por el Concejo, mesa con instituciones y presupuesto plurianual.</td></tr>
+          <tr><td>Inflación y tipo de cambio</td><td>Compras por etapas, contratos en dólares indexados y prioridad a lo que se paga con ahorro.</td></tr>
+          <tr><td>Quedar atado a un proveedor</td><td>Estándares abiertos (LoRaWAN, FIWARE, ONVIF) y código propio en repositorios del municipio.</td></tr>
+          <tr><td>Ciberataque o secuestro de datos</td><td>Red de cámaras separada, doble factor, copias cifradas fuera del municipio y prueba de intrusión anual.</td></tr>
+          <tr><td>Rechazo vecinal por vigilancia</td><td>Sin reconocimiento facial en vivo, retención corta, informe público anual y canal para pedir revisión.</td></tr>
+          <tr><td>Falta de personal técnico</td><td>Formación con la UAP y contratos de mantenimiento con niveles de servicio medibles.</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<section id="referencias">
+  <div class="envoltura">
+    <span class="etiqueta">Referencias</span>
+    <h2>Quién ya lo hizo</h2>
+    <div class="tarjetas">
+      <article class="tarjeta"><h3>Santander, España</h3><p>Ciudad laboratorio: hacia 2013 ya tenía unos 10.000 sensores de temperatura, ruido, luz, monóxido de carbono y estacionamiento.</p></article>
+      <article class="tarjeta"><h3>Almada, Portugal</h3><p>Telegestión del alumbrado en unos 1.500 puntos de luz: cerca de 40 % menos de energía y unos 80.000 € de ahorro por año.</p></article>
+      <article class="tarjeta"><h3>Porvoo, Finlandia</h3><p>Barredora eléctrica autónoma contratada como servicio por ocho años, que limpia de noche la plaza y la costanera.</p></article>
+    </div>
+  </div>
+</section>
+
+<section id="pasos" class="alterna">
+  <div class="envoltura">
+    <span class="etiqueta">Empezar</span>
+    <h2>Los primeros 90 días</h2>
+    <ol class="pasos">
+      <li><strong>Presentar el proyecto</strong> al intendente, al Concejo Deliberante y a la UAP, el sanatorio y la cooperativa LAR.</li>
+      <li><strong>Sumar los ductos al pliego de pavimento</strong> de las próximas cuadras: es lo único que no se puede hacer después sin romper.</li>
+      <li><strong>Relevar</strong> cámaras, postes, luminarias y enlaces actuales, y la topografía de los puntos bajos que se anegan.</li>
+      <li><strong>Aprobar una ordenanza de datos</strong>: qué se mide, quién accede, cuánto tiempo se guarda y cómo se audita.</li>
+      <li><strong>Lanzar un piloto visible</strong>: Wi-Fi y sensores de lluvia en la Plaza San Martín y la terminal.</li>
+    </ol>
+  </div>
+</section>
+
+<section id="fuentes">
+  <div class="envoltura">
+    <span class="etiqueta">Fuentes</span>
+    <ul class="fuentes">
+      <li><a href="archivo-2009.html">Proyecto original de 2009 (archivo completo)</a></li>
+      <li><a href="https://www.lacapital.com.ar/la-region/la-ciudad-solo-dos-horas-rosario-donde-el-alcohol-y-el-tabaco-son-rarezas-n10271150.html" rel="noopener">La Capital (2026): población, cámaras y plan de pavimento</a></li>
+      <li><a href="https://paralelo32.com.ar/lar-ya-ofrece-internet-en-libertador-san-martin/" rel="noopener">Paralelo 32 (2019): fibra óptica de LAR en Libertador San Martín y Puiggari</a></li>
+      <li><a href="https://www.unoentrerios.com.ar/libertador-san-martin-inauguraron-un-centro-monitoreo-n2722296.html" rel="noopener">Uno Entre Ríos (2022): centro de monitoreo y Fondo Provincial de Seguridad</a></li>
+      <li><a href="https://ready.net/resiliency-playbook/implement-a-dig-once-policy" rel="noopener">Ready.net: política de “zanja única” y ahorro del 60 al 90 %</a></li>
+      <li><a href="https://tago.io/blog/lorawan-range-in-the-real-world" rel="noopener">TagoIO: alcance real de LoRaWAN</a></li>
+      <li><a href="https://interregeurope.eu/good-practices/ecoenlight-telemanagement-of-public-lighting-systems" rel="noopener">Interreg Europe: telegestión del alumbrado en Almada</a></li>
+      <li><a href="https://getsafeandsound.com/blog/license-plate-reader-cost/" rel="noopener">Costos de lectoras de patentes (2026)</a></li>
+      <li><a href="https://kurrant.com/?p=47542" rel="noopener">Porvoo: barredora autónoma como servicio (2026)</a></li>
+      <li><a href="https://www.fed4fire.eu/testbeds/smart-santander" rel="noopener">SmartSantander</a></li>
+      <li><a href="https://www.diariojudicial.com/news-94902-contra-cara" rel="noopener">Diario Judicial: fallo sobre reconocimiento facial en CABA (2023)</a></li>
+      <li><a href="https://fpf.org/blog/red-lines-under-the-eu-ai-act-restricting-real-time-remote-biometric-identification-systems-for-law-enforcement-purposes/" rel="noopener">Future of Privacy Forum: identificación biométrica en el AI Act europeo</a></li>
+    </ul>
+    <p class="fuentes">Proyecto elaborado con asistencia de inteligencia artificial y revisión humana. Los montos son estimaciones de referencia. El mapa carga imágenes de OpenStreetMap y Esri: ver la <a href="privacidad.html#destinatarios">política de privacidad</a>.</p>
+  </div>
+</section>
+
+</main>
+
+<footer class="pie">
+  <div class="envoltura">
+    <img src="assets/logos/logo-horizontal-claro.svg" alt="LSM Ciudad Inteligente" width="240" height="60">
+    <div class="pie__links"><a href="index.html">Análisis</a><a href="archivo-2009.html">Archivo 2009</a><a href="privacidad.html">Privacidad</a><a href="seguridad.html">Seguridad</a><a href="#" data-revisar-cookies>Cookies</a></div>
+    <span>© 2009–2026 · Hernando A. Gigliotti</span>
+  </div>
+</footer>
+<div class="consent" data-consent hidden role="dialog" aria-label="Cookies">
+  <p>Usamos Google Analytics para saber cuántas personas visitan el sitio. Solo se activa si aceptás.</p>
+  <div><button class="boton" data-elegir="si">Aceptar</button><button class="boton boton--sec" data-elegir="no">Rechazar</button></div>
+</div>
+</body>
+</html>

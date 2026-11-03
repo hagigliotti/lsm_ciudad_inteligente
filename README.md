@@ -13,9 +13,12 @@ y propuesta de cómo implementarlo hoy.
 | Ruta | Qué es |
 |---|---|
 | `index.html` | Portada animada, la ciudad hoy, 2009 vs 2026, fallas, potencialidades, arquitectura, hoja de ruta, veredicto y formulario vecinal |
+| `proyecto-2026.html` | Proyecto LSM 2031: mapa interactivo, metas, componentes, seguridad, robótica, presupuesto, cronograma y riesgos |
+| `archivo-2009.html` | El blog original de 2009 completo (se regenera con `python3 scripts/archivo2009.py`) |
 | `privacidad.html` | Qué datos se recolectan, uso de IA, a quién se envían, borrado y qué pasa si no se cumple, sin testimonios falsos |
 | `seguridad.html` | Validación, rate limiting, sesiones, auditoría de rutas, CORS, errores y pruebas |
-| `assets/logos/` | `logo.svg` (cuadrado), `logo-horizontal.svg`, `isotipo.svg` (favicon) y `logo.png` |
+| `assets/js/proyecto-datos.js` | Presupuesto, cronograma y puntos del mapa: se editan acá y la página se actualiza sola |
+| `assets/logos/` | `logo.svg` (cuadrado), `logo-horizontal.svg` (fondo claro), `logo-horizontal-claro.svg` (fondo oscuro), `isotipo.svg` (favicon) y `logo.png` |
 | `plataforma/servidor.mjs` | Servidor de referencia para la futura API vecinal (Node 20+, sin dependencias) |
 | `tests/` | Pruebas automáticas: validación, plataforma y páginas |
 
@@ -33,7 +36,7 @@ Abrí `assets/js/config.js` y pegá tu ID en `gaId: 'G-XXXXXXXXXX'`. Nada se car
 ## Probar en tu computadora
 
 ```bash
-npm test            # 38 pruebas
+npm test            # 52 pruebas
 npm run auditar     # tabla de rutas de la API: autenticación, validación, límites
 npm run servir      # sitio en http://localhost:8000
 ```

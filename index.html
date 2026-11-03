@@ -24,11 +24,10 @@
     <a class="barra__marca" href="./"><img src="assets/logos/isotipo.svg" alt="" width="36" height="36">LSM</a>
     <nav aria-label="Secciones">
       <a class="opc" href="#hoy">La ciudad hoy</a>
-      <a class="opc" href="#fallas">2009</a>
-      <a class="opc2" href="#como">Cómo hoy</a>
-      <a href="#veredicto">¿Vale la pena?</a>
-      <a href="privacidad.html">Privacidad</a>
-      <a href="seguridad.html">Seguridad</a>
+      <a class="opc" href="#fallas">Fallas 2009</a>
+      <a href="proyecto-2026.html">Proyecto 2026</a>
+      <a href="archivo-2009.html">Archivo 2009</a>
+      <a class="opc2" href="seguridad.html">Seguridad</a>
     </nav>
   </div>
 </header>
@@ -48,9 +47,12 @@
 <section id="proyecto">
   <div class="envoltura">
     <span class="etiqueta">El proyecto original</span>
-    <h2>LSM Ciudad Inteligente, julio 2009</h2>
-    <p class="intro">El proyecto se publicó en <a href="https://lsmciudadinteligente.wordpress.com" rel="noopener">lsmciudadinteligente.wordpress.com</a>. Planteaba llevar conectividad y servicios digitales a Libertador San Martín, cuando la ciudad tenía alrededor de 6.300 habitantes y el teléfono inteligente recién empezaba a llegar a la Argentina.</p>
-    <p class="aviso">El blog original no permite copias automáticas, así que su texto todavía no está archivado acá. En <a href="docs/archivo-2009.md">docs/archivo-2009.md</a> está el paso a paso para exportarlo desde WordPress en dos minutos y guardarlo en este repositorio, para que no se pierda.</p>
+    <h2>“Libertador San Martín, una Ciudad Inteligente”, julio 2009</h2>
+    <p class="intro">Proyecto de Hernando A. Gigliotti para la materia Seminario de Aplicación Profesional de la Licenciatura en Sistemas de Información de la UAP, aprobado el 3 de agosto de 2009. Proponía internet inalámbrica libre y gratuita en el centro, en tres etapas hasta llegar a Puiggari, cuando la ciudad tenía 5.926 habitantes según el censo 2001.</p>
+    <div class="botones">
+      <a class="boton" href="archivo-2009.html">Leer el proyecto original completo</a>
+      <a class="boton boton--sec" href="proyecto-2026.html">Ver el proyecto 2026: mapa, costos y plazos</a>
+    </div>
   </div>
 </section>
 
@@ -99,16 +101,17 @@
   <div class="envoltura">
     <span class="etiqueta">Las fallas</span>
     <h2>Qué le faltó al proyecto de 2009</h2>
-    <p class="intro">Mirado como ingeniería de redes y como implementación en ciudades, estos son los puntos débiles típicos de los proyectos de “ciudad digital” de esa generación. Conviene contrastarlos punto por punto con el texto original una vez archivado.</p>
+    <p class="intro">Leído hoy, con ojos de ingeniería de redes y de implementación en ciudades. La idea era buena y la gente la quería: el 88,82 % de los 161 encuestados veía con agrado internet libre en lugares públicos. Lo que no alcanzaba era la ingeniería para sostenerla.</p>
     <div class="tarjetas">
-      <article class="tarjeta tarjeta--falla"><h3>La tecnología antes que el problema</h3><p>Se partía de “poner WiFi” o “poner cámaras” y no de qué necesitaba el vecino: un trámite, un turno, saber si se inunda la calle.</p></article>
-      <article class="tarjeta tarjeta--falla"><h3>Sin plan para mantenerlo</h3><p>La inversión inicial se consigue; el mantenimiento, el soporte y el recambio de equipos cada 5–7 años, no. Sin presupuesto anual, la red se apaga sola.</p></article>
-      <article class="tarjeta tarjeta--falla"><h3>Atado a un proveedor</h3><p>Equipos y software cerrados de una sola marca. Cuando el proveedor cambia de precio o desaparece, el municipio queda sin salida.</p></article>
-      <article class="tarjeta tarjeta--falla"><h3>Seguridad y privacidad ausentes</h3><p>Redes planas, contraseñas por defecto, sin reglas sobre qué datos se guardan ni cuánto tiempo. Hoy eso es inaceptable.</p></article>
-      <article class="tarjeta tarjeta--falla"><h3>Pensado para la PC</h3><p>En 2009 el usuario era alguien sentado frente a una computadora. Diez años después todo pasó al celular.</p></article>
-      <article class="tarjeta tarjeta--falla"><h3>Dimensionado para un pueblo</h3><p>La red se habría calculado para unos 6.000 habitantes. La ciudad pasó los 9.000 y suma miles de estudiantes, pacientes y turistas.</p></article>
-      <article class="tarjeta tarjeta--falla"><h3>Sin medir ni participar</h3><p>No había indicadores de uso ni una mesa con vecinos e instituciones para decidir prioridades y evaluar resultados.</p></article>
+      <article class="tarjeta tarjeta--falla"><h3>Un nodo y un ADSL para toda la zona</h3><p>El equipamiento era un nodo Wi-Fi omnidireccional de 2,4 GHz y una línea ADSL. Con decenas de usuarios a la vez, el ancho de banda se agota y la señal de exterior casi no entra a las casas.</p></article>
+      <article class="tarjeta tarjeta--falla"><h3>Presupuesto de $7.000</h3><p>La inversión inicial era de $7.000, con ingresos por publicidad y donaciones. Sin presupuesto anual para mantenimiento, soporte y recambio de equipos, una red pública se apaga sola.</p></article>
+      <article class="tarjeta tarjeta--falla"><h3>Registro con DNI y MAC</h3><p>Para usar la red se pedía nombre, DNI, edad, sexo y la MAC del equipo. Eran datos personales innecesarios, y la MAC se puede copiar, así que tampoco daba seguridad.</p></article>
+      <article class="tarjeta tarjeta--falla"><h3>Sin seguridad de red</h3><p>Fuera del registro por MAC, el proyecto no preveía cifrado, aislamiento entre usuarios, portal de acceso ni control de abusos. Una red abierta así expone a quienes la usan.</p></article>
+      <article class="tarjeta tarjeta--falla"><h3>“Nada interfiere”</h3><p>El proyecto suponía que no había construcciones que interfirieran. Con más edificios, árboles crecidos y redes vecinas en 2,4 GHz, hoy esa banda está saturada.</p></article>
+      <article class="tarjeta tarjeta--falla"><h3>Dimensionado para 5.926 habitantes</h3><p>La ciudad pasó los 9.000 y suma miles de estudiantes, pacientes y turistas. Las zonas de la segunda y tercera etapa, que eran campo, hoy son barrios.</p></article>
+      <article class="tarjeta tarjeta--falla"><h3>Sin quién lo ejecutara</h3><p>La ejecución quedaba “a cargo de la Municipalidad o de una entidad reguladora”, sin compromiso firmado, cronograma ni responsables. Ningún proyecto público avanza sin dueño.</p></article>
     </div>
+    <p class="fuentes">Lo que sigue valiendo: la encuesta, el avance por etapas y barrios, el cálculo de radioenlaces y la idea de llegar a Puiggari y Camarero. Todo eso está en el <a href="proyecto-2026.html">proyecto 2026</a>.</p>
   </div>
 </section>
 
@@ -230,7 +233,7 @@
 
 <footer class="pie">
   <div class="envoltura">
-    <img src="assets/logos/logo-horizontal.svg" alt="LSM Ciudad Inteligente" width="240" height="60" class="pie__logo">
+    <img src="assets/logos/logo-horizontal-claro.svg" alt="LSM Ciudad Inteligente" width="240" height="60">
     <div class="pie__links">
       <a href="privacidad.html">Privacidad</a>
       <a href="seguridad.html">Seguridad</a>
