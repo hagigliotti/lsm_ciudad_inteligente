@@ -1,12 +1,20 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 160" role="img" aria-labelledby="t">
   <title id="t">LSM Ciudad Inteligente</title>
-  <g transform="translate(8 8) scale(0.6)">
-    <path d="M28 168 C 70 92, 120 70, 212 168" fill="none" stroke="#1f5c43" stroke-width="10" stroke-linecap="round"/>
-    <g stroke="#3ddc97" stroke-width="5" stroke-linecap="round"><line x1="56" y1="138" x2="96" y2="104"/><line x1="96" y1="104" x2="144" y2="100"/><line x1="144" y1="100" x2="184" y2="138"/><line x1="96" y1="104" x2="120" y2="150"/><line x1="144" y1="100" x2="120" y2="150"/></g>
-    <g fill="#0d1f18" stroke="#3ddc97" stroke-width="6"><circle cx="56" cy="138" r="10"/><circle cx="96" cy="104" r="10"/><circle cx="144" cy="100" r="10"/><circle cx="184" cy="138" r="10"/></g>
-    <circle cx="120" cy="150" r="13" fill="#ff7a00"/>
-    <g fill="none" stroke="#ff7a00" stroke-width="5" stroke-linecap="round"><path d="M104 66 a 22 22 0 0 1 32 0"/><path d="M94 54 a 36 36 0 0 1 52 0"/></g>
+  <g transform="translate(6 -10) scale(0.72)">
+  <path d="M28 172 C 70 96, 170 96, 212 172" fill="none" stroke="#1f5c43" stroke-width="10" stroke-linecap="round"/>
+  <g stroke="#3ddc97" stroke-width="5" stroke-linecap="round">
+    <line x1="50" y1="146" x2="84" y2="116"/><line x1="84" y1="116" x2="156" y2="116"/><line x1="156" y1="116" x2="190" y2="146"/>
+    <line x1="84" y1="116" x2="104" y2="170"/><line x1="156" y1="116" x2="136" y2="170"/>
   </g>
-  <text x="168" y="78" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-weight="800" font-size="52" letter-spacing="4" fill="currentColor">LSM</text>
-  <text x="170" y="116" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-weight="500" font-size="26" letter-spacing="3" fill="#3ddc97">CIUDAD INTELIGENTE</text>
+  <g stroke="#3ddc97" stroke-width="3" stroke-linejoin="round">
+    <path d="M120 54 L112 140 Q110 157 93 166 L91 182 L120 182 Z" fill="#b9dfcc"/>
+    <path d="M120 54 L128 140 Q130 157 147 166 L149 182 L120 182 Z" fill="#f2fbf6"/>
+  </g>
+  <g fill="#0d1f18" stroke="#3ddc97" stroke-width="6">
+    <circle cx="50" cy="146" r="10"/><circle cx="84" cy="116" r="10"/><circle cx="156" cy="116" r="10"/><circle cx="190" cy="146" r="10"/>
+  </g>
+  <circle cx="120" cy="48" r="10" fill="#ff7a00"/>
+  </g>
+  <text x="184" y="80" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-weight="800" font-size="52" letter-spacing="4" fill="currentColor">LSM</text>
+  <text x="186" y="118" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-weight="500" font-size="26" letter-spacing="3" fill="#3ddc97">CIUDAD INTELIGENTE</text>
 </svg>
