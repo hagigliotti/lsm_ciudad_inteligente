@@ -43,7 +43,7 @@ class Limpiador(HTMLParser):
             return
         if tag == 'a':
             href = a.get('href', '')
-            local = imagen_local(href) if re.search(r'\.(jpe?g|png|gif)(\?|$)', href, re.I) else None
+            local = imagen_local(href) if re.search(r"\.(jpe?g|png|gif|pdf)(\?|$)", href, re.I) else None
             if local:
                 href = local
             elif not href.startswith('https://') and href.startswith('http://'):
