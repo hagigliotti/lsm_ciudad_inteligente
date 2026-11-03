@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="es-AR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://www.googletagmanager.com; connect-src 'self' https://*.google-analytics.com https://*.analytics.google.com https://www.googletagmanager.com; img-src 'self' data: https://*.google-analytics.com https://www.googletagmanager.com; style-src 'self'; font-src 'self'; base-uri 'self'; form-action 'self'; object-src 'none'; upgrade-insecure-requests">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <title>Seguridad · LSM Ciudad Inteligente</title>
+  <meta name="description" content="Cómo se protege el sitio y la futura plataforma: validación, rate limiting, sesiones, rutas, CORS, errores y pruebas.">
+  <meta name="theme-color" content="#0d1f18">
+  <link rel="icon" href="assets/logos/isotipo.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/css/estilo.css">
+  <script type="module" src="assets/js/app.js"></script>
+</head>
+<body>
+<a class="salto" href="#contenido">Saltar al contenido</a>
+<header class="barra">
+  <div class="envoltura">
+    <a class="barra__marca" href="index.html"><img src="assets/logos/isotipo.svg" alt="" width="36" height="36">LSM</a>
+    <nav aria-label="Secciones">
+      <a href="index.html">Inicio</a>
+      <a href="privacidad.html">Privacidad</a>
+      <a href="seguridad.html" aria-current="page">Seguridad</a>
+    </nav>
+  </div>
+</header>
+
+<main id="contenido" class="doc">
+  <div class="envoltura">
+    <span class="etiqueta">Revisión: 3 de noviembre de 2026</span>
+    <h1>Seguridad</h1>
+    <p class="intro">El proyecto tiene dos partes. El <strong>sitio</strong> que estás leyendo es estático (GitHub Pages): no tiene servidor propio, ni usuarios, ni base de datos. La <strong>plataforma</strong> (carpeta <code>plataforma/</code> del repositorio) es el servidor de referencia para la futura API vecinal. Abajo, cada punto revisado en las dos.</p>
+
+    <h2 id="entradas">1. Validación de todo lo que escribe el usuario <span class="estado-chip ok">HECHO</span></h2>
+    <ul>
+      <li>Una sola función, <code>validarIdea</code>, valida en el navegador y en el servidor: tipo, largo mínimo y máximo, formato de email y nombre, tema dentro de una lista cerrada y como máximo 2 enlaces.</li>
+      <li>Se quitan caracteres de control y los que invierten la dirección del texto; se normaliza Unicode.</li>
+      <li>Nada de lo que escribe el usuario se inserta como HTML. El servidor rechaza JSON mal formado (400), tipos de contenido inesperados (415) y cuerpos de más de 16 KB (413).</li>
+      <li>Campo trampa invisible para frenar bots.</li>
+    </ul>
+
+    <h2 id="rate-limit">2. Rate limiting por usuario y por IP <span class="estado-chip ok">HECHO</span></h2>
+    <ul>
+      <li><strong>Sitio:</strong> el navegador espera 45 s entre envíos y permite 3 por hora. Es solo una cortesía: el límite real lo pone el servidor de Web3Forms.</li>
+      <li><strong>Plataforma:</strong> 60 pedidos por minuto por IP; 120 por minuto por usuario con sesión; el formulario, unos 3 por hora por IP; el inicio de sesión, 5 intentos y luego 1 por minuto. Al pasarse responde 429 con <code>Retry-After</code>.</li>
+      <li>Para varias instancias del servidor, los contadores pasan a Redis (está marcado en el código).</li>
+    </ul>
+
+    <h2 id="sesiones">3. Tokens y sesiones: ¿alguien puede quedar conectado sin querer o ser suplantado? <span class="estado-chip ok">REVISADO</span></h2>
+    <p><strong>Sitio:</strong> no. No hay inicio de sesión, ni tokens, ni cookies propias. En el navegador solo se guarda la respuesta al aviso de cookies y la hora de los últimos envíos.</p>
+    <p><strong>Plataforma:</strong> así se evita cada riesgo:</p>
+    <div class="desliza">
+      <table class="tabla">
+        <thead><tr><th>Riesgo</th><th>Cómo se evita</th></tr></thead>
+        <tbody>
+          <tr><td>Quedar conectado sin querer</td><td>La sesión vence a los 30 minutos sin uso y a las 8 horas sí o sí. Cerrar sesión la borra del servidor, no solo del navegador.</td></tr>
+          <tr><td>Sesiones viejas olvidadas</td><td>Al iniciar sesión se cierran las anteriores del mismo usuario.</td></tr>
+          <tr><td>Robo del token por JavaScript (XSS)</td><td>Cookie <code>HttpOnly</code>: el JavaScript de la página no la puede leer.</td></tr>
+          <tr><td>Envío del token sin cifrar</td><td>Cookie <code>Secure</code> con prefijo <code>__Host-</code> y HSTS: solo viaja por HTTPS.</td></tr>
+          <tr><td>Suplantación desde otro sitio (CSRF)</td><td><code>SameSite=Strict</code> y CORS cerrado a la lista de orígenes.</td></tr>
+          <tr><td>Adivinar o falsificar un token</td><td>Token aleatorio de 256 bits que no contiene datos. Un token inventado da 401 (hay una prueba para eso).</td></tr>
+          <tr><td>Robo de contraseñas</td><td>Guardadas con scrypt y sal; comparación en tiempo constante; el mismo mensaje exista o no el usuario.</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h2 id="rutas">4. Rutas de la API: cuáles no tienen autenticación o validación <span class="estado-chip ok">REVISADO</span></h2>
+    <p><strong>Sitio:</strong> no tiene rutas de API propias. Su única salida de datos es el envío del formulario a Web3Forms, que se identifica con una clave pública (es así por diseño) y está protegido por validación, campo trampa y el límite del proveedor.</p>
+    <p><strong>Plataforma:</strong> resultado de <code>npm run auditar</code>. Una prueba automática falla si aparece una ruta pública sin justificación o una ruta que recibe datos sin validarlos.</p>
+    <div class="desliza">
+      <table class="tabla">
+        <thead><tr><th>Ruta</th><th>Autenticación</th><th>Validación</th><th>Límite</th></tr></thead>
+        <tbody>
+          <tr><td>GET /api/salud</td><td>No: chequeo de estado sin datos</td><td>No recibe datos</td><td>General</td></tr>
+          <tr><td>POST /api/ideas</td><td>No: formulario vecinal</td><td>Sí</td><td>Estricto</td></tr>
+          <tr><td>POST /api/sesion</td><td>No: es el inicio de sesión</td><td>Sí</td><td>Estricto</td></tr>
+          <tr><td>DELETE /api/sesion</td><td>Sí</td><td>No recibe datos</td><td>General</td></tr>
+          <tr><td>GET /api/ideas</td><td>Sí, rol admin</td><td>No recibe datos</td><td>General</td></tr>
+          <tr><td>DELETE /api/ideas/:id</td><td>Sí, rol admin</td><td>Sí (formato del id)</td><td>General</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h2 id="cors">5. CORS <span class="estado-chip ok">HECHO</span></h2>
+    <ul>
+      <li><strong>Sitio:</strong> al no tener API, no hay CORS que configurar. GitHub Pages sirve los archivos públicos a cualquier origen, lo cual es correcto para contenido público.</li>
+      <li><strong>Plataforma:</strong> solo responde a los orígenes de la variable <code>ORIGENES</code> (por defecto, <code>https://hagigliotti.github.io</code>). Nunca usa <code>*</code> con credenciales. Un origen desconocido recibe 403 y ninguna cabecera CORS.</li>
+    </ul>
+
+    <h2 id="cabeceras">6. Otras protecciones</h2>
+    <ul>
+      <li>Política de seguridad de contenido (CSP) en cada página: solo se ejecuta código del propio sitio, y de Google únicamente si aceptaste estadísticas. Sin scripts ni estilos en línea.</li>
+      <li>Sin fuentes ni librerías de CDN externos: menos terceros que puedan ver tu visita o inyectar código.</li>
+      <li>La plataforma agrega <code>nosniff</code>, <code>X-Frame-Options: DENY</code>, <code>no-store</code> y HSTS.</li>
+    </ul>
+
+    <h2 id="errores">7. Cómo se manejan los errores <span class="estado-chip ok">HECHO</span></h2>
+    <ul>
+      <li>El usuario ve un mensaje claro y un código de seguimiento, nunca un error técnico, ni rutas de archivos, ni versiones.</li>
+      <li>Los errores inesperados devuelven 500 con un mensaje genérico; el detalle va al registro interno con el mismo código.</li>
+      <li>Los registros nunca guardan contraseñas, cookies ni el texto de los formularios (hay una prueba que lo verifica).</li>
+      <li>En el sitio, si falla el envío, se explica qué hacer (revisar la conexión, esperar unos minutos) y el botón se reactiva.</li>
+    </ul>
+
+    <h2 id="pruebas">8. Escalabilidad y pruebas siempre <span class="estado-chip ok">HECHO</span></h2>
+    <ul>
+      <li><code>npm test</code> corre las pruebas de validación, de la plataforma (validación, límites, sesiones, CORS, errores, auditoría de rutas) y de cada página (CSP, enlaces rotos, textos alternativos, aviso de IA, Google Analytics solo con permiso).</li>
+      <li>GitHub Actions corre las pruebas en cada cambio. <strong>Si una falla, el sitio no se publica.</strong></li>
+      <li>La plataforma no guarda estado en memoria para producción: sesiones y límites van a Redis, así se pueden sumar servidores detrás de un balanceador. La carga se planifica para 15.000 habitantes más la población flotante.</li>
+    </ul>
+
+    <h2 id="pendientes">Pendientes antes de abrir la plataforma al público <span class="estado-chip pend">A HACER</span></h2>
+    <ul>
+      <li>Base de datos real y Redis para sesiones y límites.</li>
+      <li>Doble factor para cuentas de administración.</li>
+      <li>Prueba de intrusión externa y revisión de dependencias en cada versión.</li>
+      <li>Copias de seguridad cifradas fuera del servidor y un ensayo de recuperación.</li>
+    </ul>
+    <p class="fuentes">Esta revisión se elaboró con asistencia de inteligencia artificial y revisión humana. Ver también la <a href="privacidad.html">política de privacidad</a>.</p>
+  </div>
+</main>
+
+<footer class="pie">
+  <div class="envoltura">
+    <img src="assets/logos/logo-horizontal.svg" alt="LSM Ciudad Inteligente" width="240" height="60">
+    <div class="pie__links"><a href="privacidad.html">Privacidad</a><a href="seguridad.html">Seguridad</a><a href="#" data-revisar-cookies>Cookies</a></div>
+    <span>Contenido elaborado con asistencia de inteligencia artificial y revisión humana.</span>
+  </div>
+</footer>
+<div class="consent" data-consent hidden role="dialog" aria-label="Cookies">
+  <p>Usamos Google Analytics para saber cuántas personas visitan el sitio. Solo se activa si aceptás.</p>
+  <div><button class="boton" data-elegir="si">Aceptar</button><button class="boton boton--sec" data-elegir="no">Rechazar</button></div>
+</div>
+</body>
+</html>

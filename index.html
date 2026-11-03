@@ -1,0 +1,249 @@
+<!doctype html>
+<html lang="es-AR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://www.googletagmanager.com; connect-src 'self' https://api.web3forms.com https://*.google-analytics.com https://*.analytics.google.com https://www.googletagmanager.com; img-src 'self' data: https://*.google-analytics.com https://www.googletagmanager.com; style-src 'self'; font-src 'self'; base-uri 'self'; form-action 'self' https://api.web3forms.com; object-src 'none'; upgrade-insecure-requests">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <title>LSM Ciudad Inteligente · 2009 → 2026</title>
+  <meta name="description" content="Análisis del proyecto Ciudad Inteligente de Libertador San Martín (Entre Ríos) presentado en 2009 y cómo debería implementarse hoy.">
+  <meta property="og:title" content="LSM Ciudad Inteligente · 2009 → 2026">
+  <meta property="og:description" content="Qué falló en 2009, qué cambió en la ciudad y cómo implementarlo hoy, por etapas.">
+  <meta property="og:image" content="https://hagigliotti.github.io/lsm_ciudad_inteligente/assets/logos/portada.jpg">
+  <meta name="theme-color" content="#0d1f18">
+  <link rel="icon" href="assets/logos/isotipo.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/css/estilo.css">
+  <script type="module" src="assets/js/portada.js"></script>
+  <script type="module" src="assets/js/app.js"></script>
+</head>
+<body>
+<a class="salto" href="#contenido">Saltar al contenido</a>
+
+<header class="barra">
+  <div class="envoltura">
+    <a class="barra__marca" href="./"><img src="assets/logos/isotipo.svg" alt="" width="36" height="36">LSM</a>
+    <nav aria-label="Secciones">
+      <a class="opc" href="#hoy">La ciudad hoy</a>
+      <a class="opc" href="#fallas">2009</a>
+      <a class="opc2" href="#como">Cómo hoy</a>
+      <a href="#veredicto">¿Vale la pena?</a>
+      <a href="privacidad.html">Privacidad</a>
+      <a href="seguridad.html">Seguridad</a>
+    </nav>
+  </div>
+</header>
+
+<div class="portada">
+  <canvas data-portada aria-hidden="true"></canvas>
+  <div class="envoltura portada__texto">
+    <span class="portada__antetitulo">Libertador San Martín · Entre Ríos</span>
+    <h1>Ciudad<br><span>inteligente</span></h1>
+    <p>En julio de 2009 se presentó un proyecto para conectar la “Colina de la Esperanza”. La ciudad creció, la tecnología cambió por completo. Este es el análisis de qué pasó y de cómo habría que hacerlo hoy.</p>
+    <div class="portada__años" aria-label="De 2009 a 2026"><b>2009</b><i></i><b>2026</b></div>
+  </div>
+</div>
+
+<main id="contenido">
+
+<section id="proyecto">
+  <div class="envoltura">
+    <span class="etiqueta">El proyecto original</span>
+    <h2>LSM Ciudad Inteligente, julio 2009</h2>
+    <p class="intro">El proyecto se publicó en <a href="https://lsmciudadinteligente.wordpress.com" rel="noopener">lsmciudadinteligente.wordpress.com</a>. Planteaba llevar conectividad y servicios digitales a Libertador San Martín, cuando la ciudad tenía alrededor de 6.300 habitantes y el teléfono inteligente recién empezaba a llegar a la Argentina.</p>
+    <p class="aviso">El blog original no permite copias automáticas, así que su texto todavía no está archivado acá. En <a href="docs/archivo-2009.md">docs/archivo-2009.md</a> está el paso a paso para exportarlo desde WordPress en dos minutos y guardarlo en este repositorio, para que no se pierda.</p>
+  </div>
+</section>
+
+<section id="hoy" class="alterna">
+  <div class="envoltura">
+    <span class="etiqueta">La ciudad en 2026</span>
+    <h2>Una ciudad que no paró de crecer</h2>
+    <p class="intro">Libertador San Martín ya no es el pueblo de 2009. Creció en población, en salud, en educación y en turismo, y eso cambia qué tiene sentido construir.</p>
+    <div class="cifras">
+      <div class="cifra"><b>6.312</b><span>habitantes en el censo 2010</span><small>INDEC vía citypopulation</small></div>
+      <div class="cifra"><b>8.499</b><span>en el censo 2022: +30 % en doce años</span><small>La Capital, 2026</small></div>
+      <div class="cifra"><b>≈ 9.500</b><span>habitantes estimados hoy</span><small>La Capital, 2026</small></div>
+      <div class="cifra"><b>3.000+</b><span>estudiantes en la UAP, de más de 50 países</span><small>La Capital, 2026</small></div>
+      <div class="cifra"><b>≈ 1.000</b><span>consultas diarias en el Sanatorio Adventista, 55 especialidades</span><small>La Capital, 2026</small></div>
+      <div class="cifra"><b>800</b><span>plazas de alojamiento, con 75–80 % de ocupación todo el año</span><small>Municipio, en La Capital</small></div>
+      <div class="cifra"><b>165</b><span>cámaras de seguridad monitoreadas por el municipio y la policía</span><small>Municipio, en La Capital</small></div>
+      <div class="cifra"><b>12</b><span>geriátricos en la ciudad</span><small>Paralelo 32, 2026</small></div>
+    </div>
+    <p class="fuentes">Además, según el municipio, al inicio de la gestión actual el 52 % de la ciudad no tenía pavimento, y el plan es completar 105 cuadras de asfalto en seis años. Ese plan de obra es, como se ve más abajo, la mejor oportunidad que tiene hoy una red municipal.</p>
+  </div>
+</section>
+
+<section id="cambios">
+  <div class="envoltura">
+    <span class="etiqueta">Qué cambió</span>
+    <h2>2009 frente a 2026</h2>
+    <div class="desliza">
+      <table class="tabla">
+        <thead><tr><th>Tema</th><th>En 2009</th><th>En 2026</th></tr></thead>
+        <tbody>
+          <tr><td>Acceso</td><td>PC de escritorio, cibercafés y notebooks. Smartphones casi inexistentes.</td><td>El celular es el acceso principal. Servicios primero móviles, por WhatsApp o web.</td></tr>
+          <tr><td>Redes</td><td>ADSL, WiFi 802.11g, enlaces de radio punto a punto.</td><td>Fibra hasta el hogar, WiFi 6/6E, 4G/5G, y redes LoRaWAN de bajo consumo para sensores.</td></tr>
+          <tr><td>Sensores</td><td>Caros, cableados y con proveedor único.</td><td>Baratos, a batería por años, con estándares abiertos.</td></tr>
+          <tr><td>Datos</td><td>Planillas y sistemas aislados en cada oficina.</td><td>APIs, datos abiertos, nube y tableros en tiempo real.</td></tr>
+          <tr><td>Cámaras</td><td>CCTV analógico o primeras IP, grabación local.</td><td>Cámaras IP con analítica. Más poder y más riesgo de privacidad.</td></tr>
+          <tr><td>Inteligencia artificial</td><td>No era una herramienta práctica.</td><td>Disponible para clasificar reclamos o leer sensores, con la obligación de avisar cuándo se usa.</td></tr>
+          <tr><td>Ley de datos</td><td>Ley 25.326 (año 2000), poco aplicada.</td><td>La 25.326 sigue vigente y hay proyectos en el Congreso para reemplazarla, como el 3397-D-2026.</td></tr>
+          <tr><td>Ataques</td><td>Poco frecuentes en municipios chicos.</td><td>Ransomware y cámaras/routers con contraseñas por defecto son la puerta de entrada más común.</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<section id="fallas" class="alterna">
+  <div class="envoltura">
+    <span class="etiqueta">Las fallas</span>
+    <h2>Qué le faltó al proyecto de 2009</h2>
+    <p class="intro">Mirado como ingeniería de redes y como implementación en ciudades, estos son los puntos débiles típicos de los proyectos de “ciudad digital” de esa generación. Conviene contrastarlos punto por punto con el texto original una vez archivado.</p>
+    <div class="tarjetas">
+      <article class="tarjeta tarjeta--falla"><h3>La tecnología antes que el problema</h3><p>Se partía de “poner WiFi” o “poner cámaras” y no de qué necesitaba el vecino: un trámite, un turno, saber si se inunda la calle.</p></article>
+      <article class="tarjeta tarjeta--falla"><h3>Sin plan para mantenerlo</h3><p>La inversión inicial se consigue; el mantenimiento, el soporte y el recambio de equipos cada 5–7 años, no. Sin presupuesto anual, la red se apaga sola.</p></article>
+      <article class="tarjeta tarjeta--falla"><h3>Atado a un proveedor</h3><p>Equipos y software cerrados de una sola marca. Cuando el proveedor cambia de precio o desaparece, el municipio queda sin salida.</p></article>
+      <article class="tarjeta tarjeta--falla"><h3>Seguridad y privacidad ausentes</h3><p>Redes planas, contraseñas por defecto, sin reglas sobre qué datos se guardan ni cuánto tiempo. Hoy eso es inaceptable.</p></article>
+      <article class="tarjeta tarjeta--falla"><h3>Pensado para la PC</h3><p>En 2009 el usuario era alguien sentado frente a una computadora. Diez años después todo pasó al celular.</p></article>
+      <article class="tarjeta tarjeta--falla"><h3>Dimensionado para un pueblo</h3><p>La red se habría calculado para unos 6.000 habitantes. La ciudad pasó los 9.000 y suma miles de estudiantes, pacientes y turistas.</p></article>
+      <article class="tarjeta tarjeta--falla"><h3>Sin medir ni participar</h3><p>No había indicadores de uso ni una mesa con vecinos e instituciones para decidir prioridades y evaluar resultados.</p></article>
+    </div>
+  </div>
+</section>
+
+<section id="potencial">
+  <div class="envoltura">
+    <span class="etiqueta">Las potencialidades</span>
+    <h2>Lo que hoy juega a favor</h2>
+    <div class="tarjetas">
+      <article class="tarjeta tarjeta--pot"><h3>La zanja única</h3><p>Las 105 cuadras por pavimentar son la oportunidad: dejar ductos para fibra mientras la calle está abierta cuesta una fracción de hacerlo después. Es la decisión más rentable de todo el proyecto.</p></article>
+      <article class="tarjeta tarjeta--pot"><h3>Laboratorio vivo con la UAP</h3><p>Más de 3.000 estudiantes, carreras de sistemas y una comunidad de más de 50 países. Prácticas, tesis y pruebas piloto reales en la propia ciudad.</p></article>
+      <article class="tarjeta tarjeta--pot"><h3>Salud como identidad</h3><p>Sanatorio, centro de vida sana y 12 geriátricos: telesalud, botones de asistencia y avisos al cuidador, siempre con consentimiento.</p></article>
+      <article class="tarjeta tarjeta--pot"><h3>Turismo de salud y educación</h3><p>800 plazas con ocupación alta todo el año: información de alojamiento, transporte y servicios en varios idiomas para quien llega.</p></article>
+      <article class="tarjeta tarjeta--pot"><h3>No se empieza de cero</h3><p>Ya hay 165 cámaras monitoreadas. El primer paso es ordenar y asegurar esa red, no comprar otra.</p></article>
+      <article class="tarjeta tarjeta--pot"><h3>Escala manejable</h3><p>Dos o tres antenas LoRaWAN alcanzan para cubrir todo el ejido urbano con sensores. Una ciudad chica puede hacer en meses lo que a una grande le lleva años.</p></article>
+    </div>
+  </div>
+</section>
+
+<section id="como" class="alterna">
+  <div class="envoltura">
+    <span class="etiqueta">Cómo implementarlo hoy</span>
+    <h2>Una arquitectura en seis capas</h2>
+    <p class="intro">Cada capa se puede crecer por separado. Así el sistema escala con la ciudad en vez de reemplazarse entero.</p>
+    <div class="capas">
+      <div class="capa"><h3>1 · Conectividad</h3><ul><li>Ductos en cada cuadra que se pavimenta y un anillo de fibra municipal entre edificios públicos, CIC, plaza y terminal.</li><li>Modelo de red neutra: la fibra la usan los proveedores de internet locales y la cooperativa, y el municipio cobra por el uso.</li><li>WiFi 6 solo donde hace falta: plaza, terminal, polideportivo, CIC.</li><li>LoRaWAN para sensores, enlazada a la provincia por la red federal de fibra.</li></ul></div>
+      <div class="capa"><h3>2 · Dispositivos</h3><ul><li>Alumbrado LED con telegestión.</li><li>Nivel de tanques y consumo de agua, pluviómetros y aviso de anegamiento.</li><li>Ruido y calidad de aire. Conteo de personas anónimo en eventos, sin imágenes.</li></ul></div>
+      <div class="capa"><h3>3 · Plataforma</h3><ul><li>Software de código abierto (por ejemplo, FIWARE) para no quedar atado a un proveedor.</li><li>API con autenticación, datos abiertos de lo que no es personal y un tablero municipal.</li><li>Copia de respaldo fuera del edificio y plan de recuperación ante ransomware.</li></ul></div>
+      <div class="capa"><h3>4 · Servicios</h3><ul><li>Reclamos vecinales con foto y ubicación, y seguimiento hasta que se resuelven.</li><li>Turnos y trámites municipales desde el celular, con atención presencial para quien lo prefiera.</li><li>Alertas de lluvia, cortes y obras por WhatsApp o notificación.</li><li>Horarios de colectivos a Paraná y Crespo en tiempo real.</li></ul></div>
+      <div class="capa"><h3>5 · Seguridad</h3><ul><li>Cámaras en una red separada, sin acceso directo desde internet, con acceso remoto solo por VPN y doble factor.</li><li>Retención de video limitada (por ejemplo, 30 días) y registro de quién mira qué.</li><li>Nada de reconocimiento facial. Si se usa IA, se avisa públicamente para qué y cómo.</li></ul></div>
+      <div class="capa"><h3>6 · Gobernanza</h3><ul><li>Mesa con municipio, UAP, sanatorio, cooperativa y vecinos.</li><li>Presupuesto anual de mantenimiento aprobado antes de comprar equipos.</li><li>Indicadores públicos: uso, reclamos resueltos, tiempos, costos.</li></ul></div>
+    </div>
+  </div>
+</section>
+
+<section id="fases">
+  <div class="envoltura">
+    <span class="etiqueta">Por etapas</span>
+    <h2>Hoja de ruta</h2>
+    <div class="fases">
+      <div class="fase"><em>0 a 3 meses</em><h3>Diagnóstico y reglas</h3><p>Inventario de la red, las cámaras y los sistemas actuales. Política de datos y privacidad. Mesa de trabajo con instituciones.</p></div>
+      <div class="fase"><em>3 a 12 meses</em><h3>Zanja única y red segura</h3><p>Ductos en las cuadras que se pavimentan, primer anillo de fibra municipal y la red de cámaras separada y asegurada.</p></div>
+      <div class="fase"><em>12 a 24 meses</em><h3>Sensores y portal vecinal</h3><p>LoRaWAN con un piloto de alumbrado, agua y lluvia. Portal de reclamos y trámites, y datos abiertos.</p></div>
+      <div class="fase"><em>Desde el año 2</em><h3>Salud, turismo y laboratorio</h3><p>Servicios con el sanatorio, los geriátricos y la UAP. Evaluación pública de resultados antes de cada ampliación.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="veredicto" class="alterna">
+  <div class="envoltura">
+    <span class="etiqueta">La conclusión</span>
+    <h2>¿Vale la pena hoy?</h2>
+    <div class="veredicto">
+      <h3>Sí, pero no como en 2009.</h3>
+      <p>Vale la pena si se hace por etapas, empezando por lo que ya existe y por la obra de pavimento, con presupuesto de mantenimiento y reglas de privacidad desde el día uno. La ciudad tiene una escala ideal para un piloto y aliados que pocas ciudades de su tamaño tienen.</p>
+      <p>No vale la pena: WiFi gratis en toda la ciudad (los datos móviles ya cubren esa necesidad), reconocimiento facial, ni una app propia que duplique lo que la gente ya hace por WhatsApp.</p>
+    </div>
+  </div>
+</section>
+
+<section id="calidad">
+  <div class="envoltura">
+    <span class="etiqueta">Escalabilidad y pruebas</span>
+    <h2>Que crezca sin romperse</h2>
+    <div class="tarjetas">
+      <article class="tarjeta"><h3>Escala por capas</h3><p>Cada servicio se apoya en APIs y colas de mensajes; se puede sumar un barrio o un sensor sin tocar el resto. La carga se dimensiona para 15.000 habitantes más la población flotante, no para la de hoy.</p></article>
+      <article class="tarjeta"><h3>Siempre probado</h3><p>Cada cambio en este repositorio pasa pruebas automáticas antes de publicarse. Si una prueba falla, el sitio no se actualiza. Ver <a href="seguridad.html#pruebas">cómo se prueba</a>.</p></article>
+      <article class="tarjeta"><h3>Errores bajo control</h3><p>El usuario ve mensajes claros y nunca detalles técnicos. Los detalles quedan en registros internos, sin datos personales. Ver <a href="seguridad.html#errores">manejo de errores</a>.</p></article>
+    </div>
+  </div>
+</section>
+
+<section id="idea" class="alterna">
+  <div class="envoltura">
+    <span class="etiqueta">Participá</span>
+    <h2>¿Qué necesita tu barrio?</h2>
+    <p class="intro">Una ciudad inteligente empieza por escuchar. Contanos qué problema te gustaría que la tecnología resuelva.</p>
+    <form class="form" data-idea novalidate>
+      <div><label for="nombre">Nombre</label><input id="nombre" name="nombre" autocomplete="name" maxlength="80" required><div class="error" data-error="nombre" aria-live="polite"></div></div>
+      <div><label for="email">Email</label><input id="email" name="email" type="email" autocomplete="email" maxlength="120" inputmode="email" required><div class="error" data-error="email" aria-live="polite"></div></div>
+      <div><label for="barrio">Barrio (opcional)</label><input id="barrio" name="barrio" maxlength="60"><div class="error" data-error="barrio" aria-live="polite"></div></div>
+      <div><label for="tema">Tema</label>
+        <select id="tema" name="tema" required>
+          <option value="">Elegí uno</option>
+          <option value="conectividad">Conectividad e internet</option>
+          <option value="seguridad">Seguridad</option>
+          <option value="salud">Salud y cuidado de mayores</option>
+          <option value="movilidad">Transporte y tránsito</option>
+          <option value="ambiente">Agua, lluvia y ambiente</option>
+          <option value="turismo">Turismo y estudiantes</option>
+          <option value="tramites">Trámites municipales</option>
+          <option value="privacidad">Pedido de privacidad (ver o borrar mis datos)</option>
+          <option value="otro">Otro</option>
+        </select><div class="error" data-error="tema" aria-live="polite"></div></div>
+      <div><label for="mensaje">Tu idea</label><textarea id="mensaje" name="mensaje" maxlength="2000" required></textarea><div class="error" data-error="mensaje" aria-live="polite"></div></div>
+      <div class="trampa" aria-hidden="true"><label for="botcheck">No completar</label><input id="botcheck" name="botcheck" tabindex="-1" autocomplete="off"></div>
+      <div><label class="chico"><input type="checkbox" name="acepta"> Leí la <a href="privacidad.html">política de privacidad</a>. Entiendo que mi nombre, email e idea se envían por Web3Forms al responsable del sitio.</label><div class="error" data-error="acepta" aria-live="polite"></div></div>
+      <div><button class="boton" type="submit">Enviar idea</button></div>
+      <p class="estado" data-estado role="status" aria-live="polite"></p>
+    </form>
+  </div>
+</section>
+
+<section id="fuentes">
+  <div class="envoltura">
+    <span class="etiqueta">Fuentes</span>
+    <h2>De dónde salen los datos</h2>
+    <ul class="fuentes">
+      <li><a href="https://www.lacapital.com.ar/la-region/la-ciudad-solo-dos-horas-rosario-donde-el-alcohol-y-el-tabaco-son-rarezas-n10271150.html" rel="noopener">La Capital (26/07/2026): población 2022 y actual, UAP, sanatorio, turismo, cámaras y pavimento.</a></li>
+      <li><a href="https://citypopulation.de/en/argentina/entrerios/diamante/30021150__villa_libertador_san_mart/" rel="noopener">City Population / INDEC: censos 1991, 2001 y 2010.</a></li>
+      <li><a href="https://www.paralelo32.com.ar/comenzo-la-campana-de-vacunacion-antigripal-2026-en-libertador-san-martin" rel="noopener">Paralelo 32 (2026): geriátricos en la ciudad.</a></li>
+      <li><a href="https://es.wikipedia.org/wiki/Libertador_San_Mart%C3%ADn" rel="noopener">Wikipedia: ubicación, historia y apodo “Colina de la Esperanza”.</a></li>
+      <li><a href="https://digitalpolicyalert.org/event/42320-chamber-of-deputies-introduced-personal-data-protection-law-bill-no-3397-d-2026-including-data-protection-regulation" rel="noopener">Digital Policy Alert: proyecto de ley 3397-D-2026 de protección de datos.</a></li>
+    </ul>
+    <p class="fuentes">Este análisis se elaboró con asistencia de inteligencia artificial y revisión humana. Las cifras tienen fuente; las recomendaciones son una propuesta técnica, no una decisión municipal. En este sitio no hay testimonios.</p>
+  </div>
+</section>
+
+</main>
+
+<footer class="pie">
+  <div class="envoltura">
+    <img src="assets/logos/logo-horizontal.svg" alt="LSM Ciudad Inteligente" width="240" height="60" class="pie__logo">
+    <div class="pie__links">
+      <a href="privacidad.html">Privacidad</a>
+      <a href="seguridad.html">Seguridad</a>
+      <a href="#" data-revisar-cookies>Cookies</a>
+      <a href="https://hagigliotti.github.io/website/" rel="noopener">Hernando Gigliotti</a>
+    </div>
+    <span>© 2009–<span data-anio>2026</span> · Proyecto LSM Ciudad Inteligente</span>
+  </div>
+</footer>
+
+<div class="consent" data-consent hidden role="dialog" aria-label="Cookies">
+  <p>Usamos Google Analytics para saber cuántas personas visitan el sitio. Solo se activa si aceptás. <a href="privacidad.html#cookies">Más información</a>.</p>
+  <div><button class="boton" data-elegir="si">Aceptar</button><button class="boton boton--sec" data-elegir="no">Rechazar</button></div>
+</div>
+</body>
+</html>

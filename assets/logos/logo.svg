@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" role="img" aria-labelledby="t">
+  <title id="t">LSM Ciudad Inteligente</title>
+  <rect width="240" height="240" rx="56" fill="#0d1f18"/>
+  <path d="M28 168 C 70 92, 120 70, 212 168" fill="none" stroke="#1f5c43" stroke-width="10" stroke-linecap="round"/>
+  <g stroke="#3ddc97" stroke-width="5" stroke-linecap="round">
+    <line x1="56" y1="138" x2="96" y2="104"/><line x1="96" y1="104" x2="144" y2="100"/>
+    <line x1="144" y1="100" x2="184" y2="138"/><line x1="96" y1="104" x2="120" y2="150"/>
+    <line x1="144" y1="100" x2="120" y2="150"/>
+  </g>
+  <g fill="#0d1f18" stroke="#3ddc97" stroke-width="6">
+    <circle cx="56" cy="138" r="10"/><circle cx="96" cy="104" r="10"/>
+    <circle cx="144" cy="100" r="10"/><circle cx="184" cy="138" r="10"/>
+  </g>
+  <circle cx="120" cy="150" r="13" fill="#ff7a00"/>
+  <g fill="none" stroke="#ff7a00" stroke-width="5" stroke-linecap="round">
+    <path d="M104 66 a 22 22 0 0 1 32 0"/><path d="M94 54 a 36 36 0 0 1 52 0"/>
+  </g>
+  <text x="120" y="208" text-anchor="middle" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-weight="800" font-size="34" letter-spacing="6" fill="#e8f5ee">LSM</text>
+</svg>

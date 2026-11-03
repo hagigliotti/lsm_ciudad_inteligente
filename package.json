@@ -1,0 +1,15 @@
+{
+  "name": "lsm_ciudad_inteligente",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "LSM Ciudad Inteligente: análisis del proyecto 2009 y cómo implementarlo hoy en Libertador San Martín (Entre Ríos).",
+  "engines": { "node": ">=20" },
+  "scripts": {
+    "test": "node --test tests/validar.test.mjs tests/plataforma.test.mjs tests/paginas.test.mjs",
+    "auditar": "node plataforma/servidor.mjs --auditar",
+    "plataforma": "node plataforma/servidor.mjs",
+    "servir": "python3 -m http.server 8000"
+  },
+  "license": "MIT"
+}
