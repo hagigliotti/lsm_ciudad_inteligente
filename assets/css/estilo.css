@@ -988,3 +988,42 @@ code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: .
   .biblio-ficha { border: 2px solid #000; }
   a { color: #000; }
 }
+/* Loteo: manzanas, accesos y cloacas */
+.loteo-svg .mz-a1 { fill: #e3e9ff; stroke: #2440d8; }
+.loteo-svg .mz-a2 { fill: #efe2f7; stroke: #7a2aa6; }
+.loteo-svg .mz-a3 { fill: #fde4e4; stroke: #d4545c; }
+.loteo-svg .mz-b1 { fill: #fff7c7; stroke: #b49a00; }
+.loteo-svg .mz-b2 { fill: #dcf8fb; stroke: #18a9bd; }
+.loteo-svg .mz-c  { fill: #fde0dc; stroke: #d0281d; }
+.loteo-svg .mz-d1 { fill: #ddf2e3; stroke: #1f8a46; }
+.loteo-svg .mz-d2 { fill: #dde8f7; stroke: #2a5fa8; }
+.loteo-svg .mz-e  { fill: #ffe9d2; stroke: #e2811d; }
+.loteo-svg .mz-dg { fill: #ffffff; stroke: #111; stroke-width: 2.2; }
+.loteo-svg .lt-lote:hover { fill: #ffd9a8; }
+.loteo-svg .lt-club { fill: #9fd18f; }
+.loteo-svg .lt-club-t { font-size: 8px; fill: #23663a; text-anchor: middle; font-weight: 700; }
+.loteo-svg .lt-calle-t { font-size: 7.5px; fill: #5b5a52; font-weight: 800; letter-spacing: .1em; }
+.loteo-svg .lt-vecinal { fill: #cfcabc; }
+.loteo-svg .lt-vecino { font-size: 8px; fill: #8a877c; font-style: italic; }
+.loteo-svg .lt-cloaca { fill: none; stroke: #8a5a2b; stroke-width: 2; stroke-dasharray: 5 3; }
+.loteo-svg .lt-flecha { fill: #8a5a2b; }
+.loteo-svg .lt-tv { fill: #fff; stroke: #8a5a2b; stroke-width: 1.4; }
+.loteo-svg .lt-impulsion { stroke: #6b3d12; stroke-width: 2.4; }
+.loteo-svg .lt-flecha-imp { fill: #6b3d12; }
+.loteo-svg .lt-imp-t { font-size: 7.5px; fill: #6b3d12; font-weight: 700; }
+.loteo-svg .lt-bombeo { fill: #6b3d12; stroke: #fff; stroke-width: 1.5; }
+.loteo-svg .lt-bombeo-t { font-size: 8px; fill: #fff; font-weight: 800; text-anchor: middle; }
+.loteo-capas { display: flex; flex-wrap: wrap; gap: 8px 18px; margin: 0 0 10px; font-size: .9rem; }
+.loteo-capas label { display: inline-flex; gap: 6px; align-items: center; cursor: pointer; }
+.loteo-leyenda { display: flex; flex-wrap: wrap; gap: 6px 12px; margin: 10px 0 0; padding: 0; list-style: none; font-size: .82rem; }
+.loteo-leyenda li { display: inline-flex; align-items: center; gap: 6px; }
+.loteo-leyenda i { width: 14px; height: 14px; border-radius: 3px; border: 2px solid; display: inline-block; }
+.loteo-leyenda .l-a1 { background: #e3e9ff; border-color: #2440d8; } .loteo-leyenda .l-a2 { background: #efe2f7; border-color: #7a2aa6; }
+.loteo-leyenda .l-a3 { background: #fde4e4; border-color: #d4545c; } .loteo-leyenda .l-b1 { background: #fff7c7; border-color: #b49a00; }
+.loteo-leyenda .l-b2 { background: #dcf8fb; border-color: #18a9bd; } .loteo-leyenda .l-c { background: #fde0dc; border-color: #d0281d; }
+.loteo-leyenda .l-d1 { background: #ddf2e3; border-color: #1f8a46; } .loteo-leyenda .l-d2 { background: #dde8f7; border-color: #2a5fa8; }
+.loteo-leyenda .l-e { background: #ffe9d2; border-color: #e2811d; } .loteo-leyenda .l-dg { background: #fff; border-color: #111; }
+.loteo-leyenda .l-r { background: #b9dcb0; border-color: #1d2a24; } .loteo-leyenda .l-cl { background: none; border: 0; border-top: 2px dashed #8a5a2b; height: 0; }
+.loteo-fig:has(#capa-manzanas:not(:checked)) .lt-lote { fill: #fffdf7; stroke: #1d2a24; stroke-width: 1.1; }
+.loteo-fig:has(#capa-cloacas:not(:checked)) .lt-cloaca, .loteo-fig:has(#capa-cloacas:not(:checked)) .capa-cloaca { display: none; }
+.loteo-fig:has(#capa-puntos:not(:checked)) .capa-puntos { display: none; }
