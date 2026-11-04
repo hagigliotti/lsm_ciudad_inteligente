@@ -153,3 +153,6 @@ document.documentElement.classList.add('js');
     });
   }
 })();
+
+// Botones «Imprimir» (sin JS en línea por la CSP).
+document.querySelectorAll('[data-imprimir]').forEach((b) => b.addEventListener('click', () => window.print()));
