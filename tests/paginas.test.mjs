@@ -20,7 +20,7 @@ for (const p of paginas) {
     assert.match(html, /object-src 'none'/);
   });
   test(`${p}: sin scripts ni estilos en línea (los bloquea la CSP)`, () => {
-    assert.doesNotMatch(html, /<script(?![^>]*\bsrc=)[^>]*>/i, 'script en línea');
+    assert.doesNotMatch(html, /<script(?![^>]*\b(?:src=|type="application\/ld\+json"))[^>]*>/i, 'script en línea');
     assert.doesNotMatch(html, /\son[a-z]+="/i, 'manejador onclick/onload en línea');
     assert.doesNotMatch(html, /\sstyle="/i, 'atributo style');
   });

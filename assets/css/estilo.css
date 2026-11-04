@@ -910,3 +910,24 @@ code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: .
 .loteo img { width: 100%; height: auto; border-radius: 12px; border: 1px solid var(--linea); display: block; }
 .loteo figcaption { font-size: .88rem; color: var(--tinta-suave); margin-top: 8px; }
 @media (max-width: 720px) { .loteo { grid-template-columns: 1fr; } .loteo figure { max-width: 360px; } }
+/* Mapa de loteo redibujado */
+.loteo-fig { background: #f4f1e8; border: 1px solid var(--linea); border-radius: 14px; padding: 14px; }
+.loteo-svg { width: 100%; height: auto; display: block; font-family: inherit; }
+.loteo-svg .lt-calle { fill: #d9d6cc; }
+.loteo-svg .lt-lote { fill: #fffdf7; stroke: #1d2a24; stroke-width: 1.1; transition: fill .15s; }
+.loteo-svg .lt-lote:hover { fill: #ffd9a8; }
+.loteo-svg .lt-res { fill: #b9dcb0; stroke: #1d2a24; stroke-width: 1.1; }
+.loteo-svg .lt-res:hover { fill: #8fca82; }
+.loteo-svg .lt-int { fill: #efece2; stroke: #1d2a24; stroke-width: 1.1; }
+.loteo-svg .lt-n { font-size: 10px; font-weight: 700; fill: #1d2a24; text-anchor: middle; pointer-events: none; }
+.loteo-svg .lt-n--r { fill: #23663a; }
+.loteo-svg .lt-punto circle { fill: #fff; stroke: #e2702a; stroke-width: 2; }
+.loteo-svg .lt-punto text { font-size: 9px; font-weight: 800; fill: #b4521a; text-anchor: middle; }
+.loteo-svg .lt-rotonda { fill: #fff; stroke: #1d2a24; stroke-width: 1.5; }
+.loteo-svg .lt-ingreso path { fill: #d6303a; }
+.loteo-svg .lt-ingreso circle { fill: #fff; }
+.loteo-svg .lt-ruta { fill: #3b3f3d; }
+.loteo-svg .lt-ruta-t { font-size: 11px; font-weight: 800; fill: #fff; letter-spacing: .12em; }
+.loteo-svg .lt-norte { font-size: 12px; font-weight: 800; fill: #1d2a24; }
+.loteo-svg .lt-ingreso-t { font-size: 10px; font-weight: 700; fill: #1d2a24; text-anchor: end; }
+.loteo-fig figcaption { font-size: .86rem; color: var(--tinta-suave); margin-top: 10px; }
