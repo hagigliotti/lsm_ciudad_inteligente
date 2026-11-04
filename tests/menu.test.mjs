@@ -12,7 +12,7 @@ const sinActual = (m) => m.replace(/ aria-current="page"/g, '').replace(/ menu__
 
 const ESPERADAS = ['ciudad-hoy.html', 'archivo-2009.html', 'fallas-2009.html', 'en-simple.html', 'plan-maestro.html',
   'proyecto-2026.html', 'barrio-simple.html', 'barrio-tecnico.html', 'casa-simple.html', 'casa-tecnico.html',
-  'datos-personales.html', 'seguridad.html'];
+  'datos-personales.html', 'seguridad.html', 'escalas.html'];
 
 test('todas las páginas del menú existen', () => {
   for (const p of ESPERADAS) assert.ok(existsSync(join(RAIZ, p)), p);

@@ -32,10 +32,10 @@ Centro de operaciones con roles separados; Edge donde la latencia o continuidad 
 La Ciudad ofrece información pública y alertas oficiales y recibe reportes necesarios para servicios de su competencia. No accede por defecto a sensores interiores, cámaras, micrófonos, hábitos ni automatizaciones privadas. Las alertas pueden llegar a una casa sin conceder control municipal sobre ella.
 
 ## Documentos existentes
-- [Plan Maestro 2027–2036](../../plan-maestro.html)
-- [Proyecto 2026](../../proyecto-2026.html)
-- [La ciudad hoy](../../ciudad-hoy.html)
-- [Privacidad](../../datos-personales.html) · [Seguridad](../../seguridad.html)
+- [Plan Maestro 2027–2036](../../../../plan-maestro.html)
+- [Proyecto 2026](../../../../proyecto-2026.html)
+- [La ciudad hoy](../../../../ciudad-hoy.html)
+- [Privacidad](../../../../datos-personales.html) · [Seguridad](../../../../seguridad.html)
 
 ## Próximos trabajos
 Validar inventario y competencias; establecer líneas de base; seleccionar pilotos de alto valor y bajo riesgo; definir gobierno de datos y ciberseguridad; probar IA/robótica; publicar resultados, costes y limitaciones.

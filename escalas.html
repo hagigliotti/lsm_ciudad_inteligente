@@ -1,0 +1,293 @@
+<!doctype html>
+<html lang="es-AR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://www.googletagmanager.com; connect-src 'self' https://*.google-analytics.com https://*.analytics.google.com https://www.googletagmanager.com; img-src 'self' data: https://*.google-analytics.com https://www.googletagmanager.com; style-src 'self'; font-src 'self'; base-uri 'self'; form-action 'self'; object-src 'none'; upgrade-insecure-requests">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <title>Ciudad, barrio y casa: cómo encajan · LSM Ciudad Inteligente</title>
+  <meta name="description" content="Marco común de los proyectos LSM Ciudad Inteligente: responsabilidades de ciudad, barrio y casa, flujos de datos autorizados, capas compartidas, IA, robótica y continuidad.">
+  <meta property="og:title" content="Ciudad, barrio y casa: cómo encajan · LSM Ciudad Inteligente">
+  <meta property="og:image" content="https://hagigliotti.github.io/lsm_ciudad_inteligente/assets/logos/portada.jpg">
+  <meta name="theme-color" content="#0d1f18">
+  <link rel="icon" href="assets/logos/isotipo.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/css/estilo.css">
+  <script type="module" src="assets/js/archivo.js"></script>
+  <script type="module" src="assets/js/app.js"></script>
+</head>
+<body>
+<a class="salto" href="#contenido">Saltar al contenido</a>
+<!-- menu:inicio -->
+<header class="barra">
+  <div class="envoltura">
+    <a class="barra__marca" href="index.html"><img src="assets/logos/isotipo.svg" alt="" width="36" height="36">LSM</a>
+    <button class="menu__boton" type="button" aria-expanded="false" aria-controls="menu-principal" data-menu-boton>Menú</button>
+    <nav class="menu" id="menu-principal" aria-label="Menú principal">
+      <ul class="menu__lista">
+        <li><a class="menu__link" href="ciudad-hoy.html">La ciudad hoy</a></li>
+        <li>
+          <details class="menu__grupo">
+            <summary>Proyecto 2009 <i>original</i></summary>
+            <ul>
+              <li><a href="archivo-2009.html"><b>Archivo 2009</b><small>El proyecto original completo, tal como se publicó</small></a></li>
+              <li><a href="fallas-2009.html"><b>Fallas 2009</b><small>Qué le faltó y qué cambió desde entonces</small></a></li>
+            </ul>
+          </details>
+        </li>
+        <li>
+          <details class="menu__grupo menu__grupo--activo">
+            <summary>Proyecto 2026 <i>actualización</i></summary>
+            <ul>
+              <li><a href="en-simple.html"><b>En simple</b><small>Explicado fácil, con dibujos y ejemplos</small></a></li>
+              <li><a href="plan-maestro.html"><b>Versión técnica</b><small>Plan Maestro 2027–2036 completo</small></a></li>
+              <li><a href="proyecto-2026.html"><b>Mapa, costos y cronograma</b><small>Dónde va cada cosa, cuánto cuesta y cuándo</small></a></li>
+              <li><a href="escalas.html" aria-current="page"><b>Ciudad, barrio y casa</b><small>Cómo encajan los tres proyectos</small></a></li>
+            </ul>
+          </details>
+        </li>
+        <li>
+          <details class="menu__grupo">
+            <summary>Barrio privado inteligente <i>nuevo</i></summary>
+            <ul>
+              <li><a href="barrio-simple.html"><b>En simple</b><small>Qué cambia para quien vive en el barrio</small></a></li>
+              <li><a href="barrio-tecnico.html"><b>Versión técnica</b><small>Arquitectura, equipos, reglamento y costos</small></a></li>
+            </ul>
+          </details>
+        </li>
+        <li>
+          <details class="menu__grupo">
+            <summary>Casa particular inteligente <i>nuevo</i></summary>
+            <ul>
+              <li><a href="casa-simple.html"><b>En simple</b><small>Qué se puede automatizar y por dónde empezar</small></a></li>
+              <li><a href="casa-tecnico.html"><b>Versión técnica</b><small>Equipos, protocolos, instalación y costos</small></a></li>
+            </ul>
+          </details>
+        </li>
+        <li>
+          <details class="menu__grupo">
+            <summary>Privacidad y seguridad</summary>
+            <ul>
+              <li><a href="datos-personales.html"><b>Datos personales</b><small>Sensibles y no tan sensibles: qué se protege y cómo</small></a></li>
+              <li><a href="seguridad.html"><b>Seguridad</b><small>Cómo se protegen el sitio y los sistemas</small></a></li>
+            </ul>
+          </details>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>
+<!-- menu:fin -->
+
+<main id="contenido">
+
+<section class="proy-portada">
+  <div class="envoltura">
+    <span class="etiqueta">Marco común · versión técnica</span>
+    <h1>Ciudad, barrio y casa: cómo encajan</h1>
+    <p class="intro">Los tres proyectos son independientes pero hablan el mismo idioma. Cada escala tiene sus responsables, sus equipos y sus datos; se comunican por interfaces autorizadas y revocables, y ninguna necesita a las otras para sus funciones esenciales.</p>
+    <div class="proy-chips">
+      <div><b>3 escalas</b><span>ciudad, barrio y casa</span></div>
+      <div><b>8 capas</b><span>de referencia compartidas</span></div>
+      <div><b>5 niveles</b><span>de autonomía por tarea</span></div>
+      <div><b>0 accesos</b><span>por defecto a lo privado</span></div>
+    </div>
+    <div class="versiones">
+      <a class="version-chip" href="plan-maestro.html"><b>Ciudad</b> Plan Maestro →</a>
+      <a class="version-chip" href="barrio-tecnico.html"><b>Barrio</b> versión técnica →</a>
+      <a class="version-chip" href="casa-tecnico.html"><b>Casa</b> versión técnica →</a>
+    </div>
+  </div>
+</section>
+
+<div class="envoltura arch-cuerpo">
+  <nav class="arch-menu" aria-label="Capítulos">
+    <p class="arch-menu__tit">Capítulos</p>
+    <ol>
+      <li><a href="#responsabilidades"><span>1</span>Responsabilidades</a></li>
+      <li><a href="#autonomia"><span>2</span>Autonomía local</a></li>
+      <li><a href="#flujos"><span>3</span>Qué viaja entre escalas</a></li>
+      <li><a href="#capas"><span>4</span>Capas compartidas</a></li>
+      <li><a href="#ia-robotica"><span>5</span>IA y robótica</a></li>
+      <li><a href="#continuidad"><span>6</span>Continuidad</a></li>
+      <li><a href="#criterios"><span>7</span>Criterios comunes</a></li>
+      <li><a href="#etapas"><span>8</span>Etapas y pendientes</a></li>
+    </ol>
+  </nav>
+  <div>
+
+<article class="cap" id="responsabilidades" data-cap>
+  <div class="cap__cab"><div class="cap__num">1</div><div><h2>Quién se ocupa de qué</h2></div></div>
+  <div class="cap__cuerpo">
+    <div class="desliza"><table class="tabla"><thead><tr><th>Escala</th><th>Unidad</th><th>Responsabilidad</th><th>Ejemplos</th></tr></thead><tbody>
+      <tr><td>Ciudad</td><td>Territorio y servicios municipales</td><td>Infraestructura y servicios urbanos</td><td>Alumbrado, agua, movilidad, drenaje, emergencias, GIS</td></tr>
+      <tr><td>Barrio</td><td>Comunidad y espacios compartidos</td><td>Infraestructura y servicios vecinales</td><td>Accesos, luz común, riego, residuos, energía compartida</td></tr>
+      <tr><td>Casa</td><td>Vivienda y ocupantes</td><td>Instalaciones y automatización doméstica</td><td>Climatización, energía, agua, accesos, sensores y robots</td></tr>
+    </tbody></table></div>
+    <p>“Barrio” puede ser un barrio abierto, un conjunto residencial, un barrio cooperativo o un barrio privado; la gobernanza se define en cada caso. El <a href="barrio-tecnico.html">barrio privado</a> es un caso de aplicación, no la definición universal.</p>
+  </div>
+</article>
+
+<article class="cap" id="autonomia" data-cap>
+  <div class="cap__cab"><div class="cap__num">2</div><div><h2>Autonomía por diseño</h2></div></div>
+  <div class="cap__cuerpo">
+    <ul>
+      <li><strong>Casa:</strong> conserva control local, funciones manuales y automatizaciones esenciales.</li>
+      <li><strong>Barrio:</strong> mantiene los servicios comunes críticos con controladores locales y procedimientos manuales.</li>
+      <li><strong>Ciudad:</strong> mantiene los servicios esenciales con sistemas redundantes, operación local y equipos responsables.</li>
+    </ul>
+    <aside class="aviso"><strong>Regla.</strong> La conexión entre escalas mejora la coordinación, pero nunca es condición para abrir una salida, encender una luz o llevar un sistema a estado seguro.</aside>
+  </div>
+</article>
+
+<article class="cap" id="flujos" data-cap>
+  <div class="cap__cab"><div class="cap__num">3</div><div><h2>Qué viaja entre escalas</h2></div></div>
+  <div class="cap__cuerpo">
+    <figure class="figura">
+      <svg viewBox="0 0 900 300" role="img" aria-labelledby="es-t">
+        <title id="es-t">Tres cajas: ciudad, barrio y casa. De la ciudad bajan alertas oficiales al barrio y a la casa; del barrio sube a la ciudad un resumen de incidencias; de la casa sube al barrio solo lo autorizado, como un pedido de mantenimiento. Ninguna flecha da control de los equipos privados</title>
+        <defs><marker id="efl" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path class="d-punta" d="M0 0 10 5 0 10z"/></marker><marker id="efl2" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path class="d-punta--menta" d="M0 0 10 5 0 10z"/></marker></defs>
+        <rect class="d-caja--osc" x="330" y="14" width="240" height="64" rx="14"/><text class="d-txt--claro" x="450" y="44" text-anchor="middle">Ciudad</text><text class="d-txt--chico" x="450" y="64" text-anchor="middle">servicios municipales</text>
+        <rect class="d-caja--menta" x="60" y="200" width="240" height="64" rx="14"/><text class="d-txt" x="180" y="230" text-anchor="middle">Barrio</text><text class="d-txt--chico" x="180" y="250" text-anchor="middle">consorcio o vecinal</text>
+        <rect class="d-caja--nar" x="600" y="200" width="240" height="64" rx="14"/><text class="d-txt" x="720" y="230" text-anchor="middle">Casa</text><text class="d-txt--chico" x="720" y="250" text-anchor="middle">ocupantes</text>
+        <path class="d-linea--menta" d="M360 80 L210 196" marker-end="url(#efl2)"/><text class="d-txt--chico" x="200" y="128">alertas oficiales</text>
+        <path class="d-linea" d="M250 196 L400 82" marker-end="url(#efl)"/><text class="d-txt--chico" x="320" y="170">incidencias agregadas</text>
+        <path class="d-linea--menta" d="M540 80 L690 196" marker-end="url(#efl2)"/><text class="d-txt--chico" x="630" y="128">alertas públicas</text>
+        <path class="d-linea" d="M598 238 H304" marker-end="url(#efl)"/><text class="d-txt--chico" x="450" y="228" text-anchor="middle">solo lo autorizado (ej.: pedido de mantenimiento)</text>
+        <text class="d-txt--chico" x="450" y="290" text-anchor="middle">ninguna flecha da control sobre equipos, cámaras o sensores privados</text>
+      </svg>
+      <figcaption>Figura 1. Flujos autorizados entre escalas.</figcaption>
+    </figure>
+    <div class="desliza"><table class="tabla"><thead><tr><th>Dirección</th><th>Qué viaja</th><th>Qué nunca viaja por defecto</th></tr></thead><tbody>
+      <tr><td>Casa → Barrio</td><td>Eventos necesarios y autorizados: pedido de mantenimiento común, reserva, aviso de visita</td><td>Sensores interiores, cámaras, micrófonos, hábitos</td></tr>
+      <tr><td>Barrio → Ciudad</td><td>Incidencias agregadas de servicios municipales (alumbrado, desagües, calles)</td><td>Registros de visitas o consumos por lote</td></tr>
+      <tr><td>Ciudad → Barrio y Casa</td><td>Alertas oficiales, avisos y datos públicos</td><td>Capacidad de controlar dispositivos privados</td></tr>
+      <tr><td>Casa ↔ Casa</td><td>Colaboración voluntaria y revocable, por ejemplo energía compartida</td><td>Acceso a la red o los equipos del vecino</td></tr>
+    </tbody></table></div>
+    <div class="nota-rev"><strong>Nota de revisión</strong><p>Las comunidades energéticas entre viviendas dependen del régimen de generación distribuida y de lo que autorice la distribuidora (ENERSA o la cooperativa); hoy se consideran una propuesta a validar.</p></div>
+    <p>Todo intercambio de datos personales exige finalidad, base jurídica, transparencia, minimización y controles (ver <a href="datos-personales.html">Datos personales</a>). Cada escala mantiene sus propios usuarios, activos, permisos y registros; los accesos entre escalas son explícitos, limitados, revocables y auditados.</p>
+  </div>
+</article>
+
+<article class="cap" id="capas" data-cap>
+  <div class="cap__cab"><div class="cap__num">4</div><div><h2>Capas tecnológicas compartidas</h2></div></div>
+  <div class="cap__cuerpo">
+    <ol class="autonomia autonomia--capas">
+      <li><b>1</b><span><strong>Activos físicos:</strong> edificios, calles, redes, equipos, sensores y actuadores.</span></li>
+      <li><b>2</b><span><strong>Conectividad:</strong> fibra, Ethernet, Wi-Fi, redes móviles y LoRaWAN donde corresponda.</span></li>
+      <li><b>3</b><span><strong>Control local y borde:</strong> controladores, gateways, PLC y procesamiento cerca del origen.</span></li>
+      <li><b>4</b><span><strong>Integración:</strong> APIs y protocolos documentados como MQTT y HTTPS.</span></li>
+      <li><b>5</b><span><strong>Datos y contexto:</strong> inventario, series temporales, GIS, eventos y calidad de datos.</span></li>
+      <li><b>6</b><span><strong>IA y analítica:</strong> detección, predicción, optimización y asistencia.</span></li>
+      <li><b>7</b><span><strong>Robótica y actuación:</strong> límites operativos, zonas seguras, parada y supervisión.</span></li>
+      <li><b>8</b><span><strong>Gobernanza:</strong> identidad, permisos, auditoría, mantenimiento y continuidad.</span></li>
+    </ol>
+    <p>Se comparten criterios y estándares, no necesariamente servidores ni bases de datos: una casa no necesita un GIS, y la ciudad no aloja la domótica de nadie.</p>
+  </div>
+</article>
+
+<article class="cap" id="ia-robotica" data-cap>
+  <div class="cap__cab"><div class="cap__num">5</div><div><h2>IA y robótica en cada escala</h2></div></div>
+  <div class="cap__cuerpo">
+    <div class="desliza"><table class="tabla"><thead><tr><th>Escala</th><th>IA</th><th>Robótica</th></tr></thead><tbody>
+      <tr><td>Casa</td><td>Asistencia local, eficiencia energética, anomalías, coordinación de robots</td><td>Aspirado, césped, piscina, inspección</td></tr>
+      <tr><td>Barrio</td><td>Mantenimiento predictivo, consumos anómalos, optimización de luz y riego</td><td>Limpieza común, jardinería, inspección de instalaciones</td></tr>
+      <tr><td>Ciudad</td><td>Planificación, gemelo digital, predicción de demanda y fallas</td><td>Inspección de infraestructura y mantenimiento especializado</td></tr>
+    </tbody></table></div>
+    <ul>
+      <li>Datos sensibles procesados localmente siempre que sea viable; distinguir modelos locales y servicios externos.</li>
+      <li>Cada recomendación indica origen, confianza y limitaciones. Una simulación nunca se presenta como medición real.</li>
+      <li>La analítica del barrio no se convierte en puntuación social, seguimiento individual ni vigilancia indiscriminada.</li>
+      <li>Cada robot: identificación, zonas y horarios, detección de obstáculos, parada de emergencia, mantenimiento, registro de incidentes y modo seguro ante pérdida de comunicación.</li>
+    </ul>
+    <h3>Niveles de autonomía por tarea</h3>
+    <p>Es la misma escala del <a href="plan-maestro.html#robotica">Plan Maestro</a> (N0–N4), aplicada a las tres escalas:</p>
+    <ol class="autonomia">
+      <li><b>N0</b><span><strong>Manual:</strong> acción humana.</span></li>
+      <li><b>N1</b><span><strong>Asistido:</strong> el sistema informa o recomienda.</span></li>
+      <li><b>N2</b><span><strong>Automático acotado:</strong> reglas aprobadas y límites definidos.</span></li>
+      <li><b>N3</b><span><strong>Adaptativo supervisado:</strong> la IA optimiza con registro, supervisión y reversión.</span></li>
+      <li><b>N4</b><span><strong>Alta autonomía controlada:</strong> entorno delimitado, redundancia y supervisión. No es un objetivo universal.</span></li>
+    </ol>
+  </div>
+</article>
+
+<article class="cap" id="continuidad" data-cap>
+  <div class="cap__cab"><div class="cap__num">6</div><div><h2>Continuidad y degradación segura</h2></div></div>
+  <div class="cap__cuerpo">
+    <ol>
+      <li>Mantener controles manuales.</li>
+      <li>Definir estados seguros para sistemas críticos.</li>
+      <li>Poder detener las automatizaciones no críticas sin afectar la seguridad.</li>
+      <li>Guardar localmente y de forma segura los eventos pendientes.</li>
+      <li>Verificar integridad e identidad antes de reanudar acciones automáticas.</li>
+    </ol>
+  </div>
+</article>
+
+<article class="cap" id="criterios" data-cap>
+  <div class="cap__cab"><div class="cap__num">7</div><div><h2>Criterios comunes</h2></div></div>
+  <div class="cap__cuerpo">
+    <h3>Estados de la información</h3>
+    <div class="dominios">
+      <div class="dominio"><h4><span class="estado-chip ok">Verificado</span></h4><p>Respaldado por una fuente o una prueba reproducible.</p></div>
+      <div class="dominio"><h4><span class="estado-chip pend">Estimado</span></h4><p>Cálculo orientativo con método y supuestos explícitos.</p></div>
+      <div class="dominio"><h4><span class="estado-chip neutro">Propuesta</span></h4><p>Alternativa todavía no aprobada.</p></div>
+      <div class="dominio"><h4><span class="estado-chip alto">Pendiente</span></h4><p>Dato o validación que falta conseguir.</p></div>
+    </div>
+    <p>Nunca se presenta una estimación como cotización ni una propuesta como decisión oficial.</p>
+    <h3>Ficha mínima de cada caso de uso</h3>
+    <ol class="dos-columnas">
+      <li>Necesidad y problema</li><li>Escala responsable</li><li>Usuarios afectados y responsable operativo</li><li>Entradas, sensores, datos y fuentes</li><li>Acciones, actuadores y límites</li><li>IA: finalidad y modelo local o externo</li><li>Robótica: tipo, entorno y autonomía</li><li>Dependencias de red, energía y servicios</li><li>Riesgos y mitigaciones</li><li>Privacidad, base jurídica, retención y permisos</li><li>Modo manual, estado seguro y contingencia</li><li>Costo inicial, operación, mantenimiento y fin de vida</li><li>Indicadores y línea de base</li><li>Pruebas, aprobación y reversión</li>
+    </ol>
+    <h3>Indicadores comunes</h3>
+    <p>Disponibilidad; tiempo de detección y resolución; consumo de energía y agua; pérdidas; costo total de propiedad; incidentes de seguridad y privacidad; horas de operación sin internet; exactitud y falsas alarmas; anulaciones humanas y paradas de emergencia; accesibilidad y satisfacción. Las metas se fijan después de medir la línea de base.</p>
+    <h3>Trazabilidad</h3>
+    <p>Todo cambio registra fecha, versión, autoría, fuentes, decisiones afectadas y estado de revisión. No se publican datos personales, credenciales, direcciones privadas ni información que facilite intrusiones.</p>
+  </div>
+</article>
+
+<article class="cap" id="etapas" data-cap>
+  <div class="cap__cab"><div class="cap__num">8</div><div><h2>Etapas y validaciones pendientes</h2></div></div>
+  <div class="cap__cuerpo">
+    <div class="ruta ruta--6">
+      <div class="ruta__fase"><em>0</em><h4>Diagnóstico</h4><p>Inventario, necesidades, riesgos, competencias.</p></div>
+      <div class="ruta__fase"><em>1</em><h4>Fundaciones</h4><p>Arquitectura, identidad, ciberseguridad.</p></div>
+      <div class="ruta__fase"><em>2</em><h4>Pilotos</h4><p>Chicos, medibles y reversibles.</p></div>
+      <div class="ruta__fase"><em>3</em><h4>Integración</h4><p>Interfaces y tableros.</p></div>
+      <div class="ruta__fase"><em>4</em><h4>IA y robótica</h4><p>Solo con evidencia.</p></div>
+      <div class="ruta__fase"><em>5</em><h4>Optimización</h4><p>Auditoría y mejora.</p></div>
+    </div>
+    <p><strong>Pendiente de validar:</strong> límites territoriales y competencias; acuerdos de intercambio de datos; normativa aplicable; videovigilancia; evaluación de amenazas; cotizaciones; niveles de autonomía y certificaciones requeridas.</p>
+    <h3>Próximo: LSM Smart Home 360</h3>
+    <p>Sobre la escala Casa se propone un catálogo neutral de marcas, un configurador por espacios y funciones, un simulador, inventario, presupuesto y centro técnico, distinguiendo siempre la demostración de una conexión real con Home Assistant.</p>
+    <p class="fuentes">Marco elaborado con asistencia de inteligencia artificial (ChatGPT y Claude) y revisión humana, a partir de la entrega del 4 de noviembre de 2026 (<a href="docs/recibidos/2026-11-04-chatgpt/README.md">documentos originales</a>). Es una propuesta: no constituye aprobación municipal, proyecto ejecutivo, pliego ni presupuesto oficial. Ver la <a href="privacidad.html">política de privacidad</a>.</p>
+  </div>
+</article>
+
+  </div>
+</div>
+
+</main>
+
+<!-- pie:inicio -->
+<footer class="pie">
+  <div class="envoltura">
+    <div class="pie__marca"><img src="assets/logos/logo-horizontal-claro.svg" alt="LSM Ciudad Inteligente" width="240" height="60">
+      <span>© 2009–<span data-anio>2026</span> · Hernando A. Gigliotti</span>
+      <span><a href="ciudad-hoy.html">La ciudad hoy</a> · <a href="privacidad.html">Política de privacidad del sitio</a> · <a href="#" data-revisar-cookies>Cookies</a></span></div>
+    <div class="pie__mapa">
+      <div><b>Proyecto 2009</b><a href="archivo-2009.html">Archivo 2009</a><a href="fallas-2009.html">Fallas 2009</a></div>
+      <div><b>Proyecto 2026</b><a href="en-simple.html">En simple</a><a href="plan-maestro.html">Versión técnica</a><a href="proyecto-2026.html">Mapa, costos y cronograma</a><a href="escalas.html">Ciudad, barrio y casa</a></div>
+      <div><b>Barrio privado inteligente</b><a href="barrio-simple.html">En simple</a><a href="barrio-tecnico.html">Versión técnica</a></div>
+      <div><b>Casa particular inteligente</b><a href="casa-simple.html">En simple</a><a href="casa-tecnico.html">Versión técnica</a></div>
+      <div><b>Privacidad y seguridad</b><a href="datos-personales.html">Datos personales</a><a href="seguridad.html">Seguridad</a></div>
+    </div>
+  </div>
+</footer>
+<!-- pie:fin -->
+<div class="consent" data-consent hidden role="dialog" aria-label="Cookies">
+  <p>Usamos Google Analytics para saber cuántas personas visitan el sitio. Solo se activa si aceptás. <a href="privacidad.html#cookies">Más información</a>.</p>
+  <div><button class="boton" data-elegir="si">Aceptar</button><button class="boton boton--sec" data-elegir="no">Rechazar</button></div>
+</div>
+</body>
+</html>

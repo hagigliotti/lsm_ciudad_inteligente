@@ -33,7 +33,7 @@ Control local para servicios comunes esenciales. Segmentar red de administració
 - **Entre viviendas:** colaboración explícita y revocable, por ejemplo energía comunitaria.
 
 ## Caso particular: barrio privado
-El repositorio ya contiene [versión simple](../../barrio-simple.html) y [versión técnica](../../barrio-tecnico.html). Esta carpeta es el marco común de Barrio; el barrio privado es un caso de aplicación, no la definición universal.
+El repositorio ya contiene [versión simple](../../../../barrio-simple.html) y [versión técnica](../../../../barrio-tecnico.html). Esta carpeta es el marco común de Barrio; el barrio privado es un caso de aplicación, no la definición universal.
 
 ## Próximos trabajos
 Definir perímetro y entidad responsable; inventariar activos; establecer gobernanza y permisos; priorizar pilotos de agua, energía, iluminación y mantenimiento; evaluar IA/robótica; acordar interfaces con Ciudad y viviendas.

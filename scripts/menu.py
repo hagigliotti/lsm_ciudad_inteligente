@@ -21,6 +21,7 @@ MENU = [
         ('en-simple.html', 'En simple', 'Explicado fácil, con dibujos y ejemplos'),
         ('plan-maestro.html', 'Versión técnica', 'Plan Maestro 2027–2036 completo'),
         ('proyecto-2026.html', 'Mapa, costos y cronograma', 'Dónde va cada cosa, cuánto cuesta y cuándo'),
+        ('escalas.html', 'Ciudad, barrio y casa', 'Cómo encajan los tres proyectos'),
     ]),
     ('Barrio privado inteligente', 'nuevo', [
         ('barrio-simple.html', 'En simple', 'Qué cambia para quien vive en el barrio'),

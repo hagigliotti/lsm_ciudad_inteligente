@@ -36,7 +36,7 @@ Separar redes personales, IoT, invitados y cámaras; autenticación robusta; act
 La Casa puede recibir alertas públicas y participar voluntariamente en servicios comunitarios. Integración granular, autorizada y revocable. Ni Barrio ni Ciudad obtienen control general de automatizaciones, sensores interiores o robots domésticos.
 
 ## Documentos existentes y evolución
-- [Casa simple](../../casa-simple.html) · [Casa técnica](../../casa-tecnico.html)
+- [Casa simple](../../../../casa-simple.html) · [Casa técnica](../../../../casa-tecnico.html)
 
 Este marco sirve de base al futuro **LSM Smart Home 360**: catálogo neutral de marcas, configurador por espacios y funciones, simulador, inventario, presupuesto y centro técnico. Distinguir siempre demo de conexión real con Home Assistant.
 

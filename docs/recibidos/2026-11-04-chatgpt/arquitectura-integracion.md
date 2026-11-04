@@ -81,4 +81,4 @@ Cada piloto tendrá responsable, presupuesto, línea de base, indicadores, plan 
 Límites territoriales y competencias; acuerdos de intercambio; normativa aplicable; protección de datos y videovigilancia; evaluación de amenazas; cotizaciones; niveles de autonomía y certificaciones requeridas.
 
 ## 12. Relación con el material publicado
-Contrastar con el [Plan Maestro](../plan-maestro.html), [Proyecto 2026](../proyecto-2026.html), [Barrio técnico](../barrio-tecnico.html) y [Casa técnica](../casa-tecnico.html). Las diferencias se documentan para revisión; no se sobrescriben decisiones anteriores silenciosamente.
+Contrastar con el [Plan Maestro](../../../plan-maestro.html), [Proyecto 2026](../../../proyecto-2026.html), [Barrio técnico](../../../barrio-tecnico.html) y [Casa técnica](../../../casa-tecnico.html). Las diferencias se documentan para revisión; no se sobrescriben decisiones anteriores silenciosamente.

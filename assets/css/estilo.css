@@ -567,3 +567,7 @@ code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: .
 .alto { background: color-mix(in srgb, var(--rojo) 16%, transparent); color: var(--rojo); }
 .neutro { background: color-mix(in srgb, #64748b 18%, transparent); color: #64748b; }
 .estado-chip { white-space: nowrap; }
+.ruta--6 { grid-template-columns: repeat(6, minmax(0, 1fr)); }
+@media (max-width: 900px) { .ruta--6 { grid-template-columns: 1fr 1fr; } }
+.autonomia--capas li b { background: var(--verde) !important; color: var(--menta-viva) !important; }
+.dos-columnas { columns: 2 260px; }

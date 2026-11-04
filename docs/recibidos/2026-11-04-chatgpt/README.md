@@ -18,11 +18,11 @@ Cada escala tiene responsabilidades, inventarios, datos y controles propios. Se 
 - [Casa](casa/README.md)
 
 ## Material existente que complementa
-- [Plan Maestro 2027–2036](../plan-maestro.html)
-- [Proyecto 2026](../proyecto-2026.html)
-- [Relevamiento de la ciudad](../ciudad-hoy.html)
-- [Barrio simple](../barrio-simple.html) · [Barrio técnico](../barrio-tecnico.html)
-- [Casa simple](../casa-simple.html) · [Casa técnica](../casa-tecnico.html)
-- [Privacidad](../datos-personales.html) · [Seguridad](../seguridad.html)
+- [Plan Maestro 2027–2036](../../../plan-maestro.html)
+- [Proyecto 2026](../../../proyecto-2026.html)
+- [Relevamiento de la ciudad](../../../ciudad-hoy.html)
+- [Barrio simple](../../../barrio-simple.html) · [Barrio técnico](../../../barrio-tecnico.html)
+- [Casa simple](../../../casa-simple.html) · [Casa técnica](../../../casa-tecnico.html)
+- [Privacidad](../../../datos-personales.html) · [Seguridad](../../../seguridad.html)
 
 No se modificaron páginas existentes ni archivos fuera de `entrada/`. Esta documentación no constituye aprobación municipal, proyecto ejecutivo, pliego ni presupuesto oficial.
