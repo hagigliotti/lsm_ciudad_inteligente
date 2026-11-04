@@ -60,45 +60,54 @@ franja((362, 30), (362, 712), (330, 30), (330, 712), list(range(37, 58)) + ['R5'
 poli([(282, 742), (318, 712), (318, 742)], 'lt-res', None, 'Reserva R8')
 piezas.append('<text class="lt-n lt-n--r" x="308" y="736">R8</text>')
 
-# Manzana norte (58–70, R2, R3)
-x0, x1, y0 = 140, 300, 96
+# Manzana norte (58–70, R2, R3). Los extremos tienen tres filas (58 59 / 70 / 69 y
+# 62 63 / 64 / 66 65); el centro, dos (60 61 R2 / 68 67 R3). D está sobre la línea
+# que divide 60 de 68.
+x0, x1, y0, y1 = 140, 300, 96, 186
 cw = (x1 - x0) / 7
-filas = [(y0, y0 + 30), (y0 + 30, y0 + 60), (y0 + 60, y0 + 90)]
-for i, n in enumerate([58, 59, 60, 61, 'R2', 62, 63]):
+def rect(c0, c1, ya, yb, n):
     c, t = lote(n)
-    poli([(x0 + i * cw, filas[0][0]), (x0 + (i + 1) * cw, filas[0][0]), (x0 + (i + 1) * cw, filas[0][1]), (x0 + i * cw, filas[0][1])], c, str(n), t)
-for (a, b, n) in [(0, 2, 70), (2, 5, None), (5, 7, 64)]:
-    c, t = lote(n) if n else ('lt-int', 'Interior de manzana')
-    poli([(x0 + a * cw, filas[1][0]), (x0 + b * cw, filas[1][0]), (x0 + b * cw, filas[1][1]), (x0 + a * cw, filas[1][1])], c, str(n) if n else None, t)
-for (a, b, n) in [(0, 2, 69), (2, 3, 68), (3, 4, 67), (4, 5, 'R3'), (5, 6, 66), (6, 7, 65)]:
-    c, t = lote(n)
-    poli([(x0 + a * cw, filas[2][0]), (x0 + b * cw, filas[2][0]), (x0 + b * cw, filas[2][1]), (x0 + a * cw, filas[2][1])], c, str(n), t)
-marcador(x0 + 3.5 * cw, y0 + 45, 'D')
+    poli([(x0 + c0 * cw, ya), (x0 + c1 * cw, ya), (x0 + c1 * cw, yb), (x0 + c0 * cw, yb)], c, str(n), t)
+tercio, medio = (y1 - y0) / 3, (y0 + y1) / 2
+for i, n in enumerate([58, 59]): rect(i, i + 1, y0, y0 + tercio, n)
+rect(0, 2, y0 + tercio, y0 + 2 * tercio, 70)
+rect(0, 2, y0 + 2 * tercio, y1, 69)
+for i, n in enumerate([60, 61, 'R2']): rect(2 + i, 3 + i, y0, medio, n)
+for i, n in enumerate([68, 67, 'R3']): rect(2 + i, 3 + i, medio, y1, n)
+for i, n in enumerate([62, 63]): rect(5 + i, 6 + i, y0, y0 + tercio, n)
+rect(5, 7, y0 + tercio, y0 + 2 * tercio, 64)
+for i, n in enumerate([66, 65]): rect(5 + i, 6 + i, y0 + 2 * tercio, y1, n)
+marcador(round(x0 + 2.5 * cw, 1), medio, 'D')
 
-# Manzana central (71–84): borde izquierdo diagonal
+# Manzana central (71–84): borde izquierdo diagonal. Columna izquierda 71, 84, 83, 82,
+# 81, 80; arriba a la derecha 72, 73, 74; columna derecha 75 a 79. E está sobre la
+# línea que separa 84 de 75.
 top, base, xr = 222, 408, 300
 izq = lambda y: 170 + (y - top) * (246 - 170) / (base - top)
-filas_c = [[71, 72, 73, 74], [84, None, 75], [83, 76], [82, 77], [81, 78], [80, 79]]
+filas_c = [[71, 72, 73, 74], [84, 75], [83, 76], [82, 77], [81, 78], [80, 79]]
 alto = (base - top) / len(filas_c)
+div = lambda y: izq(y) + (xr - izq(y)) * 0.45  # línea entre columna izquierda y derecha
 for r, fila in enumerate(filas_c):
     ya, yb = top + r * alto, top + (r + 1) * alto
-    xa, xb = izq(ya), izq(yb)
-    k = len(fila)
+    if r == 0:
+        cortes_a = [izq(ya), div(ya)] + [div(ya) + (xr - div(ya)) * j / 3 for j in (1, 2, 3)]
+        cortes_b = [izq(yb), div(yb)] + [div(yb) + (xr - div(yb)) * j / 3 for j in (1, 2, 3)]
+    else:
+        cortes_a, cortes_b = [izq(ya), div(ya), xr], [izq(yb), div(yb), xr]
     for i, n in enumerate(fila):
-        l0a, l1a = xa + (xr - xa) * i / k, xa + (xr - xa) * (i + 1) / k
-        l0b, l1b = xb + (xr - xb) * i / k, xb + (xr - xb) * (i + 1) / k
-        c, t = lote(n) if n else ('lt-int', 'Interior de manzana')
-        poli([(l0a, ya), (l1a, ya), (l1b, yb), (l0b, yb)], c, str(n) if n else None, t)
-marcador(round(izq(top + 1.5 * alto) + (xr - izq(top + 1.5 * alto)) / 2, 1), round(top + 1.5 * alto, 1), 'E')
+        c, t = lote(n)
+        poli([(cortes_a[i], ya), (cortes_a[i + 1], ya), (cortes_b[i + 1], yb), (cortes_b[i], yb)], c, str(n), t)
+ye = top + 1.5 * alto
+marcador(round(div(ye), 1), round(ye, 1), 'E')
 
 # R4: triángulo verde
 poli([(250, 428), (300, 428), (300, 590)], 'lt-res', None, 'Reserva R4 (espacio verde)')
 piezas.append('<text class="lt-n lt-n--r" x="285" y="470">R4</text>')
 
 # Puntos A, B, C
-marcador(180, 333, 'A')
-marcador(167, 72, 'B')
-marcador(328, 386, 'C')
+marcador(178, 338, 'A')  # límite 16/17, lado calle
+marcador(167, 70, 'B')  # frente del lote 33
+marcador(362, 371, 'C')  # límite 47/48, lado exterior
 # Rotonda e ingreso
 piezas.append('<circle class="lt-rotonda" cx="318" cy="612" r="7"><title>Rotonda</title></circle>')
 piezas.append('<g class="lt-ingreso"><path d="M324 778c-9-12-14-20-14-27a14 14 0 0 1 28 0c0 7-5 15-14 27z"/><circle cx="324" cy="751" r="5"/>'
