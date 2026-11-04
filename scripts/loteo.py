@@ -51,14 +51,17 @@ piezas.append('<polygon class="lt-calle" points="12,30 362,30 362,742 300,742 12
 # Fondo de manzanas internas (la calle queda como fondo gris)
 # Franja oeste: lotes 1–10, R9, 11–30 (de la ruta hacia el norte)
 oeste = list(range(1, 11)) + ['R9'] + list(range(11, 31))
-franja((282, 742), (12, 30), (318, 712), (62, 30), oeste)
+franja((266, 700), (12, 30), (302, 672), (62, 30), oeste)
 # Franja norte: 31–34, R1, 35, 36
 franja((84, 30), (318, 30), (98, 70), (318, 70), [31, 32, 33, 34, 'R1', 35, 36])
 # Franja este: 37–57 y R5 (de norte a sur)
-franja((362, 30), (362, 712), (330, 30), (330, 712), list(range(37, 58)) + ['R5'])
-# R8: junto al ingreso
-poli([(282, 742), (318, 712), (318, 742)], 'lt-res', None, 'Reserva R8')
-piezas.append('<text class="lt-n lt-n--r" x="308" y="736">R8</text>')
+franja((362, 30), (362, 690), (330, 30), (330, 690), list(range(37, 58)))
+# R5: franja angosta al este del ingreso, desde el lote 57 hasta la ruta
+poli([(330, 690), (362, 690), (362, 742), (342, 742)], 'lt-res', None, 'Reserva R5')
+piezas.append('<text class="lt-n lt-n--r" x="351" y="722">R5</text>')
+# R8: debajo del lote 1, al oeste del ingreso
+poli([(266, 700), (302, 672), (312, 690), (312, 742), (282, 742)], 'lt-res', None, 'Reserva R8')
+piezas.append('<text class="lt-n lt-n--r" x="293" y="718">R8</text>')
 
 # Manzana norte (58–70, R2, R3). Los extremos tienen tres filas (58 59 / 70 / 69 y
 # 62 63 / 64 / 66 65); el centro, dos (60 61 R2 / 68 67 R3). D está sobre la línea
@@ -105,12 +108,12 @@ poli([(250, 428), (300, 428), (300, 590)], 'lt-res', None, 'Reserva R4 (espacio 
 piezas.append('<text class="lt-n lt-n--r" x="285" y="470">R4</text>')
 
 # Puntos A, B, C
-marcador(178, 338, 'A')  # límite 16/17, lado calle
+marcador(170.5, 320, 'A')  # límite 16/17, lado calle
 marcador(167, 70, 'B')  # frente del lote 33
-marcador(362, 371, 'C')  # límite 47/48, lado exterior
+marcador(362, 375.7, 'C')  # límite 47/48, lado exterior
 # Rotonda e ingreso
 piezas.append('<circle class="lt-rotonda" cx="318" cy="612" r="7"><title>Rotonda</title></circle>')
-piezas.append('<g class="lt-ingreso"><path d="M324 778c-9-12-14-20-14-27a14 14 0 0 1 28 0c0 7-5 15-14 27z"/><circle cx="324" cy="751" r="5"/>'
+piezas.append('<g class="lt-ingreso"><path d="M327 778c-9-12-14-20-14-27a14 14 0 0 1 28 0c0 7-5 15-14 27z"/><circle cx="327" cy="751" r="5"/>'
               '<title>Ingreso desde la RN 131</title></g>')
 # Ruta
 piezas.append('<rect class="lt-ruta" x="0" y="784" width="380" height="22"/>')
