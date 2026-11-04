@@ -931,3 +931,16 @@ code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: .
 .loteo-svg .lt-norte { font-size: 12px; font-weight: 800; fill: #1d2a24; }
 .loteo-svg .lt-ingreso-t { font-size: 10px; font-weight: 700; fill: #1d2a24; text-anchor: end; }
 .loteo-fig figcaption { font-size: .86rem; color: var(--tinta-suave); margin-top: 10px; }
+/* La Lomada: casa anotada */
+.casa-anotada { margin: 22px 0 10px; }
+.casa-anotada__lienzo { position: relative; border-radius: 14px; overflow: hidden; border: 1px solid var(--linea); }
+.casa-anotada__lienzo img { width: 100%; height: auto; display: block; }
+.casa-anotada__lienzo svg { position: absolute; inset: 0; width: 100%; height: 100%; }
+.casa-pt circle { fill: #e2702a; stroke: #fff; stroke-width: 3; }
+.casa-pt text { fill: #fff; font-size: 17px; font-weight: 800; text-anchor: middle; }
+.casa-anotada figcaption { font-size: .86rem; color: var(--tinta-suave); margin-top: 8px; }
+.casa-puntos { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 12px 22px; padding-left: 1.3em; margin: 18px 0; }
+.casa-puntos li::marker { color: #e2702a; font-weight: 800; }
+.casa-puntos b { display: block; }
+@media (max-width: 600px) { .casa-pt circle { r: 26px; } .casa-pt text { font-size: 26px; } }
+.casa-links { display: flex; flex-wrap: wrap; gap: 10px 22px; font-weight: 700; }

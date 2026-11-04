@@ -195,7 +195,7 @@
     <p class="intro">Cada dato indica de dónde sale. Las hipótesis no se vuelven hechos por repetirlas.</p>
     <div class="desliza"><table class="tabla"><thead><tr><th>Tema</th><th>Información</th><th>Fuente</th><th>Estado</th></tr></thead><tbody>
       <tr><td>Ubicación</td><td>Puiggari, Villa Libertador San Martín, departamento Diamante, Entre Ríos</td><td>Aviso inmobiliario y aportes del proyecto</td><td><span class="estado-chip ok">Publicado</span></td></tr>
-      <tr><td>Situación</td><td>En desarrollo; lotes sin edificar</td><td>Aportado por interesados; aviso inmobiliario</td><td><span class="estado-chip pend">Por verificar</span></td></tr>
+      <tr><td>Situación</td><td>En desarrollo; ya hay al menos una casa construida y el resto de los lotes sin edificar</td><td>Aportado por el autor; aviso inmobiliario</td><td><span class="estado-chip ok">Informado</span></td></tr>
       <tr><td>Administración</td><td>Fideicomiso</td><td>Aportado por interesados</td><td><span class="estado-chip pend">Por verificar</span></td></tr>
       <tr><td>Plano</td><td>Plano de mensura y subdivisión, julio de 2024, escala 1:2000, con visado municipal. Superficie total 144.342 m² (≈ 14,4 ha)</td><td>Foto del plano aportada por el autor</td><td><span class="estado-chip ok">Documentado</span></td></tr>
       <tr><td>Lotes</td><td>84 lotes numerados, en cinco grupos, más reservas R1 a R9. Avisos comerciales indican unos 1.000 m² por lote</td><td>Cartel de loteo en el ingreso; avisos</td><td><span class="estado-chip ok">Documentado</span></td></tr>
@@ -277,7 +277,24 @@
   </div>
 </section>
 
-<section id="relevamiento">
+<section id="casa">
+  <div class="envoltura">
+    <span class="etiqueta">Primera casa del barrio</span>
+    <h2>Una casa ya construida, pensada como casa inteligente</h2>
+    <p class="intro">Ya hay al menos una casa construida en La Lomada. La imagen es un diseño de referencia (render hecho con IA), no una foto. Encima marcamos qué se podría automatizar en una casa así. A propósito no indicamos en qué lote está ni dónde estarían realmente sus cámaras.</p>
+    <figure class="casa-anotada">
+      <div class="casa-anotada__lienzo">
+        <img src="assets/img/la-lomada/casa-render.jpg" alt="Render de una casa de una planta con frente gris, zócalo y parapeto de piedra oscura, luz LED bajo el techo, puerta doble de madera bajo un alero iluminado, tres ventanas blancas y dos macetas grandes con plantas, de noche y con lluvia" width="1280" height="431" loading="lazy">
+        <svg viewBox="0 0 1280 431" aria-hidden="true"><g class="casa-pt"><circle cx="380" cy="106" r="17"/><text x="380" y="112">1</text><title>LED de contorno</title></g><g class="casa-pt"><circle cx="810" cy="80" r="17"/><text x="810" y="86">2</text><title>Agua en el techo plano</title></g><g class="casa-pt"><circle cx="830" cy="142" r="17"/><text x="830" y="148">3</text><title>Luz del alero con presencia</title></g><g class="casa-pt"><circle cx="800" cy="268" r="17"/><text x="800" y="274">4</text><title>Cerradura inteligente</title></g><g class="casa-pt"><circle cx="884" cy="236" r="17"/><text x="884" y="242">5</text><title>Timbre con cámara</title></g><g class="casa-pt"><circle cx="204" cy="214" r="17"/><text x="204" y="220">6</text><title>Ventanas y cortinas</title></g><g class="casa-pt"><circle cx="648" cy="186" r="17"/><text x="648" y="192">7</text><title>Ventana chica: humedad</title></g><g class="casa-pt"><circle cx="1078" cy="214" r="17"/><text x="1078" y="220">8</text><title>Dormitorios</title></g><g class="casa-pt"><circle cx="540" cy="350" r="17"/><text x="540" y="356">9</text><title>Macetas y jardín</title></g><g class="casa-pt"><circle cx="650" cy="388" r="17"/><text x="650" y="394">10</text><title>Luces de camino</title></g></svg>
+      </div>
+      <figcaption>Imagen ilustrativa generada con IA. Los números indican lugares típicos, no la instalación real.</figcaption>
+    </figure>
+    <ol class="casa-puntos"><li><b>LED de contorno</b>La línea de luz bajo el borde del techo ya está en el diseño. Con un controlador se prende sola al anochecer, baja de intensidad a medianoche y parpadea si hay una alarma.</li><li><b>Agua en el techo plano</b>Un techo plano con parapeto junta agua. Un sensor en cada desagüe avisa si se tapa antes de que filtre, y un pluviómetro mide cuánto llovió.</li><li><b>Luz del alero con presencia</b>La luz del alero se enciende al llegar alguien y queda tenue el resto de la noche. Sirve también de luz de cortesía para quien abre la puerta.</li><li><b>Cerradura inteligente</b>En la puerta doble: abre con huella, código o el celular, y avisa si quedó sin llave. Las visitas reciben un código que vence.</li><li><b>Timbre con cámara</b>Atiende desde el celular aunque no haya nadie, y graba solo cuando alguien se acerca a la puerta. La imagen se queda en casa.</li><li><b>Ventanas y cortinas</b>Sensor de apertura y de vibración en cada ventana. Las cortinas se bajan solas con el sol fuerte o al salir de viaje, y simulan presencia.</li><li><b>Ventana chica: humedad</b>Si es baño o lavadero: sensor de humedad que prende la ventilación y avisa si hay pérdida de agua en el piso.</li><li><b>Dormitorios</b>Sensores de apertura, temperatura y humedad. El aire acondicionado no arranca si la ventana quedó abierta.</li><li><b>Macetas y jardín</b>Sensor de humedad de tierra con riego por goteo: riega solo cuando hace falta y no riega si va a llover.</li><li><b>Luces de camino</b>Balizas en el piso que se encienden con poca luz y guían hasta la puerta; se apagan solas de madrugada.</li></ol>
+    <p class="casa-links"><a href="casa-simulador.html">Probá estas situaciones en el simulador →</a> <a href="casa-simple.html">Casa inteligente explicada en simple →</a></p>
+  </div>
+</section>
+
+<section id="relevamiento" class="alterna">
   <div class="envoltura">
     <span class="etiqueta">Paso 1</span>
     <h2>Relevamiento prioritario</h2>
@@ -290,7 +307,7 @@
   </div>
 </section>
 
-<section id="propuesta" class="alterna">
+<section id="propuesta">
   <div class="envoltura">
     <span class="etiqueta">Paso 2</span>
     <h2>Qué conviene dejar previsto desde el loteo</h2>
@@ -307,7 +324,7 @@
   </div>
 </section>
 
-<section id="plan">
+<section id="plan" class="alterna">
   <div class="envoltura">
     <span class="etiqueta">Plan de trabajo</span>
     <h2>Seis pasos antes de presupuestar</h2>
@@ -322,7 +339,7 @@
   </div>
 </section>
 
-<section id="documentacion" class="alterna">
+<section id="documentacion">
   <div class="envoltura">
     <span class="etiqueta">Cómo se documenta</span>
     <h2>Carpeta del barrio</h2>
