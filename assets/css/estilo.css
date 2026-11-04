@@ -1027,3 +1027,8 @@ code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: .
 .loteo-fig:has(#capa-manzanas:not(:checked)) .lt-lote { fill: #fffdf7; stroke: #1d2a24; stroke-width: 1.1; }
 .loteo-fig:has(#capa-cloacas:not(:checked)) .lt-cloaca, .loteo-fig:has(#capa-cloacas:not(:checked)) .capa-cloaca { display: none; }
 .loteo-fig:has(#capa-puntos:not(:checked)) .capa-puntos { display: none; }
+/* Contraste del mapa de loteo (fondo claro también en modo oscuro) */
+.loteo-fig, .loteo-fig .loteo-capas, .loteo-fig .loteo-leyenda { color: #1d2a24; }
+.loteo-fig figcaption { color: #4a5650; }
+.loteo-fig figcaption a { color: #14663f; }
+.loteo-svg .lt-cantero { stroke: #fffdf7; stroke-width: 2; }
