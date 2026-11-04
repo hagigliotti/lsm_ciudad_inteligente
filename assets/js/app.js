@@ -92,8 +92,8 @@ function iniciarFormulario() {
         headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
         body: JSON.stringify({
           access_key: CONFIG.web3formsKey,
-          subject: `LSM Ciudad Inteligente · idea sobre ${r.datos.tema}`,
-          from_name: 'LSM Ciudad Inteligente',
+          subject: `LSM, una ciudad inteligente · idea sobre ${r.datos.tema}`,
+          from_name: 'LSM, una ciudad inteligente',
           nombre: r.datos.nombre, email: r.datos.email, barrio: r.datos.barrio,
           tema: r.datos.tema, mensaje: r.datos.mensaje, botcheck: '',
         }),

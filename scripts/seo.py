@@ -17,7 +17,7 @@ RAIZ = Path(__file__).resolve().parent.parent
 URL = 'https://hagigliotti.github.io/lsm_ciudad_inteligente/'
 IMAGEN = URL + 'assets/logos/portada.jpg'
 AUTOR = 'Hernando A. Gigliotti'
-SITIO = 'LSM Ciudad Inteligente'
+SITIO = 'LSM, una ciudad inteligente'
 # Verificación de Google Search Console (método «Etiqueta HTML»)
 GOOGLE_VERIFICACION = 'Hc9aPmTBxVf0O-psSnvX-bBOQnok3qnJpFTHAMOP9Oc'
 
@@ -34,7 +34,7 @@ CASA = ['casa inteligente', 'smart home', 'domótica', 'domótica Argentina', 'd
 # archivo: (título, descripción, [palabras clave propias], grupo, tipo de schema)
 PAGINAS = {
     'index.html': (
-        'LSM Ciudad Inteligente · Libertador San Martín, Entre Ríos',
+        'Libertador San Martín, una ciudad inteligente · 2009 → 2026',
         'Proyecto de ciudad inteligente para Libertador San Martín y Puiggari (Entre Ríos): plan 2026, barrio privado inteligente, casa inteligente y lo que se aprendió del proyecto de 2009.',
         ['proyecto ciudad inteligente', 'Libertador San Martín 2026', 'Hernando Gigliotti'], 'todo', 'WebSite'),
     'ciudad-hoy.html': (
@@ -43,17 +43,17 @@ PAGINAS = {
         ['Libertador San Martín noticias', 'reclamos vecinos Libertador San Martín', 'Municipalidad de Libertador San Martín',
          'inundaciones Libertador San Martín', 'agua Libertador San Martín', 'internet Puiggari', 'tránsito Puiggari'], 'ciudad', 'WebPage'),
     'archivo-2009.html': (
-        'Archivo 2009 · Libertador San Martín, una Ciudad Inteligente',
-        'El blog original del proyecto Libertador San Martín, una Ciudad Inteligente (julio de 2009), archivado completo y con enlaces a cada página original.',
+        'Archivo 2009 · Libertador San Martín, una ciudad inteligente',
+        'El blog original del proyecto Libertador San Martín, una ciudad inteligente (julio de 2009), archivado completo y con enlaces a cada página original.',
         ['proyecto 2009', 'ciudad digital', 'WiFi municipal', 'blog ciudad inteligente 2009'], 'ciudad', 'CollectionPage'),
     'biblioteca-2009.html': (
-        'El original de 2009 en la Biblioteca UAP · LSM Ciudad Inteligente',
+        'El original de 2009 en la Biblioteca UAP · LSM, una ciudad inteligente',
         'Dónde encontrar la monografía original “Libertador San Martín, una ciudad inteligente” (Gigliotti, 2009) en la Biblioteca E. Irving Mohr de la Universidad Adventista del Plata: signatura 004.6 G.459, ejemplares y reserva.',
         ['Biblioteca UAP', 'Biblioteca E. Irving Mohr', 'Universidad Adventista del Plata', 'UAP', 'monografía', 'Licenciatura en Sistemas de Información',
          'Hernando Ariel Gigliotti', 'Libertador San Martín, una ciudad inteligente', 'catálogo biblioteca UAP'], 'ciudad', 'Book'),
     'fallas-2009.html': (
-        'Fallas del proyecto Ciudad Inteligente 2009 · LSM',
-        'Qué le faltó al proyecto Ciudad Inteligente de Libertador San Martín de 2009, qué cambió desde entonces y qué reglas dejó para hoy.',
+        'Fallas del proyecto 2009 · LSM, una ciudad inteligente',
+        'Qué le faltó al proyecto «Libertador San Martín, una ciudad inteligente» de 2009, qué cambió desde entonces y qué reglas dejó para hoy.',
         ['lecciones aprendidas', 'por qué fallan las ciudades inteligentes', 'proyecto 2009'], 'ciudad', 'Article'),
     'en-simple.html': (
         'Ciudad inteligente explicada fácil · Libertador San Martín',
@@ -65,7 +65,7 @@ PAGINAS = {
         ['plan maestro ciudad inteligente', 'plan director smart city', 'gemelo digital', 'IoT municipal', 'LoRaWAN',
          'inteligencia artificial municipio', 'ciberseguridad municipal'], 'ciudad', 'TechArticle'),
     'proyecto-2026.html': (
-        'Proyecto 2026: mapa, costos y cronograma · LSM Ciudad Inteligente',
+        'Proyecto 2026: mapa, costos y cronograma · LSM, una ciudad inteligente',
         'El proyecto para hacer de Libertador San Martín una ciudad inteligente: mapa de lo que va en cada lugar, costos, cronograma, seguridad y robótica.',
         ['costos ciudad inteligente', 'cronograma smart city', 'cámaras de seguridad municipio', 'sensores urbanos'], 'ciudad', 'WebPage'),
     'escalas.html': (
@@ -106,11 +106,11 @@ PAGINAS = {
         'Qué datos personales usan los proyectos de ciudad, barrio privado y casa inteligente, cuáles son sensibles según la Ley 25.326 y cómo se protege cada uno.',
         ['protección de datos personales', 'Ley 25.326', 'datos sensibles', 'privacidad smart city', 'privacidad domótica'], 'todo', 'WebPage'),
     'privacidad.html': (
-        'Política de privacidad · LSM Ciudad Inteligente',
+        'Política de privacidad · LSM, una ciudad inteligente',
         'Qué datos recolecta este sitio, para qué, a quién se envían, cómo se usa la IA y cómo pedir que se borren.',
         ['política de privacidad', 'cookies'], 'todo', 'WebPage'),
     'seguridad.html': (
-        'Seguridad del sitio y de la plataforma · LSM Ciudad Inteligente',
+        'Seguridad del sitio y de la plataforma · LSM, una ciudad inteligente',
         'Cómo se protegen el sitio y la futura plataforma de ciudad, barrio y casa inteligente: validación, límites de uso, sesiones, CORS, errores y pruebas.',
         ['ciberseguridad', 'seguridad informática', 'OWASP'], 'todo', 'WebPage'),
 }
