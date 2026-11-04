@@ -1,5 +1,6 @@
 // Simulador, catálogo y configurador de la casa inteligente. Todo ocurre en el navegador.
 import { NIVELES, CATEGORIAS, EQUIPOS, TIPOS, ESCENAS, tipo, equiposDe, escenasDe, planificar, costo, equiposNivel, cobertura, SALAS_LUZ } from './casa-datos.js';
+import { FX, gato, perro, auto } from './casa-fx.js';
 
 const $ = (s, r = document) => r.querySelector(s);
 const $$ = (s, r = document) => [...r.querySelectorAll(s)];
@@ -13,6 +14,8 @@ const guardar = (k, v) => { try { localStorage.setItem(k, JSON.stringify(v)); } 
 const leer = (k, d) => { try { return JSON.parse(localStorage.getItem(k)) ?? d; } catch (_) { return d; } };
 const EQ = Object.fromEntries(EQUIPOS.map((q) => [q.id, q]));
 const ESTADOS = ['alerta', 'on', 'off', 'cerrado', 'ok'];
+// Efectos que muestran el problema: aparecen aunque tu nivel no tenga el equipo que lo detecta.
+const PROBLEMA = new Set(['ladron', 'charco', 'humo', 'gas', 'co', 'lluvia', 'apagon', 'calor', 'abuela', 'camioneta', 'noche', 'sol', 'perro', 'gato', 'perro-sale', 'persona-cocina', 'auto-llega', 'auto-sale', 'persona-sale', 'persona-entra', 'tanque-baja']);
 const CORTO = { hub: 'Puente', humo: 'Humo', co: 'Monóxido', agua: 'Agua', puerta: 'Puerta', enchufe: 'Enchufes', controlador: 'Controlador', luces: 'Luces', cortinas: 'Cortinas', presencia: 'Presencia', movimiento: 'Movimiento', temp: 'Temperatura', clima: 'Aire', luzamb: 'Luz natural', escena: 'Escenas', comedero: 'Comedero', medidor: 'Tablero', caudal: 'Medidor agua', tanque: 'Tanque', riego: 'Riego', suelo: 'Suelo', co2: 'Aire CO₂', ventana: 'Ventanas', reflector: 'Reflector', bebedero: 'Bebedero', heladera: 'Heladera', vibracion: 'Vibración', buzon: 'Buzón', lluvia: 'Estación', garrafa: 'Garrafa', humedadpared: 'Humedad', cerradura: 'Cerradura', camara: 'Cámara', timbre: 'Timbre', sirena: 'Alarma', vidrio: 'Vidrios', gas: 'Sensor gas', valvula: 'Válvula', porton: 'Portón', puertamascota: 'Gatera', ups: 'UPS', solar: 'Paneles', bateria: 'Batería', ev: 'Cargador', aspiradora: 'Aspiradora', cortacesped: 'Cortacésped', boton: 'Ayuda', caida: 'Caídas', cama: 'Cama', collar: 'Collar GPS', voz: 'Voz', pileta: 'Pileta', bomba: 'Bomba', starlink: 'Satélite', interruptores: 'Interruptores', miniswitch: 'Mini switch', aproximacion: 'Aproximación', pantalla: 'Pantalla', ventilador: 'Ventilador', multipresencia: 'Multipresencia', llavesconsumo: 'Llaves kWh', termosifon: 'Termosifón', lavarropas: 'Lavarropas', lavavajillas: 'Lavavajillas', ledcontorno: 'LED contorno', mirilla: 'Mirilla', valvulagas: 'Válvula gas' };
 const HORA = { agua: '10:12', humo: '20:41', gas: '20:15', monoxido: '03:40', salir: '08:15', llegar: '18:47', despertar: '07:00', noche: '19:58', vacaciones: '09:30', tormenta: '16:20', corte: '21:10', calor: '15:02', mayor: '10:00', mascota: '13:00', visita: '11:34', intruso: '03:12', sol: '12:30', pileta: '17:45', tanque: '06:40' };
 
@@ -25,32 +28,6 @@ $('[data-cuenta-escenas]') && ($('[data-cuenta-escenas]').textContent = `${ESCEN
 /* ---------- Plano ---------- */
 const plano = $('[data-plano]');
 const grupo = (cls, ...hijos) => { const g = svg('g', cls ? { class: cls } : {}); g.append(...hijos); return g; };
-
-// Auto visto desde arriba: carrocería, parabrisas, luneta, techo, ruedas y faros.
-function auto(x, y, color = 'p-auto') {
-  return grupo('p-auto-g',
-    svg('rect', { class: 'p-rueda', x: x + 8, y: y - 3, width: 12, height: 6, rx: 2 }), svg('rect', { class: 'p-rueda', x: x + 44, y: y - 3, width: 12, height: 6, rx: 2 }),
-    svg('rect', { class: 'p-rueda', x: x + 8, y: y + 31, width: 12, height: 6, rx: 2 }), svg('rect', { class: 'p-rueda', x: x + 44, y: y + 31, width: 12, height: 6, rx: 2 }),
-    svg('rect', { class: color, x, y, width: 64, height: 34, rx: 11 }),
-    svg('path', { class: 'p-auto__vidrio', d: `M${x + 40} ${y + 5} q8 12 0 24 h-4 v-24z` }),
-    svg('path', { class: 'p-auto__vidrio', d: `M${x + 14} ${y + 6} q-5 11 0 22 h3 v-22z` }),
-    svg('rect', { class: 'p-auto__techo', x: x + 20, y: y + 6, width: 18, height: 22, rx: 4 }),
-    svg('rect', { class: 'p-faro', x: x + 59, y: y + 4, width: 4, height: 6, rx: 1 }), svg('rect', { class: 'p-faro', x: x + 59, y: y + 24, width: 4, height: 6, rx: 1 }));
-}
-
-// Perro de costado, sentado.
-function perro(x, y, k = 1) {
-  const g = svg('g', { transform: `translate(${x} ${y}) scale(${k})`, class: 'p-perro' });
-  g.append(svg('path', { class: 'p-perro__cola', d: 'M-14 6 C-24 2 -24 -8 -20 -14' }),
-    svg('path', { class: 'p-perro__cuerpo', d: 'M-16 14 C-17 2 -13 -6 -4 -10 C2 -12 10 -10 12 -4 C14 2 14 10 13 14Z' }),
-    svg('rect', { class: 'p-perro__pata', x: -6, y: 6, width: 5, height: 9, rx: 2 }), svg('rect', { class: 'p-perro__pata', x: 4, y: 6, width: 5, height: 9, rx: 2 }),
-    svg('circle', { class: 'p-perro__cuerpo', cx: 8, cy: -16, r: 9 }),
-    svg('path', { class: 'p-perro__cuerpo', d: 'M14 -19 C21 -20 26 -17 26 -13 C26 -9 21 -8 16 -9Z' }),
-    svg('path', { class: 'p-perro__oreja', d: 'M2 -22 C-2 -21 -3 -13 -1 -7 C3 -9 5 -14 5 -19Z' }),
-    svg('circle', { class: 'p-negro', cx: 26, cy: -14, r: 2 }), svg('circle', { class: 'p-negro', cx: 11, cy: -18, r: 1.6 }),
-    svg('path', { class: 'p-perro__collar', d: 'M1 -9 Q8 -5 15 -9' }));
-  return g;
-}
 
 function arbol(x, y, r) {
   return grupo('', svg('circle', { class: 'p-sombra', cx: x + r * 0.25, cy: y + r * 0.3, r }), svg('circle', { class: 'p-arbol', cx: x, cy: y, r }),
@@ -67,19 +44,24 @@ function huerta(x, y, w, h) {
   return g;
 }
 
-// Muebles livianos en la parte de abajo de cada ambiente, detrás de los equipos.
+// Muebles de cada ambiente, en la parte de abajo y detrás de los equipos.
 function muebles(id, x, y, w, h) {
-  const bx = x + w / 2; const by = y + h - 14;
+  const bx = x + w / 2; const by = y + h - 12;
   const r = (cls, a, b, c, d, rx = 3) => svg('rect', { class: cls, x: a, y: b, width: c, height: d, rx });
+  const c = (cls, cx, cy, rr) => svg('circle', { class: cls, cx, cy, r: rr });
+  const planta = (px, py) => grupo('', r('p-maceta', px - 6, py, 12, 10, 2), c('p-arbol', px, py - 4, 8), c('p-arbol2', px - 3, py - 7, 4));
   const tipoSala = id.replace(/\d+$/, '');
-  if (tipoSala === 'living') return grupo('p-mueble', r('p-mue', bx - 50, by - 24, 100, 22, 8), r('p-mue2', bx - 46, by - 20, 30, 14, 4), r('p-mue2', bx - 14, by - 20, 30, 14, 4), r('p-mue2', bx + 18, by - 20, 28, 14, 4), r('p-mue', bx - 18, by - 50, 36, 16, 4));
-  if (tipoSala === 'cocina') return grupo('p-mueble', r('p-mue', x + 8, by - 12, w - 16, 14, 2), ...[0, 1, 2, 3].map((i) => svg('circle', { class: 'p-hornalla', cx: x + w - 52 + (i % 2) * 14, cy: by - 8 + Math.floor(i / 2) * 7 - 3, r: 3.5 })), r('p-mue2', x + 16, by - 9, 20, 8, 2));
-  if (tipoSala === 'dorm') return grupo('p-mueble', r('p-mue', bx - 30, by - 42, 60, 44, 6), r('p-mue2', bx - 26, by - 38, 24, 10, 3), r('p-mue2', bx + 2, by - 38, 24, 10, 3), r('p-manta', bx - 30, by - 22, 60, 24, 4));
-  if (tipoSala === 'bano') return grupo('p-mueble', svg('ellipse', { class: 'p-mue', cx: x + 22, cy: by - 8, rx: 9, ry: 12 }), r('p-ducha', x + w - 40, by - 30, 32, 32, 4));
-  if (tipoSala === 'lavadero') return grupo('p-mueble', r('p-mue', x + w - 34, by - 24, 26, 26, 4), svg('circle', { class: 'p-tambor', cx: x + w - 21, cy: by - 11, r: 8 }));
-  if (tipoSala === 'estudio') return grupo('p-mueble', r('p-mue', bx - 36, by - 18, 72, 18, 3), r('p-pantallita', bx - 12, by - 16, 24, 10, 2), svg('circle', { class: 'p-mue2', cx: bx, cy: by + 4, r: 7 }));
-  if (tipoSala === 'quincho') return grupo('p-mueble', r('p-mue', x + 8, y + h - 30, 38, 22, 3), r('p-parrilla', x + 12, y + h - 26, 30, 14, 2));
-  if (tipoSala === 'galpon') return grupo('p-mueble', r('p-mue', x + 8, y + h - 34, 50, 26, 4), svg('circle', { class: 'p-rueda', cx: x + 18, cy: y + h - 8, r: 7 }), svg('circle', { class: 'p-rueda', cx: x + 48, cy: y + h - 8, r: 9 }));
+  if (tipoSala === 'living') return grupo('p-mueble', r('p-alfombra', bx - 60, by - 62, 120, 50, 10), r('p-mue', bx - 52, by - 26, 104, 22, 8), r('p-mue2', bx - 48, by - 22, 31, 14, 4), r('p-mue2', bx - 15, by - 22, 31, 14, 4), r('p-mue2', bx + 18, by - 22, 30, 14, 4),
+    r('p-madera', bx - 24, by - 54, 48, 18, 4), r('p-tele', bx - 30, y + h - 84 < y + 26 ? y + 26 : by - 80, 60, 6, 2), planta(x + w - 18, by - 14), planta(x + 18, by - 14));
+  if (tipoSala === 'cocina') return grupo('p-mueble', r('p-mue', x + 6, by - 14, w - 12, 16, 2), ...[0, 1, 2, 3].map((i) => c('p-hornalla', x + w - 50 + (i % 2) * 14, by - 10 + Math.floor(i / 2) * 7 - 2, 3.5)), r('p-mue2', x + 14, by - 11, 22, 9, 2),
+    r('p-heladera', x + w - 22, y + 30, 16, 30, 3), r('p-madera', bx - 26, by - 52, 52, 26, 6), ...[-18, 0, 18].map((d) => c('p-mue2', bx + d, by - 58, 4)), ...[-18, 0, 18].map((d) => c('p-mue2', bx + d, by - 20, 4)));
+  if (tipoSala === 'dorm') return grupo('p-mueble', r('p-madera', bx - 46, by - 50, 12, 12, 2), r('p-madera', bx + 34, by - 50, 12, 12, 2), r('p-mue', bx - 32, by - 54, 64, 54, 6), r('p-mue2', bx - 28, by - 50, 26, 11, 3), r('p-mue2', bx + 2, by - 50, 26, 11, 3), r('p-manta', bx - 32, by - 30, 64, 30, 4), r('p-madera', x + 6, y + 28, 10, 50, 2));
+  if (tipoSala === 'bano') return grupo('p-mueble', svg('ellipse', { class: 'p-mue', cx: x + 20, cy: by - 10, rx: 9, ry: 12 }), r('p-mue2', x + 12, by - 1, 16, 6, 2), r('p-ducha', x + w - 42, by - 34, 34, 36, 6), c('p-mue', x + w - 25, by - 16, 3), r('p-mue', bx - 12, y + 28, 24, 12, 6));
+  if (tipoSala === 'lavadero') return grupo('p-mueble', r('p-mue', x + w - 36, by - 28, 28, 30, 4), c('p-tambor', x + w - 22, by - 13, 9), r('p-ducha', x + 8, by - 20, 26, 22, 3));
+  if (tipoSala === 'estudio') return grupo('p-mueble', r('p-madera', bx - 40, by - 22, 80, 20, 3), r('p-pantallita', bx - 14, by - 20, 28, 10, 2), c('p-mue2', bx, by + 6, 8), r('p-madera', x + w - 16, y + 26, 10, 60, 2), ...[0, 1, 2, 3, 4].map((i) => r('p-libro', x + w - 15, y + 30 + i * 11, 8, 8, 1)));
+  if (tipoSala === 'quincho') return grupo('p-mueble', r('p-mue', x + 8, y + h - 30, 38, 22, 3), r('p-parrilla', x + 12, y + h - 26, 30, 14, 2), r('p-madera', x + 56, y + h - 28, 40, 20, 4));
+  if (tipoSala === 'galpon') return grupo('p-mueble', r('p-mue', x + 8, y + h - 34, 50, 26, 4), c('p-rueda', x + 18, y + h - 8, 7), c('p-rueda', x + 48, y + h - 8, 9));
+  if (tipoSala === 'pasillo') return grupo('p-mueble', r('p-ascensor', x + 30, y + h - 70, 80, 56, 3), svg('path', { class: 'p-ascensor__linea', d: `M${x + 70} ${y + h - 70} v56` }));
   return null;
 }
 
@@ -130,46 +112,66 @@ function posiciones(t) {
   return pos;
 }
 
+let ctx = null;
 function dibujarPlano() {
   const t = tipo(estado.tipo);
   const titulo = plano.querySelector('title');
   plano.replaceChildren(titulo);
   titulo.textContent = `Plano de ${t.nombre.toLowerCase()}: ${t.salas.map((s) => s[1]).join(', ')}, con sus equipos inteligentes`;
+  const defs = svg('defs');
+  const gr = svg('radialGradient', { id: 'g-luz' });
+  gr.append(svg('stop', { offset: '0%', 'stop-color': '#ffd49a', 'stop-opacity': '0.95' }), svg('stop', { offset: '100%', 'stop-color': '#ff9f3d', 'stop-opacity': '0.25' }));
+  defs.append(gr); plano.append(defs);
   plano.append(svg('rect', { class: t.id === 'depto' ? 'p-edificio' : t.id === 'campo' ? 'p-campo' : 'p-lote', x: 10, y: 10, width: 740, height: 460, rx: 8 }));
-  const deco = svg('g');
-  t.deco.filter((d) => d.k === 'calle' || d.k === 'camino').forEach((d) => dibujarDeco(deco, d));
-  plano.append(deco);
-  for (const [id, nombre, x, y, w, h, tp] of t.salas) {
-    plano.append(svg('rect', { class: `p-sala p-sala--${tp}`, x, y, width: w, height: h }));
-    if (tp === 'in') plano.append(svg('rect', { class: 'plano__luz', 'data-sala': id, x, y, width: w, height: h }));
-  }
-  const pos = posiciones(t);
-  const fondoUsado = {};
-  for (const [id, [, py, k]] of Object.entries(pos)) { const sala = Object.keys(t.equipos).find((sl) => t.equipos[sl].includes(id)); fondoUsado[sala] = Math.max(fondoUsado[sala] || 0, py + 32 * k); }
-  for (const [id, , x, y, w, h, tp] of t.salas) {
-    if (!(tp === 'in' || id === 'quincho' || id === 'galpon')) continue;
-    if (y + h - (fondoUsado[id] || y + 30) < 40) continue; // sin lugar libre, no se dibujan muebles
-    const m = muebles(id, x, y, w, h); if (m) plano.append(m);
-  }
+  const calle = svg('g'); t.deco.filter((d) => d.k === 'calle' || d.k === 'camino').forEach((d) => dibujarDeco(calle, d)); plano.append(calle);
+  for (const [, , x, y, w, h, tp] of t.salas) plano.append(svg('rect', { class: `p-sala p-sala--${tp}`, x, y, width: w, height: h }));
+  for (const [id, , x, y, w, h, tp] of t.salas) { if (tp === 'in' || ['quincho', 'galpon', 'pasillo'].includes(id)) { const m = muebles(id, x, y, w, h); if (m) plano.append(m); } }
+  const deco = svg('g'); t.deco.filter((d) => d.k !== 'calle' && d.k !== 'camino').forEach((d) => dibujarDeco(deco, d)); plano.append(deco);
+  const estacionado = deco.querySelector('.p-auto-g');
+  const living = t.salas.find((v) => v[0] === 'living');
+  if (living) plano.append(gato(living[2] + 34, living[3] + living[5] - 30, true));
+  const cielo = svg('g', { 'data-cielo': '' }); plano.append(cielo);
+  for (const [id, , x, y, w, h, tp] of t.salas) if (tp === 'in') plano.append(svg('rect', { class: 'plano__luz', 'data-sala': id, x, y, width: w, height: h }));
   const interiores = t.salas.filter((v) => v[6] === 'in');
   const minX = Math.min(...interiores.map((v) => v[2])), minY = Math.min(...interiores.map((v) => v[3]));
   const maxX = Math.max(...interiores.map((v) => v[2] + v[4])), maxY = Math.max(...interiores.map((v) => v[3] + v[5]));
   plano.append(svg('rect', { class: 'p-contorno', 'data-led': '', x: minX - 6, y: minY - 6, width: maxX - minX + 12, height: maxY - minY + 12, rx: 6 }));
   for (const [, , x, y, w, h, tp] of t.salas) if (tp === 'in') plano.append(svg('rect', { class: 'p-muro', x, y, width: w, height: h }));
-  const deco2 = svg('g');
-  t.deco.filter((d) => d.k !== 'calle' && d.k !== 'camino').forEach((d) => dibujarDeco(deco2, d));
-  plano.append(deco2);
+  // Ventanas con cortinas en las paredes exteriores.
+  let ventanaLiving = null;
+  for (const [id, , x, y, w, h] of interiores) {
+    let v = null;
+    if (y === minY) v = [x + w / 2 - 22, y - 3, 44, 6, 'h']; else if (y + h === maxY) v = [x + w / 2 - 22, y + h - 3, 44, 6, 'h'];
+    else if (x === minX) v = [x - 3, y + h / 2 - 22, 6, 44, 'v']; else if (x + w === maxX) v = [x + w - 3, y + h / 2 - 22, 6, 44, 'v'];
+    if (!v) continue;
+    plano.append(svg('rect', { class: 'p-ventana', x: v[0], y: v[1], width: v[2], height: v[3] }));
+    plano.append(svg('rect', { class: `p-cortina p-cortina--${v[4]}`, x: v[0], y: v[1], width: v[2], height: v[3] }));
+    if (id === 'living') ventanaLiving = [v[0] + v[2] / 2, v[1] + v[3] / 2];
+  }
   for (const [, nombre, x, y] of t.salas) plano.append(svg('text', { class: 'plano__sala', x: x + 10, y: y + 20 }, nombre));
+  const bajo = svg('g', { 'data-bajo': '' }); plano.append(bajo);
+  const pos = posiciones(t);
   for (const [id, [x, y, k]] of Object.entries(pos)) {
     const q = EQ[id];
-    const g = svg('g', { class: k < 0.8 ? 'dev dev--chico' : 'dev', 'data-dev': id, transform: `translate(${x} ${y}) scale(${k})`, tabindex: 0, role: 'button', 'aria-label': `${q.nombre}: ${q.que}` });
-    g.append(svg('circle', { r: 16 }), svg('text', { class: 'dev__ico', y: 6 }, q.ico), svg('text', { class: 'dev__nom', y: 30 }, CORTO[id] || q.nombre));
-    g.addEventListener('click', () => info(id));
-    g.addEventListener('keydown', (e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); info(id); } });
-    plano.append(g);
+    const gr2 = svg('g', { class: k < 0.8 ? 'dev dev--chico' : 'dev', 'data-dev': id, transform: `translate(${x} ${y}) scale(${k})`, tabindex: 0, role: 'button', 'aria-label': `${q.nombre}: ${q.que}` });
+    gr2.append(svg('circle', { r: 16 }), svg('text', { class: 'dev__ico', y: 6 }, q.ico), svg('text', { class: 'dev__nom', y: 30 }, CORTO[id] || q.nombre));
+    gr2.addEventListener('click', () => info(id));
+    gr2.addEventListener('keydown', (e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); info(id); } });
+    plano.append(gr2);
   }
+  const capa = svg('g', { 'data-capa': '' }); plano.append(capa);
+  const sala = (id) => (t.salas.find((v) => v[0] === id) || interiores[0]).slice(2, 6);
+  const centro = (id) => { const [x, y, w, h] = sala(id); return [x + w / 2, y + h / 2]; };
+  const entrada = pos.puerta ? [pos.puerta[0], pos.puerta[1]] : centro('living');
+  const est = estacionado ? estacionado.querySelector('.p-auto, rect:not(.p-rueda)') : null;
+  ctx = { plano, t, pos, capa, bajo, cielo, sala, centro, entrada, casa: [minX, minY, maxX - minX, maxY - minY], ventana: ventanaLiving || centro('living'),
+    estacionar: est ? [Number(est.getAttribute('x')), Number(est.getAttribute('y'))] : [entrada[0] + 30, 400], estacionado };
   pintarNivel();
   pintarMia();
+}
+
+function lanzarFx(lista) {
+  for (const f of lista || []) { const [nombre, arg] = f.split(':'); try { FX[nombre]?.(ctx, arg); } catch (_) { /* efecto opcional */ } }
 }
 
 function pintarNivel() {
@@ -199,7 +201,13 @@ function burbuja(texto, quien = 'casa', extra = '') {
   if (quien === 'yo') meta.textContent = `${horaActual} ✓✓`;
   b.append(meta);
   chat.append(b);
+  while (chat.querySelectorAll('.burbuja').length > 14) chat.querySelector('.burbuja').remove();
   chat.scrollTop = chat.scrollHeight;
+  if (quien === 'casa' && !extra.includes('cola')) {
+    const bn = $('[data-banner]'); $('[data-banner-txt]').textContent = texto;
+    bn.classList.remove('visible'); void bn.getBoundingClientRect(); bn.classList.add('visible');
+    clearTimeout(burbuja.t); burbuja.t = setTimeout(() => bn.classList.remove('visible'), 2600);
+  }
 }
 
 function respuestas(lista) {
@@ -234,7 +242,8 @@ function aplicarEstilo() {
   cel.classList.toggle('chat--wa', estado.estilo === 'wa');
   cel.classList.toggle('chat--im', estado.estilo === 'im');
   $$('[data-estilo]').forEach((b) => b.setAttribute('aria-pressed', String(b.dataset.estilo === estado.estilo)));
-  $('[data-estado-chat]').textContent = estado.internet ? (estado.estilo === 'wa' ? 'en línea' : 'Casa · iMessage') : 'sin conexión';
+  $('[data-estado-chat]').textContent = estado.internet ? (estado.estilo === 'wa' ? 'en línea' : '') : 'sin conexión';
+  $('[data-placeholder]').textContent = estado.estilo === 'wa' ? 'Mensaje' : 'iMessage';
 }
 
 /* ---------- Escenas ---------- */
@@ -246,6 +255,10 @@ function limpiar() {
   $$('.dev', plano).forEach((g) => g.classList.remove(...ESTADOS, 'activo'));
   $$('.plano__luz', plano).forEach((r) => r.classList.remove('encendida'));
   $('[data-led]', plano)?.classList.remove('encendido');
+  if (ctx) { ctx.capa.replaceChildren(); ctx.bajo.replaceChildren(); ctx.cielo.replaceChildren(); ctx.estacionado?.classList.remove('fx-oculto'); }
+  plano.classList.remove('cortinas-cerradas', 'escena-activa');
+  $$('.dev--escena', plano).forEach((g) => g.classList.remove('dev--escena'));
+  $$('.fx-vacio, .fx-filtra', plano).forEach((e) => e.classList.remove('fx-vacio', 'fx-filtra'));
   log.replaceChildren();
   respuestas([]);
 }
@@ -262,10 +275,13 @@ function aplicar(p) {
   const quien = p.dev === 'telefono' ? '📱' : EQ[p.dev]?.ico || '';
   li.append(crear('span', 'paso__tag', tag), crear('span', null, `${quien} ${p.texto}`));
   log.append(li);
-  if (!p.ejecuta) return;
+  if (!p.ejecuta) { if (p.fx && p.n <= 5 && PROBLEMA.has((p.fx[0] || '').split(':')[0])) lanzarFx(p.fx); return; }
   const g = $(`.dev[data-dev="${p.dev}"]`, plano);
   if (g) { g.classList.remove(...ESTADOS); g.classList.add(p.estado, 'activo'); setTimeout(() => g.classList.remove('activo'), 900); }
   if (p.sala) luces(p.sala, p.estado === 'on');
+  if (p.dev === 'cortinas') plano.classList.toggle('cortinas-cerradas', p.estado === 'off');
+  g?.classList.add('dev--escena');
+  lanzarFx(p.fx);
   if (p.dev === 'ledcontorno') $('[data-led]', plano)?.classList.toggle('encendido', p.estado === 'on');
   if (p.msg) { burbuja(p.msg, 'casa', p.enCola ? 'burbuja--cola' : ''); if (!p.enCola) respuestas(p.resp); }
 }
@@ -279,6 +295,10 @@ function correr(id) {
   $$('[data-escenas] button').forEach((b) => b.setAttribute('aria-pressed', String(b.dataset.escena === id)));
   $('[data-resumen]').textContent = `${e.ico} ${e.titulo} · ${horaActual} h — ${e.resumen}`;
   const pasos = planificar(id, estado.nivel, estado.internet, estado.tipo);
+  const hh = Number(horaActual.split(':')[0]);
+  if (hh >= 20 || hh < 7) lanzarFx(['noche']);
+  plano.classList.add('escena-activa');
+  pasos.forEach((p) => $(`.dev[data-dev="${p.dev}"]`, plano)?.classList.add('dev--escena'));
   const demora = quieto() ? 0 : 850;
   pasos.forEach((p, i) => timers.push(setTimeout(() => aplicar(p), demora * (i + 1))));
   timers.push(setTimeout(() => {

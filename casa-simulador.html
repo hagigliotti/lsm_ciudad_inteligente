@@ -124,15 +124,35 @@
         </div>
         <div class="info-equipo" data-info aria-live="polite"><b>Tocá un equipo del plano</b><span>Vas a ver qué hace, en qué nivel entra y cuánto cuesta.</span></div>
       </div>
-      <div class="iphone chat--wa" data-celular aria-label="Celular con los mensajes de la casa">
-        <div class="iphone__marco">
-          <div class="iphone__isla"></div>
-          <div class="iphone__estado"><span data-hora-cel>9:41</span><span class="iphone__iconos" aria-hidden="true"><i class="i-senal"></i><i class="i-wifi"></i><i class="i-bat"></i></span></div>
-          <div class="chat__cab"><span class="chat__volver" aria-hidden="true">‹</span><span class="chat__avatar" aria-hidden="true">🏠</span><span class="chat__nombre">Mi Casa<small data-estado-chat>en línea</small></span></div>
+      <div class="fon chat--wa" data-celular aria-label="Celular con los mensajes de la casa">
+        <span class="fon__lado fon__lado--a" aria-hidden="true"></span><span class="fon__lado fon__lado--b" aria-hidden="true"></span><span class="fon__lado fon__lado--c" aria-hidden="true"></span>
+        <div class="fon__pantalla">
+          <div class="fon__isla" aria-hidden="true"></div>
+          <div class="fon__estado">
+            <span class="fon__hora" data-hora-cel>9:41</span>
+            <span class="fon__iconos" aria-hidden="true">
+              <svg viewBox="0 0 18 12" width="18" height="12"><rect x="0" y="8" width="3" height="4" rx="1" fill="currentColor"/><rect x="5" y="5.5" width="3" height="6.5" rx="1" fill="currentColor"/><rect x="10" y="3" width="3" height="9" rx="1" fill="currentColor"/><rect x="15" y="0" width="3" height="12" rx="1" fill="currentColor"/></svg>
+              <svg viewBox="0 0 16 12" width="16" height="12"><path d="M8 11.5 5.6 9a3.4 3.4 0 0 1 4.8 0zM3.2 6.6a6.8 6.8 0 0 1 9.6 0l-1.6 1.6a4.5 4.5 0 0 0-6.4 0zM.8 4.2a10.2 10.2 0 0 1 14.4 0l-1.6 1.6a7.9 7.9 0 0 0-11.2 0z" fill="currentColor"/></svg>
+              <svg viewBox="0 0 27 13" width="27" height="13"><rect x=".5" y=".5" width="23" height="12" rx="3.5" fill="none" stroke="currentColor" opacity=".45"/><rect x="2" y="2" width="17" height="9" rx="2" fill="currentColor"/><path d="M25 4.5v4a2 2 0 0 0 0-4z" fill="currentColor" opacity=".45"/></svg>
+            </span>
+          </div>
+          <div class="fon__banner" data-banner aria-hidden="true"><span class="fon__app">🏠</span><span class="fon__bannertxt"><b>Mi Casa</b><span data-banner-txt></span></span><small>ahora</small></div>
+          <div class="chat__cab">
+            <svg class="chat__volver" viewBox="0 0 12 20" width="12" height="20" aria-hidden="true"><path d="M10 2 2 10l8 8" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <span class="chat__avatar" aria-hidden="true">🏠</span>
+            <span class="chat__nombre">Mi Casa<small data-estado-chat>en línea</small></span>
+            <span class="chat__acciones" aria-hidden="true">
+              <svg viewBox="0 0 24 16" width="22" height="15"><rect x="1" y="2" width="15" height="12" rx="3" fill="none" stroke="currentColor" stroke-width="2"/><path d="m17 6 6-3v10l-6-3z" fill="currentColor"/></svg>
+              <svg viewBox="0 0 20 20" width="18" height="18"><path d="M5.5 1.8 8 5.6 6.4 7.7a11 11 0 0 0 5.9 5.9l2.1-1.6 3.8 2.5-1.1 3a2.5 2.5 0 0 1-2.6 1.6C8.1 18.5 1.5 11.9 1 5.5A2.5 2.5 0 0 1 2.6 2.9z" fill="currentColor"/></svg>
+            </span>
+          </div>
           <div class="chat__cuerpo" data-chat aria-live="polite"><p class="chat__fecha">Hoy</p><p class="chat__vacio">Elegí una situación y los avisos de la casa llegan acá.</p></div>
           <div class="chat__resp" data-resp></div>
-          <div class="chat__barra" aria-hidden="true"><span class="chat__mas">+</span><span class="chat__input">Mensaje</span><span class="chat__mic">🎙</span></div>
-          <div class="iphone__home"></div>
+          <div class="chat__barra" aria-hidden="true">
+            <span class="chat__mas">+</span><span class="chat__input" data-placeholder>Mensaje</span>
+            <svg class="chat__mic" viewBox="0 0 14 20" width="14" height="20"><rect x="3" y="1" width="8" height="12" rx="4" fill="currentColor"/><path d="M1 9a6 6 0 0 0 12 0M7 15v4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+          </div>
+          <div class="fon__home" aria-hidden="true"></div>
         </div>
       </div>
     </div>

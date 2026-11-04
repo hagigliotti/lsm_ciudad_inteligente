@@ -73,3 +73,8 @@ test('sin internet: lo local funciona, los mensajes esperan, la alerta oficial n
   assert.ok(equiposDe('campo').has('starlink') && !equiposDe('depto').has('porton'));
   assert.throws(() => planificar('nada', 1));
 });
+
+test('cada efecto visual de las escenas existe', async () => {
+  const { FX } = await import('../assets/js/casa-fx.js');
+  for (const e of ESCENAS) for (const p of e.pasos) for (const f of p.fx || []) assert.ok(FX[f.split(':')[0]], `${e.id}: efecto ${f}`);
+});
