@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /entrada/
+
+Sitemap: https://hagigliotti.github.io/lsm_ciudad_inteligente/sitemap.xml
