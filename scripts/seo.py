@@ -18,6 +18,8 @@ URL = 'https://hagigliotti.github.io/lsm_ciudad_inteligente/'
 IMAGEN = URL + 'assets/logos/portada.jpg'
 AUTOR = 'Hernando A. Gigliotti'
 SITIO = 'LSM Ciudad Inteligente'
+# Verificación de Google Search Console (método «Etiqueta HTML»)
+GOOGLE_VERIFICACION = 'Hc9aPmTBxVf0O-psSnvX-bBOQnok3qnJpFTHAMOP9Oc'
 
 # Palabras clave comunes por proyecto. Se combinan con las propias de cada página.
 LUGAR = ['Libertador San Martín', 'Villa Libertador San Martín', 'Puiggari', 'Entre Ríos', 'Argentina', 'LSM']
@@ -167,6 +169,7 @@ def bloque(archivo):
         f'  <meta name="description" content="{e(desc)}">',
         f'  <meta name="keywords" content="{e(", ".join(claves))}">',
         f'  <meta name="author" content="{AUTOR}">',
+        f'  <meta name="google-site-verification" content="{GOOGLE_VERIFICACION}">',
         '  <meta name="robots" content="index, follow, max-image-preview:large">',
         '  <meta name="geo.region" content="AR-E">',
         '  <meta name="geo.placename" content="Libertador San Martín, Entre Ríos">',
