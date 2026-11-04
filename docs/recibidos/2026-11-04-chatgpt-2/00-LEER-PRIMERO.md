@@ -9,9 +9,9 @@ Este envío organiza el material por niveles territoriales, tal como se acordó:
 ## Documentos incluidos
 
 1. [Marco general: ciudad, barrio y casa](01-marco-ciudad-barrio-casa.md)
-2. [Ficha de ciudad](ciudades/PLANTILLA-CIUDAD.md)
-3. [Ficha de barrio](barrios/PLANTILLA-BARRIO.md)
-4. [Ficha de casa](casas/PLANTILLA-CASA.md)
+2. [Ficha de ciudad](../../plantillas/ficha-ciudad.md)
+3. [Ficha de barrio](../../plantillas/ficha-barrio.md)
+4. [Ficha de casa](../../plantillas/ficha-casa.md)
 
 ## Criterio de organización
 

@@ -51,6 +51,7 @@
             <ul>
               <li><a href="barrio-simple.html"><b>En simple</b><small>Qué cambia para quien vive en el barrio</small></a></li>
               <li><a href="barrio-tecnico.html"><b>Versión técnica</b><small>Arquitectura, equipos, reglamento y costos</small></a></li>
+              <li><a href="la-lomada.html"><b>Caso: La Lomada</b><small>Barrio en desarrollo en Puiggari</small></a></li>
             </ul>
           </details>
         </li>
@@ -108,6 +109,7 @@
       <li><a href="#cuidado"><span>7</span>Cuidado de mayores</a></li>
       <li><a href="#seguridad"><span>8</span>Seguridad y privacidad</a></li>
       <li><a href="#instalacion"><span>9</span>Instalación</a></li>
+      <li><a href="#smart-home-360"><span>10</span>Smart Home 360</a></li>
     </ol>
   </nav>
   <div>
@@ -245,12 +247,53 @@ automation:
       <div class="ruta__fase"><em>Nivel 3 · una obra</em><h4>Energía y agua</h4><p>Solar, válvula, riego, alarma, cuidado de mayores.</p></div>
     </div>
     <p>Todo trabajo en el tablero o las llaves lo hace un electricista matriculado, según la reglamentación de la AEA.</p>
-    <h3>Próximo: LSM Smart Home 360</h3>
-    <p>Catálogo neutral de marcas, configurador por espacios y funciones, simulador, inventario y presupuesto estimativo. Regla: verificar compatibilidad por modelo, no solo por marca, y distinguir siempre la demostración de una conexión real con Home Assistant. Ver el <a href="escalas.html">marco común</a>.</p>
+    <p>El paso siguiente es <a href="#smart-home-360">LSM Smart Home 360</a>.</p>
     <p class="fuentes">Proyecto elaborado con asistencia de inteligencia artificial y revisión humana. Las marcas y programas citados son ejemplos, no recomendaciones comerciales. Ver la <a href="privacidad.html">política de privacidad</a>.</p>
   </div>
 </article>
 
+
+<article class="cap" id="smart-home-360" data-cap>
+  <div class="cap__cab"><div class="cap__num">10</div><div><h2>LSM Smart Home 360</h2><p class="cap__meta">Modelo integral de vivienda · versión 0.1</p></div></div>
+  <div class="cap__cuerpo">
+    <p>No se limita a prender luces desde el teléfono: integra confort, seguridad, energía, agua, accesibilidad, mantenimiento, asistencia, IA y, cuando sea viable, robótica. La casa sigue funcionando aunque falle internet o un servicio externo.</p>
+    <h3>Diez subsistemas</h3>
+    <div class="dominios">
+      <div class="dominio"><h4><span>1</span>Iluminación y persianas</h4></div>
+      <div class="dominio"><h4><span>2</span>Clima y calidad del aire</h4></div>
+      <div class="dominio"><h4><span>3</span>Seguridad</h4><p>Puertas, ventanas, fugas, humo y presencia.</p></div>
+      <div class="dominio"><h4><span>4</span>Energía</h4><p>Consumo, generación, baterías y cargas.</p></div>
+      <div class="dominio"><h4><span>5</span>Agua</h4><p>Fugas, consumo y estado de la instalación.</p></div>
+      <div class="dominio"><h4><span>6</span>Accesibilidad y asistencia</h4></div>
+      <div class="dominio"><h4><span>7</span>Electrodomésticos y mantenimiento</h4></div>
+      <div class="dominio"><h4><span>8</span>Multimedia</h4></div>
+      <div class="dominio"><h4><span>9</span>IA</h4><p>Asistente, patrones y anomalías.</p></div>
+      <div class="dominio"><h4><span>10</span>Robótica doméstica</h4><p>Limpieza, inspección y asistencia.</p></div>
+    </div>
+    <h3>Interoperabilidad multimarca</h3>
+    <p>Home Assistant como integrador central, con Matter, Thread, Zigbee, Wi-Fi, Ethernet, MQTT y KNX según el caso, e integración selectiva con ecosistemas como Aqara, Meross, IKEA, Google Home, Amazon Alexa, Apple Home y Samsung SmartThings.</p>
+    <div class="nota-rev"><strong>La compatibilidad se prueba equipo por equipo</strong>
+      <ul>
+        <li>No todos los modelos de una marca funcionan igual: dependen del firmware, de la <strong>versión regional</strong> y de si requieren hub o nube. Un hub de versión china (CN), por ejemplo, puede quedar atado a servidores de esa región y limitar integraciones.</li>
+        <li>Paredes gruesas o antiguas atenúan Zigbee, Thread y Wi-Fi: medir cobertura antes de comprar repetidores; un repetidor Wi-Fi no reemplaza cableado o una malla bien diseñada.</li>
+        <li>Nunca exponer Home Assistant directamente a internet.</li>
+      </ul>
+    </div>
+    <h3>Límites para la IA</h3>
+    <ul class="lista-check">
+      <li>No desbloquea puertas ni desactiva alarmas sin autorización explícita y controles de seguridad.</li>
+      <li>Toda automatización adaptativa se puede explicar y desactivar.</li>
+      <li>Se define qué datos quedan en la casa y cuáles, si alguno, van a servicios externos.</li>
+      <li>Los sistemas críticos conservan controles físicos y manuales.</li>
+    </ul>
+    <h3>Ocho etapas</h3>
+    <ol class="dos-columnas">
+      <li>Inventario y diagnóstico de cobertura</li><li>Red doméstica y seguridad básica</li><li>Plataforma central y copias de seguridad</li><li>Integración de lo existente</li><li>Automatizaciones simples y verificables</li><li>Energía, agua, clima y mantenimiento</li><li>IA supervisada</li><li>Robótica y optimización</li>
+    </ol>
+    <p>El hardware del servidor se elige después de estimar cantidad de dispositivos, carga, almacenamiento, consumo y presupuesto. Para documentar una vivienda concreta se usa la <a href="docs/plantillas/ficha-casa.md">ficha de casa</a>, en un repositorio privado: dirección, modelos de cámaras o inventario de equipos de una casa real no se publican.</p>
+    <p class="fuentes">Basado en la entrega del 4 de noviembre de 2026 (<a href="docs/recibidos/2026-11-04-chatgpt-2/casa/LSM_SMART_HOME_360.md">documento original</a>, sin el inventario privado).</p>
+  </div>
+</article>
   </div>
 </div>
 
@@ -265,7 +308,7 @@ automation:
     <div class="pie__mapa">
       <div><b>Proyecto 2009</b><a href="archivo-2009.html">Archivo 2009</a><a href="fallas-2009.html">Fallas 2009</a></div>
       <div><b>Proyecto 2026</b><a href="en-simple.html">En simple</a><a href="plan-maestro.html">Versión técnica</a><a href="proyecto-2026.html">Mapa, costos y cronograma</a><a href="escalas.html">Ciudad, barrio y casa</a></div>
-      <div><b>Barrio privado inteligente</b><a href="barrio-simple.html">En simple</a><a href="barrio-tecnico.html">Versión técnica</a></div>
+      <div><b>Barrio privado inteligente</b><a href="barrio-simple.html">En simple</a><a href="barrio-tecnico.html">Versión técnica</a><a href="la-lomada.html">Caso: La Lomada</a></div>
       <div><b>Casa particular inteligente</b><a href="casa-simple.html">En simple</a><a href="casa-tecnico.html">Versión técnica</a></div>
       <div><b>Privacidad y seguridad</b><a href="datos-personales.html">Datos personales</a><a href="seguridad.html">Seguridad</a></div>
     </div>
