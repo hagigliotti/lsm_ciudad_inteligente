@@ -904,3 +904,9 @@ code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: .
 .plano-fotos img { width: 100%; height: auto; border-radius: 12px; border: 1px solid var(--linea); background: #fff; display: block; }
 .plano-fotos figcaption { font-size: .88rem; color: var(--tinta-suave); margin-top: 8px; }
 #plano h3 { margin-top: 28px; }
+.loteo { display: grid; grid-template-columns: minmax(220px, 340px) 1fr; gap: 24px; align-items: start; margin: 18px 0; }
+.loteo > div { min-width: 0; }
+.loteo figure { margin: 0; }
+.loteo img { width: 100%; height: auto; border-radius: 12px; border: 1px solid var(--linea); display: block; }
+.loteo figcaption { font-size: .88rem; color: var(--tinta-suave); margin-top: 8px; }
+@media (max-width: 720px) { .loteo { grid-template-columns: 1fr; } .loteo figure { max-width: 360px; } }
