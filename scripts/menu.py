@@ -16,6 +16,7 @@ MENU = [
     ('Proyecto 2009', 'original', [
         ('archivo-2009.html', 'Archivo 2009', 'El proyecto original completo, tal como se publicó'),
         ('fallas-2009.html', 'Fallas 2009', 'Qué le faltó y qué cambió desde entonces'),
+        ('biblioteca-2009.html', 'En la biblioteca UAP', 'Dónde encontrar el original en papel'),
     ]),
     ('Proyecto 2026', 'actualización', [
         ('en-simple.html', 'En simple', 'Explicado fácil, con dibujos y ejemplos'),

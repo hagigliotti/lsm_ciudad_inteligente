@@ -46,6 +46,11 @@ PAGINAS = {
         'Archivo 2009 · Libertador San Martín, una Ciudad Inteligente',
         'El blog original del proyecto Libertador San Martín, una Ciudad Inteligente (julio de 2009), archivado completo y con enlaces a cada página original.',
         ['proyecto 2009', 'ciudad digital', 'WiFi municipal', 'blog ciudad inteligente 2009'], 'ciudad', 'CollectionPage'),
+    'biblioteca-2009.html': (
+        'El original de 2009 en la Biblioteca UAP · LSM Ciudad Inteligente',
+        'Dónde encontrar la monografía original “Libertador San Martín, una ciudad inteligente” (Gigliotti, 2009) en la Biblioteca E. Irving Mohr de la Universidad Adventista del Plata: signatura 004.6 G.459, ejemplares y reserva.',
+        ['Biblioteca UAP', 'Biblioteca E. Irving Mohr', 'Universidad Adventista del Plata', 'UAP', 'monografía', 'Licenciatura en Sistemas de Información',
+         'Hernando Ariel Gigliotti', 'Libertador San Martín, una ciudad inteligente', 'catálogo biblioteca UAP'], 'ciudad', 'Book'),
     'fallas-2009.html': (
         'Fallas del proyecto Ciudad Inteligente 2009 · LSM',
         'Qué le faltó al proyecto Ciudad Inteligente de Libertador San Martín de 2009, qué cambió desde entonces y qué reglas dejó para hoy.',
@@ -138,6 +143,18 @@ def jsonld(archivo, titulo, desc, tipo, grupo, claves):
               'isPartOf': {'@id': URL + '#sitio'}, 'about': lugar, 'author': autor}
     if tipo in ('Article', 'TechArticle'):
         pagina['headline'] = titulo
+    if tipo == 'Book':
+        pagina['@type'] = 'WebPage'
+        pagina['mainEntity'] = {'@type': 'Book', 'name': 'Libertador San Martín, una ciudad inteligente', 'datePublished': '2009',
+            'author': {'@type': 'Person', 'name': 'Hernando Ariel Gigliotti'}, 'numberOfPages': 91,
+            'inLanguage': 'es', 'bookFormat': 'https://schema.org/Paperback',
+            'publisher': {'@type': 'CollegeOrUniversity', 'name': 'Universidad Adventista del Plata'},
+            'about': ['Redes de computadoras', 'Telecomunicaciones', 'Libertador San Martín (Entre Ríos)'],
+            'locationCreated': {'@type': 'Place', 'name': 'Libertador San Martín, Entre Ríos'},
+            'workExample': {'@type': 'Book', 'identifier': '004.6 G.459 2009',
+                'holdingArchive': {'@type': 'Library', 'name': 'Biblioteca E. Irving Mohr', 'url': 'https://biblioteca.uap.edu.ar/',
+                    'address': {'@type': 'PostalAddress', 'streetAddress': '25 de Mayo 99', 'postalCode': '3103',
+                                'addressLocality': 'Libertador San Martín', 'addressRegion': 'Entre Ríos', 'addressCountry': 'AR'}}}}
     if tipo == 'WebApplication':
         pagina.update({'applicationCategory': 'EducationalApplication', 'operatingSystem': 'Navegador web',
                        'offers': {'@type': 'Offer', 'price': '0', 'priceCurrency': 'ARS'}})

@@ -958,3 +958,33 @@ code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: .
 .cx-pav line { stroke: rgba(150, 210, 165, .35); stroke-width: 2; }
 .cx-carga rect { fill: #f4f4f2; stroke: #2b2f2c; stroke-width: 2; }
 .cx-carga path { fill: #2e8b57; }
+/* Biblioteca 2009 */
+.biblio-acciones { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 26px; }
+.proy-portada .boton--sec { color: #e8f5ee; }
+.biblio-ficha { border: 1px solid var(--linea); border-radius: var(--radio); padding: 26px; background: var(--superficie); }
+.biblio-ficha__cab { display: flex; justify-content: space-between; align-items: flex-start; gap: 16px; }
+.biblio-ubic { text-align: right; margin: 0; }
+.biblio-sig { display: inline-block; margin-top: 6px; padding: 10px 14px; border: 2px solid currentColor; border-radius: 8px; font-family: ui-monospace, monospace; font-size: 1.15rem; line-height: 1.35; text-align: center; }
+.biblio-ref { color: var(--tinta-suave); }
+.biblio-nota { font-size: .88rem; color: var(--tinta-suave); }
+@media print {
+  .barra, .pie, .salto, .no-imprimir, [data-consent] { display: none !important; }
+  body { background: #fff; color: #000; }
+  .proy-portada { background: none; color: #000; padding: 0 0 12px; }
+  .proy-portada .proy-chips div { border: 1px solid #999; }
+  section { padding: 10px 0 !important; }
+  .biblio-pagina { font-size: 10pt; }
+  .biblio-pagina .proy-portada .intro, .biblio-pagina .proy-chips, .biblio-pagina .historia, .biblio-pagina #como h2, .biblio-pagina #como .etiqueta { display: none !important; }
+  .biblio-pagina h1 { font-size: 18pt; margin: 0; }
+  .biblio-pagina h2 { font-size: 14pt; margin: 6px 0; }
+  .biblio-pagina h3 { font-size: 11pt; margin: 8px 0 0; }
+  .biblio-pagina .tabla { margin-top: 6px; font-size: 9pt; }
+  .biblio-pagina .tabla th, .biblio-pagina .tabla td { padding: 3px 6px; }
+  .biblio-pagina .biblio-ficha { padding: 12px; }
+  .biblio-pagina .biblio-ref, .biblio-pagina .fuentes { display: none; }
+  .biblio-pagina section { padding: 4px 0 !important; }
+  .biblio-pagina #como .tabla { break-inside: avoid; }
+  .biblio-pagina .envoltura { padding: 0; max-width: none; }
+  .biblio-ficha { border: 2px solid #000; }
+  a { color: #000; }
+}
