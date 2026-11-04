@@ -944,3 +944,17 @@ code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: .
 .casa-puntos b { display: block; }
 @media (max-width: 600px) { .casa-pt circle { r: 26px; } .casa-pt text { font-size: 26px; } }
 .casa-links { display: flex; flex-wrap: wrap; gap: 10px 22px; font-weight: 700; }
+/* Equipos dibujados sobre la casa de ejemplo */
+.cx-panel polygon { fill: #1b2f52; stroke: #a9c3e6; stroke-width: 1.5; }
+.cx-panel line { stroke: #5b7cab; stroke-width: .8; }
+.cx-termo__tubos { fill: #233042; stroke: #b9c2cc; stroke-width: 1.5; }
+.cx-termo line { stroke: #6f8398; stroke-width: 4; stroke-linecap: round; }
+.cx-termo__tanque { fill: #cfd6dd; stroke: #8996a3; stroke-width: 1.5; }
+.cx-termo .cx-pata { stroke: #8996a3; stroke-width: 3; }
+.cx-tanque rect, .cx-tanque ellipse { fill: #1e1f21; stroke: #4a4d52; stroke-width: 1.5; }
+.cx-tanque line { stroke: #3a3d42; stroke-width: 2; }
+.cx-meteo line { stroke: #d3d8de; stroke-width: 2.5; }
+.cx-meteo circle, .cx-meteo rect { fill: #f2f4f6; }
+.cx-pav line { stroke: rgba(150, 210, 165, .35); stroke-width: 2; }
+.cx-carga rect { fill: #f4f4f2; stroke: #2b2f2c; stroke-width: 2; }
+.cx-carga path { fill: #2e8b57; }
