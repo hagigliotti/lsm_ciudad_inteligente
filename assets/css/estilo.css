@@ -897,3 +897,10 @@ code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: .
 .f-humo { fill: #374151; opacity: .7; } .f-gas { fill: #84cc16; opacity: .45; } .f-co { fill: #6b7280; opacity: .6; }
 .f-gota { stroke: #5aa9e6; stroke-width: 2.5; opacity: .9; }
 @keyframes humo { 0% { transform: translateY(6px) scale(.8); opacity: .3; } 50% { opacity: .85; } 100% { transform: translateY(-18px) scale(1.25); opacity: .25; } }
+
+/* La Lomada: fotos del plano */
+.plano-fotos { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 18px; margin: 22px 0; }
+.plano-fotos figure { margin: 0; }
+.plano-fotos img { width: 100%; height: auto; border-radius: 12px; border: 1px solid var(--linea); background: #fff; display: block; }
+.plano-fotos figcaption { font-size: .88rem; color: var(--tinta-suave); margin-top: 8px; }
+#plano h3 { margin-top: 28px; }
