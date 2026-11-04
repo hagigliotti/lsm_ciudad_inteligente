@@ -60,6 +60,7 @@
             <ul>
               <li><a href="casa-simple.html" aria-current="page"><b>En simple</b><small>Qué se puede automatizar y por dónde empezar</small></a></li>
               <li><a href="casa-tecnico.html"><b>Versión técnica</b><small>Equipos, protocolos, instalación y costos</small></a></li>
+              <li><a href="casa-simulador.html"><b>Simulador</b><small>Probá situaciones y calculá el costo de tu casa</small></a></li>
             </ul>
           </details>
         </li>
@@ -86,7 +87,7 @@
       <span class="etiqueta">Casa particular inteligente · en simple</span>
       <h1>Tu casa, <em>un poco más atenta</em></h1>
       <p>Qué se puede automatizar en una casa común, por dónde empezar con poca plata y cómo hacerlo sin que tus datos terminen en manos de nadie.</p>
-      <div class="botones"><a class="boton boton--menta" href="#niveles">Ver por dónde empezar</a><a class="boton boton--claro" href="casa-tecnico.html">Versión técnica</a></div>
+      <div class="botones"><a class="boton boton--menta" href="casa-simulador.html">Abrir el simulador</a><a class="boton boton--claro" href="#niveles">Por dónde empezar</a><a class="boton boton--claro" href="casa-tecnico.html">Versión técnica</a></div>
     </div>
     <div class="s-portada__ilus"><svg viewBox="0 0 600 420" role="img" aria-labelledby="hc-t">
         <title id="hc-t">Dibujo de una casa en corte: paneles solares en el techo, una lámpara, un sensor de humo, un enchufe inteligente, un sensor de agua bajo la pileta, una cámara en la puerta y un celular que recibe avisos</title>
@@ -113,7 +114,22 @@
     <span class="etiqueta">En una frase</span>
     <p class="frase">Una casa inteligente no es una casa llena de pantallas: es una casa que <mark>avisa</mark> cuando algo anda mal y <mark>hace sola</mark> lo repetitivo, mientras vos seguís decidiendo.</p>
     <div class="analogia">
-      <svg viewBox="0 0 160 120" role="img" aria-labelledby="ac-t"><title id="ac-t">Un perro guardián junto a una casa</title><rect class="i-casa" x="20" y="44" width="70" height="60" rx="3"/><path class="i-techo" d="M12 46 L55 14 L98 46Z"/><ellipse class="i-nar" cx="122" cy="86" rx="24" ry="14"/><circle class="i-nar" cx="142" cy="70" r="11"/><circle class="i-osc" cx="146" cy="68" r="2"/><path class="i-trazo-osc" d="M100 84 l-10 -10"/></svg>
+      <svg viewBox="0 0 200 150" role="img" aria-labelledby="ac-t"><title id="ac-t">Un perro guardián sentado frente a su cucha, ladrando para avisar</title>
+        <path class="i-colina2" d="M0 132 H200 V150 H0Z"/>
+        <path class="i-techo2" d="M6 70 L46 38 L86 70Z"/><rect class="i-casa" x="14" y="68" width="64" height="64" rx="2"/><path class="i-osc" d="M34 132 V104 a12 12 0 0 1 24 0 V132Z"/>
+        <path class="i-nar" d="M98 132 C96 112 100 96 112 88 C120 83 134 84 140 94 C146 104 146 120 144 132Z"/>
+        <path class="perro__cola" d="M100 118 C86 112 84 98 90 90"/>
+        <rect class="i-techo2" x="114" y="114" width="10" height="18" rx="4"/><rect class="i-techo2" x="132" y="114" width="10" height="18" rx="4"/>
+        <ellipse class="i-blanco" cx="128" cy="108" rx="9" ry="13"/>
+        <circle class="i-nar" cx="134" cy="66" r="19"/>
+        <path class="i-nar" d="M146 62 C160 60 170 64 172 72 C173 79 166 82 156 82 C150 82 146 78 145 74Z"/>
+        <circle class="i-osc" cx="171" cy="69" r="4"/>
+        <path class="perro__boca" d="M152 80 Q160 84 167 80"/>
+        <path class="i-techo2" d="M120 54 C112 56 110 70 114 84 C120 82 124 72 124 60Z"/>
+        <circle class="i-osc" cx="140" cy="60" r="3"/><circle class="i-blanco" cx="141" cy="59" r="1"/>
+        <path class="perro__collar" d="M120 82 Q134 90 148 82"/><circle class="i-menta" cx="134" cy="88" r="4"/>
+        <path class="i-onda i-parpadeo" d="M180 60 q8 10 0 20 M188 54 q12 16 0 32"/>
+      </svg>
       <p><strong>Pensalo como un buen perro guardián.</strong> No necesita entender todo: ladra si entra alguien, si huele humo o si se inunda el lavadero. Una casa inteligente es eso, más algunas manos extra que apagan luces o riegan el jardín.</p>
     </div>
   </div>
@@ -141,15 +157,36 @@
     <span class="etiqueta">Por dónde empezar</span>
     <h2>Tres niveles, de menos a más</h2>
     <div class="niveles">
-      <article class="nivel-casa"><em>Nivel 1 · básico</em><b>USD 150 – 400</b><ul><li>Detector de humo con aviso</li><li>Sensor de agua en lavadero y baño</li><li>2 o 3 enchufes inteligentes</li><li>Sensores en la puerta principal</li></ul><p>Se instala en una tarde, sin obra ni electricista.</p></article>
-      <article class="nivel-casa"><em>Nivel 2 · intermedio</em><b>USD 800 – 2.500</b><ul><li>Un “cerebro” local que une todo</li><li>Luces y persianas automáticas</li><li>Medición de consumo eléctrico</li><li>Cámaras con grabación en casa</li><li>Cerradura con código</li></ul><p>Conviene un electricista matriculado para tableros y llaves.</p></article>
-      <article class="nivel-casa"><em>Nivel 3 · completo</em><b>USD 5.000 – 15.000</b><ul><li>Paneles solares y batería</li><li>Riego automático</li><li>Alarma integrada con aviso</li><li>Válvula de corte de agua</li><li>Asistencia para adultos mayores</li></ul><p>Se planifica como una obra, idealmente al construir o reformar.</p></article>
+      <article class="nivel-casa"><em>Nivel 1 · básico</em><b>USD 125 – 350</b><ul><li>Detector de humo con aviso</li><li>Sensor de agua en lavadero y baño</li><li>2 o 3 enchufes inteligentes</li><li>Sensores en la puerta principal</li></ul><p>Se instala en una tarde, sin obra ni electricista.</p></article>
+      <article class="nivel-casa"><em>Nivel 2 · intermedio</em><b>USD 560 – 1.720</b><ul><li>Un “cerebro” local que une todo</li><li>Luces y persianas automáticas</li><li>Medición de consumo eléctrico</li><li>Cámaras con grabación en casa</li><li>Cerradura con código</li></ul><p>Conviene un electricista matriculado para tableros y llaves.</p></article>
+      <article class="nivel-casa"><em>Nivel 3 · completo</em><b>USD 3.900 – 12.750</b><ul><li>Paneles solares y batería</li><li>Riego automático</li><li>Alarma integrada con aviso</li><li>Válvula de corte de agua</li><li>Asistencia para adultos mayores</li></ul><p>Se planifica como una obra, idealmente al construir o reformar.</p></article>
     </div>
-    <p class="fuentes">Precios orientativos con referencias internacionales; en Argentina varían por impuestos e importación.</p>
+    <p class="fuentes">Cada nivel incluye el anterior. Precios orientativos con referencias internacionales; en Argentina varían por impuestos e importación. Calculá el tuyo en el <a href="casa-simulador.html#configurador">configurador</a>.</p>
   </div>
 </section>
 
-<section id="reglas" class="alterna">
+<section id="simulador" class="alterna">
+  <div class="envoltura">
+    <div class="sim-teaser">
+      <div>
+        <span class="etiqueta">Probalo</span>
+        <h2>Simulador de casa inteligente</h2>
+        <p class="intro">Elegí un nivel y una situación (se rompe un caño, hay humo, se corta la luz, llega una tormenta) y mirá paso a paso qué hace la casa. Después armá tu lista de equipos y calculá el costo.</p>
+        <a class="boton" href="casa-simulador.html">Abrir el simulador</a>
+      </div>
+      <svg viewBox="0 0 320 220" role="img" aria-labelledby="st-t"><title id="st-t">Plano simplificado de una casa con un sensor de agua que avisa al celular</title>
+        <rect class="i-cielo" x="0" y="0" width="320" height="220" rx="16"/>
+        <path class="i-trazo-osc" d="M20 20 H220 V200 H20 Z M120 20 V110 M20 110 H220"/>
+        <rect class="i-luz" x="22" y="22" width="96" height="86"/>
+        <circle class="i-nar" cx="70" cy="64" r="12"/><circle class="i-menta i-parpadeo" cx="170" cy="160" r="12"/>
+        <path class="i-trazo-nar" d="M182 160 Q230 150 250 120"/>
+        <rect class="i-osc" x="240" y="60" width="62" height="110" rx="12"/><rect class="i-blanco" x="247" y="72" width="48" height="84" rx="5"/><rect class="i-menta" x="252" y="80" width="38" height="18" rx="4"/><rect class="i-gris" x="252" y="104" width="38" height="5" rx="2"/><rect class="i-gris" x="252" y="114" width="26" height="5" rx="2"/>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<section id="reglas">
   <div class="envoltura">
     <span class="etiqueta">Sin regalar tus datos</span>
     <h2>Cinco reglas de oro</h2>
@@ -193,7 +230,7 @@
       <div><b>Proyecto 2009</b><a href="archivo-2009.html">Archivo 2009</a><a href="fallas-2009.html">Fallas 2009</a></div>
       <div><b>Proyecto 2026</b><a href="en-simple.html">En simple</a><a href="plan-maestro.html">Versión técnica</a><a href="proyecto-2026.html">Mapa, costos y cronograma</a><a href="escalas.html">Ciudad, barrio y casa</a></div>
       <div><b>Barrio privado inteligente</b><a href="barrio-simple.html">En simple</a><a href="barrio-tecnico.html">Versión técnica</a><a href="la-lomada.html">Caso: La Lomada</a></div>
-      <div><b>Casa particular inteligente</b><a href="casa-simple.html">En simple</a><a href="casa-tecnico.html">Versión técnica</a></div>
+      <div><b>Casa particular inteligente</b><a href="casa-simple.html">En simple</a><a href="casa-tecnico.html">Versión técnica</a><a href="casa-simulador.html">Simulador</a></div>
       <div><b>Privacidad y seguridad</b><a href="datos-personales.html">Datos personales</a><a href="seguridad.html">Seguridad</a></div>
     </div>
   </div>

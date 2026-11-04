@@ -31,6 +31,7 @@ MENU = [
     ('Casa particular inteligente', 'nuevo', [
         ('casa-simple.html', 'En simple', 'Qué se puede automatizar y por dónde empezar'),
         ('casa-tecnico.html', 'Versión técnica', 'Equipos, protocolos, instalación y costos'),
+        ('casa-simulador.html', 'Simulador', 'Probá situaciones y calculá el costo de tu casa'),
     ]),
     ('Privacidad y seguridad', '', [
         ('datos-personales.html', 'Datos personales', 'Sensibles y no tan sensibles: qué se protege y cómo'),

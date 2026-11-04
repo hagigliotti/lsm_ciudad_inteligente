@@ -1,0 +1,232 @@
+<!doctype html>
+<html lang="es-AR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://www.googletagmanager.com; connect-src 'self' https://*.google-analytics.com https://*.analytics.google.com https://www.googletagmanager.com; img-src 'self' data: https://*.google-analytics.com https://www.googletagmanager.com; style-src 'self'; font-src 'self'; base-uri 'self'; form-action 'self'; object-src 'none'; upgrade-insecure-requests">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <title>Simulador de casa inteligente · LSM Ciudad Inteligente</title>
+  <meta name="description" content="Simulador interactivo de una casa inteligente: elegí un nivel y una situación (pérdida de agua, humo, corte de luz, tormenta) y mirá qué hace la casa. Configurador con costos.">
+  <meta property="og:title" content="Simulador de casa inteligente · LSM Ciudad Inteligente">
+  <meta property="og:image" content="https://hagigliotti.github.io/lsm_ciudad_inteligente/assets/logos/portada.jpg">
+  <meta name="theme-color" content="#0d1f18">
+  <link rel="icon" href="assets/logos/isotipo.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/css/estilo.css">
+  <script type="module" src="assets/js/simulador-casa.js"></script>
+  <script type="module" src="assets/js/app.js"></script>
+</head>
+<body>
+<a class="salto" href="#contenido">Saltar al contenido</a>
+<!-- menu:inicio -->
+<header class="barra">
+  <div class="envoltura">
+    <a class="barra__marca" href="index.html"><img src="assets/logos/isotipo.svg" alt="" width="36" height="36">LSM</a>
+    <button class="menu__boton" type="button" aria-expanded="false" aria-controls="menu-principal" data-menu-boton>Menú</button>
+    <nav class="menu" id="menu-principal" aria-label="Menú principal">
+      <ul class="menu__lista">
+        <li><a class="menu__link" href="ciudad-hoy.html">La ciudad hoy</a></li>
+        <li>
+          <details class="menu__grupo">
+            <summary>Proyecto 2009 <i>original</i></summary>
+            <ul>
+              <li><a href="archivo-2009.html"><b>Archivo 2009</b><small>El proyecto original completo, tal como se publicó</small></a></li>
+              <li><a href="fallas-2009.html"><b>Fallas 2009</b><small>Qué le faltó y qué cambió desde entonces</small></a></li>
+            </ul>
+          </details>
+        </li>
+        <li>
+          <details class="menu__grupo">
+            <summary>Proyecto 2026 <i>actualización</i></summary>
+            <ul>
+              <li><a href="en-simple.html"><b>En simple</b><small>Explicado fácil, con dibujos y ejemplos</small></a></li>
+              <li><a href="plan-maestro.html"><b>Versión técnica</b><small>Plan Maestro 2027–2036 completo</small></a></li>
+              <li><a href="proyecto-2026.html"><b>Mapa, costos y cronograma</b><small>Dónde va cada cosa, cuánto cuesta y cuándo</small></a></li>
+              <li><a href="escalas.html"><b>Ciudad, barrio y casa</b><small>Cómo encajan los tres proyectos</small></a></li>
+            </ul>
+          </details>
+        </li>
+        <li>
+          <details class="menu__grupo">
+            <summary>Barrio privado inteligente <i>nuevo</i></summary>
+            <ul>
+              <li><a href="barrio-simple.html"><b>En simple</b><small>Qué cambia para quien vive en el barrio</small></a></li>
+              <li><a href="barrio-tecnico.html"><b>Versión técnica</b><small>Arquitectura, equipos, reglamento y costos</small></a></li>
+              <li><a href="la-lomada.html"><b>Caso: La Lomada</b><small>Barrio en desarrollo en Puiggari</small></a></li>
+            </ul>
+          </details>
+        </li>
+        <li>
+          <details class="menu__grupo menu__grupo--activo">
+            <summary>Casa particular inteligente <i>nuevo</i></summary>
+            <ul>
+              <li><a href="casa-simple.html"><b>En simple</b><small>Qué se puede automatizar y por dónde empezar</small></a></li>
+              <li><a href="casa-tecnico.html"><b>Versión técnica</b><small>Equipos, protocolos, instalación y costos</small></a></li>
+              <li><a href="casa-simulador.html" aria-current="page"><b>Simulador</b><small>Probá situaciones y calculá el costo de tu casa</small></a></li>
+            </ul>
+          </details>
+        </li>
+        <li>
+          <details class="menu__grupo">
+            <summary>Privacidad y seguridad</summary>
+            <ul>
+              <li><a href="datos-personales.html"><b>Datos personales</b><small>Sensibles y no tan sensibles: qué se protege y cómo</small></a></li>
+              <li><a href="seguridad.html"><b>Seguridad</b><small>Cómo se protegen el sitio y los sistemas</small></a></li>
+            </ul>
+          </details>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>
+<!-- menu:fin -->
+
+<main id="contenido">
+
+<section class="proy-portada proy-portada--corta">
+  <div class="envoltura">
+    <span class="etiqueta">Casa particular inteligente · LSM Smart Home 360</span>
+    <h1>Simulador de casa inteligente</h1>
+    <p class="intro">Elegí un nivel, apretá una situación y mirá qué hace la casa paso a paso. Después armá tu propia lista de equipos y calculá cuánto cuesta.</p>
+    <div class="versiones">
+      <a class="version-chip" href="casa-simple.html"><b>Casa inteligente</b> en simple →</a>
+      <a class="version-chip" href="casa-tecnico.html#smart-home-360"><b>Smart Home 360</b> versión técnica →</a>
+    </div>
+  </div>
+</section>
+
+<section id="simulador">
+  <div class="envoltura">
+    <div class="sim" data-sim>
+      <div class="sim__plano">
+      <svg class="plano" viewBox="0 0 660 440" role="img" aria-labelledby="pl-t">
+        <title id="pl-t">Plano de una casa con living, cocina, lavadero, baño, dormitorio, estudio y jardín, con los equipos inteligentes ubicados en cada ambiente</title>
+        <rect class="plano__jardin" x="460" y="220" width="180" height="200" rx="6"/>
+        <text class="plano__sala" x="472" y="242">Entrada y jardín</text>
+        <rect class="plano__piso" x="20" y="20" width="300" height="200"/>
+        <rect class="plano__luz" data-sala="living" x="20" y="20" width="300" height="200"/>
+        <text class="plano__sala" x="32" y="42">Living</text>
+        <rect class="plano__piso" x="320" y="20" width="180" height="200"/>
+        <rect class="plano__luz" data-sala="cocina" x="320" y="20" width="180" height="200"/>
+        <text class="plano__sala" x="332" y="42">Cocina</text>
+        <rect class="plano__piso" x="500" y="20" width="140" height="100"/>
+        <rect class="plano__luz" data-sala="lavadero" x="500" y="20" width="140" height="100"/>
+        <text class="plano__sala" x="512" y="42">Lavadero</text>
+        <rect class="plano__piso" x="500" y="120" width="140" height="100"/>
+        <rect class="plano__luz" data-sala="bano" x="500" y="120" width="140" height="100"/>
+        <text class="plano__sala" x="512" y="142">Baño</text>
+        <rect class="plano__piso" x="20" y="220" width="240" height="200"/>
+        <rect class="plano__luz" data-sala="dorm" x="20" y="220" width="240" height="200"/>
+        <text class="plano__sala" x="32" y="242">Dormitorio</text>
+        <rect class="plano__piso" x="260" y="220" width="200" height="200"/>
+        <rect class="plano__luz" data-sala="estudio" x="260" y="220" width="200" height="200"/>
+        <text class="plano__sala" x="272" y="242">Estudio</text>
+        <path class="plano__muro" d="M20 20 H640 V220 H460 V420 H20 Z M320 20 V220 M500 20 V220 M500 120 H640 M20 220 H460 M260 220 V420"/>
+        <path class="plano__puerta" d="M300 220 h-30 M120 220 h-30 M500 160 v-25 M460 300 v-30 M330 420 h-30"/>
+        <g class="dev" data-dev="sirena" transform="translate(280 70)"><circle r="17"/><text class="dev__ico" y="6">📢</text><text class="dev__nom" y="33">Sirena</text></g>
+        <g class="dev" data-dev="luces" transform="translate(150 90)"><circle r="17"/><text class="dev__ico" y="6">💡</text><text class="dev__nom" y="33">Luces</text></g>
+        <g class="dev" data-dev="humo" transform="translate(410 70)"><circle r="17"/><text class="dev__ico" y="6">🔥</text><text class="dev__nom" y="33">Humo</text></g>
+        <g class="dev" data-dev="movimiento" transform="translate(380 170)"><circle r="17"/><text class="dev__ico" y="6">👋</text><text class="dev__nom" y="33">Movimiento</text></g>
+        <g class="dev" data-dev="agua" transform="translate(545 80)"><circle r="17"/><text class="dev__ico" y="6">💧</text><text class="dev__nom" y="33">Agua</text></g>
+        <g class="dev" data-dev="valvula" transform="translate(605 80)"><circle r="17"/><text class="dev__ico" y="6">🚰</text><text class="dev__nom" y="33">Válvula</text></g>
+        <g class="dev" data-dev="enchufe" transform="translate(570 180)"><circle r="17"/><text class="dev__ico" y="6">🔌</text><text class="dev__nom" y="33">Termotanque</text></g>
+        <g class="dev" data-dev="ventana" transform="translate(70 280)"><circle r="17"/><text class="dev__ico" y="6">🪟</text><text class="dev__nom" y="33">Ventana</text></g>
+        <g class="dev" data-dev="boton" transform="translate(150 370)"><circle r="17"/><text class="dev__ico" y="6">🆘</text><text class="dev__nom" y="33">Botón ayuda</text></g>
+        <g class="dev" data-dev="controlador" transform="translate(310 280)"><circle r="17"/><text class="dev__ico" y="6">🧠</text><text class="dev__nom" y="33">Controlador</text></g>
+        <g class="dev" data-dev="ups" transform="translate(400 280)"><circle r="17"/><text class="dev__ico" y="6">🔋</text><text class="dev__nom" y="33">Batería</text></g>
+        <g class="dev" data-dev="hub" transform="translate(310 370)"><circle r="17"/><text class="dev__ico" y="6">📡</text><text class="dev__nom" y="33">Puente</text></g>
+        <g class="dev" data-dev="medidor" transform="translate(400 370)"><circle r="17"/><text class="dev__ico" y="6">📊</text><text class="dev__nom" y="33">Tablero</text></g>
+        <g class="dev" data-dev="puerta" transform="translate(500 265)"><circle r="17"/><text class="dev__ico" y="6">🚪</text><text class="dev__nom" y="33">Puerta</text></g>
+        <g class="dev" data-dev="cerradura" transform="translate(575 265)"><circle r="17"/><text class="dev__ico" y="6">🔐</text><text class="dev__nom" y="33">Cerradura</text></g>
+        <g class="dev" data-dev="camara" transform="translate(600 330)"><circle r="17"/><text class="dev__ico" y="6">🎥</text><text class="dev__nom" y="33">Cámara</text></g>
+        <g class="dev" data-dev="solar" transform="translate(500 330)"><circle r="17"/><text class="dev__ico" y="6">☀️</text><text class="dev__nom" y="33">Paneles</text></g>
+        <g class="dev" data-dev="riego" transform="translate(560 380)"><circle r="17"/><text class="dev__ico" y="6">🌱</text><text class="dev__nom" y="33">Riego</text></g>
+      </svg>
+        <p class="fuentes">Plano de ejemplo. Los equipos en gris no están incluidos en el nivel elegido.</p>
+      </div>
+      <div class="sim__panel">
+        <fieldset class="segmento" data-nivel-sim>
+          <legend>1 · Nivel de tu casa</legend>
+          <label><input type="radio" name="nivel" value="1"><span><b>Básico</b><small>Avisos</small></span></label>
+          <label><input type="radio" name="nivel" value="2" checked><span><b>Intermedio</b><small>Automatiza</small></span></label>
+          <label><input type="radio" name="nivel" value="3"><span><b>Completo</b><small>Actúa sola</small></span></label>
+        </fieldset>
+        <label class="interruptor"><input type="checkbox" data-internet checked><span></span>Hay internet</label>
+        <p class="sim__tit">2 · Elegí una situación</p>
+        <div class="escenas" data-escenas><p class="fuentes">El simulador necesita JavaScript.</p></div>
+      </div>
+    </div>
+    <div class="sim__salida">
+      <div class="sim__log">
+        <h2 class="sim__h">Qué pasa</h2>
+        <p class="sim__resumen" data-resumen>Elegí una situación para empezar.</p>
+        <ol class="pasos-sim" data-log aria-live="polite"></ol>
+      </div>
+      <div class="celular" aria-label="Avisos en el celular">
+        <div class="celular__pantalla">
+          <p class="celular__hora">Avisos</p>
+          <ul data-avisos><li class="celular__vacio">Sin avisos</li></ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="configurador" class="alterna">
+  <div class="envoltura">
+    <span class="etiqueta">Configurador</span>
+    <h2>Armá tu casa y calculá el costo</h2>
+    <p class="intro">Marcá los equipos que te interesan o empezá desde un nivel. El total y las situaciones que cubrís se actualizan solos.</p>
+    <div class="botones" data-preset>
+      <button class="boton boton--sec" type="button" data-nivel="1">Nivel básico</button>
+      <button class="boton boton--sec" type="button" data-nivel="2">Nivel intermedio</button>
+      <button class="boton boton--sec" type="button" data-nivel="3">Nivel completo</button>
+      <button class="boton boton--sec" type="button" data-nivel="0">Vaciar</button>
+    </div>
+    <div class="config">
+      <div class="config__lista" data-equipos></div>
+      <aside class="config__total">
+        <p class="sim__tit">Tu casa</p>
+        <b data-total>USD 0</b>
+        <span data-cantidad>0 equipos</span>
+        <div class="medidor" aria-hidden="true"><i data-barra></i></div>
+        <span data-cobertura>Cubre 0 de las acciones del simulador</span>
+        <p class="fuentes">Precios orientativos con referencias internacionales en USD de 2026; en Argentina varían por impuestos e importación. Instalaciones eléctricas, siempre con electricista matriculado.</p>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="envoltura">
+    <div class="otra-version">
+      <p><strong>¿Querés el detalle técnico?</strong> Protocolos, red, equipos recomendados y ejemplos de automatizaciones en la versión técnica.</p>
+      <a class="boton" href="casa-tecnico.html">Versión técnica</a>
+    </div>
+    <p class="fuentes">Simulador educativo elaborado con asistencia de inteligencia artificial y revisión humana. No controla dispositivos reales ni se conecta a ningún Home Assistant: todo ocurre en tu navegador. Ver la <a href="privacidad.html">política de privacidad</a>.</p>
+  </div>
+</section>
+
+</main>
+
+<!-- pie:inicio -->
+<footer class="pie">
+  <div class="envoltura">
+    <div class="pie__marca"><img src="assets/logos/logo-horizontal-claro.svg" alt="LSM Ciudad Inteligente" width="240" height="60">
+      <span>© 2009–<span data-anio>2026</span> · Hernando A. Gigliotti</span>
+      <span><a href="ciudad-hoy.html">La ciudad hoy</a> · <a href="privacidad.html">Política de privacidad del sitio</a> · <a href="#" data-revisar-cookies>Cookies</a></span></div>
+    <div class="pie__mapa">
+      <div><b>Proyecto 2009</b><a href="archivo-2009.html">Archivo 2009</a><a href="fallas-2009.html">Fallas 2009</a></div>
+      <div><b>Proyecto 2026</b><a href="en-simple.html">En simple</a><a href="plan-maestro.html">Versión técnica</a><a href="proyecto-2026.html">Mapa, costos y cronograma</a><a href="escalas.html">Ciudad, barrio y casa</a></div>
+      <div><b>Barrio privado inteligente</b><a href="barrio-simple.html">En simple</a><a href="barrio-tecnico.html">Versión técnica</a><a href="la-lomada.html">Caso: La Lomada</a></div>
+      <div><b>Casa particular inteligente</b><a href="casa-simple.html">En simple</a><a href="casa-tecnico.html">Versión técnica</a><a href="casa-simulador.html">Simulador</a></div>
+      <div><b>Privacidad y seguridad</b><a href="datos-personales.html">Datos personales</a><a href="seguridad.html">Seguridad</a></div>
+    </div>
+  </div>
+</footer>
+<!-- pie:fin -->
+<div class="consent" data-consent hidden role="dialog" aria-label="Cookies">
+  <p>Usamos Google Analytics para saber cuántas personas visitan el sitio. Solo se activa si aceptás. <a href="privacidad.html#cookies">Más información</a>.</p>
+  <div><button class="boton" data-elegir="si">Aceptar</button><button class="boton boton--sec" data-elegir="no">Rechazar</button></div>
+</div>
+</body>
+</html>
