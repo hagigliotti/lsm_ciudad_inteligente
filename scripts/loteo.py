@@ -35,8 +35,7 @@ def manzana(n):
     """Manzana de cada lote según el plano de loteo con colores (coincide con la mensura)."""
     if n <= 10: return 'A3'
     if n <= 16: return 'A2'
-    if n == 17: return 'DG'  # desglose
-    if n <= 30: return 'A1'
+    if n <= 30: return 'A1'  # el 17 es un desglose aparte en la mensura; se pinta como A1
     if n <= 34: return 'B1'
     if n <= 36: return 'B2'
     if n <= 57: return 'C'
@@ -48,7 +47,7 @@ def lote(n):
     if str(n).startswith('R'):
         return ('lt-res', f'Reserva {n}')
     m = manzana(n)
-    return (f'lt-lote mz-{m.lower()}', f'Lote {n} · ' + ('desglose' if m == 'DG' else f'manzana {m}'))
+    return (f'lt-lote mz-{m.lower()}', f'Lote {n} · ' + ('desglose junto a la manzana A1' if n == 17 else f'manzana {m}'))
 
 
 def franja(a0, a1, b0, b1, nombres, rot=0):
@@ -66,7 +65,7 @@ def marcador(x, y, letra):
 
 
 # Contorno general y calles
-piezas.append('<polygon class="lt-calle" points="12,30 362,30 362,742 282,742 12,30"/>')
+piezas.append('<polygon class="lt-calle" points="12,30 362,30 362,690 302,690 266,700 12,30"/>')
 # Fondo de manzanas internas (la calle queda como fondo gris)
 # Franja oeste: lotes 1–10, R9, 11–30 (de la ruta hacia el norte)
 oeste = list(range(1, 11)) + ['R9'] + list(range(11, 31))
@@ -75,18 +74,22 @@ franja((266, 700), (12, 30), (302, 672), (62, 30), oeste)
 franja((84, 30), (318, 30), (98, 70), (318, 70), [31, 32, 33, 34, 'R1', 35, 36])
 # Franja este: 37–57 y R5 (de norte a sur)
 franja((362, 30), (362, 690), (330, 30), (330, 690), list(range(37, 58)))
-# Sur: bulevar de ingreso desde la RN 131, con R5 (este) y R6 (oeste), rotonda, R8 y
-# el club house (R7) hacia la calle pública del oeste.
-piezas.append('<polygon class="lt-calle" points="150,700 266,700 282,742 362,742 362,882 150,882"/>')
-poli([(330, 690), (362, 690), (362, 882), (342, 882)], 'lt-res', None, 'Reserva R5 (espacio verde)')
-piezas.append('<text class="lt-n lt-n--r" x="352" y="812">R5</text>')
-poli([(266, 700), (302, 672), (312, 690), (312, 760), (286, 760)], 'lt-res', None, 'Reserva R8 (espacio verde)')
-piezas.append('<text class="lt-n lt-n--r" x="294" y="726">R8</text>')
-poli([(178, 712), (262, 712), (274, 744), (286, 772), (240, 808), (178, 796)], 'lt-res lt-club', None, 'Reserva R7: club house')
-piezas.append('<text class="lt-n lt-n--r" x="226" y="752">R7</text><text class="lt-club-t" x="226" y="766">club house</text>')
-poli([(178, 838), (314, 812), (314, 882), (178, 882)], 'lt-res', None, 'Reserva R6')
-piezas.append('<text class="lt-n lt-n--r" x="246" y="864">R6</text>')
-piezas.append('<text class="lt-calle-t" x="162" y="800" transform="rotate(-90 162 800)">CALLE PÚBLICA</text>')
+# Sur, según el plano de loteo por manzanas: bulevar con cantero desde la RN 131 entre
+# R6 (oeste) y R5 (este); rotonda; calle hacia el oeste entre R8 (norte) y el club
+# house R7 (sur), con una rotonda chica, hasta la calle pública Los Jacarandaes.
+piezas.append('<polygon class="lt-calle" points="30,886 52,886 262,712 250,698"/>')  # calle pública
+piezas.append('<polygon class="lt-calle" points="300,690 334,690 346,886 308,886"/>')  # bulevar
+piezas.append('<polygon class="lt-calle" points="306,756 268,758 240,738 224,726 210,742 232,756 264,778 306,780"/>')  # calle al club house
+piezas.append('<line class="lt-cantero" x1="321" y1="782" x2="327" y2="880"/>')
+poli([(330, 690), (362, 690), (362, 886), (348, 886)], 'lt-res', None, 'Reserva R5 (espacio verde)')
+piezas.append('<text class="lt-n lt-n--r" x="351" y="800">R5</text>')
+poli([(266, 700), (302, 672), (306, 756), (268, 758), (240, 738), (258, 722)], 'lt-res', None, 'Reserva R8 (espacio verde)')
+piezas.append('<text class="lt-n lt-n--r" x="282" y="728">R8</text>')
+poli([(232, 756), (264, 778), (294, 780), (294, 818), (270, 834), (212, 770)], 'lt-res lt-club', None, 'Reserva R7: club house')
+piezas.append('<text class="lt-n lt-n--r" x="258" y="798">R7</text><text class="lt-club-t" x="258" y="810">club house</text>')
+poli([(294, 780), (306, 780), (310, 886), (298, 886)], 'lt-res', None, 'Reserva R6 (espacio verde)')
+piezas.append('<text class="lt-n lt-n--r" x="285" y="860">R6</text>')
+piezas.append('<text class="lt-calle-t" x="118" y="826" transform="rotate(-40 118 826)">CALLE LOS JACARANDAES (PÚBLICA)</text>')
 # Manzana norte (58–70, R2, R3). Los extremos tienen tres filas (58 59 / 70 / 69 y
 # 62 63 / 64 / 66 65); el centro, dos (60 61 R2 / 68 67 R3). D está sobre la línea
 # que divide 60 de 68.
@@ -137,13 +140,14 @@ marcador(167, 70, 'B')  # frente del lote 33
 marcador(362, 375.7, 'C')  # límite 47/48, lado exterior
 # Rotondas e ingreso
 piezas.append('<circle class="lt-rotonda" cx="318" cy="612" r="7"><title>Rotonda</title></circle>')
-piezas.append('<circle class="lt-rotonda" cx="328" cy="786" r="10"><title>Rotonda del ingreso (acceso al club house)</title></circle>')
-piezas.append('<g class="lt-ingreso"><path d="M328 878c-9-12-14-20-14-27a14 14 0 0 1 28 0c0 7-5 15-14 27z"/><circle cx="328" cy="851" r="5"/>'
+piezas.append('<circle class="lt-rotonda" cx="320" cy="768" r="8"><title>Rotonda del ingreso (acceso al club house)</title></circle>')
+piezas.append('<circle class="lt-rotonda" cx="262" cy="768" r="5"><title>Rotonda chica frente al club house</title></circle>')
+piezas.append('<g class="lt-ingreso"><path d="M327 880c-9-12-14-20-14-27a14 14 0 0 1 28 0c0 7-5 15-14 27z"/><circle cx="327" cy="853" r="5"/>'
               '<title>Ingreso principal desde la RN 131</title></g>')
 # Ruta
-piezas.append('<rect class="lt-ruta" x="0" y="884" width="380" height="24"/>')
-piezas.append('<text class="lt-ruta-t" x="12" y="900">RUTA NACIONAL 131</text>')
-piezas.append('<text class="lt-ruta-t" x="250" y="900">INGRESO ↑</text>')
+piezas.append('<rect class="lt-ruta" x="0" y="886" width="380" height="24"/>')
+piezas.append('<text class="lt-ruta-t" x="12" y="902">RUTA NACIONAL 131</text>')
+piezas.append('<text class="lt-ruta-t" x="236" y="902">INGRESO ↑</text>')
 # Norte: camino vecinal, estación de bombeo e impulsión a la red municipal
 piezas.append('<rect class="lt-vecinal" x="0" y="2" width="380" height="26"/>')
 piezas.append('<text class="lt-calle-t" x="96" y="13">CAMINO VECINAL</text>')
