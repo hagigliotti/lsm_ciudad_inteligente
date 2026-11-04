@@ -186,7 +186,7 @@ def main():
             f'<div class="cap__cuerpo">{cuerpo}</div><a class="cap__arriba" href="#indice">↑ Volver al índice</a></section>')
 
     plantilla = open(os.path.join(RAIZ, 'scripts', 'archivo2009.plantilla.html'), encoding='utf-8').read()
-    salida = (plantilla.replace('{{TITULO_BLOG}}', html.escape(canal.findtext('title').strip('"')))
+    salida = (plantilla.replace('{{TITULO_BLOG}}', 'Libertador San Martín, una ciudad inteligente')  # título oficial del proyecto
               .replace('{{ORIGINAL}}', html.escape(original, quote=True))
               .replace('{{TARJETAS}}', '\n'.join(tarjetas)).replace('{{MENU}}', '\n'.join(menu))
               .replace('{{CONTENIDO}}', '\n'.join(secciones)))

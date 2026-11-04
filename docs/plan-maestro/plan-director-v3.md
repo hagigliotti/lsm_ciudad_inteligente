@@ -1,4 +1,4 @@
-# LSM CIUDAD INTELIGENTE 2026
+# LIBERTADOR SAN MARTÍN, UNA CIUDAD INTELIGENTE 2026
 ## Plan Director de Transformación Digital, Autonomía Urbana, IA y Robótica Aplicada
 **Autor:** Hernando A. Gigliotti  
 **Versión:** 3.0 (Revisión Integral 2026)  
@@ -73,7 +73,7 @@ El ecosistema de red está diseñado para operar con máxima redundancia, resolv
 
 ```
                                   ┌────────────────────────────────────────┐
-                                  │      LSM CIUDAD INTELIGENTE 2026       │
+                                  │    LSM, UNA CIUDAD INTELIGENTE 2026    │
                                   └───────────────────┬────────────────────┘
                                                       │
          ┌──────────────────────┬─────────────────────┼──────────────────────┬──────────────────────┐
@@ -147,4 +147,4 @@ Toda la información capturada por la red de sensores y nodos de IA converge en 
 
 ## 7. Conclusión
 
-El **Proyecto LSM Ciudad Inteligente 2026** redefine el desarrollo tecnológico para municipios en Argentina, demostrando que con una arquitectura moderna, abierta y enfocada en **Edge AI + Starlink + LoRaWAN**, es posible implementar soluciones de nivel internacional a una fracción del costo tradicional, garantizando sostenibilidad, seguridad y eficiencia operativa real.
+El proyecto **Libertador San Martín, una ciudad inteligente 2026** redefine el desarrollo tecnológico para municipios en Argentina, demostrando que con una arquitectura moderna, abierta y enfocada en **Edge AI + Starlink + LoRaWAN**, es posible implementar soluciones de nivel internacional a una fracción del costo tradicional, garantizando sostenibilidad, seguridad y eficiencia operativa real.

@@ -87,7 +87,7 @@ def footer() -> str:
         cols.append(f'      <div><b>{titulo}</b>{links}</div>')
     return (
         f'{PIE_INICIO}\n<footer class="pie">\n  <div class="envoltura">\n'
-        '    <div class="pie__marca"><img src="assets/logos/logo-horizontal-claro.svg" alt="LSM Ciudad Inteligente" width="240" height="60">\n'
+        '    <div class="pie__marca"><img src="assets/logos/logo-horizontal-claro.svg" alt="LSM, una ciudad inteligente" width="240" height="60">\n'
         '      <span>© 2009–<span data-anio>2026</span> · Hernando A. Gigliotti</span>\n'
         '      <span><a href="ciudad-hoy.html">La ciudad hoy</a> · <a href="privacidad.html">Política de privacidad del sitio</a> · <a href="#" data-revisar-cookies>Cookies</a></span></div>\n'
         '    <div class="pie__mapa">\n' + '\n'.join(cols) + '\n    </div>\n  </div>\n</footer>\n' + PIE_FIN

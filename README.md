@@ -1,6 +1,6 @@
-# LSM Ciudad Inteligente · 2009 → 2026
+# Libertador San Martín, una ciudad inteligente · 2009 → 2026
 
-![LSM Ciudad Inteligente](assets/logos/logo-horizontal.svg)
+![LSM, una ciudad inteligente](assets/logos/logo-horizontal.svg)
 
 Análisis del proyecto **Ciudad Inteligente de Libertador San Martín** (Entre Ríos, Argentina), presentado en julio de 2009,
 y propuesta de cómo implementarlo hoy.

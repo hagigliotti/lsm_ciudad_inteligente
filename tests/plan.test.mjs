@@ -11,7 +11,7 @@ const leer = (p) => readFileSync(join(RAIZ, p), 'utf8');
 test('los documentos fuente están en docs/plan-maestro', () => {
   assert.ok(existsSync(join(RAIZ, 'docs/plan-maestro/LSM_Ciudad_Inteligente_Plan_Maestro_2027-2036.docx')));
   const md = leer('docs/plan-maestro/plan-director-v3.md');
-  assert.match(md, /^# LSM CIUDAD INTELIGENTE 2026/);
+  assert.match(md, /^# LIBERTADOR SAN MARTÍN, UNA CIUDAD INTELIGENTE 2026/);
   assert.doesNotMatch(md, /He generado el archivo/, 'quedó texto del chat en el documento');
 });
 
