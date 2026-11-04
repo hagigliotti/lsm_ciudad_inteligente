@@ -6,7 +6,7 @@
   <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://www.googletagmanager.com; connect-src 'self' https://*.google-analytics.com https://*.analytics.google.com https://www.googletagmanager.com; img-src 'self' data: https://*.google-analytics.com https://www.googletagmanager.com; style-src 'self'; font-src 'self'; base-uri 'self'; form-action 'self'; object-src 'none'; upgrade-insecure-requests">
   <meta name="referrer" content="strict-origin-when-cross-origin">
   <title>Simulador de casa inteligente · LSM Ciudad Inteligente</title>
-  <meta name="description" content="Simulador interactivo de casa inteligente: 4 tipos de casa, 5 niveles, 54 sensores y equipos, 18 situaciones, mensajes en un celular y configurador de costos.">
+  <meta name="description" content="Simulador interactivo de casa inteligente: 4 tipos de casa, 5 niveles, 67 sensores y equipos, 19 situaciones, mensajes en un celular y configurador de costos.">
   <meta property="og:title" content="Simulador de casa inteligente · LSM Ciudad Inteligente">
   <meta property="og:image" content="https://hagigliotti.github.io/lsm_ciudad_inteligente/assets/logos/portada.jpg">
   <meta name="theme-color" content="#0d1f18">
@@ -90,8 +90,8 @@
     <div class="proy-chips">
       <div><b>4 tipos</b><span>de casa con su plano y exterior</span></div>
       <div><b>5 niveles</b><span>de avisos a autonomía</span></div>
-      <div><b data-cuenta-equipos>54 equipos</b><span>sensores, actuadores y robots</span></div>
-      <div><b data-cuenta-escenas>18 situaciones</b><span>para probar</span></div>
+      <div><b data-cuenta-equipos>67 equipos</b><span>sensores, actuadores y robots</span></div>
+      <div><b data-cuenta-escenas>19 situaciones</b><span>para probar</span></div>
     </div>
   </div>
 </section>
@@ -152,7 +152,16 @@
   <div class="envoltura">
     <span class="etiqueta">Catálogo</span>
     <h2>Todos los sensores y equipos</h2>
-    <p class="intro">Cada equipo con lo que hace, el protocolo que usa, el nivel en que entra y un precio orientativo. Los marcados “en el plano” están ubicados en la casa que elegiste.</p>
+    <p class="intro">Cada equipo con lo que hace, el protocolo que usa, el nivel en que entra y un precio orientativo. Marcá los que ya tenés y los que querés tener: en el plano aparecen con una marca verde (tengo) o naranja (quiero).</p>
+    <div class="mia" data-mia>
+      <div class="mia__datos"><span><b data-mia-tengo>0</b> que tengo</span><span><b data-mia-quiero>0</b> que quiero</span><span>Lo que quiero cuesta <b data-mia-costo>USD 0</b></span></div>
+      <div class="mia__acciones">
+        <button type="button" class="boton boton--sec" data-mia-solo aria-pressed="false">Ver solo mi lista</button>
+        <button type="button" class="boton" data-mia-config>Pasar mi lista al configurador</button>
+        <button type="button" class="boton boton--sec" data-mia-borrar>Borrar mi lista</button>
+      </div>
+      <p class="fuentes">Marcá en cada equipo “Lo tengo” o “Lo quiero”. Tu lista queda guardada solo en este navegador; no se envía a ningún lado.</p>
+    </div>
     <div class="filtros">
       <input type="search" class="filtros__buscar" placeholder="Buscar: gas, mascota, cortina…" aria-label="Buscar equipos" data-buscar>
       <div class="filtros__chips" data-cats role="group" aria-label="Filtrar por categoría"></div>

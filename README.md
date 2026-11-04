@@ -17,7 +17,7 @@ y propuesta de cómo implementarlo hoy.
 | `fallas-2009.html` | Qué le faltó al proyecto de 2009, qué cambió y qué reglas dejó |
 | `barrio-simple.html`, `barrio-tecnico.html` | Proyecto Barrio privado inteligente (versión simple y técnica) |
 | `casa-simple.html`, `casa-tecnico.html` | Proyecto Casa particular inteligente (versión simple y técnica) |
-| `casa-simulador.html` | Simulador: 4 tipos de casa, 5 niveles, 54 equipos, 18 situaciones, celular con chat, catálogo y configurador; datos en `assets/js/casa-datos.js` |
+| `casa-simulador.html` | Simulador: 4 tipos de casa, 5 niveles, 67 equipos, 19 situaciones, lista “tengo/quiero”, celular con chat, catálogo y configurador; datos en `assets/js/casa-datos.js` |
 | `datos-personales.html` | Datos personales sensibles y no tan sensibles (Ley 25.326) |
 | `scripts/menu.py` | Genera el menú y el pie de todas las páginas: se edita ahí y se corre `python3 scripts/menu.py` |
 | `entrada/` | Bandeja de entrada para material nuevo (por ejemplo, de ChatGPT) que se revisa e integra; lo ya integrado queda en `docs/recibidos/` |
