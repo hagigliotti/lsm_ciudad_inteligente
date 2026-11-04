@@ -26,6 +26,7 @@ MENU = [
     ('Barrio privado inteligente', 'nuevo', [
         ('barrio-simple.html', 'En simple', 'Qué cambia para quien vive en el barrio'),
         ('barrio-tecnico.html', 'Versión técnica', 'Arquitectura, equipos, reglamento y costos'),
+        ('la-lomada.html', 'Caso: La Lomada', 'Barrio en desarrollo en Puiggari'),
     ]),
     ('Casa particular inteligente', 'nuevo', [
         ('casa-simple.html', 'En simple', 'Qué se puede automatizar y por dónde empezar'),

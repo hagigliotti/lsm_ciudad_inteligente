@@ -21,6 +21,8 @@ y propuesta de cómo implementarlo hoy.
 | `scripts/menu.py` | Genera el menú y el pie de todas las páginas: se edita ahí y se corre `python3 scripts/menu.py` |
 | `entrada/` | Bandeja de entrada para material nuevo (por ejemplo, de ChatGPT) que se revisa e integra; lo ya integrado queda en `docs/recibidos/` |
 | `escalas.html` | Marco común: cómo encajan ciudad, barrio y casa |
+| `la-lomada.html` | Caso de estudio: barrio La Lomada de Puiggari |
+| `docs/plantillas/` | Fichas modelo de ciudad, barrio y casa |
 | `proyecto-2026.html` | Proyecto 2026 (plan 2027–2031): mapa interactivo, metas, componentes, seguridad, robótica, presupuesto, cronograma y riesgos |
 | `plan-maestro.html` | Plan Maestro 2027–2036, versión técnica completa: 24 capítulos y anexos, con el Plan Director v3.0 integrado y notas de revisión |
 | `en-simple.html` | El proyecto explicado fácil, con ilustraciones, simulador de lluvia y preguntas frecuentes |
@@ -47,7 +49,7 @@ Abrí `assets/js/config.js` y pegá tu ID en `gaId: 'G-XXXXXXXXXX'`. Nada se car
 ## Probar en tu computadora
 
 ```bash
-npm test            # 111 pruebas
+npm test            # 116 pruebas
 npm run auditar     # tabla de rutas de la API: autenticación, validación, límites
 npm run servir      # sitio en http://localhost:8000
 ```

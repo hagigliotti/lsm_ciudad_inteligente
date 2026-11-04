@@ -58,17 +58,9 @@ La compatibilidad debe comprobarse dispositivo por dispositivo. No se debe asumi
 
 La elección de hardware servidor se hará luego de estimar cantidad de dispositivos, carga, almacenamiento, consumo, disponibilidad y presupuesto.
 
-## 6. Situación de partida comunicada
+## 6. Situación de partida
 
-El inventario inicial informado incluye:
-
-- MacBook como equipo informático disponible.
-- No hay actualmente un NAS o servidor doméstico activo.
-- Router Vodafone y repetidor TP-Link RE305.
-- Dispositivos Aqara: cámara G2H Pro, hub M1S versión CN, hub E1 versión CN y sensores.
-- Vivienda con paredes antiguas/gruesas y router ubicado en un extremo del pasillo.
-
-Se había considerado un Mac mini M4 con 24 GB de memoria y 1 TB, además de un NAS, pero esto fue una posibilidad evaluada, no una instalación confirmada.
+El inventario de la vivienda de referencia se retiró de esta versión pública por privacidad y seguridad (modelos de cámara, hubs y red de una casa real). Se conserva fuera del repositorio.
 
 ## 7. Riesgos y cuestiones técnicas
 
@@ -104,7 +96,7 @@ La IA no debe desbloquear puertas, desactivar alarmas ni realizar acciones de ri
 ## 10. Decisiones pendientes
 
 - Definir el hardware definitivo para Home Assistant.
-- Confirmar compatibilidad de los dispositivos Aqara CN.
+- Confirmar compatibilidad de los dispositivos de versión regional distinta (por ejemplo, CN).
 - Evaluar cableado Ethernet y cobertura inalámbrica.
 - Definir estrategia de respaldo eléctrico y copias de seguridad.
 - Priorizar automatizaciones según utilidad y presupuesto.
