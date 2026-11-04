@@ -1,0 +1,876 @@
+<!doctype html>
+<html lang="es-AR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://www.googletagmanager.com; connect-src 'self' https://*.google-analytics.com https://*.analytics.google.com https://www.googletagmanager.com; img-src 'self' data: https://*.google-analytics.com https://www.googletagmanager.com; style-src 'self'; font-src 'self'; base-uri 'self'; form-action 'self'; object-src 'none'; upgrade-insecure-requests">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <title>Plan Maestro 2027–2036 · versión técnica · LSM Ciudad Inteligente</title>
+  <meta name="description" content="Plan Maestro técnico completo de Libertador San Martín, ciudad inteligente, autónoma y humana: arquitectura, redes, IA, robótica, datos, ciberseguridad, privacidad, gobernanza, presupuesto, hoja de ruta 2027–2036, indicadores y riesgos.">
+  <meta property="og:title" content="Plan Maestro 2027–2036 · LSM Ciudad Inteligente (versión técnica)">
+  <meta property="og:image" content="https://hagigliotti.github.io/lsm_ciudad_inteligente/assets/logos/portada.jpg">
+  <meta name="theme-color" content="#0d1f18">
+  <link rel="icon" href="assets/logos/isotipo.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/css/estilo.css">
+  <script type="module" src="assets/js/archivo.js"></script>
+  <script type="module" src="assets/js/app.js"></script>
+</head>
+<body>
+<a class="salto" href="#contenido">Saltar al contenido</a>
+<header class="barra">
+  <div class="envoltura">
+    <a class="barra__marca" href="index.html"><img src="assets/logos/isotipo.svg" alt="" width="36" height="36">LSM</a>
+    <nav aria-label="Secciones">
+      <a class="opc" href="index.html">Análisis</a>
+      <a class="opc" href="proyecto-2026.html">Proyecto 2026</a>
+      <a href="plan-maestro.html" aria-current="page">Plan técnico</a>
+      <a href="en-simple.html">En simple</a>
+      <a class="opc2" href="archivo-2009.html">Archivo 2009</a>
+    </nav>
+  </div>
+</header>
+
+<main id="contenido">
+
+<section class="proy-portada">
+  <div class="envoltura">
+    <span class="etiqueta">Plan Maestro · versión técnica completa · horizonte 2027–2036</span>
+    <h1>Ciudad inteligente, autónoma y humana</h1>
+    <p class="intro">Plan Maestro de Transformación Urbana con Inteligencia Artificial y Robótica para Libertador San Martín, Entre Ríos. Una ciudad que percibe, aprende y actúa, con tecnología al servicio de las personas. Esta página reúne el Plan Maestro 2027–2036 (versión de trabajo 1.0, 4 de noviembre de 2026) y el Plan Director de Transformación Digital (versión 3.0), con notas de revisión técnica donde los dos documentos difieren.</p>
+    <div class="proy-chips">
+      <div><b>10 años</b><span>2027 a 2036, en 5 fases</span></div>
+      <div><b>8 capas</b><span>de arquitectura de referencia</span></div>
+      <div><b>12 dominios</b><span>de servicios urbanos</span></div>
+      <div><b>5 niveles</b><span>de autonomía para máquinas</span></div>
+    </div>
+    <div class="versiones">
+      <a class="version-chip" href="en-simple.html"><b>¿Preferís una explicación fácil?</b> Ver la versión simple →</a>
+      <a class="version-chip" href="docs/plan-maestro/LSM_Ciudad_Inteligente_Plan_Maestro_2027-2036.docx" download>Descargar Plan Maestro (.docx)</a>
+      <a class="version-chip" href="docs/plan-maestro/plan-director-v3.md">Plan Director v3.0 (.md)</a>
+    </div>
+  </div>
+</section>
+
+<div class="envoltura arch-cuerpo">
+  <nav class="arch-menu" aria-label="Capítulos del plan">
+    <p class="arch-menu__tit">Capítulos</p>
+    <ol>
+      <li><a href="#alcance"><span>0</span>Alcance</a></li>
+      <li><a href="#vision"><span>1</span>Visión ejecutiva</a></li>
+      <li><a href="#antecedentes"><span>2</span>Lecciones de 2009</a></li>
+      <li><a href="#principios"><span>3</span>Principios</a></li>
+      <li><a href="#objetivos"><span>4</span>Objetivos</a></li>
+      <li><a href="#modelo"><span>5</span>Modelo operativo</a></li>
+      <li><a href="#arquitectura"><span>6</span>Arquitectura</a></li>
+      <li><a href="#conectividad"><span>7</span>Conectividad</a></li>
+      <li><a href="#ia"><span>8</span>Inteligencia artificial</a></li>
+      <li><a href="#robotica"><span>9</span>Robótica</a></li>
+      <li><a href="#dominios"><span>10</span>Dominios urbanos</a></li>
+      <li><a href="#gemelo"><span>11</span>Gemelo digital y GIS</a></li>
+      <li><a href="#plataforma"><span>12</span>Datos y estándares</a></li>
+      <li><a href="#ciber"><span>13</span>Ciberseguridad</a></li>
+      <li><a href="#privacidad"><span>14</span>Privacidad y ética</a></li>
+      <li><a href="#gobernanza"><span>15</span>Gobernanza</a></li>
+      <li><a href="#contratacion"><span>16</span>Contratación</a></li>
+      <li><a href="#economia"><span>17</span>Presupuesto</a></li>
+      <li><a href="#hoja-de-ruta"><span>18</span>Hoja de ruta</a></li>
+      <li><a href="#kpi"><span>19</span>Indicadores</a></li>
+      <li><a href="#riesgos"><span>20</span>Riesgos</a></li>
+      <li><a href="#pilotos"><span>21</span>Pilotos</a></li>
+      <li><a href="#equipos"><span>22</span>Equipos</a></li>
+      <li><a href="#comunicacion"><span>23</span>Comunicación</a></li>
+      <li><a href="#recomendaciones"><span>24</span>Recomendaciones</a></li>
+      <li><a href="#anexos"><span>A–D</span>Anexos</a></li>
+    </ol>
+  </nav>
+
+  <div>
+
+<article class="cap" id="alcance" data-cap>
+  <div class="cap__cab"><div class="cap__num">0</div><div><h2>Nota de alcance y responsabilidad</h2><p class="cap__meta">Cómo leer este plan</p></div></div>
+  <div class="cap__cuerpo">
+    <p>Este documento desarrolla una propuesta estratégica y técnica para Libertador San Martín (LSM), Entre Ríos, Argentina. Es un <strong>plan maestro preliminar</strong>: no constituye un proyecto ejecutivo de obra, un pliego de contratación, un presupuesto oficial ni un dictamen jurídico. Los trazados, cantidades, coberturas, costos y plazos deben validarse mediante relevamientos, consultas a organismos competentes, cotizaciones y estudios de campo.</p>
+    <p>La aspiración es ambiciosa: incorporar inteligencia artificial (IA), automatización y robótica en todos los servicios urbanos donde sean útiles, seguros, legales, sostenibles y económicamente justificables. La implementación será progresiva, pero la arquitectura se diseñará desde el inicio para integrar IA y robótica; no se las relegará a una etapa decorativa o secundaria.</p>
+    <p>La información del <a href="proyecto-2026.html">Proyecto 2026</a> se toma como antecedente y punto de partida. Sus estimaciones económicas, cifras de población, cantidad de cámaras, planes de pavimentación, coberturas radioeléctricas y ahorros potenciales se consideran <strong>hipótesis a verificar</strong>, no hechos certificados.</p>
+    <div class="nota-rev">
+      <strong>Cómo se relacionan los documentos</strong>
+      <ul>
+        <li><strong>Proyecto 2026</strong> (2027–2031): el plan de cinco años con mapa, presupuesto por partidas y Gantt trimestral.</li>
+        <li><strong>Plan Maestro 2027–2036</strong>: el marco de diez años que contiene al Proyecto 2026 y lo amplía con gobernanza, riesgos, indicadores y ciclo de vida de IA y robótica.</li>
+        <li><strong>Plan Director v3.0</strong>: el documento técnico de módulos (Edge AI, LoRaWAN, Starlink, drones, stack de software). Su contenido se integra en los capítulos 6 a 12, con correcciones señaladas en recuadros como este.</li>
+      </ul>
+    </div>
+  </div>
+</article>
+
+<article class="cap" id="vision" data-cap>
+  <div class="cap__cab"><div class="cap__num">1</div><div><h2>Visión ejecutiva</h2><p class="cap__meta">Del Wi-Fi gratuito de 2009 a la autonomía urbana</p></div></div>
+  <div class="cap__cuerpo">
+    <p>Libertador San Martín puede convertirse en un referente argentino de <strong>ciudad inteligente de escala humana</strong>: una localidad capaz de detectar antes los problemas, utilizar mejor sus recursos, responder con mayor rapidez, automatizar tareas repetitivas y ofrecer servicios públicos más accesibles. La tecnología debe estar al servicio de la vida cotidiana y del desarrollo local, no al revés.</p>
+    <p>El proyecto propone una plataforma urbana interoperable que conecte sensores, cámaras, luminarias, vehículos municipales, robots, sistemas administrativos y fuentes externas autorizadas. Sobre esa infraestructura se desplegarán analítica de datos, IA predictiva, asistentes digitales, visión artificial y automatización controlada. La robótica incluirá, según madurez y rentabilidad, cortacéspedes autónomos, equipos de limpieza, drones para inspección, riego automatizado y robots de servicio en entornos delimitados.</p>
+    <p>La ciudad no debe depender de una única red, nube, empresa o modelo de IA. Se combinarán fibra óptica, enlaces terrestres, conectividad satelital como Starlink cuando resulte conveniente, Wi-Fi público focalizado, redes móviles y LoRaWAN para sensores de bajo consumo. Los sistemas críticos deberán conservar funciones locales básicas ante una caída de Internet.</p>
+    <figure class="figura">
+      <svg viewBox="0 0 900 250" role="img" aria-labelledby="f1t">
+        <title id="f1t">Cambio de paradigma: en 2009 conectividad básica con servidores centrales, Wi-Fi abierto y procesamiento reactivo; en 2026 autonomía y IA en el borde, redes LoRaWAN, robótica, telemetría y mantenimiento predictivo</title>
+        <defs><marker id="fl1" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path class="d-punta--menta" d="M0 0 10 5 0 10z"/></marker></defs>
+        <text class="d-txt--tit" x="40" y="26">PARADIGMA 2009</text>
+        <text class="d-txt--tit" x="540" y="26">PARADIGMA 2026</text>
+        <rect class="d-caja" x="20" y="40" width="340" height="190" rx="16"/>
+        <rect class="d-caja--osc" x="540" y="40" width="340" height="190" rx="16"/>
+        <text class="d-txt" x="44" y="84">Conectividad básica</text>
+        <text class="d-txt" x="44" y="124">Servidores centrales</text>
+        <text class="d-txt" x="44" y="164">Cobertura Wi-Fi abierta</text>
+        <text class="d-txt" x="44" y="204">Procesamiento reactivo</text>
+        <text class="d-txt--claro" x="564" y="84">Autonomía e IA en el borde</text>
+        <text class="d-txt--claro" x="564" y="124">Fibra + LoRaWAN + satélite</text>
+        <text class="d-txt--claro" x="564" y="164">Robótica y telemetría</text>
+        <text class="d-txt--claro" x="564" y="204">Mantenimiento predictivo</text>
+        <path class="d-linea--menta" d="M380 135 H520" marker-end="url(#fl1)"/>
+      </svg>
+      <figcaption>Figura 1. En 2026 la conectividad deja de ser el fin y pasa a ser la red dorsal sobre la que se despliega la autonomía urbana (Plan Director v3.0, §1).</figcaption>
+    </figure>
+    <p>La propuesta se organiza en tres horizontes: <strong>(1) 2027</strong>: diagnóstico, gobernanza, diseño y pilotos; <strong>(2) 2028–2031</strong>: despliegue de servicios prioritarios, integración de datos y automatización; <strong>(3) 2032–2036</strong>: ampliación de robótica, modelos predictivos y gemelo digital si los resultados y la financiación lo justifican.</p>
+    <p>La medida del éxito no será la cantidad de cámaras, sensores o robots instalados. Será la <strong>mejora verificable</strong> en seguridad vial, prevención de anegamientos, consumo energético, mantenimiento, tiempos de respuesta, calidad ambiental, accesibilidad, satisfacción ciudadana y costo total de los servicios.</p>
+  </div>
+</article>
+
+<article class="cap" id="antecedentes" data-cap>
+  <div class="cap__cab"><div class="cap__num">2</div><div><h2>Antecedentes y lecciones del proyecto de 2009</h2><p class="cap__meta">Auditoría técnica de la propuesta original</p></div></div>
+  <div class="cap__cuerpo">
+    <p>El proyecto original “Libertador San Martín, una ciudad inteligente”, publicado en julio de 2009 y aprobado el 3 de agosto de 2009 en el marco académico de la Licenciatura en Sistemas de Información de la Universidad Adventista del Plata, proponía estudiar la viabilidad de brindar conectividad inalámbrica pública. Su aporte histórico fue plantear una infraestructura comunitaria y avanzar por etapas a partir de necesidades reales. El <a href="archivo-2009.html">archivo histórico de 2009</a> se preserva sin cambios de contenido.</p>
+    <p>La propuesta reflejaba las condiciones de su época: acceso a Internet más limitado, redes inalámbricas de menor capacidad, menor disponibilidad de sensores económicos y escasez de herramientas de IA urbana. No debe juzgarse con ligereza, sino utilizarse como línea de base y fuente de aprendizaje.</p>
+    <div class="desliza">
+      <table class="tabla">
+        <thead><tr><th>Factor</th><th>Falla identificada (2009)</th><th>Solución arquitectónica (2026)</th></tr></thead>
+        <tbody>
+          <tr><td>Conectividad externa</td><td>Dependencia de enlaces terrestres de alto costo, bajo ancho de banda y baja disponibilidad (ADSL).</td><td>Fibra donde existe y redundancia satelital (Starlink, LEO) y móvil 4G/5G con balanceo de carga.</td></tr>
+          <tr><td>Arquitectura de cómputo</td><td>Procesamiento centralizado en servidores locales, sensibles a cortes eléctricos y cuellos de botella.</td><td>Edge computing: video e IA se procesan en el nodo o la cámara; el centro recibe metadatos.</td></tr>
+          <tr><td>Gestión de tráfico</td><td>Red única: el tráfico doméstico interfería con los sistemas operativos.</td><td>Segmentación lógica (VLAN y QoS): telemetría municipal separada de la red pública de cortesía.</td></tr>
+          <tr><td>Protocolos</td><td>Wi-Fi/RF de alto consumo para leer datos simples.</td><td>LoRaWAN para microsensores de ultrabajo consumo, con baterías de varios años.</td></tr>
+          <tr><td>Escalabilidad</td><td>Sistemas propietarios rígidos con alto costo de integración.</td><td>Arquitectura abierta: microservicios, MQTT, contenedores Docker y API REST.</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <h3>Lecciones convertidas en reglas de ingeniería</h3>
+    <ul class="lista-check">
+      <li>No asumir cobertura sin mediciones.</li>
+      <li>No dimensionar una red a partir de un solo punto de acceso.</li>
+      <li>No usar datos personales que no sean necesarios.</li>
+      <li>No subestimar interferencias, mantenimiento y soporte.</li>
+      <li>No confundir una estimación con un presupuesto.</li>
+      <li>No depender de publicidad o donaciones inciertas para sostener servicios esenciales.</li>
+      <li>No desplegar a gran escala antes de medir un piloto.</li>
+      <li>No dejar sin responsables operativos la infraestructura una vez instalada.</li>
+    </ul>
+  </div>
+</article>
+
+<article class="cap" id="principios" data-cap>
+  <div class="cap__cab"><div class="cap__num">3</div><div><h2>Principios rectores</h2><p class="cap__meta">Diez reglas que valen para cada decisión</p></div></div>
+  <div class="cap__cuerpo">
+    <div class="dominios">
+      <div class="dominio"><h4><span>01</span>IA y robótica desde el diseño</h4><p>Cada servicio analiza si la automatización mejora calidad, seguridad, tiempos o costos.</p></div>
+      <div class="dominio"><h4><span>02</span>Personas primero</h4><p>Tecnología accesible, inclusiva, explicable y útil para residentes, estudiantes, visitantes, pacientes y comercios.</p></div>
+      <div class="dominio"><h4><span>03</span>Automatizar con responsabilidad</h4><p>La autonomía se ajusta al riesgo; las decisiones de alto impacto conservan revisión humana y apelación.</p></div>
+      <div class="dominio"><h4><span>04</span>Interoperabilidad</h4><p>Estándares abiertos; nada de sistemas cerrados que impidan cambiar de proveedor o reutilizar datos.</p></div>
+      <div class="dominio"><h4><span>05</span>Privacidad desde el diseño</h4><p>Minimizar datos, limitar finalidades, definir retención y auditar accesos antes de instalar.</p></div>
+      <div class="dominio"><h4><span>06</span>Seguridad desde el diseño</h4><p>Segmentación, identidad fuerte, cifrado, actualizaciones, copias y respuesta a incidentes.</p></div>
+      <div class="dominio"><h4><span>07</span>Resiliencia</h4><p>Los servicios esenciales se degradan de forma segura y mantienen funciones locales sin conectividad.</p></div>
+      <div class="dominio"><h4><span>08</span>Medir antes de comprar</h4><p>Línea de base, indicadores, piloto, evaluación y criterio explícito de continuar, corregir o cancelar.</p></div>
+      <div class="dominio"><h4><span>09</span>Costo total de propiedad</h4><p>Instalación, energía, conectividad, licencias, personal, mantenimiento, seguros, repuestos y renovación.</p></div>
+      <div class="dominio"><h4><span>10</span>Transparencia pública</h4><p>Publicar objetivos, resultados, costos agregados, reglas de uso y evaluaciones, sin exponer información sensible.</p></div>
+    </div>
+  </div>
+</article>
+
+<article class="cap" id="objetivos" data-cap>
+  <div class="cap__cab"><div class="cap__num">4</div><div><h2>Objetivos estratégicos y resultados esperados</h2></div></div>
+  <div class="cap__cuerpo">
+    <h3>Objetivo general</h3>
+    <p>Diseñar e implementar un ecosistema urbano inteligente, automatizado e interoperable que utilice IA, robótica y datos confiables para mejorar la calidad de vida, la sostenibilidad, la resiliencia y la eficiencia de los servicios de Libertador San Martín.</p>
+    <h3>Objetivos específicos</h3>
+    <ol>
+      <li>Crear una infraestructura digital común, segura y escalable para servicios municipales y socios autorizados.</li>
+      <li>Integrar datos geográficos, sensores, incidencias, activos, mantenimiento y sistemas administrativos mediante interfaces documentadas.</li>
+      <li>Desarrollar capacidades de IA para detección de anomalías, predicción, clasificación, optimización y asistencia a operadores.</li>
+      <li>Automatizar tareas repetitivas y peligrosas mediante robótica, priorizando entornos controlados y operaciones medibles.</li>
+      <li>Mejorar el monitoreo de lluvia, drenajes, agua, energía, tránsito y ambiente con sensores calibrados y protocolos de respuesta.</li>
+      <li>Fortalecer la conectividad con una combinación justificada de fibra, radioenlaces, satélite y redes IoT.</li>
+      <li>Crear un portal ciudadano accesible para reclamos, alertas, turnos, información y seguimiento de trámites.</li>
+      <li>Desarrollar colaboración con la UAP, cooperativas, proveedores, instituciones, organismos provinciales y comunidad.</li>
+      <li>Establecer un modelo financiero plurianual y mecanismos de compra que permitan competir a proveedores y eviten dependencia tecnológica.</li>
+      <li>Publicar resultados medibles y revisar anualmente la hoja de ruta.</li>
+    </ol>
+    <h3>Resultados al finalizar la primera etapa</h3>
+    <p>Un inventario digital de activos urbanos; un mapa GIS operativo; un sistema de incidencias con seguimiento; una red de sensores priorizados; un centro de operaciones con tablero común; procedimientos de ciberseguridad y privacidad; y al menos dos o tres pilotos de IA o robótica evaluados con datos. Las metas cuantitativas definitivas se fijarán después de medir la línea de base.</p>
+  </div>
+</article>
+
+<article class="cap" id="modelo" data-cap>
+  <div class="cap__cab"><div class="cap__num">5</div><div><h2>Modelo operativo: percibir, comprender, actuar</h2><p class="cap__meta">El ciclo de seis pasos de cada servicio</p></div></div>
+  <div class="cap__cuerpo">
+    <figure class="figura">
+      <svg viewBox="0 0 900 200" role="img" aria-labelledby="f2t">
+        <title id="f2t">Ciclo operativo de seis pasos: percibir, validar, comprender, decidir, actuar y aprender, que vuelve a percibir</title>
+        <defs><marker id="fl2" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path class="d-punta" d="M0 0 10 5 0 10z"/></marker><marker id="fl2b" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path class="d-punta--menta" d="M0 0 10 5 0 10z"/></marker></defs>
+        <g>
+          <rect class="d-caja--menta" x="10" y="40" width="125" height="70" rx="14"/><text class="d-txt" x="72" y="72" text-anchor="middle">1 Percibir</text><text class="d-txt--chico" x="72" y="94" text-anchor="middle">sensores, reportes</text>
+          <rect class="d-caja" x="160" y="40" width="125" height="70" rx="14"/><text class="d-txt" x="222" y="72" text-anchor="middle">2 Validar</text><text class="d-txt--chico" x="222" y="94" text-anchor="middle">calidad del dato</text>
+          <rect class="d-caja" x="310" y="40" width="125" height="70" rx="14"/><text class="d-txt" x="372" y="72" text-anchor="middle">3 Comprender</text><text class="d-txt--chico" x="372" y="94" text-anchor="middle">reglas + modelos</text>
+          <rect class="d-caja--nar" x="460" y="40" width="125" height="70" rx="14"/><text class="d-txt" x="522" y="72" text-anchor="middle">4 Decidir</text><text class="d-txt--chico" x="522" y="94" text-anchor="middle">umbrales aprobados</text>
+          <rect class="d-caja" x="610" y="40" width="125" height="70" rx="14"/><text class="d-txt" x="672" y="72" text-anchor="middle">5 Actuar</text><text class="d-txt--chico" x="672" y="94" text-anchor="middle">operador o sistema</text>
+          <rect class="d-caja--osc" x="760" y="40" width="125" height="70" rx="14"/><text class="d-txt--claro" x="822" y="72" text-anchor="middle">6 Aprender</text><text class="d-txt--chico" x="822" y="94" text-anchor="middle">comparar y ajustar</text>
+          <path class="d-linea" d="M136 75 H156" marker-end="url(#fl2)"/><path class="d-linea" d="M286 75 H306" marker-end="url(#fl2)"/><path class="d-linea" d="M436 75 H456" marker-end="url(#fl2)"/><path class="d-linea" d="M586 75 H606" marker-end="url(#fl2)"/><path class="d-linea" d="M736 75 H756" marker-end="url(#fl2)"/>
+          <path class="d-linea--menta" d="M822 112 V160 H72 V116" marker-end="url(#fl2b)"/>
+          <text class="d-txt--chico" x="450" y="182" text-anchor="middle">el resultado se registra y mejora el siguiente ciclo</text>
+        </g>
+      </svg>
+      <figcaption>Figura 2. Ciclo operativo. La IA estima riesgo o prioridad (paso 3); la decisión sigue límites de autonomía aprobados (paso 4).</figcaption>
+    </figure>
+    <ul>
+      <li><strong>Percibir:</strong> sensores, cámaras con analítica apropiada, estaciones meteorológicas, equipos de campo, vehículos y reportes ciudadanos.</li>
+      <li><strong>Validar:</strong> detectar sensores fuera de servicio, lecturas imposibles, duplicados, fallos de comunicación o datos desactualizados.</li>
+      <li><strong>Comprender:</strong> combinar reglas deterministas, estadísticas, modelos predictivos y contexto geográfico.</li>
+      <li><strong>Decidir:</strong> aplicar umbrales, protocolos de emergencia, prioridades de mantenimiento y límites de autonomía previamente aprobados.</li>
+      <li><strong>Actuar:</strong> generar una orden de trabajo, enviar una alerta, regular una luminaria, activar una bomba o asignar un robot solo cuando corresponda.</li>
+      <li><strong>Aprender:</strong> comparar predicciones con resultados reales, revisar errores, mantener registros y actualizar modelos con control de cambios.</li>
+    </ul>
+    <aside class="aviso"><strong>Regla de seguridad.</strong> La IA no controla directamente cualquier actuador conectado a la red. Las funciones que puedan provocar lesiones, daños, cortes de servicios o consecuencias legales deben tener límites físicos, enclavamientos, parada de emergencia, operación manual y pruebas de seguridad. La automatización nunca elimina la responsabilidad del operador ni del organismo competente.</aside>
+  </div>
+</article>
+
+<article class="cap" id="arquitectura" data-cap>
+  <div class="cap__cab"><div class="cap__num">6</div><div><h2>Arquitectura tecnológica de referencia</h2><p class="cap__meta">Ocho capas, de los sensores a la auditoría</p></div></div>
+  <div class="cap__cuerpo">
+    <div class="capas">
+      <div class="capa"><h3><span class="capa__letra">A</span>Campo físico y robótica</h3><p>Sensores ambientales e hidráulicos, medidores energéticos, luminarias, cámaras, gateways, controladores industriales, robots móviles, drones, estaciones meteorológicas y equipos en vehículos. Cada activo tiene identificador único, ubicación, propietario, fabricante, firmware, garantía, mantenimiento y estado.</p></div>
+      <div class="capa"><h3><span class="capa__letra">B</span>Conectividad</h3><p>Diseñada según tráfico y criticidad: fibra para troncales; radioenlaces donde la línea de vista y la regulación lo permitan; Starlink u otro satélite en sitios remotos o como respaldo; Wi-Fi público en espacios seleccionados; redes móviles para equipos móviles; LoRaWAN para sensores de baja tasa de datos. No se asume cobertura LoRaWAN sin estudio de radio y pruebas reales.</p></div>
+      <div class="capa"><h3><span class="capa__letra">C</span>Edge computing</h3><p>Buffer de datos, detección básica, reglas de seguridad, almacenamiento temporal, compresión y continuidad operativa. En cámaras, el análisis en el borde reduce ancho de banda y evita transmitir video innecesario. Los robots conservan navegación segura y se detienen ante pérdida de comunicaciones cuando el entorno lo requiera.</p></div>
+      <div class="capa"><h3><span class="capa__letra">D</span>Plataforma de integración</h3><p>Bus de eventos y APIs. MQTT para telemetría; OGC SensorThings API para observaciones geoespaciales; ONVIF para interoperabilidad de video; componentes FIWARE a evaluar para contexto urbano. La elección se basa en requisitos, soporte, seguridad y costo de operación, no en la popularidad de una marca.</p></div>
+      <div class="capa"><h3><span class="capa__letra">E</span>Datos y geografía</h3><p>Base geoespacial para activos y eventos, series temporales para sensores, repositorio documental para manuales y órdenes de trabajo, y un lago de datos controlado. Datos públicos, operativos, personales y sensibles separados; cada conjunto con propietario, finalidad, calidad, retención, permisos y fuente.</p></div>
+      <div class="capa"><h3><span class="capa__letra">F</span>IA y analítica</h3><p>Detección de anomalías, pronóstico de demanda, clasificación de reclamos, visión artificial no identificatoria, riesgo hídrico, optimización de rutas y mantenimiento predictivo. Cada modelo con ficha técnica, datos de evaluación, limitaciones, umbrales, versión, responsable y mecanismo de retirada.</p></div>
+      <div class="capa"><h3><span class="capa__letra">G</span>Aplicaciones y centro de operaciones</h3><p>Mapa, alarmas, tickets, telemetría, cámaras autorizadas, estado de robots, comunicaciones y escalamiento en un solo centro (C4i). Plataforma ciudadana web accesible e integración con mensajería cuando convenga. Nada crítico depende de una sola nube ni de una app móvil exclusiva.</p></div>
+      <div class="capa"><h3><span class="capa__letra">H</span>Gobierno, seguridad y auditoría</h3><p>Transversal a todas las capas: permite revisar quién accedió a qué dato, qué recomendó el modelo, qué decidió el operador y qué acción ejecutó el sistema.</p></div>
+    </div>
+  </div>
+</article>
+
+<article class="cap" id="conectividad" data-cap>
+  <div class="cap__cab"><div class="cap__num">7</div><div><h2>Estrategia de conectividad y redes</h2><p class="cap__meta">Infraestructura híbrida con redundancia</p></div></div>
+  <div class="cap__cuerpo">
+    <figure class="figura">
+      <svg viewBox="0 0 900 380" role="img" aria-labelledby="f3t">
+        <title id="f3t">Arquitectura de red: fibra óptica troncal y Starlink de respaldo llegan al nodo central; de ahí salen la red de enlaces y Wi-Fi hacia cámaras, robots y edificios, y los gateways LoRaWAN hacia sensores de agua y pluviómetros</title>
+        <defs><marker id="fl3" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path class="d-punta" d="M0 0 10 5 0 10z"/></marker></defs>
+        <rect class="d-caja--menta" x="150" y="14" width="260" height="56" rx="12"/><text class="d-txt" x="280" y="40" text-anchor="middle">Fibra óptica (LAR / anillo)</text><text class="d-txt--chico" x="280" y="58" text-anchor="middle">salida principal en zona urbana</text>
+        <rect class="d-caja--nar" x="490" y="14" width="260" height="56" rx="12"/><text class="d-txt" x="620" y="40" text-anchor="middle">Starlink (LEO) + 4G/5G</text><text class="d-txt--chico" x="620" y="58" text-anchor="middle">respaldo y sitios remotos</text>
+        <path class="d-linea--menta" d="M280 72 V110 H430 V128"/>
+        <path class="d-linea--nar" d="M620 72 V110 H470 V128"/>
+        <rect class="d-caja--osc" x="300" y="130" width="300" height="60" rx="14"/><text class="d-txt--claro" x="450" y="157" text-anchor="middle">Nodo central / centro de datos</text><text class="d-txt--chico" x="450" y="177" text-anchor="middle">edge + balanceo + firewall</text>
+        <path class="d-linea" d="M380 192 V222 H220 V240" marker-end="url(#fl3)"/>
+        <path class="d-linea" d="M520 192 V222 H680 V240" marker-end="url(#fl3)"/>
+        <rect class="d-caja" x="80" y="242" width="280" height="50" rx="12"/><text class="d-txt" x="220" y="266" text-anchor="middle">Enlaces PTP/PTMP y Wi-Fi</text><text class="d-txt--chico" x="220" y="283" text-anchor="middle">5 GHz / 60 GHz, VLAN separadas</text>
+        <rect class="d-caja" x="540" y="242" width="280" height="50" rx="12"/><text class="d-txt" x="680" y="266" text-anchor="middle">Gateways LoRaWAN</text><text class="d-txt--chico" x="680" y="283" text-anchor="middle">banda AU915 (915–928 MHz)</text>
+        <path class="d-linea" d="M130 294 V322" marker-end="url(#fl3)"/><path class="d-linea" d="M220 294 V322" marker-end="url(#fl3)"/><path class="d-linea" d="M310 294 V322" marker-end="url(#fl3)"/>
+        <path class="d-linea" d="M620 294 V322" marker-end="url(#fl3)"/><path class="d-linea" d="M740 294 V322" marker-end="url(#fl3)"/>
+        <text class="d-txt--chico" x="130" y="342" text-anchor="middle">Cámaras edge</text><text class="d-txt--chico" x="220" y="342" text-anchor="middle">Robots/drones</text><text class="d-txt--chico" x="310" y="342" text-anchor="middle">Edificios</text>
+        <text class="d-txt--chico" x="620" y="342" text-anchor="middle">Sensores de agua</text><text class="d-txt--chico" x="740" y="342" text-anchor="middle">Pluviómetros</text>
+      </svg>
+      <figcaption>Figura 3. Red dorsal híbrida. Adaptado del Plan Director v3.0, §3, con el criterio del Plan Maestro: fibra donde existe, satélite como respaldo y para lo remoto.</figcaption>
+    </figure>
+    <div class="nota-rev">
+      <strong>Notas de revisión técnica sobre el Plan Director v3.0</strong>
+      <ul>
+        <li><strong>Banda LoRaWAN:</strong> el v3.0 indica 868 MHz, que es el plan europeo (EU868). En Argentina corresponde el plan regional <strong>AU915</strong> (915–928 MHz) de los parámetros regionales de LoRaWAN. Los gateways y sensores deben comprarse para esa banda y homologarse ante ENACOM.</li>
+        <li><strong>Alcance LoRaWAN:</strong> el v3.0 estima 10 a 15 km por gateway. Es posible en zona rural con antena alta y línea de vista; en casco urbano, con arbolado y edificación, el alcance real suele ser de 2 a 5 km. La cantidad de gateways (2, 3 o 4) se decide con el estudio de radio.</li>
+        <li><strong>Starlink:</strong> el v3.0 lo plantea como enlace principal “simétrico”. El servicio no es simétrico (la subida es bastante menor que la bajada) y su rendimiento varía por horario y congestión. En LSM, donde hay fibra de la cooperativa LAR, el satélite rinde mejor como <strong>respaldo</strong> y para accesos y caminos rurales sin fibra.</li>
+      </ul>
+    </div>
+    <h3>7.1 Fibra óptica y ductos</h3>
+    <p>Antes de construir red propia, el municipio inventaría fibra, ductos, postes, acuerdos y capacidad disponibles, incluyendo propuestas de LAR y otros operadores. Se analiza si conviene contratar servicios, alquilar fibra oscura, compartir infraestructura o desplegar ductos municipales con acceso abierto y condiciones transparentes. Cada obra de pavimentación o drenaje incluye una revisión de oportunidad para instalar ductos, cámaras de inspección y reservas de capacidad, coordinando permisos, interferencias, mantenimiento y normas de obra. Cualquier ahorro porcentual se calcula por tramo, no como garantía universal.</p>
+    <h3>7.2 Starlink y conectividad satelital</h3>
+    <p>Se evalúa para instalaciones remotas, pilotos temporales y respaldo de enlaces terrestres. La elección de plan requiere cotización vigente en Argentina, condiciones comerciales, consumo, límites, disponibilidad, energía, montaje y soporte. La velocidad anunciada no sustituye las mediciones de rendimiento, latencia, pérdida de paquetes y disponibilidad en horarios críticos.</p>
+    <h3>7.3 LoRaWAN y sensores</h3>
+    <p>Adecuado para telemetría de bajo consumo y mensajes pequeños, no para video ni Wi-Fi ciudadano. Cantidad y ubicación de gateways según mapa de cobertura, pruebas en los puntos reales, altura de antenas, interferencia, topografía y redundancia. Cada sensor con plan de calibración, batería, protección ambiental y alerta de pérdida de comunicación.</p>
+    <h3>7.4 Segmentación</h3>
+    <p>Redes separadas, como mínimo, para administración, servidores, cámaras, sensores IoT, robots/OT, Wi-Fi público, invitados y gestión de proveedores. Mínimo privilegio, reglas de firewall documentadas, autenticación fuerte para administración y prohibición de exponer interfaces de gestión directamente a Internet.</p>
+    <h3>7.5 Requisitos mínimos de diseño</h3>
+    <ul>
+      <li>Medición de disponibilidad y rendimiento por sitio y proveedor.</li>
+      <li>Redundancia selectiva para servicios críticos, con prueba periódica de conmutación.</li>
+      <li>UPS y autonomía eléctrica donde el análisis de criticidad lo justifique.</li>
+      <li>Inventario de direcciones, VLAN, certificados, firmware, credenciales y responsables.</li>
+      <li>Monitoreo de enlaces, latencia, pérdida, jitter, capacidad y estado de alimentación.</li>
+      <li>Procedimientos de operación degradada cuando se pierda Internet o un proveedor.</li>
+    </ul>
+  </div>
+</article>
+
+<article class="cap" id="ia" data-cap>
+  <div class="cap__cab"><div class="cap__num">8</div><div><h2>Programa de inteligencia artificial</h2><p class="cap__meta">Capacidades específicas y evaluables, no un modelo para todo</p></div></div>
+  <div class="cap__cuerpo">
+    <p>Se combinan reglas de negocio, modelos estadísticos, visión artificial, aprendizaje automático y modelos generativos solo cuando cada técnica aporte valor.</p>
+    <h3>8.1 IA predictiva</h3>
+    <ul>
+      <li>Previsión de anegamientos combinando lluvia, nivel de agua, topografía, drenaje e historial.</li>
+      <li>Predicción de fallas de luminarias y equipos con telemetría, edad y registros de mantenimiento.</li>
+      <li>Detección de consumos energéticos anómalos en edificios públicos.</li>
+      <li>Estimación de mantenimiento de calles a partir de inspecciones y reclamos.</li>
+      <li>Predicción de demanda en servicios municipales, sin decisiones automatizadas que excluyan personas.</li>
+    </ul>
+    <h3>8.2 Visión artificial</h3>
+    <ul>
+      <li>Detectar baches, carteles dañados, residuos, obstrucciones y estado de infraestructura desde vehículos municipales.</li>
+      <li>Identificar incidentes viales, caídas u objetos en zonas restringidas, con revisión humana.</li>
+      <li>Contar flujos de tránsito o afluencia a eventos sin identificar personas cuando la identidad no es necesaria.</li>
+      <li>Analizar imágenes de drenajes, cubiertas o infraestructura para priorizar inspecciones.</li>
+      <li><strong>Lectura de patentes (ANPR/LPR)</strong> únicamente en ubicaciones y finalidades autorizadas. El Plan Director v3.0 propone detectores tipo YOLO optimizados en aceleradores NPU dentro de la cámara, en los accesos al municipio, sin enviar video continuo a la nube; se exige precisión documentada, control de accesos y reglas de retención.</li>
+      <li>Analítica de flujo: giros no permitidos, velocidad media por tramo y vehículos detenidos en vías críticas, como insumo para seguridad vial; nunca sanciones automáticas solo por inferencia de IA.</li>
+    </ul>
+    <h3>8.3 IA generativa y asistentes</h3>
+    <p>Un asistente municipal podría responder preguntas sobre ordenanzas, horarios, trámites y documentación pública; ayudar a clasificar reclamos; redactar borradores y traducir información para visitantes. Debe citar o enlazar la fuente institucional, indicar incertidumbre, no inventar trámites y derivar a una persona cuando la consulta sea legal, médica, urgente o no esté respaldada por información confiable.</p>
+    <h3>8.4 IA en el borde y modelos locales</h3>
+    <p>En sensores, cámaras y robots se priorizan modelos compactos cuando reducen latencia, consumo o transmisión. El procesamiento local no garantiza privacidad por sí solo: también se controlan logs, imágenes temporales, actualizaciones y accesos remotos. La nube se usa para cargas que no requieren respuesta inmediata y con garantías contractuales.</p>
+    <h3>8.5 Ciclo de vida de los modelos</h3>
+    <ol>
+      <li>Definir propósito, población o entorno de uso y responsable del modelo.</li>
+      <li>Registrar datos de entrenamiento y evaluación, origen, permisos y limitaciones.</li>
+      <li>Medir precisión, falsos positivos, falsos negativos, sesgos y robustez en condiciones locales.</li>
+      <li>Probar en <strong>modo sombra</strong> antes de activar acciones reales.</li>
+      <li>Establecer umbrales, revisión humana, monitoreo de deriva y plan de reversión.</li>
+      <li>Reevaluar tras cambios de cámara, iluminación, estación, firmware, población o condiciones de operación.</li>
+    </ol>
+  </div>
+</article>
+
+<article class="cap" id="robotica" data-cap>
+  <div class="cap__cab"><div class="cap__num">9</div><div><h2>Programa de robótica y autonomía</h2><p class="cap__meta">Cada robot con zona, responsable, mantenimiento y rescate</p></div></div>
+  <div class="cap__cuerpo">
+    <p>Cada robot tendrá zona de trabajo, mapa de riesgos, responsable, protocolo de carga, mantenimiento preventivo, actualización segura, seguro aplicable y procedimiento de rescate o recuperación.</p>
+    <h3>9.1 Espacios verdes</h3>
+    <p>Pilotos con cortacéspedes autónomos guiados por <strong>GPS RTK</strong> (precisión centimétrica) en superficies delimitadas, cerradas al tránsito durante la operación y libres de obstáculos peligrosos. Se evalúan rendimiento, seguridad, ruido, consumo, antirrobo, respuesta ante lluvia y capacidad de detenerse ante personas o animales. El riego automatizado con sensores de humedad y pronóstico puede ser más sencillo y rentable que un robot móvil.</p>
+    <h3>9.2 Limpieza y residuos</h3>
+    <p>Primero rutas y horarios con datos de uso; optimizar recorridos de los equipos existentes; sensores de llenado por ultrasonido solo donde la frecuencia de recolección lo justifique (el v3.0 estima hasta 30 % menos de combustible en rutas: es una hipótesis a medir en el piloto); barredoras eléctricas o autónomas en áreas controladas. Ningún robot móvil en veredas o calles compartidas sin evaluación de seguridad, accesibilidad y normativa.</p>
+    <h3>9.3 Drones</h3>
+    <p>Inspección visual de techos públicos, obras, arbolado, drenajes y áreas de difícil acceso. El v3.0 propone estaciones de carga automática (<em>drone-in-a-box</em>) que despegan ante una emergencia hidrometeorológica para un reconocimiento visual y térmico. Cada operación cumple las reglas vigentes de la ANAC, permisos, privacidad, seguros y condiciones meteorológicas. Los drones no se usan como vigilancia general indiscriminada; los vuelos automáticos más allá de la línea de vista requieren autorización específica.</p>
+    <h3>9.4 Robots de inspección</h3>
+    <p>En etapas futuras: conductos, galerías, depósitos o instalaciones industriales. Se priorizan tareas peligrosas, repetitivas o costosas para las personas, con protocolos de recuperación, higiene, resistencia al agua y comunicación en espacios confinados.</p>
+    <h3>9.5 Robots humanoides</h3>
+    <p>Se mantienen en investigación y demostración hasta que una tarea concreta justifique su costo y riesgo. No son la primera compra municipal: antes se comparan con herramientas especializadas, automatización fija, software o robots móviles más simples.</p>
+    <h3>9.6 Escala de autonomía</h3>
+    <ol class="autonomia">
+      <li><b>N0</b><span><strong>Operación manual</strong> asistida por herramientas digitales.</span></li>
+      <li><b>N1</b><span><strong>Recomendación:</strong> el sistema propone, una persona decide.</span></li>
+      <li><b>N2</b><span><strong>Automatización acotada:</strong> ejecuta acciones reversibles dentro de límites aprobados.</span></li>
+      <li><b>N3</b><span><strong>Autonomía supervisada:</strong> operación automática con monitoreo, límites físicos y parada segura.</span></li>
+      <li><b>N4</b><span><strong>Autonomía avanzada</strong> en entorno delimitado, solo tras validación formal, evaluación de riesgos y autorización.</span></li>
+    </ol>
+    <p>Es una clasificación operativa propuesta para el proyecto, no una norma certificada. La autonomía máxima se define por tarea y entorno, no por el modelo comercial del robot.</p>
+  </div>
+</article>
+
+<article class="cap" id="dominios" data-cap>
+  <div class="cap__cab"><div class="cap__num">10</div><div><h2>Dominios de aplicación urbana</h2><p class="cap__meta">Doce servicios donde se aplican datos, IA y robótica</p></div></div>
+  <div class="cap__cuerpo">
+    <div class="dominios">
+      <div class="dominio"><h4><span>10.1</span>Agua, drenaje y anegamientos</h4><p>Mapa de puntos bajos, sumideros, canales y alcantarillas. Pluviómetros y sensores ultrasónicos de nivel en arroyos y canalizaciones, combinados con pronósticos y avisos oficiales. Umbrales escalonados: observación, alerta preventiva, inspección, protocolo y aviso a vecinos. La IA prioriza; los umbrales de emergencia los aprueban responsables técnicos.</p></div>
+      <div class="dominio"><h4><span>10.2</span>Agua potable y saneamiento</h4><p>Con permiso del prestador: presión, caudal, consumo, bombeo y eventos. Ninguna intervención en agua o cloacas sin autorización y estudio de seguridad operacional.</p></div>
+      <div class="dominio"><h4><span>10.3</span>Alumbrado y energía</h4><p>Inventario georreferenciado de luminarias y tableros. LED con módulo de telegestión individual: regulación horaria y por presencia, detección inmediata de averías. La atenuación respeta los niveles de iluminación de la normativa. Consumo medido antes y después en condiciones comparables.</p></div>
+      <div class="dominio"><h4><span>10.4</span>Tránsito y seguridad vial</h4><p>Conteos, velocidad, siniestralidad, señalización y puntos conflictivos. Lectura de patentes con finalidad concreta, consultas permitidas, control de falsos positivos, registro de accesos y retención limitada. Sin sanciones automáticas por inferencia de IA.</p></div>
+      <div class="dominio"><h4><span>10.5</span>Seguridad y videovigilancia</h4><p>Auditar primero las cámaras existentes. Red de video separada de la administrativa y del Wi-Fi público. Analítica no identificatoria. Tótems de auxilio solares con botón de pánico, audio bidireccional y cámara. No se recomienda reconocimiento facial masivo en tiempo real.</p></div>
+      <div class="dominio"><h4><span>10.6</span>Ambiente y plagas</h4><p>Estaciones meteorológicas, calidad del aire, humedad y ruido con campañas validadas. Trampas IoT con sensores ópticos o de feromonas para vectores y plagas; la IA orienta la inspección, pero la aplicación de productos químicos queda en manos de profesionales autorizados.</p></div>
+      <div class="dominio"><h4><span>10.7</span>Calles, veredas y obras</h4><p>Cámaras y posicionamiento en vehículos municipales para detectar baches, señales dañadas y obstáculos. La IA genera la incidencia con ubicación, evidencia y confianza; el personal confirma antes de la orden de reparación. Seguimiento de contratistas.</p></div>
+      <div class="dominio"><h4><span>10.8</span>Espacios verdes y arbolado</h4><p>Mapa de árboles, especies, estado, riesgo, riego y poda. Imágenes para priorizar evaluaciones sin sustituir a especialistas. Riego automatizado donde se demuestre ahorro. Robots cortacésped evaluados frente a riesgos para niños, animales y fauna.</p></div>
+      <div class="dominio"><h4><span>10.9</span>Servicios ciudadanos</h4><p>Portal accesible para reclamos, turnos, tasas, obras, alertas, agenda y turismo. Cada solicitud con identificador, estado, responsable, plazo y seguimiento. Se conservan los canales presencial y telefónico.</p></div>
+      <div class="dominio"><h4><span>10.10</span>Salud, educación y comunidad</h4><p>Coordinación con el sanatorio y la UAP respetando competencias y confidencialidad. Ninguna historia clínica ni dato sensible en la plataforma general sin base jurídica, acuerdos y controles específicos.</p></div>
+      <div class="dominio"><h4><span>10.11</span>Logística municipal</h4><p>Rutas de inspección, recolección y mantenimiento optimizadas. Telemetría vehicular solo con finalidad, acceso y conservación definidos; las rutas consideran accesibilidad, seguridad y horarios.</p></div>
+      <div class="dominio"><h4><span>10.12</span>Emergencias y continuidad</h4><p>Escenarios de corte de energía, caída de fibra o satélite, inundación, incendio, ciberataque y fallo de un robot, con responsables, comunicación alternativa, procedimientos manuales y simulacros.</p></div>
+    </div>
+  </div>
+</article>
+
+<article class="cap" id="gemelo" data-cap>
+  <div class="cap__cab"><div class="cap__num">11</div><div><h2>Gemelo digital y sistema de información geográfica</h2></div></div>
+  <div class="cap__cuerpo">
+    <p>El primer paso no es una representación 3D sofisticada: es un <strong>GIS confiable</strong> de activos, calles, drenajes, luminarias, cámaras, edificios, sensores, obras y eventos. Cada objeto con identificador, fuente, fecha de actualización y nivel de confianza.</p>
+    <ol class="autonomia">
+      <li><b>1</b><span><strong>Mapa operativo</strong> con inventario y tickets.</span></li>
+      <li><b>2</b><span><strong>Tablero dinámico</strong> con sensores, historial y alertas.</span></li>
+      <li><b>3</b><span><strong>Simulación</strong> de drenaje, energía, tránsito o crecimiento urbano, solo donde existan datos suficientes.</span></li>
+    </ol>
+    <p>Un modelo 3D sin datos confiables puede ser visualmente atractivo pero operativamente inútil. Los datos abiertos priorizan información agregada y no sensible, con formatos reutilizables, documentación y licencias claras. No se publican ubicaciones de sistemas vulnerables, credenciales, imágenes identificables ni datos que faciliten ataques.</p>
+  </div>
+</article>
+
+<article class="cap" id="plataforma" data-cap>
+  <div class="cap__cab"><div class="cap__num">12</div><div><h2>Plataforma de datos y estándares</h2><p class="cap__meta">Un catálogo común en lugar de una plataforma por área</p></div></div>
+  <div class="cap__cuerpo">
+    <figure class="figura">
+      <svg viewBox="0 0 900 190" role="img" aria-labelledby="f4t">
+        <title id="f4t">Flujo de datos: sensores IoT, cámaras edge y robots envían mensajes a un broker MQTT con Node-RED; se guardan en una base de series temporales y se muestran en tableros Grafana con mapas</title>
+        <defs><marker id="fl4" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path class="d-punta" d="M0 0 10 5 0 10z"/></marker></defs>
+        <rect class="d-caja" x="10" y="20" width="190" height="40" rx="10"/><text class="d-txt" x="105" y="45" text-anchor="middle">Sensores LoRaWAN</text>
+        <rect class="d-caja" x="10" y="75" width="190" height="40" rx="10"/><text class="d-txt" x="105" y="100" text-anchor="middle">Cámaras edge / LPR</text>
+        <rect class="d-caja" x="10" y="130" width="190" height="40" rx="10"/><text class="d-txt" x="105" y="155" text-anchor="middle">Drones y robots</text>
+        <path class="d-linea" d="M202 40 L262 88" marker-end="url(#fl4)"/><path class="d-linea" d="M202 95 H260" marker-end="url(#fl4)"/><path class="d-linea" d="M202 150 L262 102" marker-end="url(#fl4)"/>
+        <rect class="d-caja--menta" x="266" y="62" width="190" height="66" rx="12"/><text class="d-txt" x="361" y="90" text-anchor="middle">Broker MQTT</text><text class="d-txt--chico" x="361" y="110" text-anchor="middle">Node-RED · reglas</text>
+        <path class="d-linea" d="M458 95 H500" marker-end="url(#fl4)"/>
+        <rect class="d-caja" x="504" y="62" width="180" height="66" rx="12"/><text class="d-txt" x="594" y="90" text-anchor="middle">Series temporales</text><text class="d-txt--chico" x="594" y="110" text-anchor="middle">TimescaleDB · PostGIS</text>
+        <path class="d-linea" d="M686 95 H716" marker-end="url(#fl4)"/>
+        <rect class="d-caja--osc" x="720" y="62" width="170" height="66" rx="12"/><text class="d-txt--claro" x="805" y="90" text-anchor="middle">Centro C4i</text><text class="d-txt--chico" x="805" y="110" text-anchor="middle">Grafana + mapa OSM</text>
+      </svg>
+      <figcaption>Figura 4. Stack de referencia del Plan Director v3.0 (§5), con software libre. Son candidatas, no obligaciones: se eligen tras una prueba de concepto.</figcaption>
+    </figure>
+    <div class="desliza">
+      <table class="tabla">
+        <thead><tr><th>Componente</th><th>Criterio</th><th>Candidatas</th></tr></thead>
+        <tbody>
+          <tr><td>GIS</td><td>Formatos geoespaciales interoperables y base espacial mantenible.</td><td>PostGIS, QGIS, OpenStreetMap</td></tr>
+          <tr><td>Telemetría</td><td>Protocolo ligero y resiliente para mensajes de dispositivos.</td><td>MQTT / MQTT-SN</td></tr>
+          <tr><td>Sensores</td><td>Observaciones georreferenciadas con modelo estándar.</td><td>OGC SensorThings API</td></tr>
+          <tr><td>Series temporales</td><td>Métricas de sensores y telemetría.</td><td>TimescaleDB, InfluxDB</td></tr>
+          <tr><td>Reglas y analítica</td><td>Orquestación de eventos y modelos.</td><td>Node-RED, Python (PyTorch, TensorFlow Lite)</td></tr>
+          <tr><td>Video</td><td>Interoperabilidad y control de firmware.</td><td>ONVIF</td></tr>
+          <tr><td>Contexto urbano</td><td>Solo si resuelve requisitos reales.</td><td>FIWARE (Orion, NGSI-LD)</td></tr>
+          <tr><td>Identidad</td><td>Directorio central con roles y mínimo privilegio.</td><td>OIDC / SAML con MFA</td></tr>
+          <tr><td>APIs</td><td>Versionadas, autenticadas, registradas y con límites de uso.</td><td>REST + OpenAPI</td></tr>
+          <tr><td>Observabilidad</td><td>Logs, métricas, alertas y trazabilidad.</td><td>Grafana, Prometheus</td></tr>
+          <tr><td>Despliegue</td><td>Microservicios portables.</td><td>Contenedores Docker</td></tr>
+          <tr><td>Datos abiertos</td><td>Solo tras clasificación, anonimización y revisión.</td><td>CSV, GeoJSON, API pública</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p>La contratación exige exportación completa de datos en formatos utilizables y documentación de integración. La decisión final requiere prueba de concepto, análisis de soporte, comunidad, seguridad, costos de operación, licencias y capacidad del equipo municipal.</p>
+  </div>
+</article>
+
+<article class="cap" id="ciber" data-cap>
+  <div class="cap__cab"><div class="cap__num">13</div><div><h2>Ciberseguridad, seguridad operacional y continuidad</h2><p class="cap__meta">Una operación permanente, no una compra puntual</p></div></div>
+  <div class="cap__cuerpo">
+    <p>La ciudad conectada amplía la superficie de ataque: cámaras, gateways, robots, controladores, sensores y APIs pueden convertirse en puntos de entrada.</p>
+    <ul class="lista-check">
+      <li>Inventario vivo de activos, versiones, responsables, criticidad y fin de soporte.</li>
+      <li>Autenticación multifactor para administración y acceso remoto.</li>
+      <li>Credenciales únicas por dispositivo; prohibidas las contraseñas predeterminadas.</li>
+      <li>Segmentación IT/OT/IoT y control explícito de comunicaciones.</li>
+      <li>Cifrado en tránsito y en reposo cuando corresponda.</li>
+      <li>Gestión de parches, vulnerabilidades y firmware firmado cuando esté disponible.</li>
+      <li>Copias de seguridad cifradas, aisladas y probadas mediante restauración.</li>
+      <li>Registro centralizado de eventos y alertas de accesos anómalos.</li>
+      <li>Evaluación de proveedores, componentes, actualizaciones y acceso remoto.</li>
+      <li>Ejercicios de incidentes y pruebas de penetración autorizadas.</li>
+      <li>Plan de respuesta a incidentes con responsables, contactos y comunicación pública.</li>
+      <li>Modo seguro y parada de emergencia para robots, drones y actuadores.</li>
+      <li>Evaluación de impacto y plan de continuidad para cada servicio crítico.</li>
+    </ul>
+    <p>Se usan marcos reconocidos, como el NIST AI Risk Management Framework para riesgos de IA, adaptados a la capacidad municipal. Adoptar un marco no sustituye el cumplimiento de la normativa argentina ni la validación por especialistas. Ver también la <a href="seguridad.html">política de seguridad del sitio</a>.</p>
+  </div>
+</article>
+
+<article class="cap" id="privacidad" data-cap>
+  <div class="cap__cab"><div class="cap__num">14</div><div><h2>Privacidad, ética y marco regulatorio</h2><p class="cap__meta">Ley 25.326, Argentina Digital y ENACOM</p></div></div>
+  <div class="cap__cuerpo">
+    <p>La Ley 25.326 de Protección de los Datos Personales es la referencia central. Antes de operar cámaras, patentes, biometría, datos de localización o perfiles, el municipio obtiene asesoramiento jurídico actualizado y determina base legal, finalidades, responsables, plazos de conservación y derechos de las personas.</p>
+    <ul>
+      <li>Recolectar solo lo necesario para una finalidad explícita.</li>
+      <li>Cartelería e información pública comprensible donde corresponda.</li>
+      <li>Retención por categoría, con eliminación automática y excepciones documentadas.</li>
+      <li>Acceso por roles, registro de consultas y auditorías periódicas.</li>
+      <li>Separación entre datos operativos, personales, sensibles y públicos.</li>
+      <li>Evaluación de impacto para sistemas de alto riesgo, especialmente biometría y vigilancia.</li>
+      <li>Revisión humana de coincidencias de patentes y alertas generadas por IA.</li>
+      <li>Canal para consultas, rectificación o reclamos.</li>
+      <li>Contratos que definan confidencialidad, subcontratación, ubicación, seguridad y devolución o eliminación de datos.</li>
+      <li>Prohibido usar datos municipales para entrenar productos comerciales de terceros sin autorización y base legal.</li>
+      <li>Prohibidas las decisiones administrativas de alto impacto basadas solo en perfiles automatizados.</li>
+    </ul>
+    <aside class="aviso"><strong>Reconocimiento facial.</strong> El reconocimiento facial en tiempo real en espacios públicos no forma parte de la configuración recomendada. Cualquier propuesta futura pasa por un análisis independiente de legalidad, necesidad, proporcionalidad, precisión, sesgos, alternativas menos intrusivas y control. La lectura de patentes también requiere marco claro y no es una tecnología libre de riesgos.</aside>
+    <p>La conectividad respeta la Ley 27.078 Argentina Digital y las disposiciones de ENACOM para cada servicio, frecuencia, instalación y operador. El plan no presume que el municipio pueda prestar o revender servicios sin verificar las autorizaciones necesarias.</p>
+  </div>
+</article>
+
+<article class="cap" id="gobernanza" data-cap>
+  <div class="cap__cab"><div class="cap__num">15</div><div><h2>Gobernanza y modelo de operación</h2><p class="cap__meta">Mesa de Transformación Digital de LSM</p></div></div>
+  <div class="cap__cuerpo">
+    <p>Una Mesa con mandato público, actas, objetivos y responsables: municipio, Concejo Deliberante, UAP, prestadores, cooperativas, instituciones, especialistas y representación comunitaria, con acuerdos compatibles con las competencias de cada entidad.</p>
+    <div class="desliza">
+      <table class="tabla">
+        <thead><tr><th>Función</th><th>Responsabilidad</th></tr></thead>
+        <tbody>
+          <tr><td>Dirección del programa</td><td>Alcance, prioridades, presupuesto, dependencias y comunicación.</td></tr>
+          <tr><td>Arquitectura y datos</td><td>Estándares, integración, calidad, inventario y APIs.</td></tr>
+          <tr><td>IA y robótica</td><td>Evaluación de casos de uso, seguridad, pruebas y desempeño.</td></tr>
+          <tr><td>Redes e infraestructura</td><td>Conectividad, obra civil, radiofrecuencia, energía y soporte.</td></tr>
+          <tr><td>Privacidad y legales</td><td>Análisis normativo, contratos, derechos y evaluaciones.</td></tr>
+          <tr><td>Ciberseguridad</td><td>Controles, monitoreo, incidentes y continuidad.</td></tr>
+          <tr><td>Operación de servicios</td><td>Órdenes de trabajo, atención al ciudadano y mantenimiento.</td></tr>
+          <tr><td>Auditoría y evaluación</td><td>Indicadores, compras, costos y revisión independiente.</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p>Cada sistema tiene un responsable institucional aunque la operación se contrate. El municipio conserva supervisión, acceso a datos, documentación, credenciales administrativas y continuidad al terminar un contrato.</p>
+  </div>
+</article>
+
+<article class="cap" id="contratacion" data-cap>
+  <div class="cap__cab"><div class="cap__num">16</div><div><h2>Contratación y prevención de dependencia tecnológica</h2></div></div>
+  <div class="cap__cuerpo">
+    <p>Compras por resultados y requisitos verificables, no por marcas. Los pliegos describen problema, línea de base, rendimiento mínimo, interfaces, seguridad, garantía, repuestos, capacitación, costo total y criterios de aceptación.</p>
+    <ul class="lista-check">
+      <li>Separar lotes cuando favorezca la competencia sin perjudicar la interoperabilidad.</li>
+      <li>Exigir APIs documentadas, exportación de datos y formatos no propietarios.</li>
+      <li>Definir propiedad y derechos de uso de software, configuraciones, modelos y datos financiados públicamente.</li>
+      <li>Exigir documentación técnica, manuales, inventario de componentes y entrega de credenciales.</li>
+      <li>Niveles de servicio, tiempos de reparación, disponibilidad y penalidades proporcionales.</li>
+      <li>Gestión de vulnerabilidades y plazo de soporte de firmware.</li>
+      <li>Sin costos de salida desproporcionados; migración planificada.</li>
+      <li>Pruebas de aceptación en sitio y evaluación independiente cuando el riesgo lo justifique.</li>
+      <li>Comparar compra, alquiler, leasing y robótica como servicio.</li>
+      <li>Ningún contrato que comprometa presupuestos futuros sin evaluación y autorización.</li>
+    </ul>
+  </div>
+</article>
+
+<article class="cap" id="economia" data-cap>
+  <div class="cap__cab"><div class="cap__num">17</div><div><h2>Modelo económico y presupuesto</h2><p class="cap__meta">Hipótesis, no presupuesto validado</p></div></div>
+  <div class="cap__cuerpo">
+    <p>El <a href="proyecto-2026.html#presupuesto">Proyecto 2026</a> presenta una hipótesis de inversión de <strong>USD 1,5–3,0 millones en cinco años</strong> y costos operativos de <strong>USD 136.000–290.000 anuales</strong>. Estos importes no se adoptan como presupuesto validado: se reconstruyen desde cantidades, precios locales, impuestos, importación, instalación, personal, conectividad, mantenimiento y reposición.</p>
+    <h3>17.1 Estructura</h3>
+    <div class="desliza">
+      <table class="tabla">
+        <thead><tr><th>Rubro</th><th>Incluye</th></tr></thead>
+        <tbody>
+          <tr><td>CAPEX</td><td>Ductos, fibra, red, sensores, cámaras autorizadas, luminarias, servidores, robots, energía de respaldo e instalación.</td></tr>
+          <tr><td>OPEX</td><td>Conectividad, nube, licencias, soporte, energía, seguros, mantenimiento, personal, calibración, repuestos y renovación.</td></tr>
+          <tr><td>Programa</td><td>Relevamientos, diseño, asesoría jurídica, gestión, capacitación, auditoría, evaluación y comunicación.</td></tr>
+          <tr><td>Contingencias</td><td>Tipo de cambio, inflación, importación, demoras, obra civil y obsolescencia.</td></tr>
+          <tr><td>Salida</td><td>Exportación de datos, migración, retiro y reemplazo de equipos.</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <h3>17.2 Escenarios</h3>
+    <p>Tres escenarios (mínimo viable, intermedio y ampliado) con alcance, cantidad de activos, costos unitarios, supuestos, contingencias y costos recurrentes explícitos. No se asignan cifras a equipos sin cotización actual.</p>
+    <h3>17.3 Evaluación económica</h3>
+    <p>Cada caso de uso calcula costo total de propiedad a 5 y 10 años, costo por activo atendido, ahorro energético medido, horas de trabajo liberadas, menos desplazamientos y fallas, costos evitados y beneficio público. Los ahorros previstos no se contabilizan como financiación asegurada antes de verificarse.</p>
+    <h3>17.4 Fuentes posibles</h3>
+    <ul>
+      <li>Presupuesto municipal y programas provinciales o nacionales.</li>
+      <li>Convenios con la UAP para investigación, prácticas, formación y evaluación.</li>
+      <li>Cooperación y fondos de desarrollo, previa verificación de elegibilidad.</li>
+      <li>Acuerdos transparentes con operadores para ductos, fibra y conectividad.</li>
+      <li>Contratos de rendimiento energético si el marco legal y la línea de base lo permiten.</li>
+      <li>Alquiler o robótica como servicio para reducir el riesgo de obsolescencia.</li>
+      <li>Patrocinios o donaciones solo para componentes no esenciales y sin control sobre datos ni decisiones.</li>
+    </ul>
+    <p><strong>La sostenibilidad financiera es condición de aprobación:</strong> ningún servicio crítico se pone en marcha sin responsable, presupuesto operativo y plan de renovación.</p>
+  </div>
+</article>
+
+<article class="cap" id="hoja-de-ruta" data-cap>
+  <div class="cap__cab"><div class="cap__num">18</div><div><h2>Hoja de ruta 2027–2036</h2><p class="cap__meta">Cinco fases; el cronograma es orientativo</p></div></div>
+  <div class="cap__cuerpo">
+    <div class="ruta">
+      <div class="ruta__fase"><em>Fase 0 · 90 días</em><h4>Gobernanza y relevamiento</h4><p>Mesa, inventarios, consulta a LAR, elección de pilotos y reglas provisionales de privacidad.</p></div>
+      <div class="ruta__fase"><em>Fase 1 · meses 3–12</em><h4>Diseño y pilotos</h4><p>GIS, incidencias, sensores piloto, IA en modo sombra, cortacésped en área controlada.</p></div>
+      <div class="ruta__fase"><em>Fase 2 · año 2</em><h4>Infraestructura y servicios</h4><p>Conectividad, segmentación, alumbrado, portal de reclamos y alertas.</p></div>
+      <div class="ruta__fase"><em>Fase 3 · años 3–5</em><h4>Integración y automatización</h4><p>APIs entre áreas, predicción, drones, limpieza, auditorías.</p></div>
+      <div class="ruta__fase"><em>Fase 4 · años 6–10</em><h4>Ciudad adaptativa</h4><p>Gemelos temáticos, flotas de robots, renovación sin perder datos.</p></div>
+    </div>
+    <h3>Fase 0 — Primeros 90 días</h3>
+    <ul>
+      <li>Constituir la mesa de gobernanza y nombrar responsables.</li>
+      <li>Confirmar población de diseño, límites, servicios, activos y obras planificadas con fuentes oficiales.</li>
+      <li>Solicitar inventarios y propuestas técnicas a LAR y otros operadores.</li>
+      <li>Relevar fibra, ductos, postes, cámaras, luminarias, edificios, zonas de anegamiento y conectividad.</li>
+      <li>Crear un registro de datos, riesgos, supuestos y decisiones.</li>
+      <li>Elegir dos o tres pilotos con impacto medible (sensores de lluvia y nivel, inventario GIS, mantenimiento asistido por IA).</li>
+      <li>Definir reglas provisionales de privacidad y seguridad antes de recoger datos personales o imágenes.</li>
+      <li>Solicitar cotizaciones comparables y elaborar presupuesto por escenarios.</li>
+    </ul>
+    <h3>Fase 1 — Meses 3 a 12: diseño y pilotos</h3>
+    <ul>
+      <li>GIS de activos y sistema básico de incidencias.</li>
+      <li>Sensores piloto con calibración y conectividad probada; gateways LoRaWAN iniciales.</li>
+      <li>Analítica de IA en modo sombra comparada con observaciones humanas.</li>
+      <li>Cortacésped autónomo en área controlada, si supera el análisis económico.</li>
+      <li>Respaldo satelital en un punto crítico, con pruebas reales.</li>
+      <li>Tablero operativo y procedimiento de atención.</li>
+      <li>Documentar métricas, fallos, costos, aceptación social y recomendación de continuar o cancelar.</li>
+    </ul>
+    <h3>Fase 2 — Año 2: infraestructura y servicios</h3>
+    <ul>
+      <li>Ampliar conectividad y segmentación según el relevamiento.</li>
+      <li>Integrar alumbrado (primer anillo LED telegestionado), mantenimiento y órdenes de trabajo.</li>
+      <li>Lectoras de patentes en accesos, si se aprueba el marco jurídico.</li>
+      <li>Extender sensores a puntos de mayor riesgo y valor público.</li>
+      <li>Portal de reclamos y alertas con canales alternativos.</li>
+      <li>Operación, soporte, respaldo, monitoreo y contratos de servicio.</li>
+    </ul>
+    <h3>Fase 3 — Años 3 a 5: integración y automatización</h3>
+    <ul>
+      <li>Integrar sistemas municipales mediante APIs.</li>
+      <li>Ampliar predicción de anegamientos, fallas y consumos donde haya datos.</li>
+      <li>Drones para inspección autorizada (estación automática para emergencias) y robots de limpieza en entornos controlados.</li>
+      <li>Publicar indicadores, costos anuales y datos abiertos.</li>
+      <li>Auditorías de seguridad, privacidad y resultados.</li>
+      <li>Actualizar el plan con evidencia, no con compromisos tecnológicos previos.</li>
+    </ul>
+    <h3>Fase 4 — Años 6 a 10: ciudad adaptativa</h3>
+    <ul>
+      <li>IA predictiva en nuevos dominios que demuestren utilidad.</li>
+      <li>Gemelos digitales temáticos y simulaciones con datos validados.</li>
+      <li>Flotas de robots de mantenimiento y servicios autónomos.</li>
+      <li>Infraestructura con criterios de eficiencia energética y circularidad.</li>
+      <li>Comparación con marcos internacionales e intercambio con otras ciudades.</li>
+      <li>Renovar equipos y contratos sin perder datos, interoperabilidad ni control institucional.</li>
+    </ul>
+    <div class="nota-rev">
+      <strong>Compatibilidad de calendarios</strong>
+      <p>El Plan Director v3.0 comprime el despliegue en 12 meses (infraestructura, IA e IoT, robótica). El Plan Maestro adopta ese orden pero lo condiciona a pilotos medidos: lo que el v3.0 ubica en los meses 7 a 12 (cortacéspedes, dron de emergencias, datos abiertos) pasa a las fases 1 y 3 según resultados. El <a href="proyecto-2026.html#cronograma">Gantt del Proyecto 2026</a> detalla por trimestre los primeros cinco años.</p>
+    </div>
+  </div>
+</article>
+
+<article class="cap" id="kpi" data-cap>
+  <div class="cap__cab"><div class="cap__num">19</div><div><h2>Indicadores clave de desempeño</h2><p class="cap__meta">Actividad, uso y resultado, con norma ISO 37122</p></div></div>
+  <div class="cap__cuerpo">
+    <p>Durante la fase inicial se establece la línea de base. Cada indicador tiene definición, unidad, fuente, frecuencia, responsable, método de cálculo, meta aprobada y regla de validación. Las metas numéricas se fijan después de conocer la situación real.</p>
+    <div class="desliza">
+      <table class="tabla">
+        <thead><tr><th>Dimensión</th><th>Indicadores propuestos</th></tr></thead>
+        <tbody>
+          <tr><td>IA y automatización</td><td>Alertas confirmadas; precisión y falsos positivos; tiempo ahorrado; acciones revisadas; incidentes por fallo de modelo.</td></tr>
+          <tr><td>Robótica</td><td>Horas útiles por mes; disponibilidad; costo por hora; intervenciones humanas; accidentes y casi accidentes; consumo.</td></tr>
+          <tr><td>Agua y drenaje</td><td>Tiempo de detección y de aviso; sensores operativos; eventos anticipados; falsos avisos; tiempo de reparación.</td></tr>
+          <tr><td>Energía</td><td>kWh por luminaria o circuito; fallas por período; tiempo medio de reparación; ahorro medido ajustado.</td></tr>
+          <tr><td>Conectividad</td><td>Disponibilidad por enlace; latencia; pérdida de paquetes; tiempo de recuperación; costo por punto y por Mbps útil.</td></tr>
+          <tr><td>Servicios ciudadanos</td><td>Primera respuesta; resolución; solicitudes vencidas; satisfacción; accesibilidad y canales alternativos.</td></tr>
+          <tr><td>Ciberseguridad</td><td>Activos inventariados; parches críticos pendientes; restauraciones exitosas; incidentes; detección y recuperación.</td></tr>
+          <tr><td>Privacidad y transparencia</td><td>Sistemas evaluados; accesos auditados; solicitudes atendidas; cumplimiento de retención; informes publicados.</td></tr>
+          <tr><td>Finanzas</td><td>CAPEX y OPEX real frente a presupuesto; costo total por servicio; ahorros verificados; mantenimiento y renovación.</td></tr>
+          <tr><td>Ambiente</td><td>Consumo de agua y energía; mediciones válidas; focos de plagas atendidos; residuos detectados y resueltos.</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p>No se considera éxito el aumento de dispositivos por sí solo: se distingue actividad (sensores instalados), uso (alertas procesadas) y resultado (problemas prevenidos, tiempo ahorrado, servicio mejorado).</p>
+  </div>
+</article>
+
+<article class="cap" id="riesgos" data-cap>
+  <div class="cap__cab"><div class="cap__num">20</div><div><h2>Registro inicial de riesgos</h2></div></div>
+  <div class="cap__cuerpo">
+    <div class="desliza">
+      <table class="tabla">
+        <thead><tr><th>Riesgo</th><th>Consecuencia</th><th>Mitigación principal</th></tr></thead>
+        <tbody>
+          <tr><td>Financiación insuficiente</td><td>Equipos sin operación sostenible</td><td>Aprobar OPEX, mantenimiento y renovación antes de contratar.</td></tr>
+          <tr><td>Dependencia de proveedor</td><td>Costos de salida o pérdida de datos</td><td>APIs abiertas, exportación, documentación y plan de migración.</td></tr>
+          <tr><td>Cobertura sobreestimada</td><td>Sensores sin conectividad</td><td>Estudio RF, piloto, mediciones y gateways adicionales.</td></tr>
+          <tr><td>Caída de conectividad</td><td>Pérdida de telemetría o acceso</td><td>Procesamiento local, almacenamiento temporal, rutas alternativas y simulacros.</td></tr>
+          <tr><td>Ciberataque</td><td>Interrupción, filtración o control indebido</td><td>Segmentación, MFA, parches, backups, monitoreo y respuesta.</td></tr>
+          <tr><td>Falsos positivos de IA</td><td>Intervenciones innecesarias o daño reputacional</td><td>Modo sombra, umbrales, revisión humana y evaluación continua.</td></tr>
+          <tr><td>Riesgo físico de robots</td><td>Lesiones o daños materiales</td><td>Zonas delimitadas, sensores de seguridad, parada de emergencia y seguros.</td></tr>
+          <tr><td>Rechazo comunitario</td><td>Pérdida de confianza y oposición</td><td>Consulta pública, transparencia, mínima vigilancia y revisión independiente.</td></tr>
+          <tr><td>Cambio de gestión</td><td>Abandono del programa</td><td>Acuerdos institucionales, documentación, indicadores y presupuesto plurianual.</td></tr>
+          <tr><td>Obsolescencia</td><td>Reemplazos no previstos</td><td>Ciclo de vida, soporte mínimo, modularidad y reserva de renovación.</td></tr>
+          <tr><td>Datos deficientes</td><td>Predicciones poco confiables</td><td>Calibración, controles de calidad, trazabilidad y responsables.</td></tr>
+          <tr><td>Incumplimiento regulatorio</td><td>Sanciones o suspensión</td><td>Revisión jurídica previa y autorizaciones por actividad.</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</article>
+
+<article class="cap" id="pilotos" data-cap>
+  <div class="cap__cab"><div class="cap__num">21</div><div><h2>Criterios de aprobación de cada piloto</h2></div></div>
+  <div class="cap__cuerpo">
+    <p>Cada piloto tiene una ficha de una a tres páginas (ver <a href="#anexo-a">Anexo A</a>) con problema, responsable, población afectada, hipótesis, línea de base, diseño, proveedor, presupuesto, datos, riesgos, protocolo de seguridad, métricas, plazo, criterio de éxito y condición de cancelación.</p>
+    <ul class="lista-check">
+      <li>Problema público concreto y evidencia de que existe.</li>
+      <li>Alternativas comparadas, incluida la de no comprar tecnología.</li>
+      <li>Datos suficientes y permisos definidos.</li>
+      <li>Seguridad técnica, operacional y jurídica evaluada.</li>
+      <li>Prueba limitada, reversible y con responsable operativo.</li>
+      <li>Evaluación independiente cuando el riesgo sea elevado.</li>
+      <li>Resultado publicado de forma agregada, incluidos fallos y costos.</li>
+      <li>Decisión explícita: escalar, corregir, extender la prueba o cancelar.</li>
+    </ul>
+  </div>
+</article>
+
+<article class="cap" id="equipos" data-cap>
+  <div class="cap__cab"><div class="cap__num">22</div><div><h2>Organización de equipos y capacidades</h2></div></div>
+  <div class="cap__cuerpo">
+    <p>El municipio no necesita contratar a todos de forma permanente, pero sí mantener capacidad para especificar, supervisar y aceptar los trabajos.</p>
+    <div class="dominios">
+      <div class="dominio"><h4>Dirección de programa</h4><p>Gestión de proyectos, presupuesto y comunicación.</p></div>
+      <div class="dominio"><h4>Arquitectura e integración</h4><p>Sistemas, APIs y estándares.</p></div>
+      <div class="dominio"><h4>Redes y radiofrecuencia</h4><p>LAN/WAN, fibra, Wi-Fi y enlaces.</p></div>
+      <div class="dominio"><h4>IoT y LoRaWAN</h4><p>Despliegue y calibración de sensores.</p></div>
+      <div class="dominio"><h4>Datos y GIS</h4><p>Ingeniería de datos y plataforma urbana.</p></div>
+      <div class="dominio"><h4>IA y visión artificial</h4><p>Desarrollo y evaluación de modelos.</p></div>
+      <div class="dominio"><h4>Robótica</h4><p>Seguridad funcional y mantenimiento.</p></div>
+      <div class="dominio"><h4>Ciberseguridad</h4><p>Controles y continuidad operativa.</p></div>
+      <div class="dominio"><h4>Legales y compras</h4><p>Privacidad, contratos y compras públicas.</p></div>
+      <div class="dominio"><h4>Operación</h4><p>Servicios, mantenimiento, atención ciudadana y comunicación.</p></div>
+    </div>
+    <p>La UAP puede ser socio para investigación aplicada, formación, prácticas y evaluación mediante acuerdos institucionales. La participación académica no reemplaza la responsabilidad municipal ni a los profesionales habilitados en obras, seguridad, instalaciones eléctricas o actividades reguladas.</p>
+  </div>
+</article>
+
+<article class="cap" id="comunicacion" data-cap>
+  <div class="cap__cab"><div class="cap__num">23</div><div><h2>Comunicación pública y participación ciudadana</h2></div></div>
+  <div class="cap__cuerpo">
+    <p>La confianza se construye explicando qué se instala, para qué, qué datos se recogen, quién accede, cuánto tiempo se conservan y cómo se mide el resultado. Antes de cada piloto sensible hay información pública y, cuando corresponda, consulta y evaluación jurídica. La <a href="en-simple.html">versión simple de este plan</a> es parte de esa estrategia.</p>
+    <ul>
+      <li>Publicar resumen del proyecto, costos aprobados, responsables y calendario.</li>
+      <li>Ofrecer un canal de reclamos sobre sensores, cámaras, IA y robots.</li>
+      <li>Informar incidentes relevantes y medidas correctivas.</li>
+      <li>Explicar los límites de los sistemas automatizados y cómo pedir revisión humana.</li>
+      <li>Encuestas de satisfacción y reuniones abiertas.</li>
+      <li>Resultados en lenguaje claro y formatos accesibles.</li>
+    </ul>
+  </div>
+</article>
+
+<article class="cap" id="recomendaciones" data-cap>
+  <div class="cap__cab"><div class="cap__num">24</div><div><h2>Recomendaciones inmediatas</h2></div></div>
+  <div class="cap__cuerpo">
+    <ol>
+      <li>Preservar el proyecto original de 2009 como archivo histórico sin cambios de contenido.</li>
+      <li>Actualizar el Proyecto 2026 para que la IA y la robótica sean ejes transversales desde el diseño.</li>
+      <li>Reemplazar cifras de población, cámaras, obras y conectividad no verificadas por fuentes oficiales o etiquetas de supuesto.</li>
+      <li>No publicar un presupuesto cerrado hasta completar relevamientos y cotizaciones.</li>
+      <li>Solicitar a LAR y otros operadores una consulta técnica estructurada sobre fibra, ductos, capacidad, SLA y precios.</li>
+      <li>Elegir tres pilotos complementarios: GIS e inventario; sensores de lluvia y nivel; IA para clasificación de incidencias o inspección de activos.</li>
+      <li>Definir reglas de privacidad, seguridad y adquisición antes de tratar datos sensibles.</li>
+      <li>Preparar pliegos basados en resultados y exigir interoperabilidad y portabilidad.</li>
+      <li>Crear una línea de base y un tablero público de indicadores.</li>
+      <li>Revisar este plan cada año con evaluación técnica, financiera, jurídica y comunitaria.</li>
+    </ol>
+    <div class="veredicto">
+      <h3>La prioridad</h3>
+      <p>No es adquirir la mayor cantidad de tecnología en el menor tiempo posible. Es crear una capacidad municipal duradera para seleccionar, integrar, operar y mejorar IA y robótica sin comprometer seguridad, privacidad ni sostenibilidad financiera.</p>
+    </div>
+  </div>
+</article>
+
+<article class="cap" id="anexos" data-cap>
+  <div class="cap__cab"><div class="cap__num">A–D</div><div><h2>Anexos</h2><p class="cap__meta">Ficha de caso de uso, datos a relevar, glosario y bibliografía</p></div></div>
+  <div class="cap__cuerpo">
+    <h3 id="anexo-a">Anexo A. Ficha modelo de caso de uso</h3>
+    <div class="desliza">
+      <table class="tabla">
+        <thead><tr><th>Campo</th><th>Contenido a completar</th></tr></thead>
+        <tbody>
+          <tr><td>Nombre y responsable</td><td>Nombre del piloto, área responsable y persona encargada.</td></tr>
+          <tr><td>Problema</td><td>Qué se busca resolver y evidencia disponible.</td></tr>
+          <tr><td>Población o servicio afectado</td><td>Quién se beneficia y quién podría verse afectado.</td></tr>
+          <tr><td>Solución propuesta</td><td>Sensor, IA, robot, plataforma, proceso humano o combinación.</td></tr>
+          <tr><td>Alternativas</td><td>Proceso actual, compra, alquiler, servicio gestionado y no hacer nada.</td></tr>
+          <tr><td>Datos</td><td>Fuente, calidad, permisos, finalidad, retención y controles.</td></tr>
+          <tr><td>Seguridad y privacidad</td><td>Riesgos, mitigaciones, revisión jurídica y parada segura.</td></tr>
+          <tr><td>Línea de base</td><td>Valor actual antes del piloto y método de medición.</td></tr>
+          <tr><td>Indicadores y metas</td><td>Métricas, umbrales y método de verificación.</td></tr>
+          <tr><td>Costo total</td><td>CAPEX, OPEX, personal, conectividad, seguros, renovación y salida.</td></tr>
+          <tr><td>Plan de pruebas</td><td>Entorno, duración, pruebas de fallo, aceptación y responsables.</td></tr>
+          <tr><td>Decisión final</td><td>Escalar, corregir, repetir o cancelar, con justificación.</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <h3>Anexo B. Datos a relevar antes de cerrar el presupuesto</h3>
+    <ul>
+      <li>Población residente y flotante, límites urbanos, crecimiento y usos del suelo.</li>
+      <li>Inventario de cámaras, postes, luminarias, edificios, redes y sistemas actuales.</li>
+      <li>Mapas de drenaje, puntos de anegamiento, cauces, alcantarillas y bombeo.</li>
+      <li>Obras viales previstas, plazos, responsables, permisos y oportunidad de ductos.</li>
+      <li>Fibra, ductos, postes, enlaces, contratos, capacidad y SLA disponibles.</li>
+      <li>Planes satelitales vigentes, cotización local, condiciones de uso y rendimiento medido.</li>
+      <li>Vehículos, parques, plazas, árboles y equipos de mantenimiento.</li>
+      <li>Consumo eléctrico por circuito y edificio; costos y contratos de energía.</li>
+      <li>Personal, capacidades, tiempos de atención y costos de desplazamiento.</li>
+      <li>Normativa municipal, provincial y nacional sobre datos, cámaras, drones, telecomunicaciones, robots y compras.</li>
+      <li>Requisitos de continuidad, energía de respaldo, conectividad y recuperación.</li>
+      <li>Cotizaciones comparables, impuestos, importación, seguros, garantía, soporte y repuestos.</li>
+    </ul>
+    <h3>Anexo C. Glosario</h3>
+    <dl class="glosario">
+      <dt>IA</dt><dd>Inteligencia artificial: técnicas para inferencia, clasificación, generación o predicción.</dd>
+      <dt>Edge AI</dt><dd>Procesamiento cerca del sensor o dispositivo, sin depender siempre de la nube.</dd>
+      <dt>API</dt><dd>Interfaz documentada para intercambiar datos entre sistemas.</dd>
+      <dt>ANPR / LPR</dt><dd>Lectura automática de patentes de vehículos.</dd>
+      <dt>CAPEX</dt><dd>Inversión inicial en activos e instalación.</dd>
+      <dt>OPEX</dt><dd>Gastos recurrentes de operación y mantenimiento.</dd>
+      <dt>C4i</dt><dd>Centro de mando, control, comunicaciones, cómputo e inteligencia.</dd>
+      <dt>GIS</dt><dd>Sistema de información geográfica.</dd>
+      <dt>Gemelo digital</dt><dd>Representación digital conectada a datos de un activo o sistema real.</dd>
+      <dt>GPS RTK</dt><dd>Posicionamiento satelital con corrección en tiempo real, de precisión centimétrica.</dd>
+      <dt>LoRaWAN</dt><dd>Protocolo de red amplia y bajo consumo para dispositivos IoT.</dd>
+      <dt>LEO</dt><dd>Órbita terrestre baja, la de constelaciones como Starlink.</dd>
+      <dt>MQTT</dt><dd>Protocolo de mensajería ligero para telemetría.</dd>
+      <dt>NPU</dt><dd>Procesador especializado para ejecutar redes neuronales.</dd>
+      <dt>OT</dt><dd>Tecnología operacional que supervisa o controla procesos físicos.</dd>
+      <dt>SLA</dt><dd>Acuerdo de nivel de servicio con métricas y obligaciones verificables.</dd>
+      <dt>TCO</dt><dd>Costo total de propiedad durante el ciclo de vida.</dd>
+      <dt>VLAN / QoS</dt><dd>Redes lógicas separadas y prioridad de tráfico.</dd>
+      <dt>Visión artificial</dt><dd>Análisis automatizado de imágenes o video.</dd>
+      <dt>Robótica autónoma</dt><dd>Sistemas físicos que perciben el entorno y ejecutan tareas dentro de límites definidos.</dd>
+    </dl>
+    <h3>Anexo D. Bibliografía y recursos de referencia</h3>
+    <p>Base inicial de consulta. Antes de aprobar el proyecto ejecutivo se comprueba la versión vigente, aplicabilidad local y modificaciones normativas.</p>
+    <ul class="fuentes">
+      <li><a href="proyecto-2026.html">Proyecto LSM Ciudad Inteligente 2026</a></li>
+      <li><a href="archivo-2009.html">Archivo histórico del proyecto de 2009</a></li>
+      <li><a href="https://lsmciudadinteligente.wordpress.com/" rel="noopener">Blog original del proyecto</a></li>
+      <li><a href="https://www.itu.int/cities/publications/ssc/" rel="noopener">UIT: Digital Transformation for People-Centred Cities</a></li>
+      <li><a href="https://www.itu.int/epublications/en/publication/digital-transformation-assessment-of-people-centred-cities-performance-and-impact-assessment-guide" rel="noopener">UIT: Digital Transformation Assessment Guide (2026)</a></li>
+      <li><a href="https://www.iso.org/standard/69050.html" rel="noopener">ISO 37122:2019, indicadores para ciudades inteligentes</a></li>
+      <li><a href="https://www.argentina.gob.ar/normativa/nacional/64790/actualizacion" rel="noopener">Ley 25.326 de Protección de los Datos Personales, texto actualizado</a></li>
+      <li><a href="https://www.argentina.gob.ar/normativa/nacional/ley-27078-239771/actualizacion" rel="noopener">Ley 27.078 Argentina Digital</a></li>
+      <li><a href="https://www.nist.gov/itl/ai-risk-management-framework" rel="noopener">NIST AI Risk Management Framework</a></li>
+      <li><a href="https://www.ogc.org/standards/sensorthings/" rel="noopener">OGC SensorThings API</a></li>
+      <li><a href="https://resources.lora-alliance.org/technical-specifications" rel="noopener">LoRa Alliance: parámetros regionales (AU915 para Argentina)</a></li>
+      <li><a href="https://www.starlink.com/ar" rel="noopener">Starlink Argentina: planes y disponibilidad</a></li>
+      <li><a href="https://www.enacom.gob.ar/" rel="noopener">ENACOM</a></li>
+      <li><a href="https://www.argentina.gob.ar/anac" rel="noopener">ANAC: vehículos aéreos no tripulados</a></li>
+      <li><a href="https://www.fiware.org/" rel="noopener">FIWARE</a></li>
+    </ul>
+    <h3>Documentos fuente</h3>
+    <div class="descargas">
+      <a class="boton" href="docs/plan-maestro/LSM_Ciudad_Inteligente_Plan_Maestro_2027-2036.docx" download>Plan Maestro 2027–2036 (.docx)</a>
+      <a class="boton boton--sec" href="docs/plan-maestro/plan-director-v3.md">Plan Director v3.0 (.md)</a>
+    </div>
+  </div>
+</article>
+
+<article class="cap" id="cierre">
+  <div class="cap__cuerpo">
+    <h2>Cierre</h2>
+    <p>Libertador San Martín, Ciudad Inteligente, Autónoma y Humana es una propuesta para pasar de proyectos aislados a una capacidad pública de aprendizaje, integración y mejora continua. La IA ayudará a interpretar información; la robótica permitirá actuar en tareas físicas; los sensores harán visible el estado de la ciudad; las redes conectarán los sistemas; y la gobernanza garantizará que todo ello se use con responsabilidad.</p>
+    <p>La excelencia se demostrará en servicios más confiables, una ciudadanía mejor atendida, costos transparentes, riesgos controlados y resultados que puedan verificarse.</p>
+    <div class="otra-version">
+      <p><strong>¿Tenés que explicarlo a vecinos, al Concejo o a la prensa?</strong> La versión simple cuenta lo mismo con dibujos, ejemplos y sin palabras técnicas.</p>
+      <a class="boton" href="en-simple.html">Ver la versión simple</a>
+    </div>
+    <p class="fuentes">Plan elaborado con asistencia de inteligencia artificial y revisión humana. Autor: Hernando A. Gigliotti. Es un documento de trabajo: los montos, coberturas y plazos son hipótesis a validar. Ver la <a href="privacidad.html">política de privacidad</a>.</p>
+  </div>
+</article>
+
+  </div>
+</div>
+
+</main>
+
+<footer class="pie">
+  <div class="envoltura">
+    <img src="assets/logos/logo-horizontal-claro.svg" alt="LSM Ciudad Inteligente" width="240" height="60">
+    <div class="pie__links"><a href="index.html">Análisis</a><a href="proyecto-2026.html">Proyecto 2026</a><a href="en-simple.html">En simple</a><a href="archivo-2009.html">Archivo 2009</a><a href="privacidad.html">Privacidad</a><a href="seguridad.html">Seguridad</a><a href="#" data-revisar-cookies>Cookies</a></div>
+    <span>© 2009–2026 · Hernando A. Gigliotti</span>
+  </div>
+</footer>
+<div class="consent" data-consent hidden role="dialog" aria-label="Cookies">
+  <p>Usamos Google Analytics para saber cuántas personas visitan el sitio. Solo se activa si aceptás.</p>
+  <div><button class="boton" data-elegir="si">Aceptar</button><button class="boton boton--sec" data-elegir="no">Rechazar</button></div>
+</div>
+</body>
+</html>

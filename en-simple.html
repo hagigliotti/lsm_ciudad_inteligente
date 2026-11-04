@@ -1,0 +1,377 @@
+<!doctype html>
+<html lang="es-AR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://www.googletagmanager.com; connect-src 'self' https://*.google-analytics.com https://*.analytics.google.com https://www.googletagmanager.com; img-src 'self' data: https://*.google-analytics.com https://www.googletagmanager.com; style-src 'self'; font-src 'self'; base-uri 'self'; form-action 'self'; object-src 'none'; upgrade-insecure-requests">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <title>El proyecto en simple · LSM Ciudad Inteligente</title>
+  <meta name="description" content="El plan de ciudad inteligente de Libertador San Martín explicado fácil, con dibujos y ejemplos: qué es, qué vas a notar, cómo se cuidan tus datos, cuánto cuesta y cuándo llega.">
+  <meta property="og:title" content="Libertador San Martín, una ciudad que avisa antes · explicado fácil">
+  <meta property="og:image" content="https://hagigliotti.github.io/lsm_ciudad_inteligente/assets/logos/portada.jpg">
+  <meta name="theme-color" content="#0d1f18">
+  <link rel="icon" href="assets/logos/isotipo.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/css/estilo.css">
+  <script type="module" src="assets/js/simple.js"></script>
+  <script type="module" src="assets/js/app.js"></script>
+</head>
+<body class="simple">
+<a class="salto" href="#contenido">Saltar al contenido</a>
+<header class="barra">
+  <div class="envoltura">
+    <a class="barra__marca" href="index.html"><img src="assets/logos/isotipo.svg" alt="" width="36" height="36">LSM</a>
+    <nav aria-label="Secciones">
+      <a class="opc" href="index.html">Análisis</a>
+      <a class="opc" href="proyecto-2026.html">Proyecto 2026</a>
+      <a href="en-simple.html" aria-current="page">En simple</a>
+      <a href="plan-maestro.html">Plan técnico</a>
+      <a class="opc2" href="#preguntas">Preguntas</a>
+    </nav>
+  </div>
+</header>
+
+<main id="contenido">
+
+<section class="s-portada">
+  <div class="envoltura">
+    <div class="s-portada__texto">
+      <span class="etiqueta">El proyecto explicado en 5 minutos</span>
+      <h1>Una ciudad que <em>avisa antes</em></h1>
+      <p>Cómo Libertador San Martín puede usar sensores, internet, inteligencia artificial y algunos robots para cuidar mejor a su gente. Sin palabras técnicas.</p>
+      <div class="botones">
+        <a class="boton boton--menta" href="#que-es">Empezar</a>
+        <a class="boton boton--claro" href="plan-maestro.html">Ver la versión técnica</a>
+      </div>
+    </div>
+    <div class="s-portada__ilus">
+      <svg viewBox="0 0 600 420" role="img" aria-labelledby="hero-t">
+        <title id="hero-t">Dibujo de la ciudad sobre la colina: el pórtico de entrada, casas, una luminaria encendida, un sensor junto al arroyo que manda una señal, un dron sobre los techos y un robot cortando el pasto</title>
+        <circle class="i-luz" cx="470" cy="70" r="34"/>
+        <circle class="i-nar" cx="470" cy="70" r="20"/>
+        <path class="i-colina3" d="M0 300 C120 230 250 210 360 240 C460 265 540 250 600 230 V420 H0Z"/>
+        <path class="i-colina" d="M0 340 C140 280 300 270 420 300 C500 320 560 310 600 300 V420 H0Z"/>
+        <path class="i-colina2" d="M0 380 C160 350 330 345 600 370 V420 H0Z"/>
+        <g>
+          <rect class="i-casa" x="190" y="200" width="54" height="42" rx="3"/><path class="i-techo" d="M184 202 L217 176 L250 202Z"/><rect class="i-vent" x="210" y="218" width="14" height="24"/>
+          <rect class="i-casa" x="256" y="188" width="66" height="54" rx="3"/><path class="i-techo2" d="M250 190 L289 160 L328 190Z"/><rect class="i-vent" x="268" y="204" width="14" height="14"/><rect class="i-vent" x="296" y="204" width="14" height="14"/>
+          <rect class="i-casa" x="334" y="206" width="50" height="40" rx="3"/><path class="i-techo" d="M328 208 L359 184 L390 208Z"/><rect class="i-vent" x="352" y="222" width="12" height="24"/>
+          <rect class="i-casa" x="396" y="214" width="44" height="36" rx="3"/><path class="i-techo2" d="M390 216 L418 194 L446 216Z"/>
+        </g>
+        <g>
+          <rect class="i-blanco" x="60" y="262" width="14" height="70" rx="2"/>
+          <rect class="i-blanco" x="132" y="262" width="14" height="70" rx="2"/>
+          <path class="i-trazo-osc" d="M52 266 Q103 220 154 266"/>
+          <rect class="i-blanco" x="50" y="252" width="106" height="12" rx="3"/>
+          <text class="d-txt--claro" x="103" y="246" text-anchor="middle">LSM</text>
+        </g>
+        <g>
+          <rect class="i-osc" x="168" y="230" width="6" height="96"/>
+          <path class="i-osc" d="M171 232 h22 v8 h-22z"/>
+          <path class="i-luz" d="M188 240 L168 320 H216 Z"/>
+          <circle class="i-nar i-parpadeo" cx="193" cy="242" r="5"/>
+        </g>
+        <path class="i-trazo" d="M0 400 C120 390 220 398 330 392 C420 388 520 396 600 392"/>
+        <g>
+          <rect class="i-osc" x="452" y="350" width="8" height="40"/>
+          <rect class="i-menta" x="444" y="338" width="24" height="16" rx="4"/>
+          <path class="i-onda i-parpadeo" d="M476 334 q10 -12 0 -24"/>
+          <path class="i-onda i-parpadeo" d="M486 342 q18 -22 0 -42"/>
+        </g>
+        <g class="i-vuelo">
+          <rect class="i-osc" x="300" y="112" width="44" height="12" rx="6"/>
+          <path class="i-trazo-osc" d="M292 108 h20 M332 108 h20"/>
+          <circle class="i-nar" cx="322" cy="128" r="5"/>
+          <path class="i-trazo-nar" d="M322 136 V180"/>
+        </g>
+        <g>
+          <rect class="i-nar" x="500" y="318" width="54" height="22" rx="10"/>
+          <circle class="i-osc" cx="512" cy="344" r="7"/><circle class="i-osc" cx="542" cy="344" r="7"/>
+          <rect class="i-blanco" x="512" y="322" width="18" height="8" rx="3"/>
+          <path class="i-trazo" d="M560 346 h30"/>
+        </g>
+        <g>
+          <rect class="i-osc" x="560" y="250" width="6" height="40"/>
+          <circle class="i-colina2" cx="563" cy="238" r="22"/>
+          <rect class="i-osc" x="24" y="300" width="6" height="36"/>
+          <circle class="i-colina2" cx="27" cy="290" r="18"/>
+        </g>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<section id="que-es">
+  <div class="envoltura">
+    <span class="etiqueta">En una frase</span>
+    <p class="frase">Es darle <mark>sentidos</mark> a la ciudad: aparatos que miran, miden y avisan, para que el municipio se entere de los problemas <mark>antes</mark> y los resuelva <mark>más rápido</mark>.</p>
+    <div class="analogia">
+      <svg viewBox="0 0 160 120" role="img" aria-labelledby="an-t">
+        <title id="an-t">Tablero de un auto con un indicador que avisa</title>
+        <rect class="i-osc" x="6" y="18" width="148" height="88" rx="18"/>
+        <path class="i-trazo" d="M40 82 A40 40 0 0 1 120 82"/>
+        <path class="i-trazo-osc" d="M80 82 L104 58"/>
+        <circle class="i-menta" cx="80" cy="82" r="6"/>
+        <circle class="i-nar i-parpadeo" cx="130" cy="36" r="9"/>
+        <circle class="i-menta" cx="30" cy="36" r="6"/>
+      </svg>
+      <p><strong>Pensalo como el tablero de un auto.</strong> Una lucecita te avisa que falta aceite antes de que se funda el motor. Una ciudad inteligente tiene lucecitas parecidas: el arroyo que sube, la lámpara que se quemó, el bache que apareció. Así se arregla lo pequeño antes de que se vuelva grande.</p>
+    </div>
+  </div>
+</section>
+
+<section id="historia" class="alterna">
+  <div class="envoltura">
+    <span class="etiqueta">De dónde viene</span>
+    <h2>La idea tiene 17 años</h2>
+    <ol class="historia">
+      <li><time>2009</time><b>Wi-Fi gratis en el centro</b>Un proyecto de la universidad propuso internet libre en las plazas. 9 de cada 10 vecinos encuestados dijeron que sí.</li>
+      <li><time>2019</time><b>Llega la fibra óptica</b>La cooperativa LAR trae internet por fibra a Libertador y Puiggari.</li>
+      <li><time>2022</time><b>Centro de monitoreo</b>La ciudad abre su centro con cámaras de seguridad.</li>
+      <li><time>2026</time><b>Un plan nuevo y más grande</b>Ya no alcanza con dar internet: hace falta usar la tecnología para cuidar el agua, la luz, las calles y la gente.</li>
+      <li><time>2027 → 2036</time><b>Se hace de a poco</b>Primero se prueba en pocos lugares, se mide si funciona y recién ahí se amplía.</li>
+    </ol>
+  </div>
+</section>
+
+<section id="como">
+  <div class="envoltura">
+    <span class="etiqueta">Cómo funciona</span>
+    <h2>Seis pasos, siempre los mismos</h2>
+    <p class="intro">Cualquier servicio de la ciudad inteligente, del alumbrado a las inundaciones, sigue esta rueda:</p>
+    <ol class="ciclo">
+      <li><svg viewBox="0 0 64 64" aria-hidden="true"><circle class="i-fondo-icono" cx="32" cy="32" r="30"/><path class="i-icono" d="M10 32 Q32 12 54 32 Q32 52 10 32Z"/><circle class="i-icono" cx="32" cy="32" r="7"/></svg><b>Mira</b><span>Un sensor o un vecino detecta algo.</span></li>
+      <li><svg viewBox="0 0 64 64" aria-hidden="true"><circle class="i-fondo-icono" cx="32" cy="32" r="30"/><path class="i-icono" d="M32 12 L50 19 V32 C50 43 42 50 32 53 C22 50 14 43 14 32 V19Z"/><path class="i-icono" d="M24 32 l6 6 l11 -12"/></svg><b>Revisa</b><span>Se confirma que el dato es real.</span></li>
+      <li><svg viewBox="0 0 64 64" aria-hidden="true"><circle class="i-fondo-icono" cx="32" cy="32" r="30"/><path class="i-icono" d="M32 12 a14 14 0 0 1 8 25 v6 h-16 v-6 a14 14 0 0 1 8 -25Z"/><path class="i-icono" d="M26 49 h12"/></svg><b>Entiende</b><span>La IA calcula qué tan urgente es.</span></li>
+      <li><svg viewBox="0 0 64 64" aria-hidden="true"><circle class="i-fondo-nar" cx="32" cy="32" r="30"/><path class="i-icono-nar" d="M32 12 V54 M32 18 H48 L53 24 L48 30 H32 M32 34 H18 L13 40 L18 46 H32"/></svg><b>Decide</b><span>Con reglas que aprobaron personas.</span></li>
+      <li><svg viewBox="0 0 64 64" aria-hidden="true"><circle class="i-fondo-icono" cx="32" cy="32" r="30"/><path class="i-icono" d="M40 14 a10 10 0 0 0 -10 14 L14 44 l6 6 L36 34 a10 10 0 0 0 14 -10 l-6 6 l-6 -2 l-2 -6Z"/></svg><b>Actúa</b><span>Va la cuadrilla o se manda un aviso.</span></li>
+      <li><svg viewBox="0 0 64 64" aria-hidden="true"><circle class="i-fondo-icono" cx="32" cy="32" r="30"/><path class="i-icono" d="M48 30 A16 16 0 1 1 42 18"/><path class="i-icono" d="M44 10 V20 H34"/></svg><b>Aprende</b><span>Se anota qué pasó para mejorar.</span></li>
+    </ol>
+  </div>
+</section>
+
+<section id="lluvia" class="alterna">
+  <div class="envoltura">
+    <span class="etiqueta">Probalo vos</span>
+    <h2>Ejemplo: se larga a llover fuerte</h2>
+    <p class="intro">Un sensor en el arroyo mide cuánto sube el agua y un pluviómetro mide cuánta lluvia cae. Mové la barra y mirá qué haría la ciudad.</p>
+    <div class="simulador" data-simulador>
+      <div>
+        <label for="mm">Lluvia en la última hora</label>
+        <div class="simulador__mm"><span data-mm>10</span> <small>milímetros</small></div>
+        <input id="mm" type="range" min="0" max="100" step="5" value="10" data-rango>
+        <output class="nivel" for="mm" data-nivel data-n="0">Todo tranquilo<small>El sistema solo mira. Nadie tiene que hacer nada.</small></output>
+        <p class="fuentes">Los números son un ejemplo para entender la idea. Los límites reales los fijan técnicos después de medir cada arroyo.</p>
+      </div>
+      <svg viewBox="0 0 320 220" role="img" aria-labelledby="sim-t">
+        <title id="sim-t">Corte de un arroyo con un sensor encima; el nivel del agua sube a medida que aumenta la lluvia</title>
+        <rect class="i-cielo" x="0" y="0" width="320" height="220"/>
+        <g data-gotas>
+          <path class="i-trazo" d="M40 10 l-4 12 M90 18 l-4 12 M140 8 l-4 12 M190 16 l-4 12 M240 6 l-4 12 M280 20 l-4 12"/>
+        </g>
+        <rect class="s-agua-osc" x="40" y="60" width="240" height="140"/>
+        <rect class="agua" x="40" y="180" width="240" height="20" data-agua/>
+        <path class="i-colina" d="M0 60 H40 V200 H280 V60 H320 V220 H0Z"/>
+        <path class="i-trazo-nar" d="M40 120 H280"/>
+        <text class="d-txt--chico" x="276" y="114" text-anchor="end">nivel de emergencia</text>
+        <rect class="i-osc" x="150" y="30" width="20" height="14" rx="3"/>
+        <rect class="i-osc" x="158" y="44" width="4" height="16"/>
+        <path class="i-onda" d="M176 30 q8 -8 0 -16 M184 34 q14 -14 0 -28"/>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<section id="vida-diaria">
+  <div class="envoltura">
+    <span class="etiqueta">Lo que vas a notar</span>
+    <h2>Cómo te cambia el día a día</h2>
+    <div class="ilus-tarjetas">
+      <article class="ilus-tarjeta">
+        <svg viewBox="0 0 320 200" aria-hidden="true"><rect class="i-osc" x="96" y="40" width="8" height="150"/><path class="i-osc" d="M100 44 h50 v12 h-50z"/><path class="i-luz" d="M140 56 L104 190 H190Z"/><circle class="i-nar i-parpadeo" cx="146" cy="58" r="7"/><rect class="i-blanco" x="190" y="44" width="104" height="44" rx="12"/><text class="d-txt" x="242" y="64" text-anchor="middle">¡Me quemé!</text><text class="d-txt--chico" x="242" y="80" text-anchor="middle">calle 3, poste 12</text><path class="i-blanco" d="M196 82 L186 98 L210 86Z"/></svg>
+        <div><h3>Luces que avisan solas</h3><p>Cada luminaria LED avisa cuando se apaga, así no hace falta que un vecino reclame. De madrugada bajan un poco y suben si pasa alguien: se ahorra luz sin dejar la calle a oscuras.</p></div>
+      </article>
+      <article class="ilus-tarjeta">
+        <svg viewBox="0 0 320 200" aria-hidden="true"><path class="i-gris" d="M60 70 a26 26 0 0 1 46 -18 a30 30 0 0 1 56 12 a22 22 0 0 1 -6 44 H70 a22 22 0 0 1 -10 -38Z"/><path class="i-trazo" d="M80 122 l-6 18 M108 122 l-6 18 M136 122 l-6 18"/><rect class="i-osc" x="206" y="40" width="74" height="134" rx="14"/><rect class="i-blanco" x="214" y="56" width="58" height="100" rx="6"/><rect class="i-nar" x="220" y="66" width="46" height="28" rx="6"/><text class="d-txt" x="243" y="85" text-anchor="middle">⚠</text><rect class="i-gris" x="220" y="102" width="46" height="6" rx="3"/><rect class="i-gris" x="220" y="114" width="34" height="6" rx="3"/></svg>
+        <div><h3>Alerta de inundación en el celular</h3><p>Si el arroyo sube rápido, te llega un aviso horas antes, con qué calles evitar. Los pluviómetros y sensores de nivel funcionan años con una pila.</p></div>
+      </article>
+      <article class="ilus-tarjeta">
+        <svg viewBox="0 0 320 200" aria-hidden="true"><ellipse class="i-osc" cx="110" cy="150" rx="70" ry="18"/><ellipse class="i-gris" cx="110" cy="146" rx="52" ry="11"/><rect class="i-osc" x="196" y="30" width="78" height="140" rx="14"/><rect class="i-blanco" x="204" y="46" width="62" height="106" rx="6"/><circle class="i-menta" cx="235" cy="82" r="18"/><path class="i-trazo-osc" d="M226 82 l6 6 l12 -13"/><text class="d-txt--chico" x="235" y="124" text-anchor="middle">#348</text><text class="d-txt--chico" x="235" y="140" text-anchor="middle">en camino</text></svg>
+        <div><h3>Reclamos con foto y seguimiento</h3><p>Sacás una foto del bache, la mandás y ves en qué estado está tu reclamo, como el seguimiento de un envío. Si no usás celular, podés seguir yendo o llamando a la municipalidad.</p></div>
+      </article>
+      <article class="ilus-tarjeta">
+        <svg viewBox="0 0 320 200" aria-hidden="true"><rect class="i-colina2" x="0" y="140" width="320" height="60"/><path class="i-colina3" d="M0 140 h320 v8 h-320z"/><rect class="i-nar" x="120" y="104" width="90" height="38" rx="16"/><rect class="i-blanco" x="140" y="110" width="30" height="12" rx="4"/><circle class="i-osc" cx="140" cy="146" r="11"/><circle class="i-osc" cx="192" cy="146" r="11"/><path class="i-trazo" d="M220 150 h60 M30 150 h70"/><circle class="i-menta i-parpadeo" cx="200" cy="100" r="5"/></svg>
+        <div><h3>Robots que cortan el pasto</h3><p>En plazas y parques, cortacéspedes eléctricos trabajan solos, en zonas cerradas y con frenado si aparece una persona o un animal. Los jardineros se dedican a lo que una máquina no sabe hacer.</p></div>
+      </article>
+      <article class="ilus-tarjeta">
+        <svg viewBox="0 0 320 200" aria-hidden="true"><rect class="i-casa" x="80" y="110" width="160" height="80"/><path class="i-techo" d="M66 112 L160 60 L254 112Z"/><rect class="i-vent" x="148" y="146" width="24" height="44"/><g class="i-vuelo"><rect class="i-osc" x="196" y="26" width="56" height="14" rx="7"/><path class="i-trazo-osc" d="M186 22 h26 M236 22 h26"/><circle class="i-nar" cx="224" cy="46" r="6"/></g><path class="i-trazo-nar" d="M224 54 L190 92"/></svg>
+        <div><h3>Drones que revisan techos y desagües</h3><p>En vez de subir con escalera a un techo de una escuela o meterse en un canal, un dron saca fotos y la IA marca dónde hay un problema. No se usan para espiar a la gente.</p></div>
+      </article>
+      <article class="ilus-tarjeta">
+        <svg viewBox="0 0 320 200" aria-hidden="true"><rect class="i-gris" x="0" y="160" width="320" height="40"/><rect class="i-blanco" x="40" y="60" width="14" height="100"/><rect class="i-blanco" x="266" y="60" width="14" height="100"/><rect class="i-blanco" x="32" y="48" width="256" height="16" rx="4"/><rect class="i-osc" x="60" y="66" width="30" height="16" rx="4"/><path class="i-luz" d="M86 80 L140 150 H70Z"/><rect class="i-nar" x="120" y="124" width="90" height="36" rx="10"/><circle class="i-osc" cx="140" cy="162" r="9"/><circle class="i-osc" cx="190" cy="162" r="9"/><rect class="i-blanco" x="148" y="146" width="36" height="10" rx="2"/></svg>
+        <div><h3>Patentes en las entradas</h3><p>Cámaras en los accesos leen la patente y avisan solo si el auto tiene pedido de secuestro. Las demás lecturas se borran a los pocos días. No reconocen caras.</p></div>
+      </article>
+      <article class="ilus-tarjeta">
+        <svg viewBox="0 0 320 200" aria-hidden="true"><rect class="i-osc" x="86" y="80" width="10" height="100"/><circle class="i-colina2" cx="91" cy="70" r="44"/><rect class="i-techo2" x="150" y="150" width="110" height="10" rx="3"/><rect class="i-osc" x="160" y="160" width="6" height="22"/><rect class="i-osc" x="244" y="160" width="6" height="22"/><path class="i-onda" d="M180 104 a40 40 0 0 1 50 0"/><path class="i-onda" d="M190 116 a24 24 0 0 1 30 0"/><circle class="i-menta" cx="205" cy="128" r="6"/></svg>
+        <div><h3>Wi-Fi en plazas y la terminal</h3><p>Internet libre en espacios públicos, como soñaba el proyecto de 2009, pero sin pedirte DNI ni datos personales para conectarte.</p></div>
+      </article>
+      <article class="ilus-tarjeta">
+        <svg viewBox="0 0 320 200" aria-hidden="true"><rect class="i-blanco" x="40" y="40" width="160" height="50" rx="16"/><text class="d-txt" x="120" y="70" text-anchor="middle">¿Qué horario tiene…?</text><rect class="i-menta" x="120" y="104" width="160" height="56" rx="16"/><text class="d-txt" x="200" y="128" text-anchor="middle">Abre de 7 a 13 h.</text><text class="d-txt--chico" x="200" y="146" text-anchor="middle">Fuente: municipalidad</text></svg>
+        <div><h3>Un asistente que responde</h3><p>Preguntás por un trámite o un horario y un asistente te contesta con la información oficial, en varios idiomas para estudiantes y turistas. Si no sabe o es algo serio, te pasa con una persona.</p></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="redes" class="alterna">
+  <div class="envoltura">
+    <span class="etiqueta">Lo que no se ve</span>
+    <h2>Cuatro caminos para los datos</h2>
+    <p class="intro">Para que todo esto funcione, los aparatos tienen que poder “hablar”. Se usan cuatro tipos de conexión, cada uno para lo que mejor hace:</p>
+    <div class="redes">
+      <article class="red"><svg viewBox="0 0 72 72" aria-hidden="true"><circle class="i-fondo-icono" cx="36" cy="36" r="34"/><path class="i-icono" d="M10 28 H62 M10 36 H62 M10 44 H62"/><circle class="i-nar" cx="30" cy="36" r="4"/></svg><h3>Fibra óptica</h3><em>Como una autopista</em><p>Lleva muchísimos datos por cables bajo la calle o en los postes. Es la principal dentro de la ciudad. Cuando se asfalta una calle, se deja un caño vacío para pasarla después sin romper.</p></article>
+      <article class="red"><svg viewBox="0 0 72 72" aria-hidden="true"><circle class="i-fondo-nar" cx="36" cy="36" r="34"/><rect class="i-icono-nar" x="28" y="26" width="16" height="16" rx="3"/><path class="i-icono-nar" d="M12 22 h14 M46 22 h14 M12 46 h14 M46 46 h14"/></svg><h3>Satélite (Starlink)</h3><em>Como un puente de repuesto</em><p>Si se corta la fibra, el satélite mantiene funcionando las alarmas. También conecta lugares lejos del centro, como las rutas de acceso y los caminos rurales.</p></article>
+      <article class="red"><svg viewBox="0 0 72 72" aria-hidden="true"><circle class="i-fondo-icono" cx="36" cy="36" r="34"/><path class="i-icono" d="M36 56 V30"/><circle class="i-icono" cx="36" cy="26" r="4"/><path class="i-icono" d="M26 18 a14 14 0 0 0 0 16 M46 18 a14 14 0 0 1 0 16"/></svg><h3>Red de sensores (LoRaWAN)</h3><em>Como un cartero en bicicleta</em><p>Lleva mensajes muy cortitos, como “el agua subió 10 cm”, a varios kilómetros, gastando tan poco que un sensor funciona años con la misma pila.</p></article>
+      <article class="red"><svg viewBox="0 0 72 72" aria-hidden="true"><circle class="i-fondo-icono" cx="36" cy="36" r="34"/><path class="i-icono" d="M16 32 a28 28 0 0 1 40 0 M23 40 a18 18 0 0 1 26 0 M30 47 a8 8 0 0 1 12 0"/></svg><h3>Wi-Fi público</h3><em>Como una canilla en la plaza</em><p>Para que cualquiera se conecte en lugares públicos. Va por una red separada, así nadie desde el Wi-Fi puede llegar a las cámaras o a los sistemas de la ciudad.</p></article>
+    </div>
+  </div>
+</section>
+
+<section id="datos">
+  <div class="envoltura">
+    <span class="etiqueta">Tu privacidad</span>
+    <h2>Seis promesas sobre tus datos</h2>
+    <ul class="promesas">
+      <li><svg viewBox="0 0 52 52" aria-hidden="true"><circle class="i-fondo-nar" cx="26" cy="26" r="25"/><circle class="i-icono-nar" cx="26" cy="22" r="8"/><path class="i-icono-nar" d="M12 40 a16 12 0 0 1 28 0 M10 10 L42 42"/></svg><span><b>Nada de reconocimiento facial en vivo</b>Las cámaras detectan situaciones, como una caída o una calle inundada, no quién sos.</span></li>
+      <li><svg viewBox="0 0 52 52" aria-hidden="true"><circle class="i-fondo-icono" cx="26" cy="26" r="25"/><circle class="i-icono" cx="26" cy="26" r="14"/><path class="i-icono" d="M26 18 V26 L32 30"/></svg><span><b>Se guarda poco tiempo</b>Cada dato tiene fecha de vencimiento y se borra solo.</span></li>
+      <li><svg viewBox="0 0 52 52" aria-hidden="true"><circle class="i-fondo-icono" cx="26" cy="26" r="25"/><circle class="i-icono" cx="20" cy="20" r="6"/><circle class="i-icono" cx="34" cy="20" r="6"/><path class="i-icono" d="M10 38 a10 9 0 0 1 20 0 M24 38 a10 9 0 0 1 20 0"/></svg><span><b>Una persona revisa</b>Ninguna máquina pone multas ni decide sobre vos sola. Siempre podés pedir revisión humana.</span></li>
+      <li><svg viewBox="0 0 52 52" aria-hidden="true"><circle class="i-fondo-icono" cx="26" cy="26" r="25"/><rect class="i-icono" x="15" y="23" width="22" height="16" rx="3"/><path class="i-icono" d="M19 23 V18 a7 7 0 0 1 14 0 V23"/></svg><span><b>Solo entra quien tiene permiso</b>Y queda anotado quién miró qué y cuándo.</span></li>
+      <li><svg viewBox="0 0 52 52" aria-hidden="true"><circle class="i-fondo-icono" cx="26" cy="26" r="25"/><path class="i-icono" d="M14 16 h24 v22 h-24z M18 22 h16 M18 28 h16 M18 34 h10"/></svg><span><b>Se publica cómo funciona</b>Qué se instala, para qué, cuánto costó y qué resultado dio.</span></li>
+      <li><svg viewBox="0 0 52 52" aria-hidden="true"><circle class="i-fondo-icono" cx="26" cy="26" r="25"/><path class="i-icono" d="M16 26 h20 M30 18 l8 8 l-8 8"/><path class="i-icono" d="M14 14 v24"/></svg><span><b>Tus datos no se venden</b>Ninguna empresa puede usarlos para sus propios productos.</span></li>
+    </ul>
+  </div>
+</section>
+
+<section id="robots" class="alterna">
+  <div class="envoltura">
+    <span class="etiqueta">Robots</span>
+    <h2>Dónde sí y dónde no</h2>
+    <div class="si-no">
+      <div>
+        <h3>Sí, porque ayudan</h3>
+        <ul>
+          <li>Cortar el pasto en plazas cerradas</li>
+          <li>Regar solo cuando la tierra está seca</li>
+          <li>Revisar techos y desagües con drones</li>
+          <li>Detectar baches desde los vehículos municipales</li>
+          <li>Barrer de noche en zonas controladas, si conviene</li>
+        </ul>
+      </div>
+      <div>
+        <h3>No, o todavía no</h3>
+        <ul>
+          <li>Robots sueltos por veredas con gente</li>
+          <li>Drones para vigilar personas</li>
+          <li>Robots humanoides “para la foto”</li>
+          <li>Máquinas que decidan sanciones solas</li>
+          <li>Comprar algo antes de probarlo y medirlo</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="cuando">
+  <div class="envoltura">
+    <span class="etiqueta">Cuándo</span>
+    <h2>Paso a paso, en diez años</h2>
+    <ol class="camino">
+      <li><i aria-hidden="true">🗂️</i><div><time>2027 · primeros meses</time><b>Ordenar la casa</b><span>Contar qué hay: cámaras, postes, luces, lugares que se inundan.</span></div></li>
+      <li><i aria-hidden="true">🧪</i><div><time>2027</time><b>Probar en chiquito</b><span>Sensores de lluvia y un mapa digital de la ciudad.</span></div></li>
+      <li><i aria-hidden="true">🔌</i><div><time>2028</time><b>Conectar la ciudad</b><span>Redes, luces inteligentes y reclamos por internet.</span></div></li>
+      <li><i aria-hidden="true">🤖</i><div><time>2029 – 2031</time><b>Sumar IA y robots</b><span>Avisos que se anticipan, drones y robots donde rindan.</span></div></li>
+      <li><i aria-hidden="true">🌱</i><div><time>2032 – 2036</time><b>Ciudad que aprende</b><span>Un “gemelo digital” que ayuda a planificar el crecimiento.</span></div></li>
+    </ol>
+    <p class="fuentes">Cada paso solo avanza si el anterior demostró que funciona. Las fechas son orientativas.</p>
+  </div>
+</section>
+
+<section id="costo" class="alterna">
+  <div class="envoltura">
+    <span class="etiqueta">Cuánto cuesta</span>
+    <h2>Una estimación, todavía no un precio</h2>
+    <div class="costo">
+      <div><b data-total="capex">USD 1,5 – 3,0 millones</b><span>para construir todo en 5 años</span></div>
+      <div><b data-total="opex">USD 136 – 290 mil</b><span>por año para que siga funcionando</span></div>
+      <div><b data-total="hab">USD 32 a 63</b><span>por habitante y por año</span></div>
+    </div>
+    <h3 class="sub">¿De dónde sale la plata?</h3>
+    <ul class="lista-check">
+      <li><strong>De lo que se ahorra:</strong> las luces LED gastan menos y parte del ahorro en la boleta paga la obra.</li>
+      <li><strong>De fondos provinciales y nacionales</strong> para seguridad y modernización.</li>
+      <li><strong>De la universidad (UAP):</strong> estudiantes y docentes ayudan a construir y evaluar.</li>
+      <li><strong>De quienes usan la red:</strong> las empresas de internet pagan por usar los caños y la fibra.</li>
+      <li><strong>Alquilando robots</strong> en vez de comprarlos, para no quedar con aparatos viejos.</li>
+    </ul>
+    <p class="fuentes">Los montos son hipótesis: se van a confirmar con relevamientos y presupuestos reales antes de decidir.</p>
+  </div>
+</section>
+
+<section id="preguntas">
+  <div class="envoltura">
+    <span class="etiqueta">Preguntas frecuentes</span>
+    <h2>Lo que más se pregunta</h2>
+    <div class="faq">
+      <details><summary>¿Me van a estar vigilando todo el tiempo?</summary><p>No. El plan prohíbe el reconocimiento facial en vivo, guarda los datos poco tiempo y deja registrado quién los mira. Las cámaras se usan para detectar situaciones (un accidente, una calle inundada), no para seguir personas.</p></details>
+      <details><summary>¿Los robots van a dejar sin trabajo a los empleados municipales?</summary><p>La idea es lo contrario: que las máquinas hagan lo repetitivo o peligroso (subir a techos, cortar pasto bajo el sol) y las personas se ocupen de lo que requiere criterio. Además hace falta gente para operar y mantener los equipos.</p></details>
+      <details><summary>¿Qué pasa si se corta internet?</summary><p>Los sistemas importantes siguen funcionando “en el lugar” y guardan los datos hasta que vuelve la conexión. Además hay un segundo camino por satélite para las alarmas.</p></details>
+      <details><summary>¿Y si no tengo celular o no sé usar aplicaciones?</summary><p>Vas a poder seguir haciendo todo en persona o por teléfono. La tecnología se suma; no reemplaza a la atención de siempre.</p></details>
+      <details><summary>¿La inteligencia artificial decide cosas por su cuenta?</summary><p>Propone y avisa. Las decisiones importantes las toma una persona, con reglas aprobadas antes. Y todo se prueba primero “en modo sombra”: la IA opina, pero nadie le hace caso hasta comprobar que acierta.</p></details>
+      <details><summary>¿Por qué no se hace todo ya?</summary><p>Porque la experiencia de 2009 enseñó que es mejor probar en pocos lugares, medir y recién ahí ampliar. Así no se gasta en cosas que después no sirven.</p></details>
+      <details><summary>¿Cómo puedo opinar?</summary><p>Podés <a href="index.html#idea">dejar tu idea en el formulario del sitio</a>. El plan prevé reuniones abiertas, encuestas y un canal para reclamos sobre cámaras, sensores y robots.</p></details>
+    </div>
+  </div>
+</section>
+
+<section id="palabras" class="alterna">
+  <div class="envoltura">
+    <span class="etiqueta">Diccionario</span>
+    <h2>Palabras raras, en criollo</h2>
+    <div class="palabras">
+      <div><b>Sensor</b><span>Un aparatito que mide algo (agua, lluvia, ruido) y lo avisa.</span></div>
+      <div><b>Inteligencia artificial (IA)</b><span>Programas que aprenden de ejemplos para reconocer cosas o anticiparse.</span></div>
+      <div><b>Gemelo digital</b><span>Una copia de la ciudad en la computadora, que se actualiza con datos reales.</span></div>
+      <div><b>Telegestión</b><span>Manejar algo a distancia, como prender o atenuar una luz desde el centro.</span></div>
+      <div><b>Modo sombra</b><span>Probar la IA sin que sus decisiones se apliquen, para ver si acierta.</span></div>
+      <div><b>Red neutra</b><span>Caños y fibra del municipio que cualquier empresa de internet puede alquilar.</span></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="envoltura">
+    <div class="otra-version">
+      <p><strong>¿Querés todos los detalles?</strong> La versión técnica tiene la arquitectura, las normas, los riesgos, los indicadores y el presupuesto completo.</p>
+      <div class="botones">
+        <a class="boton" href="plan-maestro.html">Versión técnica</a>
+        <a class="boton boton--sec" href="proyecto-2026.html">Mapa y costos</a>
+      </div>
+    </div>
+    <p class="fuentes">Explicación elaborada con asistencia de inteligencia artificial y revisión humana, a partir del Plan Maestro 2027–2036 de Hernando A. Gigliotti. Ver la <a href="privacidad.html">política de privacidad</a>.</p>
+  </div>
+</section>
+
+</main>
+
+<footer class="pie">
+  <div class="envoltura">
+    <img src="assets/logos/logo-horizontal-claro.svg" alt="LSM Ciudad Inteligente" width="240" height="60">
+    <div class="pie__links"><a href="index.html">Análisis</a><a href="proyecto-2026.html">Proyecto 2026</a><a href="plan-maestro.html">Plan técnico</a><a href="archivo-2009.html">Archivo 2009</a><a href="privacidad.html">Privacidad</a><a href="#" data-revisar-cookies>Cookies</a></div>
+    <span>© 2009–2026 · Hernando A. Gigliotti</span>
+  </div>
+</footer>
+<div class="consent" data-consent hidden role="dialog" aria-label="Cookies">
+  <p>Usamos Google Analytics para saber cuántas personas visitan el sitio. Solo se activa si aceptás.</p>
+  <div><button class="boton" data-elegir="si">Aceptar</button><button class="boton boton--sec" data-elegir="no">Rechazar</button></div>
+</div>
+</body>
+</html>

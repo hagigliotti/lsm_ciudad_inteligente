@@ -14,6 +14,9 @@ y propuesta de cómo implementarlo hoy.
 |---|---|
 | `index.html` | Portada animada, la ciudad hoy, 2009 vs 2026, fallas, potencialidades, arquitectura, hoja de ruta, veredicto y formulario vecinal |
 | `proyecto-2026.html` | Proyecto 2026 (plan 2027–2031): mapa interactivo, metas, componentes, seguridad, robótica, presupuesto, cronograma y riesgos |
+| `plan-maestro.html` | Plan Maestro 2027–2036, versión técnica completa: 24 capítulos y anexos, con el Plan Director v3.0 integrado y notas de revisión |
+| `en-simple.html` | El proyecto explicado fácil, con ilustraciones, simulador de lluvia y preguntas frecuentes |
+| `docs/plan-maestro/` | Documentos fuente: Plan Maestro (.docx) y Plan Director v3.0 (.md) |
 | `archivo-2009.html` | El blog original de 2009 completo (se regenera con `python3 scripts/archivo2009.py`) |
 | `privacidad.html` | Qué datos se recolectan, uso de IA, a quién se envían, borrado y qué pasa si no se cumple, sin testimonios falsos |
 | `seguridad.html` | Validación, rate limiting, sesiones, auditoría de rutas, CORS, errores y pruebas |
@@ -36,7 +39,7 @@ Abrí `assets/js/config.js` y pegá tu ID en `gaId: 'G-XXXXXXXXXX'`. Nada se car
 ## Probar en tu computadora
 
 ```bash
-npm test            # 52 pruebas
+npm test            # 67 pruebas
 npm run auditar     # tabla de rutas de la API: autenticación, validación, límites
 npm run servir      # sitio en http://localhost:8000
 ```
