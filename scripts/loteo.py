@@ -35,7 +35,7 @@ def manzana(n):
     """Manzana de cada lote según el plano de loteo con colores (coincide con la mensura)."""
     if n <= 10: return 'A3'
     if n <= 16: return 'A2'
-    if n <= 30: return 'A1'  # el 17 es un desglose aparte en la mensura; se pinta como A1
+    if n <= 30: return 'A1'
     if n <= 34: return 'B1'
     if n <= 36: return 'B2'
     if n <= 57: return 'C'
@@ -47,7 +47,7 @@ def lote(n):
     if str(n).startswith('R'):
         return ('lt-res', f'Reserva {n}')
     m = manzana(n)
-    return (f'lt-lote mz-{m.lower()}', f'Lote {n} · ' + ('desglose junto a la manzana A1' if n == 17 else f'manzana {m}'))
+    return (f'lt-lote mz-{m.lower()}', f'Lote {n} · ' + f'manzana {m}')
 
 
 def franja(a0, a1, b0, b1, nombres, rot=0):
@@ -77,27 +77,35 @@ franja((362, 30), (362, 690), (330, 30), (330, 690), list(range(37, 58)))
 # Sur, según el plano de loteo por manzanas: bulevar con cantero desde la RN 131 entre
 # R6 (oeste) y R5 (este); rotonda; calle hacia el oeste entre R8 (norte) y el club
 # house R7 (sur), con una rotonda chica, hasta la calle pública Los Jacarandaes.
-piezas.append('<polygon class="lt-calle" points="30,886 52,886 262,712 250,698"/>')  # calle pública
-piezas.append('<polygon class="lt-calle" points="300,690 334,690 346,886 308,886"/>')  # bulevar
+piezas.append('<polygon class="lt-calle" points="-22,930 -1,930 262,712 250,698"/>')  # calle pública
+piezas.append('<polygon class="lt-calle" points="300,690 334,690 346,843 308,853"/>')  # bulevar (doble mano con cantero)
 piezas.append('<polygon class="lt-calle" points="306,756 268,758 240,738 224,726 210,742 232,756 264,778 306,780"/>')  # calle al club house
-piezas.append('<line class="lt-cantero" x1="321" y1="782" x2="327" y2="880"/>')
-poli([(330, 690), (362, 690), (362, 886), (348, 886)], 'lt-res', None, 'Reserva R5 (espacio verde)')
+# Canteros centrales: bulevar desde la ruta hasta la punta de R4 (con corte en el cruce
+# hacia el club house) y en la calle del club house. Los círculos son las cabeceras.
+for (a, b) in [((303, 602), (318, 757)), ((322, 779), (326, 840)), ((300, 768), (264, 768)), ((264, 768), (244, 753))]:
+    piezas.append(f'<line class="lt-cantero" x1="{a[0]}" y1="{a[1]}" x2="{b[0]}" y2="{b[1]}"/>')
+for (x, y) in [(303, 602), (318, 757), (322, 779), (300, 768), (244, 753)]:
+    piezas.append(f'<circle class="lt-cabecera" cx="{x}" cy="{y}" r="2.6"/>')
+poli([(330, 690), (362, 690), (362, 839), (348, 842)], 'lt-res', None, 'Reserva R5 (espacio verde)')
 piezas.append('<text class="lt-n lt-n--r" x="351" y="800">R5</text>')
 poli([(266, 700), (302, 672), (306, 756), (268, 758), (240, 738), (258, 722)], 'lt-res', None, 'Reserva R8 (espacio verde)')
 piezas.append('<text class="lt-n lt-n--r" x="282" y="728">R8</text>')
 poli([(232, 756), (264, 778), (294, 780), (294, 818), (270, 834), (212, 770)], 'lt-res lt-club', None, 'Reserva R7: club house')
 piezas.append('<text class="lt-n lt-n--r" x="258" y="798">R7</text><text class="lt-club-t" x="258" y="810">club house</text>')
-poli([(294, 780), (306, 780), (310, 886), (298, 886)], 'lt-res', None, 'Reserva R6 (espacio verde)')
-piezas.append('<text class="lt-n lt-n--r" x="285" y="860">R6</text>')
+poli([(294, 780), (306, 780), (310, 853), (298, 856)], 'lt-res', None, 'Reserva R6 (espacio verde)')
+piezas.append('<text class="lt-n lt-n--r" x="303" y="818" transform="rotate(-90 303 818)">R6</text>')
 piezas.append('<text class="lt-calle-t" x="118" y="826" transform="rotate(-40 118 826)">CALLE LOS JACARANDAES (PÚBLICA)</text>')
 # Manzana norte (58–70, R2, R3). Los extremos tienen tres filas (58 59 / 70 / 69 y
 # 62 63 / 64 / 66 65); el centro, dos (60 61 R2 / 68 67 R3). D está sobre la línea
 # que divide 60 de 68.
 x0, x1, y0, y1 = 140, 300, 96, 186
 cw = (x1 - x0) / 7
+lx = lambda y: 109 + (y - 96) * 33 / 90  # borde oeste paralelo a la calle diagonal (lotes 58, 70, 69)
 def rect(c0, c1, ya, yb, n):
     c, t = lote(n)
-    poli([(x0 + c0 * cw, ya), (x0 + c1 * cw, ya), (x0 + c1 * cw, yb), (x0 + c0 * cw, yb)], c, str(n), t)
+    xa = lx(ya) if c0 == 0 else x0 + c0 * cw
+    xb = lx(yb) if c0 == 0 else x0 + c0 * cw
+    poli([(xa, ya), (x0 + c1 * cw, ya), (x0 + c1 * cw, yb), (xb, yb)], c, str(n), t)
 tercio, medio = (y1 - y0) / 3, (y0 + y1) / 2
 for i, n in enumerate([58, 59]): rect(i, i + 1, y0, y0 + tercio, n)
 rect(0, 2, y0 + tercio, y0 + 2 * tercio, 70)
@@ -113,7 +121,7 @@ marcador(round(x0 + 2.5 * cw, 1), medio, 'D')
 # 81, 80; arriba a la derecha 72, 73, 74; columna derecha 75 a 79. E está sobre la
 # línea que separa 84 de 75.
 top, base, xr = 222, 408, 300
-izq = lambda y: 170 + (y - top) * (246 - 170) / (base - top)
+izq = lambda y: 156 + (y - top) * (226 - 156) / (base - top)
 filas_c = [[71, 72, 73, 74], [84, 75], [83, 76], [82, 77], [81, 78], [80, 79]]
 alto = (base - top) / len(filas_c)
 div = lambda y: izq(y) + (xr - izq(y)) * 0.45  # línea entre columna izquierda y derecha
@@ -139,15 +147,13 @@ marcador(170.5, 320, 'A')  # límite 16/17, lado calle
 marcador(167, 70, 'B')  # frente del lote 33
 marcador(362, 375.7, 'C')  # límite 47/48, lado exterior
 # Rotondas e ingreso
-piezas.append('<circle class="lt-rotonda" cx="318" cy="612" r="7"><title>Rotonda</title></circle>')
-piezas.append('<circle class="lt-rotonda" cx="320" cy="768" r="8"><title>Rotonda del ingreso (acceso al club house)</title></circle>')
-piezas.append('<circle class="lt-rotonda" cx="262" cy="768" r="5"><title>Rotonda chica frente al club house</title></circle>')
-piezas.append('<g class="lt-ingreso"><path d="M327 880c-9-12-14-20-14-27a14 14 0 0 1 28 0c0 7-5 15-14 27z"/><circle cx="327" cy="853" r="5"/>'
+piezas.append('<g class="lt-ingreso"><path d="M327 836c-9-12-14-20-14-27a14 14 0 0 1 28 0c0 7-5 15-14 27z"/><circle cx="327" cy="809" r="5"/>'
               '<title>Ingreso principal desde la RN 131</title></g>')
 # Ruta
-piezas.append('<rect class="lt-ruta" x="0" y="886" width="380" height="24"/>')
-piezas.append('<text class="lt-ruta-t" x="12" y="902">RUTA NACIONAL 131</text>')
-piezas.append('<text class="lt-ruta-t" x="236" y="902">INGRESO ↑</text>')
+# Ruta Nacional 131 en diagonal, como en el plano
+f = lambda x: 850 - 0.27 * (x - 320)  # borde norte de la ruta
+piezas.append(f'<polygon class="lt-ruta" points="-10,{f(-10):.1f} 390,{f(390):.1f} 390,{f(390) + 26:.1f} -10,{f(-10) + 26:.1f}"/>')
+piezas.append(f'<text class="lt-ruta-t" x="40" y="{f(40) + 17:.1f}" transform="rotate(-15.1 40 {f(40) + 17:.1f})">RUTA NACIONAL 131 · PAVIMENTADA · CRESPO–DIAMANTE</text>')
 # Norte: camino vecinal, estación de bombeo e impulsión a la red municipal
 piezas.append('<rect class="lt-vecinal" x="0" y="2" width="380" height="26"/>')
 piezas.append('<text class="lt-calle-t" x="96" y="13">CAMINO VECINAL</text>')
@@ -174,11 +180,11 @@ DEFS = ('<defs><marker id="flecha" viewBox="0 0 10 10" refX="5" refY="5" markerW
         '<path class="lt-flecha" d="M1 1L9 5L1 9z"/></marker>'
         '<marker id="flecha-imp" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="6" markerHeight="6" orient="auto">'
         '<path class="lt-flecha-imp" d="M1 1L9 5L1 9z"/></marker></defs>')
-svg = ('<svg class="loteo-svg" viewBox="0 0 380 912" role="img" aria-labelledby="loteo-t loteo-d">' + DEFS +
+svg = ('<svg class="loteo-svg" viewBox="0 0 380 960" role="img" aria-labelledby="loteo-t loteo-d">' + DEFS +
        '<title id="loteo-t">Mapa de loteo de La Lomada</title>'
-       '<desc id="loteo-d">Esquema del barrio: 84 lotes en las manzanas A1, A2 y A3 (franja oeste, lotes 1 a 30, con el 17 como desglose), '
+       '<desc id="loteo-d">Esquema del barrio: 84 lotes en las manzanas A1, A2 y A3 (franja oeste, lotes 1 a 30), '
        'B1 y B2 (franja norte, 31 a 36), C (franja este, 37 a 57), D1 y D2 (manzana norte, 58 a 70) y E (manzana central, 71 a 84), '
-       'más reservas R1 a R9. El ingreso principal es un bulevar desde la Ruta Nacional 131, con rotonda y club house (R7). '
+       'más reservas R1 a R9. El ingreso principal es un bulevar desde la Ruta Nacional 131, con cantero central y una calle hacia el club house (R7). '
        'Las cloacas bajan por gravedad hacia el norte hasta una estación de bombeo, que impulsa por el camino vecinal a la red municipal.</desc>'
        + ''.join(piezas) + '</svg>')
 

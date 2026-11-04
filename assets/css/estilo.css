@@ -1032,3 +1032,4 @@ code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: .
 .loteo-fig figcaption { color: #4a5650; }
 .loteo-fig figcaption a { color: #14663f; }
 .loteo-svg .lt-cantero { stroke: #fffdf7; stroke-width: 2; }
+.loteo-svg .lt-cabecera { fill: #fffdf7; stroke: #9b978a; stroke-width: 1; }
