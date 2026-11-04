@@ -1,0 +1,205 @@
+<!doctype html>
+<html lang="es-AR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://www.googletagmanager.com; connect-src 'self' https://*.google-analytics.com https://*.analytics.google.com https://www.googletagmanager.com; img-src 'self' data: https://*.google-analytics.com https://www.googletagmanager.com; style-src 'self'; font-src 'self'; base-uri 'self'; form-action 'self'; object-src 'none'; upgrade-insecure-requests">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <title>Casa particular inteligente en simple · LSM Ciudad Inteligente</title>
+  <meta name="description" content="Qué se puede automatizar en una casa, por dónde empezar, cuánto cuesta y cómo cuidar tus datos, explicado fácil.">
+  <meta property="og:title" content="Casa particular inteligente en simple · LSM Ciudad Inteligente">
+  <meta property="og:image" content="https://hagigliotti.github.io/lsm_ciudad_inteligente/assets/logos/portada.jpg">
+  <meta name="theme-color" content="#0d1f18">
+  <link rel="icon" href="assets/logos/isotipo.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/css/estilo.css">
+  <script type="module" src="assets/js/app.js"></script>
+</head>
+<body class="simple">
+<a class="salto" href="#contenido">Saltar al contenido</a>
+<!-- menu:inicio -->
+<header class="barra">
+  <div class="envoltura">
+    <a class="barra__marca" href="index.html"><img src="assets/logos/isotipo.svg" alt="" width="36" height="36">LSM</a>
+    <button class="menu__boton" type="button" aria-expanded="false" aria-controls="menu-principal" data-menu-boton>Menú</button>
+    <nav class="menu" id="menu-principal" aria-label="Menú principal">
+      <ul class="menu__lista">
+        <li><a class="menu__link" href="ciudad-hoy.html">La ciudad hoy</a></li>
+        <li>
+          <details class="menu__grupo">
+            <summary>Proyecto 2009 <i>original</i></summary>
+            <ul>
+              <li><a href="archivo-2009.html"><b>Archivo 2009</b><small>El proyecto original completo, tal como se publicó</small></a></li>
+              <li><a href="fallas-2009.html"><b>Fallas 2009</b><small>Qué le faltó y qué cambió desde entonces</small></a></li>
+            </ul>
+          </details>
+        </li>
+        <li>
+          <details class="menu__grupo">
+            <summary>Proyecto 2026 <i>actualización</i></summary>
+            <ul>
+              <li><a href="en-simple.html"><b>En simple</b><small>Explicado fácil, con dibujos y ejemplos</small></a></li>
+              <li><a href="plan-maestro.html"><b>Versión técnica</b><small>Plan Maestro 2027–2036 completo</small></a></li>
+              <li><a href="proyecto-2026.html"><b>Mapa, costos y cronograma</b><small>Dónde va cada cosa, cuánto cuesta y cuándo</small></a></li>
+            </ul>
+          </details>
+        </li>
+        <li>
+          <details class="menu__grupo">
+            <summary>Barrio privado inteligente <i>nuevo</i></summary>
+            <ul>
+              <li><a href="barrio-simple.html"><b>En simple</b><small>Qué cambia para quien vive en el barrio</small></a></li>
+              <li><a href="barrio-tecnico.html"><b>Versión técnica</b><small>Arquitectura, equipos, reglamento y costos</small></a></li>
+            </ul>
+          </details>
+        </li>
+        <li>
+          <details class="menu__grupo menu__grupo--activo">
+            <summary>Casa particular inteligente <i>nuevo</i></summary>
+            <ul>
+              <li><a href="casa-simple.html" aria-current="page"><b>En simple</b><small>Qué se puede automatizar y por dónde empezar</small></a></li>
+              <li><a href="casa-tecnico.html"><b>Versión técnica</b><small>Equipos, protocolos, instalación y costos</small></a></li>
+            </ul>
+          </details>
+        </li>
+        <li>
+          <details class="menu__grupo">
+            <summary>Privacidad y seguridad</summary>
+            <ul>
+              <li><a href="datos-personales.html"><b>Datos personales</b><small>Sensibles y no tan sensibles: qué se protege y cómo</small></a></li>
+              <li><a href="seguridad.html"><b>Seguridad</b><small>Cómo se protegen el sitio y los sistemas</small></a></li>
+            </ul>
+          </details>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>
+<!-- menu:fin -->
+
+<main id="contenido">
+
+<section class="s-portada">
+  <div class="envoltura">
+    <div class="s-portada__texto">
+      <span class="etiqueta">Casa particular inteligente · en simple</span>
+      <h1>Tu casa, <em>un poco más atenta</em></h1>
+      <p>Qué se puede automatizar en una casa común, por dónde empezar con poca plata y cómo hacerlo sin que tus datos terminen en manos de nadie.</p>
+      <div class="botones"><a class="boton boton--menta" href="#niveles">Ver por dónde empezar</a><a class="boton boton--claro" href="casa-tecnico.html">Versión técnica</a></div>
+    </div>
+    <div class="s-portada__ilus"><svg viewBox="0 0 600 420" role="img" aria-labelledby="hc-t">
+        <title id="hc-t">Dibujo de una casa en corte: paneles solares en el techo, una lámpara, un sensor de humo, un enchufe inteligente, un sensor de agua bajo la pileta, una cámara en la puerta y un celular que recibe avisos</title>
+        <path class="i-colina2" d="M0 370 C200 355 400 355 600 365 V420 H0Z"/>
+        <rect class="i-casa" x="120" y="180" width="320" height="190" rx="4"/>
+        <path class="i-techo" d="M100 184 L280 70 L460 184Z"/>
+        <path class="i-osc" d="M190 120 L250 82 L286 104 L226 142Z"/><path class="i-trazo" d="M206 124 L262 88 M220 132 L276 96"/>
+        <rect class="i-gris" x="278" y="186" width="4" height="184"/><rect class="i-gris" x="120" y="276" width="320" height="4"/>
+        <circle class="i-luz" cx="200" cy="216" r="22"/><circle class="i-nar" cx="200" cy="206" r="8"/><path class="i-trazo-osc" d="M200 186 V198"/>
+        <circle class="i-gris" cx="360" cy="196" r="9"/><circle class="i-nar i-parpadeo" cx="360" cy="196" r="3"/>
+        <rect class="i-osc" x="150" y="240" width="16" height="22" rx="3"/><circle class="i-menta" cx="158" cy="251" r="4"/>
+        <rect class="i-gris" x="320" y="330" width="80" height="12" rx="3"/><rect class="i-menta" x="352" y="350" width="16" height="8" rx="3"/><path class="i-onda" d="M374 354 q6 -6 0 -12"/>
+        <rect class="i-techo2" x="170" y="300" width="60" height="70" rx="3"/><circle class="i-osc" cx="220" cy="336" r="3"/>
+        <rect class="i-osc" x="236" y="294" width="16" height="12" rx="3"/><circle class="i-menta i-parpadeo" cx="244" cy="300" r="3"/>
+        <g class="i-vuelo"><rect class="i-osc" x="490" y="200" width="70" height="120" rx="12"/><rect class="i-blanco" x="497" y="214" width="56" height="88" rx="5"/><rect class="i-menta" x="503" y="222" width="44" height="22" rx="5"/><rect class="i-gris" x="503" y="252" width="44" height="6" rx="3"/><rect class="i-gris" x="503" y="264" width="30" height="6" rx="3"/></g>
+        <path class="i-trazo-nar" d="M440 260 Q470 240 488 250"/>
+        <circle class="i-luz" cx="520" cy="70" r="30"/><circle class="i-nar" cx="520" cy="70" r="17"/>
+      </svg></div>
+  </div>
+</section>
+
+<section id="que-es">
+  <div class="envoltura">
+    <span class="etiqueta">En una frase</span>
+    <p class="frase">Una casa inteligente no es una casa llena de pantallas: es una casa que <mark>avisa</mark> cuando algo anda mal y <mark>hace sola</mark> lo repetitivo, mientras vos seguís decidiendo.</p>
+    <div class="analogia">
+      <svg viewBox="0 0 160 120" role="img" aria-labelledby="ac-t"><title id="ac-t">Un perro guardián junto a una casa</title><rect class="i-casa" x="20" y="44" width="70" height="60" rx="3"/><path class="i-techo" d="M12 46 L55 14 L98 46Z"/><ellipse class="i-nar" cx="122" cy="86" rx="24" ry="14"/><circle class="i-nar" cx="142" cy="70" r="11"/><circle class="i-osc" cx="146" cy="68" r="2"/><path class="i-trazo-osc" d="M100 84 l-10 -10"/></svg>
+      <p><strong>Pensalo como un buen perro guardián.</strong> No necesita entender todo: ladra si entra alguien, si huele humo o si se inunda el lavadero. Una casa inteligente es eso, más algunas manos extra que apagan luces o riegan el jardín.</p>
+    </div>
+  </div>
+</section>
+
+<section id="para-que" class="alterna">
+  <div class="envoltura">
+    <span class="etiqueta">Para qué sirve</span>
+    <h2>Ocho cosas que resuelve</h2>
+    <div class="tarjetas">
+      <article class="tarjeta"><div class="tarjeta__icono" aria-hidden="true">🔥</div><h3>Humo, gas y agua</h3><p>Un sensor de humo o de agua bajo el lavarropas te avisa al celular aunque no estés. Una válvula puede cortar el agua sola.</p></article>
+      <article class="tarjeta"><div class="tarjeta__icono" aria-hidden="true">🚪</div><h3>Puertas y ventanas</h3><p>Te avisa si quedó una ventana abierta antes de la tormenta o si alguien abre la puerta cuando no hay nadie.</p></article>
+      <article class="tarjeta"><div class="tarjeta__icono" aria-hidden="true">💡</div><h3>Luces</h3><p>Se prenden al anochecer, se apagan cuando no hay nadie y simulan presencia si te vas de viaje.</p></article>
+      <article class="tarjeta"><div class="tarjeta__icono" aria-hidden="true">⚡</div><h3>Gastar menos luz</h3><p>Ves qué aparato consume más, programás el termotanque y el aire, y con paneles solares generás parte de tu energía.</p></article>
+      <article class="tarjeta"><div class="tarjeta__icono" aria-hidden="true">🌧️</div><h3>Riego y lluvia</h3><p>El riego no arranca si llovió o va a llover. Sirve también la alerta municipal de lluvia fuerte.</p></article>
+      <article class="tarjeta"><div class="tarjeta__icono" aria-hidden="true">👵</div><h3>Cuidar a mayores</h3><p>Un botón de ayuda, un sensor que avisa si alguien no se levantó a la hora de siempre, recordatorio de remedios. Siempre con su consentimiento.</p></article>
+      <article class="tarjeta"><div class="tarjeta__icono" aria-hidden="true">🔌</div><h3>Cortes de luz</h3><p>Te avisa si se cortó la luz (y la heladera está apagada) y una batería mantiene internet y la alarma.</p></article>
+      <article class="tarjeta"><div class="tarjeta__icono" aria-hidden="true">🎥</div><h3>Cámaras que no espían</h3><p>Cámaras que graban en tu casa, no en la nube de una empresa, y que no apuntan a la vereda ni al vecino.</p></article>
+    </div>
+  </div>
+</section>
+
+<section id="niveles">
+  <div class="envoltura">
+    <span class="etiqueta">Por dónde empezar</span>
+    <h2>Tres niveles, de menos a más</h2>
+    <div class="niveles">
+      <article class="nivel-casa"><em>Nivel 1 · básico</em><b>USD 150 – 400</b><ul><li>Detector de humo con aviso</li><li>Sensor de agua en lavadero y baño</li><li>2 o 3 enchufes inteligentes</li><li>Sensores en la puerta principal</li></ul><p>Se instala en una tarde, sin obra ni electricista.</p></article>
+      <article class="nivel-casa"><em>Nivel 2 · intermedio</em><b>USD 800 – 2.500</b><ul><li>Un “cerebro” local que une todo</li><li>Luces y persianas automáticas</li><li>Medición de consumo eléctrico</li><li>Cámaras con grabación en casa</li><li>Cerradura con código</li></ul><p>Conviene un electricista matriculado para tableros y llaves.</p></article>
+      <article class="nivel-casa"><em>Nivel 3 · completo</em><b>USD 5.000 – 15.000</b><ul><li>Paneles solares y batería</li><li>Riego automático</li><li>Alarma integrada con aviso</li><li>Válvula de corte de agua</li><li>Asistencia para adultos mayores</li></ul><p>Se planifica como una obra, idealmente al construir o reformar.</p></article>
+    </div>
+    <p class="fuentes">Precios orientativos con referencias internacionales; en Argentina varían por impuestos e importación.</p>
+  </div>
+</section>
+
+<section id="reglas" class="alterna">
+  <div class="envoltura">
+    <span class="etiqueta">Sin regalar tus datos</span>
+    <h2>Cinco reglas de oro</h2>
+    <ul class="lista-check">
+      <li><strong>Que funcione sin internet.</strong> Si la empresa cierra o se corta la conexión, la casa tiene que seguir andando.</li>
+      <li><strong>Cambiá las contraseñas de fábrica</strong> y usá una distinta en cada aparato.</li>
+      <li><strong>Cámaras adentro con cuidado:</strong> que las sepa toda la familia y quien trabaje en la casa; afuera, que no graben la vereda ni la casa del vecino.</li>
+      <li><strong>Los aparatos “inteligentes”, en su propia red de Wi-Fi</strong>, separada de la computadora y el celular.</li>
+      <li><strong>Actualizalos.</strong> Un aparato sin actualizaciones es una puerta abierta.</li>
+    </ul>
+  </div>
+</section>
+
+<section id="preguntas">
+  <div class="envoltura">
+    <span class="etiqueta">Preguntas frecuentes</span>
+    <h2>Lo que más se pregunta</h2>
+    <div class="faq">
+      <details><summary>¿Tengo que cambiar toda la instalación eléctrica?</summary><p>No. El nivel 1 no necesita obra. Para llaves y tableros, conviene un electricista matriculado que respete la reglamentación eléctrica.</p></details>
+      <details><summary>¿Necesito Alexa o Google?</summary><p>No es obligatorio. Se puede usar un sistema local, que no manda tus datos a ninguna empresa. Los asistentes de voz son opcionales.</p></details>
+      <details><summary>¿Y si alquilo?</summary><p>Elegí aparatos que se enchufan o se pegan, sin perforar ni tocar la instalación, y llevátelos al mudarte.</p></details>
+      <details><summary>¿Me conecto con el barrio o la ciudad?</summary><p>Puede recibir las alertas de lluvia del municipio o los avisos del barrio, pero tu casa no le manda datos a nadie si no querés.</p></details>
+    </div>
+    <div class="otra-version">
+      <p><strong>¿Lo vas a instalar vos o un técnico?</strong> La versión técnica tiene los protocolos, la red, los equipos y ejemplos de automatizaciones.</p>
+      <a class="boton" href="casa-tecnico.html">Versión técnica</a>
+    </div>
+    <p class="fuentes">Proyecto elaborado con asistencia de inteligencia artificial y revisión humana. Ver la <a href="privacidad.html">política de privacidad</a>.</p>
+  </div>
+</section>
+
+</main>
+
+<!-- pie:inicio -->
+<footer class="pie">
+  <div class="envoltura">
+    <div class="pie__marca"><img src="assets/logos/logo-horizontal-claro.svg" alt="LSM Ciudad Inteligente" width="240" height="60">
+      <span>© 2009–<span data-anio>2026</span> · Hernando A. Gigliotti</span>
+      <span><a href="ciudad-hoy.html">La ciudad hoy</a> · <a href="privacidad.html">Política de privacidad del sitio</a> · <a href="#" data-revisar-cookies>Cookies</a></span></div>
+    <div class="pie__mapa">
+      <div><b>Proyecto 2009</b><a href="archivo-2009.html">Archivo 2009</a><a href="fallas-2009.html">Fallas 2009</a></div>
+      <div><b>Proyecto 2026</b><a href="en-simple.html">En simple</a><a href="plan-maestro.html">Versión técnica</a><a href="proyecto-2026.html">Mapa, costos y cronograma</a></div>
+      <div><b>Barrio privado inteligente</b><a href="barrio-simple.html">En simple</a><a href="barrio-tecnico.html">Versión técnica</a></div>
+      <div><b>Casa particular inteligente</b><a href="casa-simple.html">En simple</a><a href="casa-tecnico.html">Versión técnica</a></div>
+      <div><b>Privacidad y seguridad</b><a href="datos-personales.html">Datos personales</a><a href="seguridad.html">Seguridad</a></div>
+    </div>
+  </div>
+</footer>
+<!-- pie:fin -->
+<div class="consent" data-consent hidden role="dialog" aria-label="Cookies">
+  <p>Usamos Google Analytics para saber cuántas personas visitan el sitio. Solo se activa si aceptás. <a href="privacidad.html#cookies">Más información</a>.</p>
+  <div><button class="boton" data-elegir="si">Aceptar</button><button class="boton boton--sec" data-elegir="no">Rechazar</button></div>
+</div>
+</body>
+</html>

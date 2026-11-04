@@ -1,0 +1,275 @@
+<!doctype html>
+<html lang="es-AR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://www.googletagmanager.com; connect-src 'self' https://*.google-analytics.com https://*.analytics.google.com https://www.googletagmanager.com; img-src 'self' data: https://*.google-analytics.com https://www.googletagmanager.com; style-src 'self'; font-src 'self'; base-uri 'self'; form-action 'self'; object-src 'none'; upgrade-insecure-requests">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <title>Casa particular inteligente · versión técnica · LSM Ciudad Inteligente</title>
+  <meta name="description" content="Diseño técnico de una casa inteligente local: protocolos, red segmentada, equipos y costos, automatizaciones, energía, cuidado de mayores y privacidad.">
+  <meta property="og:title" content="Casa particular inteligente · versión técnica · LSM Ciudad Inteligente">
+  <meta property="og:image" content="https://hagigliotti.github.io/lsm_ciudad_inteligente/assets/logos/portada.jpg">
+  <meta name="theme-color" content="#0d1f18">
+  <link rel="icon" href="assets/logos/isotipo.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/css/estilo.css">
+  <script type="module" src="assets/js/archivo.js"></script>
+  <script type="module" src="assets/js/app.js"></script>
+</head>
+<body>
+<a class="salto" href="#contenido">Saltar al contenido</a>
+<!-- menu:inicio -->
+<header class="barra">
+  <div class="envoltura">
+    <a class="barra__marca" href="index.html"><img src="assets/logos/isotipo.svg" alt="" width="36" height="36">LSM</a>
+    <button class="menu__boton" type="button" aria-expanded="false" aria-controls="menu-principal" data-menu-boton>Menú</button>
+    <nav class="menu" id="menu-principal" aria-label="Menú principal">
+      <ul class="menu__lista">
+        <li><a class="menu__link" href="ciudad-hoy.html">La ciudad hoy</a></li>
+        <li>
+          <details class="menu__grupo">
+            <summary>Proyecto 2009 <i>original</i></summary>
+            <ul>
+              <li><a href="archivo-2009.html"><b>Archivo 2009</b><small>El proyecto original completo, tal como se publicó</small></a></li>
+              <li><a href="fallas-2009.html"><b>Fallas 2009</b><small>Qué le faltó y qué cambió desde entonces</small></a></li>
+            </ul>
+          </details>
+        </li>
+        <li>
+          <details class="menu__grupo">
+            <summary>Proyecto 2026 <i>actualización</i></summary>
+            <ul>
+              <li><a href="en-simple.html"><b>En simple</b><small>Explicado fácil, con dibujos y ejemplos</small></a></li>
+              <li><a href="plan-maestro.html"><b>Versión técnica</b><small>Plan Maestro 2027–2036 completo</small></a></li>
+              <li><a href="proyecto-2026.html"><b>Mapa, costos y cronograma</b><small>Dónde va cada cosa, cuánto cuesta y cuándo</small></a></li>
+            </ul>
+          </details>
+        </li>
+        <li>
+          <details class="menu__grupo">
+            <summary>Barrio privado inteligente <i>nuevo</i></summary>
+            <ul>
+              <li><a href="barrio-simple.html"><b>En simple</b><small>Qué cambia para quien vive en el barrio</small></a></li>
+              <li><a href="barrio-tecnico.html"><b>Versión técnica</b><small>Arquitectura, equipos, reglamento y costos</small></a></li>
+            </ul>
+          </details>
+        </li>
+        <li>
+          <details class="menu__grupo menu__grupo--activo">
+            <summary>Casa particular inteligente <i>nuevo</i></summary>
+            <ul>
+              <li><a href="casa-simple.html"><b>En simple</b><small>Qué se puede automatizar y por dónde empezar</small></a></li>
+              <li><a href="casa-tecnico.html" aria-current="page"><b>Versión técnica</b><small>Equipos, protocolos, instalación y costos</small></a></li>
+            </ul>
+          </details>
+        </li>
+        <li>
+          <details class="menu__grupo">
+            <summary>Privacidad y seguridad</summary>
+            <ul>
+              <li><a href="datos-personales.html"><b>Datos personales</b><small>Sensibles y no tan sensibles: qué se protege y cómo</small></a></li>
+              <li><a href="seguridad.html"><b>Seguridad</b><small>Cómo se protegen el sitio y los sistemas</small></a></li>
+            </ul>
+          </details>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>
+<!-- menu:fin -->
+
+<main id="contenido">
+
+<section class="proy-portada">
+  <div class="envoltura">
+    <span class="etiqueta">Casa particular inteligente · versión técnica</span>
+    <h1>Casa inteligente local, segura y abierta</h1>
+    <p class="intro">Diseño de referencia para una vivienda en la zona de Libertador San Martín: control local (sin depender de la nube), protocolos abiertos, red segmentada, seguridad eléctrica y privacidad. Se puede construir por niveles y crecer sin cambiar de plataforma.</p>
+    <div class="proy-chips">
+      <div><b>Local primero</b><span>funciona sin internet</span></div>
+      <div><b>Matter · Zigbee · Thread</b><span>protocolos abiertos</span></div>
+      <div><b>3 niveles</b><span>de USD 150 a 15.000</span></div>
+      <div><b>2 redes</b><span>personal e IoT separadas</span></div>
+    </div>
+    <div class="versiones"><a class="version-chip" href="casa-simple.html"><b>¿Preferís la explicación fácil?</b> Ver la versión simple →</a></div>
+  </div>
+</section>
+
+<div class="envoltura arch-cuerpo">
+  <nav class="arch-menu" aria-label="Capítulos">
+    <p class="arch-menu__tit">Capítulos</p>
+    <ol>
+      <li><a href="#arquitectura"><span>1</span>Arquitectura</a></li>
+      <li><a href="#protocolos"><span>2</span>Protocolos</a></li>
+      <li><a href="#red"><span>3</span>Red</a></li>
+      <li><a href="#equipos"><span>4</span>Equipos y costos</a></li>
+      <li><a href="#automatizaciones"><span>5</span>Automatizaciones</a></li>
+      <li><a href="#energia"><span>6</span>Energía</a></li>
+      <li><a href="#cuidado"><span>7</span>Cuidado de mayores</a></li>
+      <li><a href="#seguridad"><span>8</span>Seguridad y privacidad</a></li>
+      <li><a href="#instalacion"><span>9</span>Instalación</a></li>
+    </ol>
+  </nav>
+  <div>
+
+<article class="cap" id="arquitectura" data-cap>
+  <div class="cap__cab"><div class="cap__num">1</div><div><h2>Arquitectura</h2></div></div>
+  <div class="cap__cuerpo">
+    <figure class="figura">
+      <svg viewBox="0 0 900 260" role="img" aria-labelledby="ca-t">
+        <title id="ca-t">Arquitectura de la casa: sensores Zigbee y Thread, enchufes y cámaras se conectan a un controlador local; el controlador tiene una salida opcional a internet por VPN para avisos al celular</title>
+        <defs><marker id="cfl" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path class="d-punta" d="M0 0 10 5 0 10z"/></marker></defs>
+        <rect class="d-caja" x="20" y="20" width="200" height="44" rx="10"/><text class="d-txt" x="120" y="47" text-anchor="middle">Sensores Zigbee / Thread</text>
+        <rect class="d-caja" x="20" y="108" width="200" height="44" rx="10"/><text class="d-txt" x="120" y="135" text-anchor="middle">Enchufes, llaves, válvula</text>
+        <rect class="d-caja" x="20" y="196" width="200" height="44" rx="10"/><text class="d-txt" x="120" y="223" text-anchor="middle">Cámaras (red IoT)</text>
+        <path class="d-linea" d="M222 42 L330 116" marker-end="url(#cfl)"/><path class="d-linea" d="M222 130 H328" marker-end="url(#cfl)"/><path class="d-linea" d="M222 218 L330 144" marker-end="url(#cfl)"/>
+        <rect class="d-caja--osc" x="334" y="92" width="250" height="76" rx="14"/><text class="d-txt--claro" x="459" y="124" text-anchor="middle">Controlador local</text><text class="d-txt--chico" x="459" y="146" text-anchor="middle">Home Assistant + grabador</text>
+        <path class="d-linea--nar" d="M586 130 H680"/>
+        <rect class="d-caja--nar" x="684" y="70" width="196" height="44" rx="10"/><text class="d-txt" x="782" y="97" text-anchor="middle">VPN → tu celular</text>
+        <rect class="d-caja--menta" x="684" y="146" width="196" height="44" rx="10"/><text class="d-txt" x="782" y="173" text-anchor="middle">Alertas municipales</text>
+        <path class="d-linea" d="M680 168 H588" marker-end="url(#cfl)"/>
+      </svg>
+      <figcaption>Figura 1. Las decisiones se toman en la casa; internet es opcional y solo para avisos.</figcaption>
+    </figure>
+    <p>Principios: <strong>control local</strong> (las automatizaciones corren en el controlador, no en servidores de terceros), <strong>protocolos abiertos</strong> para poder mezclar marcas, <strong>degradación segura</strong> (si el controlador falla, las llaves de luz siguen funcionando a mano) y <strong>mínimos datos</strong>.</p>
+  </div>
+</article>
+
+<article class="cap" id="protocolos" data-cap>
+  <div class="cap__cab"><div class="cap__num">2</div><div><h2>Protocolos</h2></div></div>
+  <div class="cap__cuerpo">
+    <div class="desliza"><table class="tabla"><thead><tr><th>Protocolo</th><th>Para qué</th><th>A favor</th><th>En contra</th></tr></thead><tbody>
+      <tr><td>Zigbee</td><td>Sensores a pila, enchufes, llaves</td><td>Barato, red en malla, muy probado</td><td>Necesita coordinador; perfiles de algunas marcas</td></tr>
+      <tr><td>Thread + Matter</td><td>Equipos nuevos de varias marcas</td><td>Estándar común, local, IPv6</td><td>Ecosistema todavía en maduración</td></tr>
+      <tr><td>Z-Wave</td><td>Cerraduras y sensores</td><td>Menos interferencia</td><td>Más caro, oferta limitada en Argentina</td></tr>
+      <tr><td>Wi-Fi</td><td>Cámaras, enchufes con alimentación</td><td>No requiere puente</td><td>Consume más; muchos dependen de nube</td></tr>
+      <tr><td>Cableado (KNX, Modbus)</td><td>Obras nuevas, tableros</td><td>Máxima fiabilidad</td><td>Costo de instalación</td></tr>
+    </tbody></table></div>
+    <p>Regla práctica: sensores a pila por Zigbee o Thread; cámaras por cable de red con alimentación PoE cuando sea posible; equipos Wi-Fi solo si se pueden controlar localmente.</p>
+  </div>
+</article>
+
+<article class="cap" id="red" data-cap>
+  <div class="cap__cab"><div class="cap__num">3</div><div><h2>Red doméstica</h2></div></div>
+  <div class="cap__cuerpo">
+    <ul>
+      <li>Dos redes: <strong>personal</strong> (computadoras, celulares) e <strong>IoT</strong> (aparatos), con VLAN o un SSID separado; la red IoT no puede iniciar conexiones hacia la personal.</li>
+      <li>Cámaras sin acceso a internet: graban en el controlador o un grabador local.</li>
+      <li>Acceso desde afuera solo por VPN (por ejemplo, WireGuard); ningún puerto abierto en el router.</li>
+      <li>UPS para router, ONT y controlador: mantiene avisos durante cortes de luz.</li>
+      <li>Internet: fibra de la cooperativa o del proveedor local; Starlink o 4G como respaldo si los avisos son críticos (por ejemplo, cuidado de mayores).</li>
+    </ul>
+  </div>
+</article>
+
+<article class="cap" id="equipos" data-cap>
+  <div class="cap__cab"><div class="cap__num">4</div><div><h2>Equipos y costos de referencia</h2></div></div>
+  <div class="cap__cuerpo">
+    <div class="desliza"><table class="tabla"><thead><tr><th>Componente</th><th>Especificación</th><th>Criterio</th><th class="num">Precio</th></tr></thead><tbody><tr><td>Controlador</td><td>Home Assistant (equipo dedicado o mini PC) con respaldo automático</td><td>Local, código abierto, integra miles de marcas</td><td class="num">USD 100 – 300</td></tr><tr><td>Radio Zigbee o Thread</td><td>Coordinador USB o integrado</td><td>Sensores a pila por años, red en malla</td><td class="num">USD 30 – 60</td></tr><tr><td>Sensores</td><td>Apertura, movimiento, temperatura y humedad, agua, humo</td><td>Zigbee o Matter sobre Thread</td><td class="num">USD 15 – 50 c/u</td></tr><tr><td>Enchufes y llaves</td><td>Con medición de energía; llaves de luz con neutro</td><td>Matter, Zigbee o Wi-Fi local</td><td class="num">USD 15 – 60 c/u</td></tr><tr><td>Medición general</td><td>Pinza amperimétrica en el tablero</td><td>Instala electricista matriculado</td><td class="num">USD 50 – 150</td></tr><tr><td>Cámaras</td><td>IP con ONVIF/RTSP, grabador local (Frigate o NVR)</td><td>Sin nube obligatoria</td><td class="num">USD 60 – 250 c/u</td></tr><tr><td>Cerradura</td><td>Código y llave mecánica de respaldo</td><td>Zigbee, Z-Wave o Matter</td><td class="num">USD 150 – 400</td></tr><tr><td>Válvula de agua</td><td>Motorizada en la entrada</td><td>Corte ante pérdida</td><td class="num">USD 80 – 200</td></tr><tr><td>Solar</td><td>3–5 kWp, inversor, opcional batería</td><td>Según régimen de la distribuidora</td><td class="num">USD 3.000 – 10.000</td></tr><tr><td>Red</td><td>Router con VLAN o SSID para IoT, UPS para router y controlador</td><td>Separación de redes</td><td class="num">USD 100 – 300</td></tr></tbody></table></div>
+    <div class="nota-rev"><strong>Precios</strong><p>Referencias internacionales en dólares de 2026; en Argentina varían por impuestos e importación. Verificar que cada equipo de radio esté homologado por ENACOM.</p></div>
+  </div>
+</article>
+
+<article class="cap" id="automatizaciones" data-cap>
+  <div class="cap__cab"><div class="cap__num">5</div><div><h2>Automatizaciones de ejemplo</h2></div></div>
+  <div class="cap__cuerpo">
+    <div class="desliza"><table class="tabla"><thead><tr><th>Si…</th><th>Entonces…</th></tr></thead><tbody>
+      <tr><td>El sensor de agua detecta líquido</td><td>Cierra la válvula de entrada y avisa al celular.</td></tr>
+      <tr><td>Se va el último de la casa</td><td>Apaga luces y aire, arma la alarma, avisa si quedó una ventana abierta.</td></tr>
+      <tr><td>Hay alerta de tormenta</td><td>Avisa qué ventanas están abiertas y suspende el riego.</td></tr>
+      <tr><td>Se corta la luz más de 30 minutos</td><td>Avisa; al volver, enciende la heladera de forma escalonada.</td></tr>
+      <tr><td>No hay movimiento en la cocina a las 10 (adulto mayor que vive solo)</td><td>Envía un aviso a un familiar, si la persona lo autorizó.</td></tr>
+      <tr><td>Hay excedente solar al mediodía</td><td>Enciende el termotanque eléctrico o carga el auto.</td></tr>
+    </tbody></table></div>
+    <pre><code># Home Assistant: cortar el agua ante una pérdida
+automation:
+  - alias: "Pérdida de agua"
+    trigger:
+      - platform: state
+        entity_id: binary_sensor.agua_lavadero
+        to: "on"
+    action:
+      - service: valve.close_valve
+        target: { entity_id: valve.entrada_agua }
+      - service: notify.celular
+        data: { message: "Se detectó agua en el lavadero. Cerré la llave de entrada." }</code></pre>
+  </div>
+</article>
+
+<article class="cap" id="energia" data-cap>
+  <div class="cap__cab"><div class="cap__num">6</div><div><h2>Energía</h2></div></div>
+  <div class="cap__cuerpo">
+    <ul>
+      <li>Medir primero: pinza en el tablero y enchufes con medición durante un mes para saber qué consume.</li>
+      <li>Termotanque y aire acondicionado programados según horario y presencia.</li>
+      <li>Solar fotovoltaica de 3 a 5 kWp conectada a red, con medidor bidireccional si la distribuidora (ENERSA o cooperativa) lo habilita bajo el régimen de generación distribuida; con batería si los cortes son frecuentes.</li>
+      <li>Termotanque solar como alternativa económica para agua caliente.</li>
+    </ul>
+  </div>
+</article>
+
+<article class="cap" id="cuidado" data-cap>
+  <div class="cap__cab"><div class="cap__num">7</div><div><h2>Cuidado de adultos mayores</h2></div></div>
+  <div class="cap__cuerpo">
+    <p>Con 12 geriátricos y una comunidad de salud fuerte, la ciudad tiene muchas personas mayores que viven solas o con cuidadores.</p>
+    <ul>
+      <li>Botón de ayuda inalámbrico y aviso de inactividad por sensores de movimiento, sin cámaras en dormitorios ni baños.</li>
+      <li>Recordatorio de medicación por parlante o luz; sin registrar diagnósticos.</li>
+      <li>Consentimiento explícito de la persona, que puede apagar el sistema; los datos de salud son <a href="datos-personales.html">datos sensibles</a>.</li>
+    </ul>
+  </div>
+</article>
+
+<article class="cap" id="seguridad" data-cap>
+  <div class="cap__cab"><div class="cap__num">8</div><div><h2>Seguridad y privacidad</h2></div></div>
+  <div class="cap__cuerpo">
+    <ul class="lista-check">
+      <li>Contraseñas únicas y doble factor en el controlador.</li>
+      <li>Actualizaciones mensuales y retiro de equipos sin soporte.</li>
+      <li>Copia de seguridad del controlador fuera de la casa, cifrada.</li>
+      <li>Cámaras exteriores con máscaras de privacidad sobre la vía pública y casas vecinas.</li>
+      <li>Avisar a visitas y personal de la casa qué cámaras hay.</li>
+      <li>Asistentes de voz opcionales y con el micrófono apagable.</li>
+    </ul>
+  </div>
+</article>
+
+<article class="cap" id="instalacion" data-cap>
+  <div class="cap__cab"><div class="cap__num">9</div><div><h2>Instalación por etapas</h2></div></div>
+  <div class="cap__cuerpo">
+    <div class="ruta ruta--3">
+      <div class="ruta__fase"><em>Nivel 1 · un día</em><h4>Avisos</h4><p>Humo, agua, puerta y enchufes, con la app del fabricante o directo al controlador.</p></div>
+      <div class="ruta__fase"><em>Nivel 2 · un mes</em><h4>Control local</h4><p>Controlador, red IoT, luces, medición, cámaras locales.</p></div>
+      <div class="ruta__fase"><em>Nivel 3 · una obra</em><h4>Energía y agua</h4><p>Solar, válvula, riego, alarma, cuidado de mayores.</p></div>
+    </div>
+    <p>Todo trabajo en el tablero o las llaves lo hace un electricista matriculado, según la reglamentación de la AEA.</p>
+    <p class="fuentes">Proyecto elaborado con asistencia de inteligencia artificial y revisión humana. Las marcas y programas citados son ejemplos, no recomendaciones comerciales. Ver la <a href="privacidad.html">política de privacidad</a>.</p>
+  </div>
+</article>
+
+  </div>
+</div>
+
+</main>
+
+<!-- pie:inicio -->
+<footer class="pie">
+  <div class="envoltura">
+    <div class="pie__marca"><img src="assets/logos/logo-horizontal-claro.svg" alt="LSM Ciudad Inteligente" width="240" height="60">
+      <span>© 2009–<span data-anio>2026</span> · Hernando A. Gigliotti</span>
+      <span><a href="ciudad-hoy.html">La ciudad hoy</a> · <a href="privacidad.html">Política de privacidad del sitio</a> · <a href="#" data-revisar-cookies>Cookies</a></span></div>
+    <div class="pie__mapa">
+      <div><b>Proyecto 2009</b><a href="archivo-2009.html">Archivo 2009</a><a href="fallas-2009.html">Fallas 2009</a></div>
+      <div><b>Proyecto 2026</b><a href="en-simple.html">En simple</a><a href="plan-maestro.html">Versión técnica</a><a href="proyecto-2026.html">Mapa, costos y cronograma</a></div>
+      <div><b>Barrio privado inteligente</b><a href="barrio-simple.html">En simple</a><a href="barrio-tecnico.html">Versión técnica</a></div>
+      <div><b>Casa particular inteligente</b><a href="casa-simple.html">En simple</a><a href="casa-tecnico.html">Versión técnica</a></div>
+      <div><b>Privacidad y seguridad</b><a href="datos-personales.html">Datos personales</a><a href="seguridad.html">Seguridad</a></div>
+    </div>
+  </div>
+</footer>
+<!-- pie:fin -->
+<div class="consent" data-consent hidden role="dialog" aria-label="Cookies">
+  <p>Usamos Google Analytics para saber cuántas personas visitan el sitio. Solo se activa si aceptás. <a href="privacidad.html#cookies">Más información</a>.</p>
+  <div><button class="boton" data-elegir="si">Aceptar</button><button class="boton boton--sec" data-elegir="no">Rechazar</button></div>
+</div>
+</body>
+</html>

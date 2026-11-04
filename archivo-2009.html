@@ -15,17 +15,65 @@
 </head>
 <body>
 <a class="salto" href="#contenido">Saltar al contenido</a>
+<!-- menu:inicio -->
 <header class="barra">
   <div class="envoltura">
     <a class="barra__marca" href="index.html"><img src="assets/logos/isotipo.svg" alt="" width="36" height="36">LSM</a>
-    <nav aria-label="Secciones">
-      <a class="opc" href="index.html">Análisis</a>
-      <a href="proyecto-2026.html">Proyecto 2026</a>
-      <a href="archivo-2009.html" aria-current="page">Archivo 2009</a>
-      <a class="opc2" href="privacidad.html">Privacidad</a>
+    <button class="menu__boton" type="button" aria-expanded="false" aria-controls="menu-principal" data-menu-boton>Menú</button>
+    <nav class="menu" id="menu-principal" aria-label="Menú principal">
+      <ul class="menu__lista">
+        <li><a class="menu__link" href="ciudad-hoy.html">La ciudad hoy</a></li>
+        <li>
+          <details class="menu__grupo menu__grupo--activo">
+            <summary>Proyecto 2009 <i>original</i></summary>
+            <ul>
+              <li><a href="archivo-2009.html" aria-current="page"><b>Archivo 2009</b><small>El proyecto original completo, tal como se publicó</small></a></li>
+              <li><a href="fallas-2009.html"><b>Fallas 2009</b><small>Qué le faltó y qué cambió desde entonces</small></a></li>
+            </ul>
+          </details>
+        </li>
+        <li>
+          <details class="menu__grupo">
+            <summary>Proyecto 2026 <i>actualización</i></summary>
+            <ul>
+              <li><a href="en-simple.html"><b>En simple</b><small>Explicado fácil, con dibujos y ejemplos</small></a></li>
+              <li><a href="plan-maestro.html"><b>Versión técnica</b><small>Plan Maestro 2027–2036 completo</small></a></li>
+              <li><a href="proyecto-2026.html"><b>Mapa, costos y cronograma</b><small>Dónde va cada cosa, cuánto cuesta y cuándo</small></a></li>
+            </ul>
+          </details>
+        </li>
+        <li>
+          <details class="menu__grupo">
+            <summary>Barrio privado inteligente <i>nuevo</i></summary>
+            <ul>
+              <li><a href="barrio-simple.html"><b>En simple</b><small>Qué cambia para quien vive en el barrio</small></a></li>
+              <li><a href="barrio-tecnico.html"><b>Versión técnica</b><small>Arquitectura, equipos, reglamento y costos</small></a></li>
+            </ul>
+          </details>
+        </li>
+        <li>
+          <details class="menu__grupo">
+            <summary>Casa particular inteligente <i>nuevo</i></summary>
+            <ul>
+              <li><a href="casa-simple.html"><b>En simple</b><small>Qué se puede automatizar y por dónde empezar</small></a></li>
+              <li><a href="casa-tecnico.html"><b>Versión técnica</b><small>Equipos, protocolos, instalación y costos</small></a></li>
+            </ul>
+          </details>
+        </li>
+        <li>
+          <details class="menu__grupo">
+            <summary>Privacidad y seguridad</summary>
+            <ul>
+              <li><a href="datos-personales.html"><b>Datos personales</b><small>Sensibles y no tan sensibles: qué se protege y cómo</small></a></li>
+              <li><a href="seguridad.html"><b>Seguridad</b><small>Cómo se protegen el sitio y los sistemas</small></a></li>
+            </ul>
+          </details>
+        </li>
+      </ul>
     </nav>
   </div>
 </header>
+<!-- menu:fin -->
 
 <div class="arch-portada">
   <div class="envoltura">
@@ -783,13 +831,22 @@ Existe un punto crítico, y se lo encuentra en el lugar de mayor acercamiento de
   </div>
 </main>
 
+<!-- pie:inicio -->
 <footer class="pie">
   <div class="envoltura">
-    <img src="assets/logos/logo-horizontal-claro.svg" alt="LSM Ciudad Inteligente" width="240" height="60">
-    <div class="pie__links"><a href="index.html">Análisis</a><a href="proyecto-2026.html">Proyecto 2026</a><a href="privacidad.html">Privacidad</a><a href="seguridad.html">Seguridad</a><a href="#" data-revisar-cookies>Cookies</a></div>
-    <span>© 2009–2026 · Hernando A. Gigliotti</span>
+    <div class="pie__marca"><img src="assets/logos/logo-horizontal-claro.svg" alt="LSM Ciudad Inteligente" width="240" height="60">
+      <span>© 2009–<span data-anio>2026</span> · Hernando A. Gigliotti</span>
+      <span><a href="ciudad-hoy.html">La ciudad hoy</a> · <a href="privacidad.html">Política de privacidad del sitio</a> · <a href="#" data-revisar-cookies>Cookies</a></span></div>
+    <div class="pie__mapa">
+      <div><b>Proyecto 2009</b><a href="archivo-2009.html">Archivo 2009</a><a href="fallas-2009.html">Fallas 2009</a></div>
+      <div><b>Proyecto 2026</b><a href="en-simple.html">En simple</a><a href="plan-maestro.html">Versión técnica</a><a href="proyecto-2026.html">Mapa, costos y cronograma</a></div>
+      <div><b>Barrio privado inteligente</b><a href="barrio-simple.html">En simple</a><a href="barrio-tecnico.html">Versión técnica</a></div>
+      <div><b>Casa particular inteligente</b><a href="casa-simple.html">En simple</a><a href="casa-tecnico.html">Versión técnica</a></div>
+      <div><b>Privacidad y seguridad</b><a href="datos-personales.html">Datos personales</a><a href="seguridad.html">Seguridad</a></div>
+    </div>
   </div>
 </footer>
+<!-- pie:fin -->
 <div class="consent" data-consent hidden role="dialog" aria-label="Cookies">
   <p>Usamos Google Analytics para saber cuántas personas visitan el sitio. Solo se activa si aceptás. <a href="privacidad.html#cookies">Más información</a>.</p>
   <div><button class="boton" data-elegir="si">Aceptar</button><button class="boton boton--sec" data-elegir="no">Rechazar</button></div>

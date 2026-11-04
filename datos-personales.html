@@ -1,0 +1,199 @@
+<!doctype html>
+<html lang="es-AR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://www.googletagmanager.com; connect-src 'self' https://*.google-analytics.com https://*.analytics.google.com https://www.googletagmanager.com; img-src 'self' data: https://*.google-analytics.com https://www.googletagmanager.com; style-src 'self'; font-src 'self'; base-uri 'self'; form-action 'self'; object-src 'none'; upgrade-insecure-requests">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <title>Datos personales sensibles y no tan sensibles · LSM Ciudad Inteligente</title>
+  <meta name="description" content="Qué datos personales usan los proyectos de ciudad, barrio y casa inteligente, cuáles son sensibles según la Ley 25.326 y cómo se protege cada uno.">
+  <meta property="og:title" content="Datos personales sensibles y no tan sensibles · LSM Ciudad Inteligente">
+  <meta property="og:image" content="https://hagigliotti.github.io/lsm_ciudad_inteligente/assets/logos/portada.jpg">
+  <meta name="theme-color" content="#0d1f18">
+  <link rel="icon" href="assets/logos/isotipo.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/css/estilo.css">
+  <script type="module" src="assets/js/app.js"></script>
+</head>
+<body>
+<a class="salto" href="#contenido">Saltar al contenido</a>
+<!-- menu:inicio -->
+<header class="barra">
+  <div class="envoltura">
+    <a class="barra__marca" href="index.html"><img src="assets/logos/isotipo.svg" alt="" width="36" height="36">LSM</a>
+    <button class="menu__boton" type="button" aria-expanded="false" aria-controls="menu-principal" data-menu-boton>Menú</button>
+    <nav class="menu" id="menu-principal" aria-label="Menú principal">
+      <ul class="menu__lista">
+        <li><a class="menu__link" href="ciudad-hoy.html">La ciudad hoy</a></li>
+        <li>
+          <details class="menu__grupo">
+            <summary>Proyecto 2009 <i>original</i></summary>
+            <ul>
+              <li><a href="archivo-2009.html"><b>Archivo 2009</b><small>El proyecto original completo, tal como se publicó</small></a></li>
+              <li><a href="fallas-2009.html"><b>Fallas 2009</b><small>Qué le faltó y qué cambió desde entonces</small></a></li>
+            </ul>
+          </details>
+        </li>
+        <li>
+          <details class="menu__grupo">
+            <summary>Proyecto 2026 <i>actualización</i></summary>
+            <ul>
+              <li><a href="en-simple.html"><b>En simple</b><small>Explicado fácil, con dibujos y ejemplos</small></a></li>
+              <li><a href="plan-maestro.html"><b>Versión técnica</b><small>Plan Maestro 2027–2036 completo</small></a></li>
+              <li><a href="proyecto-2026.html"><b>Mapa, costos y cronograma</b><small>Dónde va cada cosa, cuánto cuesta y cuándo</small></a></li>
+            </ul>
+          </details>
+        </li>
+        <li>
+          <details class="menu__grupo">
+            <summary>Barrio privado inteligente <i>nuevo</i></summary>
+            <ul>
+              <li><a href="barrio-simple.html"><b>En simple</b><small>Qué cambia para quien vive en el barrio</small></a></li>
+              <li><a href="barrio-tecnico.html"><b>Versión técnica</b><small>Arquitectura, equipos, reglamento y costos</small></a></li>
+            </ul>
+          </details>
+        </li>
+        <li>
+          <details class="menu__grupo">
+            <summary>Casa particular inteligente <i>nuevo</i></summary>
+            <ul>
+              <li><a href="casa-simple.html"><b>En simple</b><small>Qué se puede automatizar y por dónde empezar</small></a></li>
+              <li><a href="casa-tecnico.html"><b>Versión técnica</b><small>Equipos, protocolos, instalación y costos</small></a></li>
+            </ul>
+          </details>
+        </li>
+        <li>
+          <details class="menu__grupo menu__grupo--activo">
+            <summary>Privacidad y seguridad</summary>
+            <ul>
+              <li><a href="datos-personales.html" aria-current="page"><b>Datos personales</b><small>Sensibles y no tan sensibles: qué se protege y cómo</small></a></li>
+              <li><a href="seguridad.html"><b>Seguridad</b><small>Cómo se protegen el sitio y los sistemas</small></a></li>
+            </ul>
+          </details>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>
+<!-- menu:fin -->
+
+<main id="contenido">
+
+<section class="proy-portada">
+  <div class="envoltura">
+    <span class="etiqueta">Privacidad y seguridad</span>
+    <h1>Datos personales: sensibles y no tan sensibles</h1>
+    <p class="intro">Qué datos tocan los proyectos de ciudad, barrio y casa inteligente, cuáles la ley considera sensibles, cuáles no lo son pero igual pueden hacer daño, y qué regla se aplica a cada uno. La base es la Ley 25.326 de Protección de los Datos Personales de Argentina.</p>
+    <div class="proy-chips">
+      <div><b>Sensibles</b><span>la ley les da protección especial</span></div>
+      <div><b>Alto riesgo</b><span>no son sensibles, pero exponen mucho</span></div>
+      <div><b>Comunes</b><span>de contacto e identificación</span></div>
+      <div><b>No personales</b><span>agregados o anónimos</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="en-simple">
+  <div class="envoltura">
+    <span class="etiqueta">En simple</span>
+    <h2>Tres preguntas antes de guardar un dato</h2>
+    <ol class="ciclo ciclo--3">
+      <li><svg viewBox="0 0 64 64" aria-hidden="true"><circle class="i-fondo-icono" cx="32" cy="32" r="30"/><path class="i-icono" d="M24 24 a8 8 0 1 1 10 8 v6 M34 46 v1"/></svg><b>¿Hace falta?</b><span>Si el servicio funciona sin ese dato, no se pide.</span></li>
+      <li><svg viewBox="0 0 64 64" aria-hidden="true"><circle class="i-fondo-icono" cx="32" cy="32" r="30"/><circle class="i-icono" cx="32" cy="32" r="14"/><path class="i-icono" d="M32 24 V32 L38 36"/></svg><b>¿Por cuánto tiempo?</b><span>Cada dato tiene fecha de vencimiento y se borra solo.</span></li>
+      <li><svg viewBox="0 0 64 64" aria-hidden="true"><circle class="i-fondo-icono" cx="32" cy="32" r="30"/><rect class="i-icono" x="21" y="29" width="22" height="16" rx="3"/><path class="i-icono" d="M25 29 V24 a7 7 0 0 1 14 0 V29"/></svg><b>¿Quién lo ve?</b><span>Solo quien lo necesita para su tarea, y queda registrado.</span></li>
+    </ol>
+  </div>
+</section>
+
+<section id="clasificacion" class="alterna">
+  <div class="envoltura">
+    <span class="etiqueta">Clasificación</span>
+    <h2>Cada dato, su regla</h2>
+    <div class="desliza">
+      <table class="tabla tabla--datos">
+        <thead><tr><th>Dato</th><th>Nivel</th><th>Ejemplos</th><th>Ciudad</th><th>Barrio</th><th>Casa</th></tr></thead>
+        <tbody><tr><td>Salud</td><td><span class="estado-chip pend">Sensible</span></td><td>Diagnósticos, remedios, discapacidad, botón de ayuda de un adulto mayor</td><td>No se integra a la plataforma general</td><td>No se recoge</td><td>Solo en el hogar, con consentimiento</td></tr><tr><td>Origen étnico, religión, opiniones políticas, afiliación sindical, vida sexual</td><td><span class="estado-chip pend">Sensible</span></td><td>Asistencia a un templo, afiliación a un partido</td><td>Nunca se recoge</td><td>Nunca se recoge</td><td>Nunca se recoge</td></tr><tr><td>Biometría</td><td><span class="estado-chip alto">Alto riesgo</span></td><td>Rostro para reconocimiento, huella para abrir una puerta</td><td>Sin reconocimiento facial en vivo</td><td>No se usa para el acceso</td><td>Huella solo guardada en el propio equipo</td></tr><tr><td>Imágenes de cámaras</td><td><span class="estado-chip alto">Alto riesgo</span></td><td>Video de calles, accesos o del frente de una casa</td><td>Retención limitada y registro de quién mira</td><td>15 a 30 días, máscaras sobre lotes</td><td>Local, sin apuntar a la vereda</td></tr><tr><td>Patente y ubicación</td><td><span class="estado-chip alto">Alto riesgo</span></td><td>Lectura de patentes, GPS de un vehículo, historial de entradas</td><td>Solo coincidencias con alertas; el resto se borra</td><td>30 días</td><td>—</td></tr><tr><td>Consumo de agua y luz por hogar</td><td><span class="estado-chip alto">Alto riesgo</span></td><td>Revela horarios, ausencias y hábitos</td><td>Solo agregado por zona</td><td>El consorcio ve totales y alertas</td><td>Queda en la casa</td></tr><tr><td>DNI y número de trámite</td><td><span class="estado-chip alto">Alto riesgo</span></td><td>Identifica con certeza; permite fraudes</td><td>No se pide para el Wi-Fi ni reclamos</td><td>No se escanea ni se guarda imagen</td><td>—</td></tr><tr><td>Nombre, email, teléfono, dirección</td><td><span class="estado-chip ok">Común</span></td><td>Datos de contacto para un reclamo o una visita</td><td>Con finalidad declarada</td><td>Padrón del consorcio</td><td>—</td></tr><tr><td>Identificadores de equipos</td><td><span class="estado-chip ok">Común</span></td><td>MAC, IP, identificador de un sensor</td><td>Se anonimizan en estadísticas</td><td>Inventario interno</td><td>Red IoT separada</td></tr><tr><td>Datos agregados o anónimos</td><td><span class="estado-chip neutro">No personal</span></td><td>Cantidad de autos por hora, lluvia, nivel del arroyo</td><td>Se publican como datos abiertos</td><td>Tablero del barrio</td><td>—</td></tr></tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<section id="sensibles">
+  <div class="envoltura">
+    <span class="etiqueta">Lo que dice la ley</span>
+    <h2>Datos sensibles</h2>
+    <p class="intro">La Ley 25.326 (art. 2) llama <strong>datos sensibles</strong> a los que revelan origen racial y étnico, opiniones políticas, convicciones religiosas, filosóficas o morales, afiliación sindical, e información referida a la salud o a la vida sexual.</p>
+    <ul class="lista-check">
+      <li><strong>Nadie está obligado a darlos</strong> (art. 7).</li>
+      <li>Solo se pueden tratar con una razón de interés general autorizada por ley, o con fines estadísticos o científicos cuando no se puede identificar a la persona.</li>
+      <li>Está prohibido armar bases de datos que revelen directa o indirectamente datos sensibles, salvo excepciones legales.</li>
+      <li><strong>Biometría:</strong> según los criterios de la Agencia de Acceso a la Información Pública (Resolución 4/2019), un dato biométrico que identifica a una persona es sensible cuando puede revelar información adicional potencialmente discriminatoria, como el origen étnico o la salud. Este proyecto la trata siempre con el máximo cuidado.</li>
+    </ul>
+  </div>
+</section>
+
+<section id="no-tan-sensibles" class="alterna">
+  <div class="envoltura">
+    <span class="etiqueta">Los “no tan sensibles”</span>
+    <h2>Datos comunes que igual hay que cuidar</h2>
+    <p class="intro">Una patente, el consumo de agua o una grabación no son datos sensibles para la ley, pero cruzados dicen mucho: a qué hora salís, cuándo no hay nadie en casa, con quién te ves. Por eso el proyecto los trata como de <strong>alto riesgo</strong>:</p>
+    <div class="tarjetas">
+      <article class="tarjeta"><h3>Cámaras</h3><p>La Disposición 10/2015 pide carteles con finalidad y responsable, no captar más espacio público o de terceros que el necesario, no usar las imágenes para otra cosa y borrarlas al vencer el plazo fijado.</p></article>
+      <article class="tarjeta"><h3>Patentes y ubicación</h3><p>Permiten reconstruir recorridos. Se guardan solo las coincidencias con alertas o por el plazo corto que fije el reglamento.</p></article>
+      <article class="tarjeta"><h3>Consumos</h3><p>El consumo de luz o agua minuto a minuto muestra rutinas. Se usa agregado o para avisos al propio usuario.</p></article>
+      <article class="tarjeta"><h3>DNI</h3><p>No es sensible, pero facilita fraudes y robo de identidad. No se pide si no hace falta, y nunca se guarda una foto del documento.</p></article>
+    </div>
+  </div>
+</section>
+
+<section id="derechos">
+  <div class="envoltura">
+    <span class="etiqueta">Tus derechos</span>
+    <h2>Lo que podés pedir</h2>
+    <div class="dominios">
+      <div class="dominio"><h4>Acceso</h4><p>Saber qué datos tuyos hay y para qué. Es gratuito si lo pedís cada seis meses o más; deben responder en 10 días corridos (art. 14).</p></div>
+      <div class="dominio"><h4>Rectificación y supresión</h4><p>Corregir o borrar datos falsos, desactualizados o innecesarios, en 5 días hábiles (art. 16).</p></div>
+      <div class="dominio"><h4>Explicación</h4><p>Si una decisión automatizada te afecta, pedir que te expliquen la lógica usada (art. 15 y Res. 4/2019).</p></div>
+      <div class="dominio"><h4>Reclamo</h4><p>Si no te responden, reclamar ante la Agencia de Acceso a la Información Pública.</p></div>
+    </div>
+    <p class="fuentes">Para pedidos sobre los datos de este sitio, usá el formulario de la portada eligiendo “Pedido de privacidad”. La <a href="privacidad.html">política de privacidad del sitio</a> explica qué datos recoge esta web.</p>
+  </div>
+</section>
+
+<section id="fuentes" class="alterna">
+  <div class="envoltura">
+    <span class="etiqueta">Fuentes</span>
+    <ul class="fuentes">
+      <li><a href="https://www.argentina.gob.ar/normativa/nacional/64790/actualizacion" rel="noopener">Ley 25.326 de Protección de los Datos Personales, texto actualizado</a></li>
+      <li><a href="https://www.argentina.gob.ar/normativa/nacional/243335/texto" rel="noopener">Disposición 10/2015: videovigilancia</a></li>
+      <li><a href="https://beccarvarela.com/novedades/resolucion-de-la-agencia-de-acceso-a-la-informacion-publica-no42019/" rel="noopener">Beccar Varela: Resolución AAIP 4/2019, criterios orientadores</a></li>
+      <li><a href="https://www.marval.com/publicacion/regulacion-sobre-video-vigilancia-12624" rel="noopener">Marval O’Farrell Mairal: regulación sobre videovigilancia</a></li>
+      <li><a href="https://www.argentina.gob.ar/aaip" rel="noopener">Agencia de Acceso a la Información Pública</a></li>
+    </ul>
+    <p class="fuentes">Página elaborada con asistencia de inteligencia artificial y revisión humana. Es información general, no asesoramiento legal.</p>
+  </div>
+</section>
+
+</main>
+
+<!-- pie:inicio -->
+<footer class="pie">
+  <div class="envoltura">
+    <div class="pie__marca"><img src="assets/logos/logo-horizontal-claro.svg" alt="LSM Ciudad Inteligente" width="240" height="60">
+      <span>© 2009–<span data-anio>2026</span> · Hernando A. Gigliotti</span>
+      <span><a href="ciudad-hoy.html">La ciudad hoy</a> · <a href="privacidad.html">Política de privacidad del sitio</a> · <a href="#" data-revisar-cookies>Cookies</a></span></div>
+    <div class="pie__mapa">
+      <div><b>Proyecto 2009</b><a href="archivo-2009.html">Archivo 2009</a><a href="fallas-2009.html">Fallas 2009</a></div>
+      <div><b>Proyecto 2026</b><a href="en-simple.html">En simple</a><a href="plan-maestro.html">Versión técnica</a><a href="proyecto-2026.html">Mapa, costos y cronograma</a></div>
+      <div><b>Barrio privado inteligente</b><a href="barrio-simple.html">En simple</a><a href="barrio-tecnico.html">Versión técnica</a></div>
+      <div><b>Casa particular inteligente</b><a href="casa-simple.html">En simple</a><a href="casa-tecnico.html">Versión técnica</a></div>
+      <div><b>Privacidad y seguridad</b><a href="datos-personales.html">Datos personales</a><a href="seguridad.html">Seguridad</a></div>
+    </div>
+  </div>
+</footer>
+<!-- pie:fin -->
+<div class="consent" data-consent hidden role="dialog" aria-label="Cookies">
+  <p>Usamos Google Analytics para saber cuántas personas visitan el sitio. Solo se activa si aceptás. <a href="privacidad.html#cookies">Más información</a>.</p>
+  <div><button class="boton" data-elegir="si">Aceptar</button><button class="boton boton--sec" data-elegir="no">Rechazar</button></div>
+</div>
+</body>
+</html>

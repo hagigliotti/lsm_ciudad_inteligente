@@ -120,3 +120,36 @@ function iniciarFormulario() {
 iniciarConsentimiento();
 iniciarFormulario();
 document.querySelectorAll('[data-anio]').forEach((el) => { el.textContent = String(new Date().getFullYear()); });
+
+/* ---------- Menú principal ---------- */
+document.documentElement.classList.add('js');
+(function iniciarMenu() {
+  const boton = document.querySelector('[data-menu-boton]');
+  const menu = document.getElementById('menu-principal');
+  if (!menu) return;
+  const grupos = [...menu.querySelectorAll('details')];
+  const escritorio = () => window.matchMedia('(min-width: 1201px)').matches;
+  // En escritorio, abrir un submenú cierra los demás.
+  grupos.forEach((d) => d.addEventListener('toggle', () => {
+    if (d.open && escritorio()) grupos.forEach((o) => { if (o !== d) o.open = false; });
+  }));
+  // Clic afuera o Escape cierran los submenús.
+  document.addEventListener('click', (e) => {
+    if (escritorio() && !menu.contains(e.target)) grupos.forEach((d) => { d.open = false; });
+  });
+  document.addEventListener('keydown', (e) => {
+    if (e.key !== 'Escape') return;
+    const abierto = grupos.find((d) => d.open);
+    if (abierto) { abierto.open = false; abierto.querySelector('summary').focus(); }
+    else if (boton && menu.classList.contains('abierto')) { boton.click(); boton.focus(); }
+  });
+  if (boton) {
+    boton.addEventListener('click', () => {
+      const abrir = !menu.classList.contains('abierto');
+      menu.classList.toggle('abierto', abrir);
+      boton.setAttribute('aria-expanded', String(abrir));
+      // En el celular se despliega el grupo de la página actual.
+      if (abrir) grupos.forEach((d) => { d.open = d.classList.contains('menu__grupo--activo'); });
+    });
+  }
+})();

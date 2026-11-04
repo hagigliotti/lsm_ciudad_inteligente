@@ -1,0 +1,311 @@
+<!doctype html>
+<html lang="es-AR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://www.googletagmanager.com; connect-src 'self' https://*.google-analytics.com https://*.analytics.google.com https://www.googletagmanager.com; img-src 'self' data: https://*.google-analytics.com https://www.googletagmanager.com; style-src 'self'; font-src 'self'; base-uri 'self'; form-action 'self'; object-src 'none'; upgrade-insecure-requests">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <title>Barrio privado inteligente · versión técnica · LSM Ciudad Inteligente</title>
+  <meta name="description" content="Especificación técnica de un barrio privado inteligente: red de fibra, control de acceso, perímetro, agua, energía, plataforma, reglamento y costos.">
+  <meta property="og:title" content="Barrio privado inteligente · versión técnica · LSM Ciudad Inteligente">
+  <meta property="og:image" content="https://hagigliotti.github.io/lsm_ciudad_inteligente/assets/logos/portada.jpg">
+  <meta name="theme-color" content="#0d1f18">
+  <link rel="icon" href="assets/logos/isotipo.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/css/estilo.css">
+  <script type="module" src="assets/js/archivo.js"></script>
+  <script type="module" src="assets/js/app.js"></script>
+</head>
+<body>
+<a class="salto" href="#contenido">Saltar al contenido</a>
+<!-- menu:inicio -->
+<header class="barra">
+  <div class="envoltura">
+    <a class="barra__marca" href="index.html"><img src="assets/logos/isotipo.svg" alt="" width="36" height="36">LSM</a>
+    <button class="menu__boton" type="button" aria-expanded="false" aria-controls="menu-principal" data-menu-boton>Menú</button>
+    <nav class="menu" id="menu-principal" aria-label="Menú principal">
+      <ul class="menu__lista">
+        <li><a class="menu__link" href="ciudad-hoy.html">La ciudad hoy</a></li>
+        <li>
+          <details class="menu__grupo">
+            <summary>Proyecto 2009 <i>original</i></summary>
+            <ul>
+              <li><a href="archivo-2009.html"><b>Archivo 2009</b><small>El proyecto original completo, tal como se publicó</small></a></li>
+              <li><a href="fallas-2009.html"><b>Fallas 2009</b><small>Qué le faltó y qué cambió desde entonces</small></a></li>
+            </ul>
+          </details>
+        </li>
+        <li>
+          <details class="menu__grupo">
+            <summary>Proyecto 2026 <i>actualización</i></summary>
+            <ul>
+              <li><a href="en-simple.html"><b>En simple</b><small>Explicado fácil, con dibujos y ejemplos</small></a></li>
+              <li><a href="plan-maestro.html"><b>Versión técnica</b><small>Plan Maestro 2027–2036 completo</small></a></li>
+              <li><a href="proyecto-2026.html"><b>Mapa, costos y cronograma</b><small>Dónde va cada cosa, cuánto cuesta y cuándo</small></a></li>
+            </ul>
+          </details>
+        </li>
+        <li>
+          <details class="menu__grupo menu__grupo--activo">
+            <summary>Barrio privado inteligente <i>nuevo</i></summary>
+            <ul>
+              <li><a href="barrio-simple.html"><b>En simple</b><small>Qué cambia para quien vive en el barrio</small></a></li>
+              <li><a href="barrio-tecnico.html" aria-current="page"><b>Versión técnica</b><small>Arquitectura, equipos, reglamento y costos</small></a></li>
+            </ul>
+          </details>
+        </li>
+        <li>
+          <details class="menu__grupo">
+            <summary>Casa particular inteligente <i>nuevo</i></summary>
+            <ul>
+              <li><a href="casa-simple.html"><b>En simple</b><small>Qué se puede automatizar y por dónde empezar</small></a></li>
+              <li><a href="casa-tecnico.html"><b>Versión técnica</b><small>Equipos, protocolos, instalación y costos</small></a></li>
+            </ul>
+          </details>
+        </li>
+        <li>
+          <details class="menu__grupo">
+            <summary>Privacidad y seguridad</summary>
+            <ul>
+              <li><a href="datos-personales.html"><b>Datos personales</b><small>Sensibles y no tan sensibles: qué se protege y cómo</small></a></li>
+              <li><a href="seguridad.html"><b>Seguridad</b><small>Cómo se protegen el sitio y los sistemas</small></a></li>
+            </ul>
+          </details>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>
+<!-- menu:fin -->
+
+<main id="contenido">
+
+<section class="proy-portada">
+  <div class="envoltura">
+    <span class="etiqueta">Barrio privado inteligente · versión técnica</span>
+    <h1>Barrio inteligente: arquitectura y especificación</h1>
+    <p class="intro">Propuesta de referencia para un barrio cerrado, country o barrio cooperativo de unos 100 lotes en la zona de Libertador San Martín. Aplica los principios del <a href="plan-maestro.html">Plan Maestro 2027–2036</a> a escala de consorcio: estándares abiertos, operación local ante cortes, privacidad desde el diseño y compras por resultados.</p>
+    <div class="proy-chips">
+      <div><b>100 lotes</b><span>caso de referencia</span></div>
+      <div><b>USD 110–260 mil</b><span>inversión total estimada</span></div>
+      <div><b>3 etapas</b><span>de 6 a 18 meses</span></div>
+      <div><b>5 redes</b><span>separadas por función</span></div>
+    </div>
+    <div class="versiones"><a class="version-chip" href="barrio-simple.html"><b>¿Lo explicás a los vecinos?</b> Ver la versión simple →</a></div>
+  </div>
+</section>
+
+<div class="envoltura arch-cuerpo">
+  <nav class="arch-menu" aria-label="Capítulos">
+    <p class="arch-menu__tit">Capítulos</p>
+    <ol>
+      <li><a href="#alcance"><span>1</span>Alcance</a></li>
+      <li><a href="#arquitectura"><span>2</span>Arquitectura</a></li>
+      <li><a href="#red"><span>3</span>Red y fibra</a></li>
+      <li><a href="#acceso"><span>4</span>Acceso</a></li>
+      <li><a href="#perimetro"><span>5</span>Perímetro</a></li>
+      <li><a href="#agua"><span>6</span>Agua</a></li>
+      <li><a href="#energia"><span>7</span>Energía y luz</a></li>
+      <li><a href="#comunes"><span>8</span>Áreas comunes</a></li>
+      <li><a href="#plataforma"><span>9</span>Plataforma</a></li>
+      <li><a href="#legal"><span>10</span>Reglamento y ley</a></li>
+      <li><a href="#costos"><span>11</span>Costos</a></li>
+      <li><a href="#etapas"><span>12</span>Etapas y riesgos</a></li>
+    </ol>
+  </nav>
+  <div>
+
+<article class="cap" id="alcance" data-cap>
+  <div class="cap__cab"><div class="cap__num">1</div><div><h2>Alcance y supuestos</h2></div></div>
+  <div class="cap__cuerpo">
+    <p>Caso de referencia: <strong>100 lotes</strong>, perímetro de unos <strong>2 km</strong>, un acceso principal con guardia, SUM, tanque elevado con bombeo propio y unos <strong>60 puntos de alumbrado</strong> en calles internas. Sirve también para barrios cooperativos abiertos, como los de Colonia San Emilio sobre la Ruta 131, quitando el control de acceso y el perímetro.</p>
+    <p>Objetivos medibles: reducir el tiempo de ingreso de residentes a menos de 5 segundos, detectar pérdidas de agua por lote en menos de 24 horas, detectar luminarias apagadas en el día, y cero imágenes del interior de lotes almacenadas.</p>
+    <div class="nota-rev"><strong>Supuestos a validar</strong><p>Cantidades, distancias y precios son de referencia; se ajustan con el plano del barrio, un relevamiento de radio y cotizaciones locales.</p></div>
+  </div>
+</article>
+
+<article class="cap" id="arquitectura" data-cap>
+  <div class="cap__cab"><div class="cap__num">2</div><div><h2>Arquitectura</h2></div></div>
+  <div class="cap__cuerpo">
+    <figure class="figura">
+      <svg viewBox="0 0 900 300" role="img" aria-labelledby="ba-t">
+        <title id="ba-t">Arquitectura del barrio: en la guardia hay un servidor local con firewall que conecta la fibra a los lotes, las cámaras, el gateway LoRaWAN con medidores y sensores, el alumbrado y la salida a internet por fibra con respaldo satelital o 4G</title>
+        <defs><marker id="bfl" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path class="d-punta" d="M0 0 10 5 0 10z"/></marker></defs>
+        <rect class="d-caja--menta" x="40" y="20" width="250" height="50" rx="12"/><text class="d-txt" x="165" y="50" text-anchor="middle">Internet: fibra de un ISP</text>
+        <rect class="d-caja--nar" x="610" y="20" width="250" height="50" rx="12"/><text class="d-txt" x="735" y="50" text-anchor="middle">Respaldo: Starlink o 4G</text>
+        <path class="d-linea" d="M165 72 V100 H420 V118" marker-end="url(#bfl)"/><path class="d-linea" d="M735 72 V100 H480 V118" marker-end="url(#bfl)"/>
+        <rect class="d-caja--osc" x="290" y="120" width="320" height="64" rx="14"/><text class="d-txt--claro" x="450" y="148" text-anchor="middle">Guardia: servidor local + firewall</text><text class="d-txt--chico" x="450" y="170" text-anchor="middle">grabador, plataforma, OLT, UPS</text>
+        <path class="d-linea" d="M320 186 L130 230" marker-end="url(#bfl)"/><path class="d-linea" d="M400 186 L330 230" marker-end="url(#bfl)"/><path class="d-linea" d="M500 186 L570 230" marker-end="url(#bfl)"/><path class="d-linea" d="M580 186 L770 230" marker-end="url(#bfl)"/>
+        <rect class="d-caja" x="40" y="232" width="180" height="50" rx="12"/><text class="d-txt" x="130" y="262" text-anchor="middle">Fibra a cada lote</text>
+        <rect class="d-caja" x="240" y="232" width="180" height="50" rx="12"/><text class="d-txt" x="330" y="262" text-anchor="middle">Acceso y cámaras</text>
+        <rect class="d-caja" x="480" y="232" width="180" height="50" rx="12"/><text class="d-txt" x="570" y="262" text-anchor="middle">LoRaWAN: agua</text>
+        <rect class="d-caja" x="680" y="232" width="180" height="50" rx="12"/><text class="d-txt" x="770" y="262" text-anchor="middle">Alumbrado y solar</text>
+      </svg>
+      <figcaption>Figura 1. Todo lo crítico funciona dentro del barrio; internet solo hace falta para avisos y acceso remoto.</figcaption>
+    </figure>
+    <div class="capas">
+      <div class="capa"><h3><span class="capa__letra">1</span>Campo</h3><p>Cámaras, lectoras de patentes, barrera, sensores de cerco, medidores de agua, sensores de nivel, luminarias, estación meteorológica, robots y paneles.</p></div>
+      <div class="capa"><h3><span class="capa__letra">2</span>Red</h3><p>Fibra GPON a los lotes, red de cámaras cableada, LoRaWAN AU915 para sensores y Wi-Fi solo en SUM y espacios comunes.</p></div>
+      <div class="capa"><h3><span class="capa__letra">3</span>Borde</h3><p>Servidor local en la guardia con grabador, analítica de video en las cámaras y reglas que funcionan sin internet.</p></div>
+      <div class="capa"><h3><span class="capa__letra">4</span>Plataforma</h3><p>Broker MQTT, servidor LoRaWAN, base de series temporales y tablero; app del consorcio con API documentada.</p></div>
+      <div class="capa"><h3><span class="capa__letra">5</span>Gobierno</h3><p>Reglamento aprobado en asamblea, registro de accesos a datos, responsable técnico y contrato de mantenimiento con niveles de servicio.</p></div>
+    </div>
+  </div>
+</article>
+
+<article class="cap" id="red" data-cap>
+  <div class="cap__cab"><div class="cap__num">3</div><div><h2>Red y fibra</h2></div></div>
+  <div class="cap__cuerpo">
+    <ul>
+      <li><strong>Fibra al lote (FTTH, GPON):</strong> OLT en la guardia, divisores 1:32 en cámaras de inspección, una ONT por lote. Se tiende en tritubo durante la obra de calles; reservar un tubo vacío.</li>
+      <li><strong>Red neutra:</strong> la fibra es del consorcio y cualquier proveedor (por ejemplo, la cooperativa LAR) puede ofrecer servicio en ella; el barrio cobra un canon por lote conectado.</li>
+      <li><strong>Segmentación (VLAN):</strong> seguridad (cámaras, acceso), IoT (gateways, bombas, luminarias), administración, Wi-Fi de espacios comunes, y una VLAN por proveedor de internet. Nada de cámaras accesibles desde internet; acceso remoto solo por VPN con doble factor.</li>
+      <li><strong>Respaldo:</strong> salida principal por fibra y secundaria por Starlink o 4G con conmutación automática; UPS de al menos 2 horas en guardia, barrera y cámaras de acceso.</li>
+      <li><strong>LoRaWAN:</strong> plan AU915, gateway en el tanque elevado y otro en la guardia; prueba de cobertura en el lote más lejano antes de comprar medidores.</li>
+    </ul>
+  </div>
+</article>
+
+<article class="cap" id="acceso" data-cap>
+  <div class="cap__cab"><div class="cap__num">4</div><div><h2>Control de acceso</h2></div></div>
+  <div class="cap__cuerpo">
+    <div class="desliza"><table class="tabla"><thead><tr><th>Quién</th><th>Cómo entra</th><th>Qué se guarda</th></tr></thead><tbody>
+      <tr><td>Residentes</td><td>Lectura de patente con lista blanca; respaldo con tag RFID UHF en el parabrisas.</td><td>Patente y hora. Retención: 30 días.</td></tr>
+      <tr><td>Visitas</td><td>QR de un solo uso o por franja horaria, generado por el residente y enviado por WhatsApp.</td><td>Nombre, lote de destino, patente y hora. Retención: 30 días.</td></tr>
+      <tr><td>Proveedores y personal</td><td>Autorización por días y horarios; alta y baja desde la administración.</td><td>Nombre, empresa y horarios. Retención: mientras dure la relación + 6 meses.</td></tr>
+      <tr><td>Emergencias</td><td>Apertura manual en guardia y botón de apertura para ambulancias y bomberos.</td><td>Registro del evento.</td></tr>
+    </tbody></table></div>
+    <p>Requisitos: lectura de patentes con precisión medida en condiciones de noche y lluvia; apertura manual siempre disponible; sin fotos de rostros para el acceso; DNI de visitas solo si el reglamento lo exige, sin escanear ni guardar imagen del documento.</p>
+  </div>
+</article>
+
+<article class="cap" id="perimetro" data-cap>
+  <div class="cap__cab"><div class="cap__num">5</div><div><h2>Perímetro y videovigilancia</h2></div></div>
+  <div class="cap__cuerpo">
+    <ul>
+      <li>Cámaras IP compatibles con ONVIF cada 40–60 m, con analítica de <strong>cruce de línea</strong> en el propio equipo; alarmas solo en franjas configuradas.</li>
+      <li>Sensores de vibración o fibra sensora en el cerco, integrados con el encendido de reflectores de la zona.</li>
+      <li><strong>Máscaras de privacidad</strong> sobre ventanas y patios de lotes linderos y sobre la vía pública exterior.</li>
+      <li>Grabación local en el servidor de la guardia, retención de 15 a 30 días, exportación solo ante incidente con registro de quién la pidió.</li>
+      <li>Sin reconocimiento facial. Cartelería visible de zona videovigilada.</li>
+    </ul>
+  </div>
+</article>
+
+<article class="cap" id="agua" data-cap>
+  <div class="cap__cab"><div class="cap__num">6</div><div><h2>Agua</h2></div></div>
+  <div class="cap__cuerpo">
+    <ul>
+      <li>Medidor ultrasónico con radio LoRaWAN por lote y un macromedidor a la salida del tanque: la diferencia indica pérdidas en la red interna.</li>
+      <li>Alerta de <strong>consumo continuo nocturno</strong> (pérdida en el lote) al propietario y alerta de pérdida de red a la administración.</li>
+      <li>Sensor de nivel en tanque elevado y cisterna; bombas con variador y arranque automático; aviso por falta de agua o falla de bomba.</li>
+      <li>Si el agua llega de la red municipal, coordinar con el prestador antes de intervenir y aprovechar los avisos de purgas y cortes.</li>
+    </ul>
+  </div>
+</article>
+
+<article class="cap" id="energia" data-cap>
+  <div class="cap__cab"><div class="cap__num">7</div><div><h2>Energía y alumbrado</h2></div></div>
+  <div class="cap__cuerpo">
+    <ul>
+      <li>Luminarias LED con nodo de telegestión (por ejemplo, zócalo NEMA o Zhaga): encendido por horario solar, atenuación de madrugada con mínimo normativo, aviso de falla.</li>
+      <li>Generación solar en SUM y bombeo (≈ 20 kWp en el caso de referencia), con medición bidireccional según el régimen de generación distribuida que habilite la distribuidora (ENERSA o cooperativa).</li>
+      <li>Medición de consumo de espacios comunes por circuito para detectar desvíos.</li>
+      <li>Previsión de canalizaciones para cargadores de autos eléctricos en estacionamientos comunes.</li>
+    </ul>
+  </div>
+</article>
+
+<article class="cap" id="comunes" data-cap>
+  <div class="cap__cab"><div class="cap__num">8</div><div><h2>Áreas comunes</h2></div></div>
+  <div class="cap__cuerpo">
+    <ul>
+      <li>Riego por zonas con sensores de humedad y pronóstico: no riega si va a llover.</li>
+      <li>Robots cortacésped con GPS RTK en áreas delimitadas, trabajando en horarios sin chicos ni mascotas, con paro ante obstáculos.</li>
+      <li>Estación meteorológica propia: lluvia, viento y temperatura, útil para riego y alertas.</li>
+      <li>Reservas del SUM y canchas con control de acceso por QR.</li>
+    </ul>
+  </div>
+</article>
+
+<article class="cap" id="plataforma" data-cap>
+  <div class="cap__cab"><div class="cap__num">9</div><div><h2>Plataforma y app</h2></div></div>
+  <div class="cap__cuerpo">
+    <ul>
+      <li>Servidor de red LoRaWAN (por ejemplo, ChirpStack), broker MQTT, Node-RED para reglas, base de series temporales y Grafana para el tablero de guardia y administración.</li>
+      <li>App del consorcio: expensas, reservas, reclamos con foto y estado, avisos y visitas. Debe tener API y exportación de datos; canal en papel o presencial para quien no la use.</li>
+      <li>Usuarios con roles (guardia, administración, consejo, residente) y doble factor para roles con acceso a cámaras.</li>
+      <li>Copias de seguridad cifradas fuera de la guardia y prueba de restauración cada seis meses.</li>
+    </ul>
+  </div>
+</article>
+
+<article class="cap" id="legal" data-cap>
+  <div class="cap__cab"><div class="cap__num">10</div><div><h2>Reglamento y marco legal</h2></div></div>
+  <div class="cap__cuerpo">
+    <ul>
+      <li><strong>Código Civil y Comercial, conjuntos inmobiliarios (arts. 2073 a 2086):</strong> las reglas de acceso, uso de espacios comunes y tecnología se incorporan al reglamento y se aprueban por la mayoría que corresponda.</li>
+      <li><strong>Ley 25.326 de datos personales:</strong> el consorcio es responsable de las bases (visitas, patentes, video, consumos); debe informar finalidad, plazo y derechos, y evaluar su inscripción ante la Agencia de Acceso a la Información Pública.</li>
+      <li><strong>Videovigilancia (Disposición 10/2015 de la autoridad de datos):</strong> carteles con finalidad y responsable, captar solo el predio propio y el mínimo de vía pública o de terceros, no usar las imágenes para otros fines, borrarlas al vencer el plazo fijado, política interna de privacidad e inscripción del archivo de grabaciones en el Registro Nacional de Bases de Datos.</li>
+      <li><strong>Radiofrecuencia:</strong> equipos LoRaWAN y Wi-Fi homologados por ENACOM.</li>
+      <li><strong>Electricidad:</strong> instalaciones según la reglamentación de la AEA, firmadas por profesional matriculado.</li>
+    </ul>
+    <p>Asesoramiento jurídico local obligatorio antes de aprobar el reglamento. Ver <a href="datos-personales.html">Datos personales</a>.</p>
+  </div>
+</article>
+
+<article class="cap" id="costos" data-cap>
+  <div class="cap__cab"><div class="cap__num">11</div><div><h2>Costos de referencia</h2><p class="cap__meta">Barrio de 100 lotes, dólares de 2026</p></div></div>
+  <div class="cap__cuerpo">
+    <div class="desliza"><table class="tabla"><thead><tr><th>Partida</th><th>Incluye</th><th class="num">Inversión</th></tr></thead><tbody><tr><td>Control de acceso</td><td>2 cámaras lectoras de patentes, barrera, lector de QR, intercomunicador IP y software de visitas</td><td class="num">USD 6.000 – 15.000</td></tr><tr><td>Perímetro</td><td>≈ 40 cámaras con analítica de cruce de línea (perímetro de 2 km), sensores de vibración en el cerco, grabador y UPS</td><td class="num">USD 15.000 – 40.000</td></tr><tr><td>Fibra al lote (FTTH)</td><td>OLT en la guardia, divisores, fibra y una ONT por lote; con la obra de calles abierta</td><td class="num">USD 30.000 – 70.000</td></tr><tr><td>Red de sensores</td><td>2 gateways LoRaWAN, 100 medidores de agua con radio, nivel de tanque y control de bombas</td><td class="num">USD 13.000 – 34.000</td></tr><tr><td>Alumbrado</td><td>≈ 60 luminarias LED con nodo de telegestión</td><td class="num">USD 15.000 – 30.000</td></tr><tr><td>Áreas comunes</td><td>Riego por humedad y pronóstico, 1 o 2 robots cortacésped</td><td class="num">USD 5.000 – 16.000</td></tr><tr><td>Energía solar</td><td>≈ 20 kWp en SUM o bombeo, inversor y medición</td><td class="num">USD 15.000 – 30.000</td></tr><tr><td>Plataforma y app</td><td>Servidor local o nube, tablero, app de expensas, reservas y reclamos; puesta en marcha</td><td class="num">USD 3.000 – 10.000</td></tr><tr><td>Ingeniería y contingencia</td><td>Proyecto, dirección de obra, pruebas, capacitación y 10 % de imprevistos</td><td class="num">USD 8.000 – 15.000</td></tr>
+      <tr class="tabla__total"><td>Total</td><td>Tres etapas</td><td class="num">USD 110 – 260 mil</td></tr></tbody></table></div>
+    <p>Funcionamiento anual estimado: mantenimiento de equipos 5 a 8 % de la inversión, conectividad de respaldo, licencias de la app y reposición de baterías. La fibra puede generar ingresos por canon de los proveedores.</p>
+    <div class="nota-rev"><strong>Cómo leer estos números</strong><p>Son órdenes de magnitud con precios internacionales; en Argentina pueden variar por impuestos, importación y tipo de cambio. Para decidir, pedir al menos tres cotizaciones por partida con los mismos requisitos.</p></div>
+  </div>
+</article>
+
+<article class="cap" id="etapas" data-cap>
+  <div class="cap__cab"><div class="cap__num">12</div><div><h2>Etapas, indicadores y riesgos</h2></div></div>
+  <div class="cap__cuerpo">
+    <div class="ruta ruta--3">
+      <div class="ruta__fase"><em>Etapa 1 · 0 a 6 meses</em><h4>Acceso y agua</h4><p>Reglamento, lectoras y QR, sensores de tanque, piloto de 20 medidores.</p></div>
+      <div class="ruta__fase"><em>Etapa 2 · 6 a 12 meses</em><h4>Perímetro, luz y fibra</h4><p>Cámaras con analítica, LED telegestionado, FTTH si hay obra.</p></div>
+      <div class="ruta__fase"><em>Etapa 3 · 12 a 18 meses</em><h4>Energía y verde</h4><p>Solar, riego, robots, tablero completo.</p></div>
+    </div>
+    <div class="desliza"><table class="tabla"><thead><tr><th>Riesgo</th><th>Mitigación</th></tr></thead><tbody>
+      <tr><td>Falsas alarmas del perímetro</td><td>Analítica en el equipo, zonas y horarios, revisión mensual de alarmas.</td></tr>
+      <tr><td>Rechazo de vecinos por vigilancia</td><td>Máscaras de privacidad, retención corta, reglamento aprobado en asamblea.</td></tr>
+      <tr><td>Proveedor que se va</td><td>Estándares abiertos (ONVIF, LoRaWAN, MQTT), datos exportables, credenciales en poder del consorcio.</td></tr>
+      <tr><td>Corte de luz o internet</td><td>UPS, operación local y apertura manual.</td></tr>
+      <tr><td>Hackeo de cámaras</td><td>Red separada, sin puertos abiertos, contraseñas únicas, actualizaciones.</td></tr>
+    </tbody></table></div>
+    <p class="fuentes">Proyecto elaborado con asistencia de inteligencia artificial y revisión humana. No reemplaza el proyecto ejecutivo ni el asesoramiento legal. Ver la <a href="privacidad.html">política de privacidad</a>.</p>
+  </div>
+</article>
+
+  </div>
+</div>
+
+</main>
+
+<!-- pie:inicio -->
+<footer class="pie">
+  <div class="envoltura">
+    <div class="pie__marca"><img src="assets/logos/logo-horizontal-claro.svg" alt="LSM Ciudad Inteligente" width="240" height="60">
+      <span>© 2009–<span data-anio>2026</span> · Hernando A. Gigliotti</span>
+      <span><a href="ciudad-hoy.html">La ciudad hoy</a> · <a href="privacidad.html">Política de privacidad del sitio</a> · <a href="#" data-revisar-cookies>Cookies</a></span></div>
+    <div class="pie__mapa">
+      <div><b>Proyecto 2009</b><a href="archivo-2009.html">Archivo 2009</a><a href="fallas-2009.html">Fallas 2009</a></div>
+      <div><b>Proyecto 2026</b><a href="en-simple.html">En simple</a><a href="plan-maestro.html">Versión técnica</a><a href="proyecto-2026.html">Mapa, costos y cronograma</a></div>
+      <div><b>Barrio privado inteligente</b><a href="barrio-simple.html">En simple</a><a href="barrio-tecnico.html">Versión técnica</a></div>
+      <div><b>Casa particular inteligente</b><a href="casa-simple.html">En simple</a><a href="casa-tecnico.html">Versión técnica</a></div>
+      <div><b>Privacidad y seguridad</b><a href="datos-personales.html">Datos personales</a><a href="seguridad.html">Seguridad</a></div>
+    </div>
+  </div>
+</footer>
+<!-- pie:fin -->
+<div class="consent" data-consent hidden role="dialog" aria-label="Cookies">
+  <p>Usamos Google Analytics para saber cuántas personas visitan el sitio. Solo se activa si aceptás. <a href="privacidad.html#cookies">Más información</a>.</p>
+  <div><button class="boton" data-elegir="si">Aceptar</button><button class="boton boton--sec" data-elegir="no">Rechazar</button></div>
+</div>
+</body>
+</html>
